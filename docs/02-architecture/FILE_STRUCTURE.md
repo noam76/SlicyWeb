@@ -63,9 +63,9 @@ wichy/
 ```text
 docs/
 
-├── 00-index/
-│   ├── PROJECT_DOCUMENTATION_INDEX.md
-│   └── AI_START_HERE.md
+├── 00-index/AI_START_HERE.md
+│   ├── API_SPEC.md
+│   └── PROJECT_DOCUMENTATION_INDEX.md
 │
 ├── 01-project/
 │   ├── PROJECT_DESCRIPTION.md
