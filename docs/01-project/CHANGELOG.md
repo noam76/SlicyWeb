@@ -2,7 +2,9 @@
 
 \# CHANGELOG
 
+Version: 1.1.0
 
+Status: Active
 
 This file records all significant changes made to the project.
 
@@ -637,25 +639,27 @@ Import Error Handling
 \# VERSION 0.5.0
 
 
-
 Release Type:
-
 
 
 Transformation System
 
+Undo System
+
+Redo System
+
+History Stack
+
+Transaction System
 
 
 Status:
 
 
-
 Planned
 
 
-
 Date:
-
 
 
 TBD
@@ -829,17 +833,19 @@ Profile Validation
 Release Type:
 
 
-
 Material Management
 
+Filament Profiles
+
+Manufacturer Filaments
+
+Filament Validation
 
 
 Status:
 
 
-
 Planned
-
 
 
 Date:
@@ -961,9 +967,13 @@ Profile Integrity
 Release Type:
 
 
-
 Model Analysis
 
+Object Classification
+
+Category Detection
+
+Confidence Score
 
 
 Status:
@@ -1085,30 +1095,17 @@ TBD
 \## Planned Features
 
 
-
 Automatic Recommendations
-
-
 
 Quality Suggestions
 
-
-
 Speed Suggestions
-
-
 
 Support Suggestions
 
-
-
 Cooling Suggestions
 
-
-
 Retraction Suggestions
-
-
 
 Warning Generation
 
@@ -1121,17 +1118,15 @@ Warning Generation
 \## Recommendation Inputs
 
 
-
 Printer
-
-
 
 Material
 
-
+Filament
 
 Model Analysis
 
+Object Classification
 
 
 \---
@@ -1141,18 +1136,11 @@ Model Analysis
 \## Validation Requirements
 
 
-
 Printer Safe
-
-
 
 Material Safe
 
-
-
 Geometry Safe
-
-
 
 \---
 
@@ -1161,29 +1149,22 @@ Geometry Safe
 \# VERSION 1.0.0
 
 
-
 Release Type:
-
 
 
 Stable Release
 
 
-
 Status:
-
 
 
 Planned
 
 
-
 Date:
 
 
-
 TBD
-
 
 
 \---
@@ -1193,42 +1174,23 @@ TBD
 \## Planned Features
 
 
-
 Optimization Engine
-
-
 
 Orientation Search
 
-
-
 Support Reduction
-
-
 
 Cost Estimation
 
-
-
 Project Save
-
-
 
 Project Load
 
-
-
 Settings Persistence
-
-
 
 Error Reporting
 
-
-
 Performance Improvements
-
-
 
 \---
 
@@ -1237,21 +1199,16 @@ Performance Improvements
 \## Validation Requirements
 
 
-
 Stable Platform
-
 
 
 No Critical Errors
 
 
-
 Documentation Complete
 
 
-
 Testing Complete
-
 
 
 \---
@@ -1261,33 +1218,28 @@ Testing Complete
 \# FUTURE VERSIONS
 
 
-
 \---
-
 
 
 \# VERSION 1.1.0
 
 
-
 Status:
 
-
-
 Future
-
 
 
 \---
 
 
-
 \## Candidate Features
 
 
+Plugin System
 
-G-Code Generation
+Plugin Marketplace
 
+G-Code Engine
 
 
 \---
@@ -1654,5 +1606,5 @@ it is important enough to be written in this file.
 
 
 
-\# END OF DOCUMENT
+\# # End Of Document
 
