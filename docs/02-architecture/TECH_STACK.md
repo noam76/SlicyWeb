@@ -562,34 +562,37 @@ React Application
 \# Communication
 
 
-
 Use:
-
 
 
 ```text
 
-IPC
+IPC Layer
+
+```
+Technology:
+
+ipcMain
+
+ipcRenderer
+
+preload.ts
 
 ```
 
 
-
-For:
-
+Used For:
 
 
 ```text
 
 File Access
 
-
-
-Printer Profiles
-
-
+Project Save/Load
 
 System Operations
+
+Profile Management
 
 ```
 
@@ -1452,7 +1455,15 @@ preferences.json
 
 \# Testing Framework
 
+\## Coverage Target
 
+Minimum:
+
+80%
+
+Critical Modules:
+
+90%
 
 \## Vitest
 
