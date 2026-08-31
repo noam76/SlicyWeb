@@ -1532,42 +1532,29 @@ Future
 \## Possible Features
 
 
-
 G-Code Generation
-
-
 
 Multi Material
 
-
-
 Cloud Synchronization
-
-
 
 Remote Printers
 
-
-
 Webcam Monitoring
-
-
 
 Print History
 
-
-
 Community Profiles
-
-
 
 Profile Marketplace
 
-
-
 Machine Learning Assistance
 
+Filament Tracking
 
+Vision Classification
+
+Preset Marketplace
 
 \---
 
@@ -1576,25 +1563,19 @@ Machine Learning Assistance
 \## Validation Criteria
 
 
-
 Defined during implementation.
 
 
-
 \---
-
 
 
 \## Output
 
 
-
 Professional ecosystem.
 
 
-
 \---
-
 
 
 \# PHASE 13
@@ -1821,11 +1802,7 @@ Stable Release
 
 \# Success Criteria
 
-
-
 The project is successful if:
-
-
 
 \- Users can import STL and 3MF files
 
@@ -1843,26 +1820,27 @@ The project is successful if:
 
 \- New features can be added without major rewrites
 
+\- Object classification is reliable
+
+\- Support recommendations are reliable
+
+\- Preset recommendations improve workflow
+
+\- Undo/Redo operations remain stable
 
 
 \---
-
 
 
 \# Golden Rule
 
 
-
 Every phase must leave the project in a working state.
-
-
 
 Never start a new phase while the previous phase remains unstable.
 
 
-
 \---
-
 
 
 \# End Of Document
