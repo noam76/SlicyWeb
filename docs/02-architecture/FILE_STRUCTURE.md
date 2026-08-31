@@ -79,6 +79,7 @@ docs/
 │   ├── API_SPEC.md          = Comment les modules communiquent    
 │   ├── ARCHITECTURE.md      = Comment le logiciel est construit
 │   ├── FILE_STRUCTURE.md    = Où se trouve chaque fichier
+│   ├── IMPORT_EXPORT_SPEC.md
 │   ├── TECH_STACK.md        = Avec quoi le logiciel est construit
 │   └── DATA_SCHEMA.md       = Comment les données sont structurées
 │
