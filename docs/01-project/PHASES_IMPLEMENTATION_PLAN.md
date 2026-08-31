@@ -4,7 +4,7 @@
 
 
 
-Version: 1.0.0
+Version: 1.1.0
 
 
 
@@ -1643,29 +1643,29 @@ Projects Restored Correctly
 
 \## Future
 
-
 \### G-Code Engine
-
 
 \### Multi Material
 
-
 \### Remote Printers
 
-
 \### Cloud
-
 
 \### Plugins
 
 \### Plugin Marketplace
 
-
 \### Machine Learning
-
 
 \### Webcam Monitoring
 
+\### Community Profiles
+
+\### Filament Tracking
+
+\### Vision Classification
+
+\### Preset Marketplace
 
 \---
 
