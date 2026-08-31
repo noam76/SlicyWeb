@@ -1159,7 +1159,6 @@ Filament
 Analysis
 
 Object Classification
-``
 
 
 \---
@@ -1555,6 +1554,8 @@ Filament Tracking
 Vision Classification
 
 Preset Marketplace
+
+Plugin System
 
 \---
 
