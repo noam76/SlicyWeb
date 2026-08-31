@@ -90,6 +90,14 @@ The application must:
 
 \- Optimize orientation automatically
 
+\- Classify object types automatically
+
+\- Generate support recommendations
+
+\- Apply validated print presets
+
+\- Support undo and redo operations
+
 
 
 The system should operate similarly to professional slicers while providing intelligent assistance.
@@ -194,10 +202,17 @@ The user must be able to:
 
 \- Hide objects
 
+\- Show objects
+
 \- Lock objects
 
-\- Center objects on bed
+\- Unlock objects
 
+\-Center objects on bed
+
+\- Arrange objects automatically
+
+\- Arrange objects manually
 
 
 \---
@@ -296,6 +311,29 @@ The system shall:
 
 \---
 
+## 4.5 History System
+
+The system shall support:
+
+\-  Undo
+\-  Redo
+\-  Action History
+
+Supported Actions:
+
+\-  Import
+\-  Delete
+\-  Duplicate
+\-  Move
+\-  Rotate
+\-  Scale
+\-  Printer Changes
+\-  Material Changes
+\-  Print Settings Changes
+
+The history system must preserve project integrity.
+
+\---
 
 
 \# 5. Visualization Engine
@@ -648,6 +686,25 @@ The system shall analyze:
 
 \---
 
+---
+
+## Classification
+
+The system shall automatically classify objects.
+
+Supported categories:
+
+- Figurine
+- Miniature
+- Mechanical Part
+- Gear
+- Bracket
+- Tool
+- Enclosure
+- Vase
+- Prototype
+- Structural Part
+- Functional Part
 
 
 \## Stability
@@ -674,18 +731,23 @@ The system shall analyze:
 
 Input:
 
-
-
 Printer
 
-\+
++
 
 Material
 
-\+
++
+
+Filament
+
++
 
 Model Analysis
 
++
+
+Object Classification
 
 
 Output:
@@ -906,6 +968,22 @@ Types:
 
 \---
 
+---
+
+## Print Presets
+
+The AI may recommend:
+
+- Draft
+- Fast
+- Balanced
+- Quality
+- Ultra Quality
+- Mechanical
+- Prototype
+- Miniature
+- Vase
+- Structural
 
 
 \# 11. Automatic Optimization
@@ -1262,14 +1340,11 @@ Recommendation Engine
 
 Objectives:
 
-
-
-\- Automatic Settings
-
-\- Warnings
-
-\- Profile Suggestions
-
+- Object Classification
+- Automatic Recommendations
+- Support Recommendations
+- Preset Selection
+- Warning Generation
 
 
 \---
@@ -1302,6 +1377,7 @@ Objectives:
 
 \## Phase 10
 
+- Plugin System
 
 
 Advanced Features
@@ -1326,7 +1402,18 @@ Objectives:
 
 \---
 
+# 15.1 Documentation Status
 
+Documentation Status:
+
+- Core Documentation Complete
+- Architecture Defined
+- Development Ready
+
+Reference:
+
+AI_START_HERE.md
+PROJECT_DOCUMENTATION_INDEX.md
 
 \# 16. Long Term Vision
 
