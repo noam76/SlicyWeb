@@ -114,7 +114,14 @@ docs/
 ├── 08-user-interface/
 │   └── GUI_SPEC.md
 │
-└── 09-reference/
+├── 09-reference/
+├── GLOSSARY.md
+├── TERMINOLOGY.md
+├── NAMING_CONVENTIONS.md
+├── ARCHITECTURE_DECISION_MATRIX.md
+├── PROJECT_ACRONYMS.md
+├── DIRECTORY_PURPOSES.md
+└── VERSIONING_POLICY.md
 ```
 
 ---
