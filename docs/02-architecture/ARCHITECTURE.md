@@ -397,37 +397,28 @@ Responsible for:
 \## Layer 5
 
 
-
 Data Services
-
 
 
 Responsible for:
 
-
-
-\- Printer profiles
-
-\- Material profiles
-
-\- Cached repositories
-
+- Printer profiles
+- Material profiles
+- Filament profiles
+- Print presets
+- Cached repositories
 
 
 \---
 
 
-
 \## Layer 6
-
 
 
 Storage Layer
 
 
-
 Responsible for:
-
 
 
 \- Files
@@ -439,21 +430,16 @@ Responsible for:
 \- Online repositories
 
 
-
 \---
-
 
 
 \# Module Structure
 
 
-
 \## GUI Module
 
 
-
 Folder
-
 
 
 ```text
@@ -982,7 +968,7 @@ Filament
 
 Analysis
 
-/+
+\+
 
 Object Classification
 ```
@@ -1015,59 +1001,42 @@ Confidence Score
 
 Printer
 
-
-&#x20;+
-
-&#x20;
++
 
 Material
 
++
 
+Filament
 
-&#x20;+
-
-
++
 
 Model Analysis
 
++
 
+Object Classification
 
-&#x20;↓
-
-
+↓
 
 Decision Engine
 
-
-
-&#x20;↓
-
-
+↓
 
 Validation Engine
 
-
-
-&#x20;↓
-
-
+↓
 
 Recommended Profile
 
-
-
-&#x20;↓
-
-
+↓
 
 Warnings
 
 ```
 
 
-
 \---
-
 
 
 \# Optimization Engine
@@ -1518,42 +1487,31 @@ Application State
 
 Contains:
 
-
-
-\- Scene
-
-\- Objects
-
-\- Printer
-
-\- Material
-
-\- Recommendations
-
+- Scene
+- Objects
+- Printer
+- Material
+- Filament
+- Recommendations
+- Print Presets
 
 
 All modules read from state.
 
 
-
 Only services may modify state.
-
 
 
 \---
 
 
-
 \# Persistence Architecture
-
 
 
 Saved Project
 
 
-
 Contains:
-
 
 
 ```text
@@ -1566,16 +1524,18 @@ Printer
 
 Material
 
+Filament
+
 Settings
 
 Recommendations
 
+Print Presets
+
 ```
 
 
-
 Does Not Contain:
-
 
 
 ```text
@@ -1589,17 +1549,13 @@ Logs
 ```
 
 
-
 \---
-
 
 
 \# Logging Architecture
 
 
-
 Levels
-
 
 
 ```text
@@ -1617,13 +1573,10 @@ Critical
 ```
 
 
-
 Logs stored separately from project files.
 
 
-
 \---
-
 
 
 \# Security Principles
@@ -1673,57 +1626,43 @@ Large models must:
 Avoid recalculating unchanged analyses.
 
 
-
 \---
-
 
 
 \# Testing Architecture
 
 
-
 Every module requires:
-
 
 
 \## Unit Tests
 
 
-
 Test isolated functionality.
 
 
-
 \---
-
 
 
 \## Integration Tests
 
 
-
 Test communication between modules.
 
 
-
 \---
-
 
 
 \## Regression Tests
 
 
-
 Verify previous functionality remains operational.
-
 
 
 \---
 
 
-
 \# Future Architecture Extensions
-
 
 
 Reserved Modules
@@ -1750,8 +1689,11 @@ Reserved Modules
 
 /vision_classification
 
-```
+/undo_redo
 
+/project_persistence
+
+```
 
 \---
 
@@ -1761,27 +1703,19 @@ Reserved Modules
 
 1\. No module owns another module.
 
-
 2\. Communication occurs through interfaces.
-
 
 3\. Data flows downward.
 
-
 4\. Events flow upward.
-
 
 5\. New features must be added without rewriting existing systems.
 
-
 6\. Preserve backward compatibility whenever possible.
-
 
 7\. Every module must remain independently testable.
 
-
 8\. Stability has priority over complexity.
-
 
 \---
 
