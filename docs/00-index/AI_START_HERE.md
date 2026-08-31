@@ -181,6 +181,12 @@ Determine which module is involved.
 
 Read only the documents relevant to that module.
 
+Additionally verify:
+
+docs/01-project/PHASES_IMPLEMENTATION_PLAN.md
+
+to ensure the requested feature belongs to the current development phase.
+
 ---
 
 # GUI TASKS
