@@ -29,8 +29,10 @@ This structure is the official reference for the entire project.
 ```text
 wichy/
 
+├── data/
 ├── docs/
 ├── src/
+├── /src-electron/
 ├── tests/
 ├── assets/
 ├── cache/
@@ -77,8 +79,8 @@ docs/
 │   └── DECISIONS.md                     = Journal des décisions architecturales (ADR)
 │
 ├── 02-architecture/
-│   ├── API_SPEC.md                      = Comment les modules communiquent entre eux
 │   ├── ARCHITECTURE.md                  = Comment le logiciel est construit
+│   ├── API_SPEC.md                      = Comment les modules communiquent entre eux
 │   ├── FILE_STRUCTURE.md                = Où se trouve chaque fichier et dossier
 │   ├── IMPORT_EXPORT_SPEC.md            = Gestion des imports et exports de fichiers
 │   ├── TECH_STACK.md                    = Technologies utilisées dans le projet
