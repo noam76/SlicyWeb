@@ -63,8 +63,14 @@ wichy/
 # Documentation Structure
 
 ```text
-docs/
+data/
+│   ├── printers/
+│   ├── materials/
+│   ├── filaments/
+│   └── presets/
 
+docs/
+│
 ├── 00-index/
 │   ├── AI_START_HERE.md                 = Point d'entrée principal pour l'IA et les nouveaux contributeurs
 │   ├── API_START_HERE.md                = Guide de démarrage rapide pour l'API et les services
