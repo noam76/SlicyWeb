@@ -644,14 +644,6 @@ Release Type:
 
 Transformation System
 
-Undo System
-
-Redo System
-
-History Stack
-
-Transaction System
-
 
 Status:
 
@@ -672,34 +664,27 @@ TBD
 
 \## Planned Features
 
-
-
 Move Tool
-
-
 
 Rotate Tool
 
-
-
 Scale Tool
-
-
 
 Duplicate Tool
 
-
-
 Delete Tool
-
-
 
 Center Tool
 
-
-
 Reset Tool
 
+Undo System
+
+Redo System
+
+History Stack
+
+Transaction System
 
 
 \---
@@ -835,12 +820,6 @@ Release Type:
 
 Material Management
 
-Filament Profiles
-
-Manufacturer Filaments
-
-Filament Validation
-
 
 Status:
 
@@ -863,25 +842,21 @@ TBD
 \## Planned Features
 
 
-
 Material Database
-
-
 
 Material Profiles
 
-
-
 Material Selection
-
-
 
 Material Validation
 
-
-
 Material Presets
 
+Filament Profiles
+
+Manufacturer Filaments
+
+Filament Validation
 
 
 \---
@@ -969,12 +944,6 @@ Release Type:
 
 Model Analysis
 
-Object Classification
-
-Category Detection
-
-Confidence Score
-
 
 Status:
 
@@ -998,43 +967,29 @@ TBD
 
 \## Planned Features
 
-
-
 Geometry Analysis
-
-
 
 Mesh Analysis
 
-
-
 Dimensions
-
-
 
 Volume
 
-
-
 Surface Area
-
-
 
 Overhang Detection
 
-
-
 Bridge Detection
-
-
 
 Thin Wall Detection
 
-
-
 Stability Analysis
 
+Object Classification
 
+Category Detection
+
+Confidence Score
 
 \---
 
@@ -1063,33 +1018,25 @@ Large Model Support
 \# VERSION 0.9.0
 
 
-
 Release Type:
-
 
 
 Recommendation Engine
 
 
-
 Status:
-
 
 
 Planned
 
 
-
 Date:
-
 
 
 TBD
 
 
-
 \---
-
 
 
 \## Planned Features
@@ -1109,6 +1056,11 @@ Retraction Suggestions
 
 Warning Generation
 
+Print Preset Selection
+
+Support Strategy
+
+Confidence Score
 
 
 \---
