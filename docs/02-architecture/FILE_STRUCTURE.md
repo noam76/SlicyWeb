@@ -163,7 +163,7 @@ LICENSE
 Total Documentation Assets:
 
 ```text
-28+
+35+
 ```
 
 ---
@@ -286,6 +286,8 @@ src/transform/
 ├── RotateTool.ts
 ├── ScaleTool.ts
 ├── TransformManager.ts
+├── HistoryManager.ts
+├── UndoRedoManager.ts
 └── TransformValidator.ts
 ```
 
@@ -328,6 +330,8 @@ src/material_database/
 ├── MaterialRepository.ts
 ├── MaterialValidator.ts
 ├── MaterialCache.ts
+├── FilamentRepository.ts
+├── FilamentValidator.ts
 └── profiles/
 ```
 
