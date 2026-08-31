@@ -1031,7 +1031,19 @@ Recommended Profile
 
 ↓
 
+Print Preset
+
+↓
+
+Support Strategy
+
+↓
+
 Warnings
+
+↓
+
+Confidence Score
 
 ```
 
