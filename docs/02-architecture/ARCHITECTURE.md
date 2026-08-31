@@ -2,7 +2,7 @@
 
 
 
-Version: 1.0.0
+Version: 1.1.0
 
 
 
@@ -619,9 +619,7 @@ Folder
 ```
 
 
-
 Responsibilities:
-
 
 
 \- Move
@@ -632,10 +630,17 @@ Responsibilities:
 
 \- Reset
 
+\- Undo
+
+\- Redo
+
+\- History Tracking
+
+\- Transaction Management
+
 
 
 \---
-
 
 
 \## Import Module
@@ -645,7 +650,6 @@ Responsibilities:
 Folder
 
 
-
 ```text
 
 /importer
@@ -653,9 +657,7 @@ Folder
 ```
 
 
-
 Responsibilities:
-
 
 
 \- STL Import
@@ -663,7 +665,6 @@ Responsibilities:
 \- 3MF Import
 
 \- Validation
-
 
 
 Submodules
@@ -760,7 +761,11 @@ Responsibilities:
 
 \- Validate materials
 
+\- Load filament profiles
 
+\- Validate filament profiles
+
+\- Manufacturer profile management
 
 \---
 
@@ -785,17 +790,17 @@ Folder
 Responsibilities:
 
 
-
 \- Geometry analysis
 
 \- Stability analysis
 
 \- Printability analysis
 
+\- Object classification
 
+\- Confidence scoring
 
 \---
-
 
 
 \# Analysis Engine Architecture
@@ -937,9 +942,7 @@ Stability Report
 \# Recommendation Engine
 
 
-
 Folder
-
 
 
 ```text
@@ -949,9 +952,7 @@ Folder
 ```
 
 
-
 Responsibilities:
-
 
 
 \- Generate print settings
@@ -965,7 +966,6 @@ Responsibilities:
 Input:
 
 
-
 ```text
 
 Printer
@@ -976,36 +976,44 @@ Material
 
 \+
 
+Filament
+
+\+
+
 Analysis
 
+/+
+
+Object Classification
 ```
 
 
-
 Output:
-
 
 
 ```text
 
 Recommended Profile
 
+Print Preset
+
+Support Strategy
+
+Warnings
+
+Confidence Score
+
 ```
 
-
-
 \---
-
 
 
 \# Recommendation Flow
 
 
-
 ```text
 
 Printer
-
 
 
 &#x20;+
@@ -1720,83 +1728,62 @@ Verify previous functionality remains operational.
 
 Reserved Modules
 
-
-
 ```text
 
 /gcode\_engine
 
-
-
 /multi\_material
-
-
 
 /cloud
 
-
-
 /remote\_printer
-
-
 
 /webcam
 
-
-
 /machine\_learning
 
-
-
 /profile\_marketplace
+
+/filament_tracking
+
+/community_profiles
+
+/vision_classification
 
 ```
 
 
-
 \---
-
 
 
 \# Architectural Golden Rules
 
 
-
 1\. No module owns another module.
-
 
 
 2\. Communication occurs through interfaces.
 
 
-
 3\. Data flows downward.
-
 
 
 4\. Events flow upward.
 
 
-
 5\. New features must be added without rewriting existing systems.
-
 
 
 6\. Preserve backward compatibility whenever possible.
 
 
-
 7\. Every module must remain independently testable.
-
 
 
 8\. Stability has priority over complexity.
 
 
-
 \---
-
-
 
 \# End Of Document
 
