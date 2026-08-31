@@ -1000,7 +1000,7 @@ Represents an entire workspace.
 \---
 
 
-\# # Print Preset Schema
+\# Print Preset Schema
 
 ```json
 {
@@ -1123,7 +1123,7 @@ Represents an entire workspace.
 
 &#x20;   "adhesion": {},
 
-&#x20;   "confidenceScore": {0}
+&#x20;   "confidenceScore": 0
 
 &#x20; }
 
@@ -1448,7 +1448,11 @@ it
   
   &#x20; "pluginMarketplace": {},
   
-  &#x20; "communityProfiles": {}
+  &#x20; "communityProfiles": {},
+
+  &#x20; "filamentTracking": {},
+  
+  &#x20; "visionClassification": {}
 }
 
 Reserved:
