@@ -103,9 +103,9 @@ docs/
 │   └── PRINT_SETTINGS_SPEC.md           = Tous les paramètres d'impression disponibles
 │
 ├── 05-profiles/
+│   ├── MATERIAL_PROFILE_SPEC.md         = Profils des matériaux d'impression
 │   ├── FILAMENT_SETTINGS_SPEC.md        = Profils détaillés des filaments
-│   ├── PRINTER_PROFILE_SPEC.md          = Profils et capacités des imprimantes
-│   └── MATERIAL_PROFILE_SPEC.md         = Profils des matériaux d'impression
+│   └── PRINTER_PROFILE_SPEC.md          = Profils et capacités des imprimantes 
 │
 ├── 06-quality/
 │   ├── TEST_PLAN.md                     = Stratégie de tests du projet
