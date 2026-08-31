@@ -1049,47 +1049,42 @@ Validate:
 
 Printer Profiles
 
-
-
 Material Profiles
 
+Filament Profiles
 
+Print Presets
 
 Settings
 
-
-
 Imported Data
-
-
 
 API Responses
 
 ```
 
 
-
 \---
-
 
 
 \# File Formats
 
 
-
 Supported:
-
 
 
 ```text
 
+Supported:
+
 JSON
-
 STL
-
 3MF
-
 WYPROJ
+
+Project Extension:
+
+.wyproj
 
 ```
 
