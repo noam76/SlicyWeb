@@ -76,6 +76,7 @@ docs/
 │   └── DECISIONS.md
 │
 ├── 02-architecture/
+│   ├── API_SPEC.md
 │   ├── ARCHITECTURE.md
 │   ├── FILE_STRUCTURE.md
 │   ├── TECH_STACK.md
