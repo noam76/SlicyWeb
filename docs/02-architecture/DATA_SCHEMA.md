@@ -942,7 +942,9 @@ Represents an entire workspace.
 
 &#x20; "bridges": {},
 
-&#x20; "thinWalls": {}
+&#x20; "thinWalls": {},
+
+&#x20; "classification": {}
 
 }
 
