@@ -313,53 +313,29 @@ TBD
 \## Planned Features
 
 
-
 Main Window
-
-
 
 Menu Bar
 
-
-
 Toolbar
-
-
 
 Left Sidebar
 
-
-
 Object List
-
-
 
 Viewport Container
 
-
-
 Property Panels
-
-
 
 Status Bar
 
-
-
 Theme Support
-
-
 
 Dark Theme
 
-
-
 Light Theme
 
-
-
 Panel Resizing
-
 
 
 \---
@@ -372,19 +348,11 @@ Panel Resizing
 
 Application Starts
 
-
-
 Layout Stable
-
-
 
 Responsive Panels
 
-
-
 Persistent Layout
-
-
 
 \---
 
@@ -1098,6 +1066,12 @@ Error Reporting
 
 Performance Improvements
 
+WYPROJ Project Format
+
+Auto Save
+
+Recovery Mode
+
 \---
 
 
@@ -1271,35 +1245,28 @@ Live Status Reporting
 Status:
 
 
-
 Future
-
 
 
 \---
 
 
-
 \## Candidate Features
-
 
 
 Machine Learning Optimization
 
-
-
 Automatic Profile Learning
-
-
 
 Print Success Prediction
 
-
-
 Failure Detection Models
 
+Vision Classification
 
+Filament Tracking
 
+Community Learning
 \---
 
 
@@ -1307,13 +1274,10 @@ Failure Detection Models
 \# BREAKING CHANGES SECTION
 
 
-
 Any breaking changes must be recorded here.
 
 
-
 Template:
-
 
 
 ```text
@@ -1341,7 +1305,6 @@ Migration Instructions:
 
 
 Any deprecated functionality must be recorded here.
-
 
 
 Template:
