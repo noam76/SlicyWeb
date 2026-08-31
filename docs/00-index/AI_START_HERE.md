@@ -111,6 +111,8 @@ Read:
 
 ```text
 docs/02-architecture/ARCHITECTURE.md
+
+docs/02-architecture/API_SPEC.md
 ```
 
 Purpose:
@@ -207,6 +209,14 @@ Read:
 docs/04-ai/AI_ENGINE_SPEC.md
 
 docs/04-ai/RECOMMENDATION_RULES.md
+
+docs/04-ai/OBJECT_CLASSIFICATION_SPEC.md
+
+docs/04-ai/SUPPORT_GENERATION_SPEC.md
+
+docs/04-ai/PRINT_SETTINGS_SPEC.md
+
+docs/04-ai/PRINT_PRESETS_SPEC.md
 ```
 
 ---
@@ -223,10 +233,14 @@ docs/05-profiles/PRINTER_PROFILE_SPEC.md
 
 # MATERIAL TASKS
 
+# PRINT TASKS
+
 Read:
 
 ```text
 docs/05-profiles/MATERIAL_PROFILE_SPEC.md
+
+docs/05-profiles/FILAMENT_SETTINGS_SPEC.md
 ```
 
 ---
@@ -278,6 +292,24 @@ Read:
 ```text
 docs/07-future/PLUGIN_SYSTEM_SPEC.md
 ```
+---
+# REFERENCE TASKS
+
+Read when terminology or project conventions are involved:
+
+docs/09-reference/GLOSSARY.md
+
+docs/09-reference/TERMINOLOGY.md
+
+docs/09-reference/NAMING_CONVENTIONS.md
+
+docs/09-reference/PROJECT_ACRONYMS.md
+
+docs/09-reference/DIRECTORY_PURPOSES.md
+
+docs/09-reference/VERSIONING_POLICY.md
+
+---
 
 ---
 
@@ -401,6 +433,8 @@ DATA_SCHEMA.md
 SYSTEM_RULES.md
 
 DEVELOPMENT_RULES.md
+
+DECISIONS.md
 ```
 
 If conflict exists:
@@ -634,6 +668,22 @@ Understand the project first.
 Modify the project second.
 
 Never modify a system you have not fully understood.
+
+---
+
+---
+
+# DOCUMENTATION VERSION
+
+Documentation Status:
+
+Version 1.x
+
+Core Documentation Complete
+
+Architecture Defined
+
+Ready For Development Phase
 
 ---
 
