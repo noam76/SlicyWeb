@@ -128,30 +128,21 @@ local currency
 
 \# Entity Relationship Overview
 
-
-
 Printer
-
 ↓
-
 Material
-
 ↓
-
+Filament
+↓
 Model
-
 ↓
-
 Analysis
-
 ↓
-
+Classification
+↓
 Recommendation
-
 ↓
-
 Warnings
-
 
 
 \---
@@ -592,18 +583,31 @@ unknown
 
 ```
 
+\--- 
 
+\# Filament Schema
+
+```json
+{
+  "id": "",
+  "brand": "",
+  "name": "",
+  "material": "",
+  "color": "",
+  "diameter": 1.75,
+  "density": 1.24,
+  "recommendedProfile": {},
+  "manufacturerSettings": {}
+}
+```
 
 \---
-
 
 
 \# Project Schema
 
 
-
 Represents an entire workspace.
-
 
 
 ```json
@@ -616,7 +620,13 @@ Represents an entire workspace.
 
 &#x20; "createdAt": "",
 
-&#x20; "updatedAt": ""
+&#x20; "updatedAt": "",
+
+&#x20; "version": "",
+
+&#x20; "scene": "",
+
+&#x20; "settings": ""
 
 }
 
@@ -642,7 +652,11 @@ Represents an entire workspace.
 
 &#x20;   "printer": {},
 
-&#x20;   "material": {}
+&#x20;   "material": {},
+
+&#x20;   "filament": {},
+
+&#x20;   "preset": {}
 
 &#x20; }
 
@@ -909,9 +923,7 @@ Represents an entire workspace.
 \---
 
 
-
 \# Complete Analysis Schema
-
 
 
 ```json
@@ -936,14 +948,25 @@ Represents an entire workspace.
 
 ```
 
+\---
+
+\# Object Classification Schema
+
+```json
+{
+  "classification": {
+    "category": "",
+    "confidenceScore": 0,
+    "detectedFeatures": []
+  }
+}
+```
 
 
 \---
 
 
-
 \# Recommended Settings Schema
-
 
 
 ```json
@@ -974,14 +997,26 @@ Represents an entire workspace.
 
 ```
 
+\---
 
+
+\# # Print Preset Schema
+
+```json
+{
+  "preset": {
+    "name": "",
+    "category": "",
+    "description": "",
+    "settings": {}
+  }
+}
+```
 
 \---
 
 
-
 \# Speed Schema
-
 
 
 ```json
@@ -1074,6 +1109,8 @@ Represents an entire workspace.
 
 &#x20; "recommendedProfile": {
 
+&#x20;   "preset": {},
+
 &#x20;   "quality": {},
 
 &#x20;   "speed": {},
@@ -1084,7 +1121,9 @@ Represents an entire workspace.
 
 &#x20;   "supports": {},
 
-&#x20;   "adhesion": {}
+&#x20;   "adhesion": {},
+
+&#x20;   "confidenceScore": {0}
 
 &#x20; }
 
@@ -1404,10 +1443,15 @@ it
 
 \# Future Extensions
 
-
+{
+  &#x20; "pluginSystem": {},
+  
+  &#x20; "pluginMarketplace": {},
+  
+  &#x20; "communityProfiles": {}
+}
 
 Reserved:
-
 
 
 ```json
