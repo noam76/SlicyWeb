@@ -343,6 +343,7 @@ src/material_database/
 src/model_analysis/
 
 ├── ModelAnalyzer.ts
+├── ClassificationAnalyzer.ts
 ├── GeometryAnalyzer.ts
 ├── PrintabilityAnalyzer.ts
 ├── StabilityAnalyzer.ts
