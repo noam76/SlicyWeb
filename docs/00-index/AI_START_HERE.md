@@ -169,6 +169,8 @@ Read:
 
 ```text
 docs/01-project/CHANGELOG.md
+
+docs/01-project/DECISIONS.md
 ```
 
 Purpose:
@@ -231,17 +233,27 @@ docs/05-profiles/PRINTER_PROFILE_SPEC.md
 
 ---
 
+---
+
 # MATERIAL TASKS
+
+Read:
+
+docs/05-profiles/MATERIAL_PROFILE_SPEC.md
+
+docs/05-profiles/FILAMENT_SETTINGS_SPEC.md
+
+---
+
+---
 
 # PRINT TASKS
 
 Read:
 
-```text
-docs/05-profiles/MATERIAL_PROFILE_SPEC.md
+docs/04-ai/PRINT_SETTINGS_SPEC.md
 
-docs/05-profiles/FILAMENT_SETTINGS_SPEC.md
-```
+docs/04-ai/PRINT_PRESETS_SPEC.md
 
 ---
 
@@ -303,13 +315,13 @@ docs/09-reference/TERMINOLOGY.md
 
 docs/09-reference/NAMING_CONVENTIONS.md
 
+docs/09-reference/ARCHITECTURE_DECISION_MATRIX.md
+
 docs/09-reference/PROJECT_ACRONYMS.md
 
 docs/09-reference/DIRECTORY_PURPOSES.md
 
 docs/09-reference/VERSIONING_POLICY.md
-
----
 
 ---
 
@@ -677,7 +689,7 @@ Never modify a system you have not fully understood.
 
 Documentation Status:
 
-Version 1.x
+Version 1.0
 
 Core Documentation Complete
 
