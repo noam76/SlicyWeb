@@ -408,44 +408,32 @@ Zustand manages:
 
 Application State
 
-
-
 Scene State
-
-
 
 Selected Objects
 
-
-
 Printer Profiles
-
-
 
 Materials
 
+Filaments
 
+Print Presets
 
 Analysis Results
-
-
 
 Recommendations
 
 ```
 
 
-
 \---
-
 
 
 \# Forbidden
 
 
-
 Do not use Zustand for:
-
 
 
 ```text
@@ -453,15 +441,12 @@ Do not use Zustand for:
 Temporary Form Fields
 
 
-
 One-Time UI States
 
 ```
 
 
-
 Use local component state instead.
-
 
 
 \---
@@ -1100,13 +1085,11 @@ Supported:
 
 JSON
 
-
-
 STL
 
-
-
 3MF
+
+WYPROJ
 
 ```
 
@@ -1911,25 +1894,19 @@ Long Sessions
 \# Future Technologies
 
 
-
 Reserved
-
 
 
 Do Not Implement Yet
 
 
-
 \---
-
 
 
 \## G-Code Engine
 
 
-
 Possible:
-
 
 
 ```text
@@ -1939,29 +1916,27 @@ Rust
 ```
 
 
-
 \---
-
 
 
 \## Machine Learning
 
 
-
 Possible:
-
 
 
 ```text
 
 ONNX Runtime
 
+Computer Vision Models
+
+Local Inference
+
 ```
 
 
-
 \---
-
 
 
 \## Cloud Sync
