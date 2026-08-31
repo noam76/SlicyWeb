@@ -90,7 +90,8 @@ docs/
 │   ├── FILE_STRUCTURE.md                = Où se trouve chaque fichier et dossier
 │   ├── IMPORT_EXPORT_SPEC.md            = Gestion des imports et exports de fichiers
 │   ├── TECH_STACK.md                    = Technologies utilisées dans le projet
-│   └── DATA_SCHEMA.md                   = Structure officielle de toutes les données
+│   ├── DATA_SCHEMA.md                   = Structure officielle de toutes les données
+│   └── TECHNICAL_OVERVIEW.md
 │
 ├── 03-development/
 │   ├── SYSTEM_RULES.md                  = Règles globales du projet
