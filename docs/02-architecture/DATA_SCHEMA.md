@@ -403,7 +403,9 @@ unknown
 
 &#x20; "extruder": {},
 
-&#x20; "supportedMaterials": \[]
+&#x20; "supportedMaterials": \[],
+
+&#x20; "supportedFilaments": \[]
 
 }
 
@@ -1454,54 +1456,40 @@ it
 
   &#x20; "filamentTracking": {},
   
-  &#x20; "visionClassification": {}
-}
+  &#x20; "visionClassification": {},
 
-Reserved:
+  &#x20; "gcode": {},
 
+  &#x20; "multimaterial": {},
 
-```json
+  &#x20; "camera": {},
 
-{
+  &#x20; "cloud": {},
 
-&#x20; "gcode": {},
+  &#x20; "remotePrinter": {},
 
-&#x20; "multimaterial": {},
+  &#x20; "telemetry": {},
 
-&#x20; "camera": {},
-
-&#x20; "cloud": {},
-
-&#x20; "remotePrinter": {},
-
-&#x20; "telemetry": {},
-
-&#x20; "machineLearning": {}
+  &#x20; "machineLearning": {}
 
 }
 
 ```
 
 
-
 \---
-
 
 
 \# Schema Compatibility Rules
 
 
-
 Existing fields must never be removed.
-
 
 
 New fields should be added whenever possible.
 
 
-
 Breaking schema changes require:
-
 
 
 \- PROJECT\_SPEC update
