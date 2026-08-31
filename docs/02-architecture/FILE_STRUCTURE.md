@@ -64,7 +64,7 @@ wichy/
 docs/
 
 ├── 00-index/AI_START_HERE.md
-│   ├── API_SPEC.md
+│   ├── API_START_HERE.md
 │   └── PROJECT_DOCUMENTATION_INDEX.md
 │
 ├── 01-project/
