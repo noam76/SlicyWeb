@@ -175,7 +175,9 @@ docs/01-project/DECISIONS.md
 
 Purpose:
 
-Identify existing versions and changes.
+Identify existing versions,
+historical changes,
+and architectural decisions.
 
 ---
 
