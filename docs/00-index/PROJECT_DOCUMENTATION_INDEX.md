@@ -1,1188 +1,895 @@
-\# AI SMART SLICER
+# WICHY
+# PROJECT DOCUMENTATION INDEX
 
-\# PROJECT DOCUMENTATION INDEX
-
-
-
-Version: 1.0.0
-
-
+Version: 2.0.0
 
 Status: Active
 
+---
 
-
-\---
-
-
-
-\# Purpose
-
-
+# Purpose
 
 This document is the master index of all project documentation.
 
-
-
 It provides:
 
+- Documentation overview
+- File responsibilities
+- Reading guidance
+- Development references
+- Navigation across the project
 
+All developers, contributors, and AI systems should consult this document before working on the project.
 
-\- Quick navigation
+---
 
-\- Documentation overview
+# Documentation Structure
 
-\- Responsibilities of each document
+```text
+docs/
 
-\- Development guidance
+00-index/
+01-project/
+02-architecture/
+03-development/
+04-ai/
+05-profiles/
+06-quality/
+07-future/
+08-user-interface/
+09-reference/
+```
 
+---
 
+# 00-INDEX
 
-All developers and AI assistants should consult this file first.
+---
 
-
-
-\---
-
-
-
-\# Documentation Overview
-
-
-
-Total Documents: 23
-
-
-
-\---
-
-
-
-\# 01. PROJECT\_SPEC.md
-
-
+## AI_START_HERE.md
 
 Purpose:
 
+Primary entry point for AI systems.
 
+Contains:
+
+- Reading order
+- AI rules
+- Documentation priorities
+- Modification policies
+
+Importance:
+
+★★★★★
+
+---
+
+## PROJECT_DOCUMENTATION_INDEX.md
+
+Purpose:
+
+Master documentation index.
+
+Contains:
+
+- Documentation map
+- File responsibilities
+- Reading guidance
+
+Importance:
+
+★★★★★
+
+---
+
+# 01-PROJECT
+
+---
+
+## PROJECT_SPEC.md
+
+Purpose:
 
 Main project specification.
 
+Contains:
 
-
-Defines:
-
-
-
-\- Project vision
-
-\- Objectives
-
-\- Features
-
-\- Development phases
-
-\- Functional requirements
-
-\- Long-term goals
-
-
+- Vision
+- Requirements
+- Objectives
+- Scope
 
 Importance:
 
-
-
 ★★★★★
 
+---
 
-
-Must be read first.
-
-
-
-\---
-
-
-
-\# 02. SYSTEM\_RULES.md
-
-
+## PROJECT_DESCRIPTION.md
 
 Purpose:
 
-
-
-Defines AI and development behavior.
-
-
+Complete project presentation.
 
 Contains:
 
-
-
-\- Project rules
-
-\- Token optimization rules
-
-\- Compatibility rules
-
-\- Development principles
-
-
+- Mission
+- Product vision
+- Core capabilities
+- Long-term objectives
 
 Importance:
 
-
-
 ★★★★★
 
+---
 
-
-Mandatory before modifications.
-
-
-
-\---
-
-
-
-\# 03. DATA\_SCHEMA.md
-
-
+## ROADMAP.md
 
 Purpose:
 
-
-
-Defines all project data structures.
-
-
+Development roadmap.
 
 Contains:
 
-
-
-\- JSON schemas
-
-\- Data formats
-
-\- Data relationships
-
-\- Validation rules
-
-
+- Development phases
+- Milestones
+- Priorities
 
 Importance:
 
-
-
 ★★★★★
 
+---
 
-
-Source of truth for all data.
-
-
-
-\---
-
-
-
-\# 04. ARCHITECTURE.md
-
-
+## PHASES_IMPLEMENTATION_PLAN.md
 
 Purpose:
 
-
-
-Defines system architecture.
-
-
+Implementation order.
 
 Contains:
 
-
-
-\- Modules
-
-\- Services
-
-\- Layers
-
-\- Dependencies
-
-\- Communication flow
-
-
+- Phase breakdown
+- Deliverables
+- Validation steps
 
 Importance:
 
-
-
 ★★★★★
 
+---
 
-
-Required before creating modules.
-
-
-
-\---
-
-
-
-\# 05. ROADMAP.md
-
-
+## CHANGELOG.md
 
 Purpose:
-
-
-
-Defines project timeline.
-
-
-
-Contains:
-
-
-
-\- Development phases
-
-\- Milestones
-
-\- Deliverables
-
-\- Validation requirements
-
-
-
-Importance:
-
-
-
-★★★★★
-
-
-
-Project progression reference.
-
-
-
-\---
-
-
-
-\# 06. DEVELOPMENT\_RULES.md
-
-
-
-Purpose:
-
-
-
-Defines development methodology.
-
-
-
-Contains:
-
-
-
-\- Coding rules
-
-\- Update strategy
-
-\- Patch-first policy
-
-\- Refactoring rules
-
-
-
-Importance:
-
-
-
-★★★★★
-
-
-
-Mandatory during implementation.
-
-
-
-\---
-
-
-
-\# 07. CHANGELOG.md
-
-
-
-Purpose:
-
-
 
 Tracks project evolution.
 
-
-
 Contains:
 
-
-
-\- Releases
-
-\- New features
-
-\- Bug fixes
-
-\- Breaking changes
-
-
+- Releases
+- Fixes
+- New features
+- Breaking changes
 
 Importance:
-
-
 
 ★★★★☆
 
+---
 
-
-Project history reference.
-
-
-
-\---
-
-
-
-\# 08. GUI\_SPEC.md
-
-
+## DECISIONS.md
 
 Purpose:
 
-
-
-Defines the complete graphical interface.
-
-
+Architecture Decision Records.
 
 Contains:
 
-
-
-\- Layout
-
-\- Panels
-
-\- Menus
-
-\- Controls
-
-\- User interactions
-
-
+- Technical choices
+- Design decisions
+- Decision rationale
 
 Importance:
 
-
-
 ★★★★★
 
+---
 
+# 02-ARCHITECTURE
 
-Reference for all UI development.
+---
 
-
-
-\---
-
-
-
-\# 09. TECH\_STACK.md
-
-
+## ARCHITECTURE.md
 
 Purpose:
 
-
-
-Defines project technologies.
-
-
+System architecture.
 
 Contains:
 
-
-
-\- React
-
-\- Electron
-
-\- Three.js
-
-\- TypeScript
-
-\- Zustand
-
-\- Testing stack
-
-
+- Modules
+- Services
+- Layers
+- Dependencies
 
 Importance:
 
+★★★★★
 
+---
+
+## FILE_STRUCTURE.md
+
+Purpose:
+
+Official project structure.
+
+Contains:
+
+- Directories
+- Module locations
+- File organization
+
+Importance:
 
 ★★★★★
 
+---
 
+## TECH_STACK.md
+
+Purpose:
 
 Technology reference.
 
-
-
-\---
-
-
-
-\# 10. FILE\_STRUCTURE.md
-
-
-
-Purpose:
-
-
-
-Defines the directory structure.
-
-
-
 Contains:
 
-
-
-\- Folder organization
-
-\- Module locations
-
-\- Project hierarchy
-
-
+- React
+- Electron
+- Three.js
+- TypeScript
+- Zustand
+- Tailwind
 
 Importance:
-
-
 
 ★★★★★
 
+---
 
-
-Prevents project disorder.
-
-
-
-\---
-
-
-
-\# 11. AI\_ENGINE\_SPEC.md
-
-
+## DATA_SCHEMA.md
 
 Purpose:
 
-
-
-Defines AI engine behavior.
-
-
+Data source of truth.
 
 Contains:
 
-
-
-\- Analysis pipeline
-
-\- Scoring
-
-\- Validation
-
-\- Recommendation workflow
-
-
+- Schemas
+- Entities
+- Relationships
+- Validation rules
 
 Importance:
-
-
 
 ★★★★★
 
+---
 
-
-Core project intelligence.
-
-
-
-\---
-
-
-
-\# 12. PRINTER\_PROFILE\_SPEC.md
-
-
+## API_SPEC.md
 
 Purpose:
 
-
-
-Defines printer profile format.
-
-
+Internal API architecture.
 
 Contains:
 
-
-
-\- Hardware
-
-\- Motion limits
-
-\- Thermal limits
-
-\- Features
-
-
+- Services
+- Events
+- Repositories
+- Communication contracts
 
 Importance:
-
-
 
 ★★★★★
 
+---
 
+# 03-DEVELOPMENT
 
-Mandatory for printer profiles.
+---
 
-
-
-\---
-
-
-
-\# 13. MATERIAL\_PROFILE\_SPEC.md
-
-
+## SYSTEM_RULES.md
 
 Purpose:
 
-
-
-Defines material profile format.
-
-
+Global project rules.
 
 Contains:
 
-
-
-\- Temperatures
-
-\- Cooling
-
-\- Mechanical properties
-
-\- Risks
-
-
+- Development constraints
+- AI behavior
+- Project policies
 
 Importance:
-
-
 
 ★★★★★
 
+---
 
-
-Mandatory for material profiles.
-
-
-
-\---
-
-
-
-\# 14. TEST\_PLAN.md
-
-
+## DEVELOPMENT_RULES.md
 
 Purpose:
 
-
-
-Defines testing requirements.
-
-
+Coding methodology.
 
 Contains:
 
-
-
-\- Unit tests
-
-\- Integration tests
-
-\- E2E tests
-
-\- Performance tests
-
-
+- Refactoring rules
+- Patch-first policy
+- Development standards
 
 Importance:
-
-
 
 ★★★★★
 
+---
 
-
-Quality assurance reference.
-
-
-
-\---
-
-
-
-\# 15. API\_SPEC.md
-
-
+## DEVELOPMENT_WORKFLOW.md
 
 Purpose:
 
-
-
-Defines all APIs.
-
-
+Development lifecycle.
 
 Contains:
 
-
-
-\- Internal APIs
-
-\- Repository APIs
-
-\- Project APIs
-
-\- Event APIs
-
-
+- Analysis
+- Implementation
+- Validation
+- Release flow
 
 Importance:
 
+★★★★★
 
+---
+
+## USER_SETTINGS_SPEC.md
+
+Purpose:
+
+User preferences specification.
+
+Contains:
+
+- Themes
+- Language
+- Application settings
+
+Importance:
 
 ★★★★☆
 
+---
 
-
-Communication reference.
-
-
-
-\---
-
-
-
-\# 16. SECURITY\_SPEC.md
-
-
+## ERROR_CODES_SPEC.md
 
 Purpose:
 
-
-
-Defines security requirements.
-
-
+Application error definitions.
 
 Contains:
 
-
-
-\- Import validation
-
-\- Repository validation
-
-\- Cache protection
-
-\- Data integrity
-
-
+- Error IDs
+- Categories
+- Severity levels
 
 Importance:
-
-
-
-★★★★★
-
-
-
-Security reference.
-
-
-
-\---
-
-
-
-\# 17. RECOMMENDATION\_RULES.md
-
-
-
-Purpose:
-
-
-
-Defines AI recommendation rules.
-
-
-
-Contains:
-
-
-
-\- Material rules
-
-\- Printer rules
-
-\- Support rules
-
-\- Optimization rules
-
-
-
-Importance:
-
-
-
-★★★★★
-
-
-
-Recommendation logic reference.
-
-
-
-\---
-
-
-
-\# 18. USER\_SETTINGS\_SPEC.md
-
-
-
-Purpose:
-
-
-
-Defines user preferences.
-
-
-
-Contains:
-
-
-
-\- Themes
-
-\- Language
-
-\- Viewport settings
-
-\- AI settings
-
-
-
-Importance:
-
-
 
 ★★★★☆
 
+---
 
-
-Settings management reference.
-
-
-
-\---
-
-
-
-\# 19. PERFORMANCE\_SPEC.md
-
-
+## UNDO_REDO_SPEC.md
 
 Purpose:
 
-
-
-Defines performance objectives.
-
-
+Undo / Redo architecture.
 
 Contains:
 
-
-
-\- FPS targets
-
-\- Memory limits
-
-\- Loading times
-
-\- Optimization strategy
-
-
+- History stack
+- Transactions
+- Recovery logic
 
 Importance:
-
-
 
 ★★★★★
 
+---
 
+# 04-AI
 
-Performance reference.
+---
 
-
-
-\---
-
-
-
-\# 20. ERROR\_CODES\_SPEC.md
-
-
+## AI_ENGINE_SPEC.md
 
 Purpose:
 
-
-
-Defines project error codes.
-
-
+Core AI engine specification.
 
 Contains:
 
-
-
-\- Import errors
-
-\- Analysis errors
-
-\- Recommendation errors
-
-\- Security errors
-
-
+- Analysis workflow
+- Recommendation process
+- Validation logic
 
 Importance:
 
+★★★★★
 
+---
+
+## RECOMMENDATION_RULES.md
+
+Purpose:
+
+Recommendation logic.
+
+Contains:
+
+- Material rules
+- Printer rules
+- Geometry rules
+
+Importance:
+
+★★★★★
+
+---
+
+## OBJECT_CLASSIFICATION_SPEC.md
+
+Purpose:
+
+Model classification system.
+
+Contains:
+
+- Categories
+- Confidence scoring
+- Classification workflow
+
+Importance:
+
+★★★★★
+
+---
+
+## SUPPORT_GENERATION_SPEC.md
+
+Purpose:
+
+Support strategy system.
+
+Contains:
+
+- Support generation rules
+- Overhang logic
+- Support selection
+
+Importance:
+
+★★★★★
+
+---
+
+## PRINT_SETTINGS_SPEC.md
+
+Purpose:
+
+Print settings definition.
+
+Contains:
+
+- Layer settings
+- Speed settings
+- Cooling
+- Retraction
+
+Importance:
+
+★★★★★
+
+---
+
+## PRINT_PRESETS_SPEC.md
+
+Purpose:
+
+Preset management.
+
+Contains:
+
+- Draft
+- Balanced
+- Quality
+- Miniature
+- Mechanical
+
+Importance:
+
+★★★★★
+
+---
+
+# 05-PROFILES
+
+---
+
+## PRINTER_PROFILE_SPEC.md
+
+Purpose:
+
+Printer profile structure.
+
+Contains:
+
+- Hardware limits
+- Motion limits
+- Temperature limits
+
+Importance:
+
+★★★★★
+
+---
+
+## MATERIAL_PROFILE_SPEC.md
+
+Purpose:
+
+Material profile definition.
+
+Contains:
+
+- Material properties
+- Thermal behavior
+- Cooling requirements
+
+Importance:
+
+★★★★★
+
+---
+
+## FILAMENT_SETTINGS_SPEC.md
+
+Purpose:
+
+Manufacturer filament profiles.
+
+Contains:
+
+- Filament settings
+- Brand-specific tuning
+- Cost information
+
+Importance:
+
+★★★★★
+
+---
+
+# 06-QUALITY
+
+---
+
+## TEST_PLAN.md
+
+Purpose:
+
+Testing strategy.
+
+Contains:
+
+- Unit tests
+- Integration tests
+- E2E tests
+
+Importance:
+
+★★★★★
+
+---
+
+## SECURITY_SPEC.md
+
+Purpose:
+
+Security requirements.
+
+Contains:
+
+- Data validation
+- Import validation
+- Protection rules
+
+Importance:
+
+★★★★★
+
+---
+
+## PERFORMANCE_SPEC.md
+
+Purpose:
+
+Performance targets.
+
+Contains:
+
+- FPS goals
+- Memory limits
+- Optimization requirements
+
+Importance:
+
+★★★★★
+
+---
+
+# 07-FUTURE
+
+---
+
+## GCODE_ENGINE_SPEC.md
+
+Purpose:
+
+Future slicing engine.
+
+Contains:
+
+- Toolpaths
+- Layers
+- Export workflow
+
+Importance:
+
+★★★★★
+
+---
+
+## PLUGIN_SYSTEM_SPEC.md
+
+Purpose:
+
+Plugin platform architecture.
+
+Contains:
+
+- APIs
+- Permissions
+- Lifecycle
+
+Importance:
 
 ★★★★☆
 
+---
 
+# 08-USER-INTERFACE
 
-Diagnostics reference.
+---
 
-
-
-\---
-
-
-
-\# 21. GCODE\_ENGINE\_SPEC.md
-
-
+## GUI_SPEC.md
 
 Purpose:
 
-
-
-Defines future G-Code engine.
-
-
+User interface specification.
 
 Contains:
 
-
-
-\- Slicing workflow
-
-\- Toolpath generation
-
-\- Export process
-
-\- Validation rules
-
-
+- Layout
+- Panels
+- Menus
+- Toolbars
+- Status bar
 
 Importance:
-
-
 
 ★★★★★
 
+---
 
+# 09-REFERENCE
 
-Future slicing engine reference.
+---
 
-
-
-\---
-
-
-
-\# 22. PLUGIN\_SYSTEM\_SPEC.md
-
-
+## GLOSSARY.md
 
 Purpose:
 
-
-
-Defines plugin architecture.
-
-
-
-Contains:
-
-
-
-\- Plugin lifecycle
-
-\- Permissions
-
-\- APIs
-
-\- Security
-
-
+Project terminology definitions.
 
 Importance:
-
-
 
 ★★★★☆
 
+---
 
-
-Future extensibility reference.
-
-
-
-\---
-
-
-
-\# 23. DECISIONS.md
-
-
+## TERMINOLOGY.md
 
 Purpose:
 
-
-
-Stores architectural decisions.
-
-
-
-Contains:
-
-
-
-\- ADR records
-
-\- Technology choices
-
-\- Design decisions
-
-\- Project rationale
-
-
+Official project vocabulary.
 
 Importance:
 
+★★★★☆
 
+---
+
+## NAMING_CONVENTIONS.md
+
+Purpose:
+
+Naming standards.
+
+Importance:
 
 ★★★★★
 
+---
 
+## ARCHITECTURE_DECISION_MATRIX.md
 
-Long-term decision history.
+Purpose:
 
+Technology comparison matrix.
 
+Importance:
 
-\---
+★★★★☆
 
+---
 
+## PROJECT_ACRONYMS.md
 
-\# Recommended Reading Order
+Purpose:
 
+Official acronyms.
 
+Importance:
 
-For New Developers:
+★★★★☆
 
+---
 
+## DIRECTORY_PURPOSES.md
 
-1\. PROJECT\_SPEC.md
+Purpose:
 
-2\. SYSTEM\_RULES.md
+Directory responsibilities.
 
-3\. ARCHITECTURE.md
+Importance:
 
-4\. FILE\_STRUCTURE.md
+★★★★☆
 
-5\. ROADMAP.md
+---
 
-6\. TECH\_STACK.md
+## VERSIONING_POLICY.md
 
+Purpose:
 
+Version management policy.
 
-\---
+Importance:
 
+★★★★★
 
+---
 
-\# Recommended Reading Order For AI
-
-
-
-Before Any Modification:
-
-
-
-1\. PROJECT\_SPEC.md
-
-2\. SYSTEM\_RULES.md
-
-3\. ARCHITECTURE.md
-
-4\. FILE\_STRUCTURE.md
-
-5\. DATA\_SCHEMA.md
-
-6\. DEVELOPMENT\_RULES.md
-
-7\. CHANGELOG.md
-
-
-
-\---
-
-
-
-\# Phase 0 Documents
-
-
-
-Required Before Coding:
-
-
-
-✅ PROJECT\_SPEC.md
-
-
-
-✅ SYSTEM\_RULES.md
-
-
-
-✅ DATA\_SCHEMA.md
-
-
-
-✅ ARCHITECTURE.md
-
-
-
-✅ ROADMAP.md
-
-
-
-✅ DEVELOPMENT\_RULES.md
-
-
-
-✅ FILE\_STRUCTURE.md
-
-
-
-✅ TECH\_STACK.md
-
-
-
-\---
-
-
-
-\# Core System Documents
-
-
-
-Critical Documents:
-
-
+# Recommended Reading Order For Developers
 
 ```text
+1. PROJECT_SPEC.md
 
-PROJECT\_SPEC.md
+2. PROJECT_DESCRIPTION.md
+
+3. SYSTEM_RULES.md
+
+4. ARCHITECTURE.md
+
+5. FILE_STRUCTURE.md
+
+6. DATA_SCHEMA.md
+
+7. TECH_STACK.md
+
+8. DEVELOPMENT_RULES.md
+
+9. ROADMAP.md
+
+10. PHASES_IMPLEMENTATION_PLAN.md
+```
+
+---
+
+# Recommended Reading Order For AI
+
+```text
+1. AI_START_HERE.md
+
+2. PROJECT_DOCUMENTATION_INDEX.md
+
+3. PROJECT_SPEC.md
+
+4. SYSTEM_RULES.md
+
+5. ARCHITECTURE.md
+
+6. FILE_STRUCTURE.md
+
+7. DATA_SCHEMA.md
+
+8. DEVELOPMENT_RULES.md
+
+9. CHANGELOG.md
+
+10. DECISIONS.md
+```
+
+---
+
+# Core System Documents
+
+The highest authority documents are:
+
+```text
+PROJECT_SPEC.md
 
 ARCHITECTURE.md
 
-DATA\_SCHEMA.md
+DATA_SCHEMA.md
 
-AI\_ENGINE\_SPEC.md
+SYSTEM_RULES.md
 
-FILE\_STRUCTURE.md
+DEVELOPMENT_RULES.md
 
+DECISIONS.md
 ```
 
+These files define the foundation of the project.
 
+---
 
-These documents define the foundation of the project.
+# Documentation Status
 
+```text
+Documentation Complete
 
+Architecture Defined
 
-\---
+Reference Documents Complete
 
+Ready For Development
+```
 
+---
 
-\# Golden Rule
-
-
+# Golden Rule
 
 Before modifying any part of the project:
 
-
-
 Read the relevant specification first.
-
-
 
 Documentation is the source of truth.
 
+---
 
-
-\---
-
-
-
-\# End Of Document
-
+# End Of Document
