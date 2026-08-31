@@ -915,7 +915,13 @@ Manipulate models.
 
 \## Create
 
+\### Undo System
 
+\### Redo System
+
+\### History Stack
+
+\### Transaction System
 
 \### Move
 
@@ -995,6 +1001,11 @@ Independent
 
 \### Validation
 
+Undo Works
+
+Redo Works
+
+Multi-Step History Works
 
 
 ```text
@@ -1119,7 +1130,9 @@ Manage materials.
 
 \## Create
 
+\### Filament Profiles
 
+\### Manufacturer Filaments
 
 \### Material Database
 
@@ -1170,6 +1183,12 @@ Filament Profiles Valid
 
 
 \# MODEL ANALYSIS
+
+\### Object Classification
+
+\### Category Detection
+
+\### Confidence Score
 
 
 
