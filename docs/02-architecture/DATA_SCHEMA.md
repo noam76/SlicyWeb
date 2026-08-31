@@ -626,9 +626,9 @@ Represents an entire workspace.
 
 &#x20; "version": "",
 
-&#x20; "scene": "",
+&#x20;   "scene": {},
 
-&#x20; "settings": ""
+&#x20;   "settings": {}
 
 }
 
@@ -1366,13 +1366,10 @@ critical
 ```
 
 
-
 \---
 
 
-
 \# User Preferences Schema
-
 
 
 ```json
@@ -1446,6 +1443,8 @@ it
 
 
 \# Future Extensions
+
+```json
 
 {
   &#x20; "pluginSystem": {},
