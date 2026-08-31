@@ -1680,6 +1680,8 @@ A phase may only begin when:
 - Tests Passing
 - Previous Phase Stable
 
+\---
+
 \# DEVELOPMENT RULE
 
 
