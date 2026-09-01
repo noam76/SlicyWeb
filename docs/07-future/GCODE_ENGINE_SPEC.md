@@ -34,29 +34,21 @@ The goal is to transform:
 
 ```text
 
-3D Models
+Model
 
-
-
-\+
-
-
++
 
 Printer Profile
 
-
-
-\+
-
-
++
 
 Material Profile
 
++
 
+Filament Profile
 
-\+
-
-
++
 
 Recommended Settings
 
@@ -192,36 +184,23 @@ Export
 
 Slice Generator
 
-
-
 Toolpath Generator
-
-
 
 Wall Generator
 
-
-
 Infill Generator
-
-
 
 Support Generator
 
-
-
 Travel Optimizer
-
-
 
 Preview Renderer
 
-
-
 Export Engine
 
-```
+Validation Engine
 
+```
 
 
 \---
@@ -231,101 +210,59 @@ Export Engine
 \# G-Code Workflow
 
 
-
 ```text
 
 Load Model
 
-
-
 ↓
-
-
 
 Analyze Model
 
-
-
 ↓
-
-
 
 Generate Layers
 
-
-
 ↓
-
-
 
 Generate Walls
 
-
-
 ↓
-
-
 
 Generate Top/Bottom
 
-
-
 ↓
-
-
 
 Generate Infill
 
-
-
 ↓
-
-
 
 Generate Supports
 
-
-
 ↓
-
-
 
 Generate Travels
 
-
-
 ↓
-
-
 
 Validate
 
-
-
 ↓
-
-
 
 Export
 
 ```
 
 
-
 \---
-
 
 
 \# Layer Generator
 
 
-
 Purpose:
 
 
-
 Convert model into layers.
-
 
 
 \---
@@ -335,21 +272,15 @@ Convert model into layers.
 \# Inputs
 
 
-
 ```text
 
 Layer Height
 
-
-
 Adaptive Layer Settings
-
-
 
 Model Geometry
 
 ```
-
 
 
 \---
@@ -359,7 +290,6 @@ Model Geometry
 \# Outputs
 
 
-
 ```text
 
 Layer Stack
@@ -367,33 +297,24 @@ Layer Stack
 ```
 
 
-
 \---
-
 
 
 \# Layer Height Rules
 
 
-
 Use:
-
 
 
 ```text
 
 AI Recommendation
 
-
-
 or
-
-
 
 User Override
 
 ```
-
 
 
 \---
@@ -403,28 +324,19 @@ User Override
 \# Adaptive Layers
 
 
-
 Future Feature
 
 
-
 Allows:
-
 
 
 ```text
 
 Small Layer Height
 
-
-
 on detailed areas
 
-
-
 Larger Layer Height
-
-
 
 on simple areas
 
@@ -884,11 +796,9 @@ Configured Threshold
 
 Material
 
-
+Filament
 
 Printer
-
-
 
 AI Recommendation
 
@@ -1156,7 +1066,7 @@ Collision Risk
 
 
 
-\# Cooling Planner
+\# Cooling Planner Inputs
 
 
 
@@ -1175,20 +1085,15 @@ Plan cooling strategies.
 \# Inputs
 
 
-
 ```text
 
 Material
 
-
+Filament
 
 Layer Time
 
-
-
 Bridges
-
-
 
 Small Features
 
@@ -1592,25 +1497,17 @@ Generated G-Code should contain:
 
 Printer
 
-
-
 Material
-
-
 
 Date
 
-
-
 Layer Height
-
-
 
 Estimated Time
 
-
-
 Estimated Material
+
+Filament
 
 ```
 
