@@ -459,10 +459,23 @@ Material Caching
 ```
 
 
-
 \---
 
+# Filament Database Unit Tests
 
+Test:
+
+```text
+Filament Loading
+
+Filament Validation
+
+Filament Search
+
+Filament Caching
+```
+
+\---
 
 \# Analysis Engine Unit Tests
 
@@ -476,29 +489,21 @@ Test:
 
 Bounding Box Calculation
 
-
-
 Volume Calculation
-
-
 
 Surface Calculation
 
-
-
 Overhang Detection
-
-
 
 Bridge Detection
 
-
-
 Thin Wall Detection
 
-
-
 Stability Scoring
+
+Object Classification
+
+Confidence Scoring
 
 ```
 
@@ -520,25 +525,21 @@ Test:
 
 Layer Height Selection
 
-
-
 Wall Selection
-
-
 
 Infill Selection
 
-
-
 Support Generation Rules
-
-
 
 Cooling Rules
 
-
-
 Retraction Rules
+
+Print Preset Selection
+
+Confidence Calculation
+
+Warning Generation
 
 ```
 
@@ -776,19 +777,11 @@ Process
 
 Material Changed
 
-
-
 ↓
-
-
 
 Validation Triggered
 
-
-
 ↓
-
-
 
 Recommendations Updated
 
@@ -802,7 +795,25 @@ Must succeed.
 
 \---
 
+# Filament To Recommendation
 
+Process
+
+```text
+Filament Selected
+
+↓
+
+Validation Triggered
+
+↓
+
+Recommendations Updated
+```
+
+Must succeed.
+
+\---
 
 \# Database To Cache
 
@@ -816,19 +827,11 @@ Verify:
 
 Data Loaded
 
-
-
 ↓
-
-
 
 Cached
 
-
-
 ↓
-
-
 
 Reloaded Successfully
 
@@ -851,9 +854,7 @@ Purpose:
 Test complete workflows.
 
 
-
 \---
-
 
 
 \# Workflow 1
@@ -863,28 +864,19 @@ Test complete workflows.
 Import STL
 
 
-
 \---
 
 
-
 Expected
-
 
 
 ```text
 
 Import Successful
 
-
-
 Visible On Plate
 
-
-
 Selectable
-
-
 
 Transformable
 
@@ -895,14 +887,9 @@ Transformable
 \---
 
 
-
 \# Workflow 2
 
-
-
 Import Multiple Files
-
-
 
 \---
 
@@ -974,7 +961,23 @@ Select Material
 
 \---
 
+# Workflow 5
 
+Select Filament
+
+---
+
+Expected
+
+```text
+Filament Data Loaded
+
+Recommendations Updated
+
+Confidence Updated
+```
+
+\---
 
 Expected
 
@@ -996,7 +999,7 @@ Recommendations Updated
 
 
 
-\# Workflow 5
+\# Workflow 6
 
 
 
@@ -1032,7 +1035,7 @@ Scores Produced
 
 
 
-\# Workflow 6
+\# Workflow 7
 
 
 
@@ -1087,46 +1090,29 @@ Validate complete user behavior.
 \# E2E Scenario 1
 
 
-
 New Project
 
-
-
 ↓
-
-
 
 Import STL
 
-
-
 ↓
-
-
 
 Select Printer
 
-
-
 ↓
-
-
 
 Select Material
 
-
-
 ↓
 
+Select Filament
 
+↓
 
 Generate Recommendation
 
-
-
 ↓
-
-
 
 Save Project
 
@@ -1143,41 +1129,23 @@ Must succeed.
 \# E2E Scenario 2
 
 
-
 Import Multiple Models
 
-
-
 ↓
-
-
 
 Arrange Models
 
-
-
 ↓
-
-
 
 Analyze
 
-
-
 ↓
-
-
 
 Optimize
 
-
-
 ↓
 
-
-
 Save
-
 
 
 Must succeed.
@@ -1191,34 +1159,23 @@ Must succeed.
 \# E2E Scenario 3
 
 
-
 Load Existing Project
 
-
-
 ↓
-
-
 
 Restore Scene
 
-
-
 ↓
-
-
 
 Restore Settings
 
-
-
 ↓
-
-
 
 Restore Recommendations
 
+↓
 
+Restore Filament Selection
 
 Must succeed.
 
@@ -1504,22 +1461,21 @@ Import
 
 Transformations
 
-
-
 Analysis
-
-
 
 Recommendations
 
-
-
 Saving
-
-
 
 Loading
 
+Filaments
+
+Print Presets
+
+Auto Save
+
+Recovery
 ```
 
 
@@ -1556,15 +1512,9 @@ Test
 
 Valid STL
 
-
-
 Corrupted STL
 
-
-
 Truncated STL
-
-
 
 Malformed STL
 
@@ -1579,24 +1529,16 @@ Malformed STL
 \# 3MF Validation
 
 
-
 Test
-
 
 
 ```text
 
 Valid 3MF
 
-
-
 Corrupted 3MF
 
-
-
 Missing Files
-
-
 
 Invalid Metadata
 
@@ -1620,15 +1562,9 @@ Test
 
 Missing Fields
 
-
-
 Invalid Values
 
-
-
 Negative Values
-
-
 
 Corrupted JSON
 
@@ -1643,9 +1579,7 @@ Corrupted JSON
 \# Material Profile Validation
 
 
-
 Test
-
 
 
 ```text
@@ -1666,29 +1600,35 @@ Invalid Schema
 
 \---
 
+# Filament Profile Validation
 
+Test
+
+```text
+Missing Fields
+
+Invalid Temperatures
+
+Invalid Schema
+
+Corrupted JSON
+```
+
+---
 
 \# Repository Security
 
 
-
 Verify
-
 
 
 ```text
 
 Invalid Response
 
-
-
 Missing Data
 
-
-
 Unexpected Data
-
-
 
 Corrupted Cache
 
@@ -1816,21 +1756,29 @@ Verify
 
 Complete Data
 
-
-
 High Confidence
 
-
-
 Missing Data
-
-
 
 Lower Confidence
 
 ```
 
+# Classification Test
 
+Verify
+
+```text
+Known Object
+
+High Classification Confidence
+
+Unknown Object
+
+Lower Classification Confidence
+```
+
+---
 
 \---
 
@@ -2108,17 +2056,13 @@ A release may proceed only if:
 
 All Critical Tests Pass
 
-
-
 No Critical Bugs
-
-
 
 No Data Loss
 
-
-
 No Security Issues
+
+No Invalid AI Recommendations
 
 ```
 
