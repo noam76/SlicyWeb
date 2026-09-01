@@ -142,6 +142,10 @@ Classification
 ↓
 Recommendation
 ↓
+Recommended Profile
+↓
+Print Preset
+↓
 Warnings
 
 
@@ -599,7 +603,8 @@ unknown
   "diameter": 1.75,
   "density": 1.24,
   "recommendedProfile": {},
-  "manufacturerSettings": {}
+  "manufacturerSettings": {},
+   "pricePerKg": 0
 }
 ```
 
@@ -628,7 +633,11 @@ Represents an entire workspace.
 
 &#x20;   "scene": {},
 
-&#x20;   "settings": {}
+&#x20;   "settings": {},
+
+&#x20;   "recommendations": {},
+
+&#x20;   "preset": {}
 
 }
 
