@@ -19,7 +19,7 @@ The system combines deterministic rule-based AI, geometry analytics, and continu
 ## 2. Core Feature Matrix
 
 ### 2.1 3D Workspace & Geometry Engine
-- **Supported Formats:** STL, 3MF (Current) | STEP, WYPROJ, OBJ, AMF (Roadmap).
+- **Supported Formats:** STL, 3MF, WYPROJ (Current) | STEP, OBJ, AMF (Roadmap)
 - **Interactive Scene (Three.js):** Custom build plate visualization, dynamic grid adaptivity, spatial axis indicators, multi-object handling.
 - **Object Manipulation:** Precise Translation, Rotation, Uniform/Non-Uniform Scaling (with specialized Scale Gizmo), Duplication with automatic spacing, and Align-to-Bed.
 - **Real-Time Collision Detection:** Instantaneous bounding-box and mesh intersection checks with visual status feedback (grayscale tinting during collision).
