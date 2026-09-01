@@ -19,7 +19,7 @@ The system combines deterministic rule-based AI, geometry analytics, and continu
 ## 2. Core Feature Matrix
 
 ### 2.1 3D Workspace & Geometry Engine
-- **Supported Formats:** STL, 3MF (Current) | STEP, OBJ, AMF (Roadmap).
+- **Supported Formats:** STL, 3MF (Current) | STEP, WYPROJ, OBJ, AMF (Roadmap).
 - **Interactive Scene (Three.js):** Custom build plate visualization, dynamic grid adaptivity, spatial axis indicators, multi-object handling.
 - **Object Manipulation:** Precise Translation, Rotation, Uniform/Non-Uniform Scaling (with specialized Scale Gizmo), Duplication with automatic spacing, and Align-to-Bed.
 - **Real-Time Collision Detection:** Instantaneous bounding-box and mesh intersection checks with visual status feedback (grayscale tinting during collision).
@@ -39,10 +39,12 @@ The system combines deterministic rule-based AI, geometry analytics, and continu
   - *Vases & Shells* (Focus: continuous extrusion path).
   - *Rapid Prototypes* (Focus: speed, minimal infill).
 - **Automated Recommendation Generation:** Calculates layer height, wall perimeter count, infill density/pattern, cooling fans, retraction limits, print speeds, and brim/raft adhesion strategies.
+- **Confidence Scoring:**  Every classification and recommendation is accompanied by a confidence score to indicate decision reliability.
 
 ### 2.4 Support & Optimization System
 - **Support Strategy:** Evaluates overhang angles and surface accessibility to select between Tree/Organic supports and Standard grid supports.
 - **Optimization Trade-Offs:** Minimizes support volume and print time while preserving structural integrity.
+- **Orientation Optimization:** Searches multiple valid orientations to improve stability, reduce supports, lower print time, and improve surface quality.
 
 ### 2.5 Multi-Variable Cost & Duration Engine
 - Real-time estimation before slicing:
@@ -50,6 +52,7 @@ The system combines deterministic rule-based AI, geometry analytics, and continu
   - Total Material Cost (based on spool pricing).
   - Electrical Power Consumption & Financial Cost.
   - Total Estimated Print Duration.
+  - **Print Preset Integration:** Estimates are generated using the currently selected printer, material, filament profile, and print preset.
 
 ---
 
@@ -66,17 +69,17 @@ The application enforces strict separation of concerns across single-responsibil
        ┌───────────────────────────┴────────────────────────────┐
        │                 Three.js Renderer / App                │
        │       (Workspace, Gizmos, Real-Time Collisions)        │
-       └───────┬───────────────────┬───────────────────┬────────┘
-               │                   │                   │
-   ┌───────────┴───────────┐ ┌─────┴─────────────┐ ┌───┴───────────────────┐
-   │ Importer & Parser     │ │ Printer & Material│ │ AI Analytics &        │
-   │ (STL / 3MF Loaders)   │ │ Sync Engine       │ │ Recommendation Engine │
-   └───────────────────────┘ └───────────────────┘ └───┬───────────────────┐
-                                                       │
-                                           ┌───────────┴───────────┐
-                                           │ Cost & Telemetry      │
-                                           │ Estimator Engine      │
-                                           └───────────────────────┘
+       └───────┬───────────────────┬─────────────────────┬──────┘
+               │                   │                     │
+   ┌───────────┴───────────┐ ┌─────┴───────────────┐ ┌───┴───────────────────┐
+   │ Importer & Parser     │ │ Printer, Material & │ │ AI Analytics &        │
+   │ (STL / 3MF Loaders)   │ │ Filament Sync Engine│ │ Recommendation Engine │
+   └───────────────────────┘ └─────────────────────┘ └───┬───────────────────┘
+                                                         │
+                                             ┌───────────┴───────────┐
+                                             │ Cost & Telemetry      │
+                                             │ Estimator Engine      │
+                                             └───────────────────────┘
 
 ## 4. Technical Stack
 
@@ -90,6 +93,13 @@ The application enforces strict separation of concerns across single-responsibil
 | **Validation & Parsing** | Zod |
 | **Test Automation** | Vitest (Unit) + Playwright (E2E) |
 
+Additional Core Libraries:
+
+- Lucide React (Icons)
+- Octokit (GitHub Integration)
+- three-mesh-bvh (Accelerated Geometry Analysis)
+- Electron Log (Application Logging)
+
 ---
 
 ## 5. Development Roadmap & Principles
@@ -101,3 +111,5 @@ The application enforces strict separation of concerns across single-responsibil
 1. **Local First:** Operates fully without active internet connectivity.
 2. **Deterministic Security:** AI assists with transparent, rule-driven engineering parameters; it never hallucinates data.
 3. **User Authority:** Recommendations are suggested; the user retains absolute override control over all parameters.
+4. **Documentation First:** Architecture and specifications are defined before implementation.
+5. **Backward Compatibility:** Existing project formats and schemas should remain compatible whenever possible.
