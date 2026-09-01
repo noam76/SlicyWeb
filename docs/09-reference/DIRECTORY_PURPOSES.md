@@ -291,6 +291,10 @@ Naming Rules
 Acronyms
 
 Versioning Policies
+
+Architecture Decisions
+
+Directory Definitions
 ```
 
 ---
@@ -513,6 +517,28 @@ Repositories
 
 ---
 
+# src/filament_database/
+
+Purpose:
+
+```text
+Filament Management System
+```
+
+Contains:
+
+```text
+Filament Profiles
+
+Manufacturer Data
+
+Validation
+
+Repositories
+```
+
+---
+
 # src/model_analysis/
 
 Purpose:
@@ -535,6 +561,28 @@ Geometry Evaluation
 
 ---
 
+# src/classification_engine/
+
+Purpose:
+
+```text
+Object Classification System
+```
+
+Contains:
+
+```text
+Object Categories
+
+Classification Rules
+
+Confidence Scoring
+
+Classification Validation
+```
+
+---
+
 # src/recommendation_engine/
 
 Purpose:
@@ -553,6 +601,28 @@ Validation
 Warnings
 
 Recommendations
+```
+
+---
+
+# src/preset_engine/
+
+Purpose:
+
+```text
+Print Preset Management
+```
+
+Contains:
+
+```text
+Preset Selection
+
+Preset Validation
+
+Preset Recommendations
+
+Preset Storage
 ```
 
 ---
@@ -635,6 +705,28 @@ Local Storage
 File Storage
 
 Future Database Integrations
+```
+
+---
+
+# src/recovery/
+
+Purpose:
+
+```text
+Project Recovery System
+```
+
+Contains:
+
+```text
+Auto Save
+
+Recovery Files
+
+Session Restoration
+
+Recovery Validation
 ```
 
 ---
@@ -815,6 +907,8 @@ Materials
 Filaments
 
 Presets
+
+Repositories
 ```
 
 ---
