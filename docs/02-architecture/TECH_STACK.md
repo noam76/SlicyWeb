@@ -578,8 +578,6 @@ ipcRenderer
 preload.ts
 ```
 
-```
-
 
 Used For:
 
