@@ -1376,17 +1376,15 @@ POST
 \## Create Project
 
 
-
 ```text
 
 POST
 
 
-
 /api/project/new
-
 ---
 
+---
 ## Auto Save
 
 ```text
@@ -1467,55 +1465,39 @@ DELETE
 \# Repository API
 
 
-
 Purpose:
-
 
 
 Access online repositories.
 
 
-
 \---
 
 
-
-\# GitHub Repository Service
-
+\## GitHub Repository Service
 
 
 Sources:
 
 
-
 ```text
 
 Official Profiles
-
-
-
 Verified Repositories
-
-
-
 Community Sources
 
 ```
 
 
-
 \---
-
 
 
 \## Refresh Printer Profiles
 
 
-
 ```text
 
 POST
-
 
 
 /api/repositories/printers/refresh
@@ -1523,273 +1505,175 @@ POST
 ```
 
 
-
 \---
 
 
-
 \## Refresh Material Profiles
-
 
 
 ```text
 
 POST
 
-
-
 /api/repositories/materials/refresh
-
 ```
-
 
 
 \---
 
+---
+
+## Refresh Filament Profiles
+
+```text
+POST
+
+/api/repositories/filaments/refresh
+```
 
 
 \# Repository Validation
 
 
-
 Every downloaded file must pass:
-
 
 
 ```text
 
 Schema Validation
-
-
-
 Integrity Validation
-
-
-
 Version Validation
 
 ```
 
-
-
 Before import.
 
-
-
 \---
-
 
 
 \# Download Queue
 
 
-
 Purpose:
-
-
 
 Prevent excessive requests.
 
-
-
 \---
-
 
 
 \## Queue States
 
 
-
 ```text
 
 Pending
-
-
-
 Running
-
-
-
 Completed
-
-
-
 Failed
 
 ```
 
 
-
 \---
-
 
 
 \# Rate Limiting
 
 
-
 Remote requests should be limited.
 
 
-
 \---
-
 
 
 \## Recommended Rules
 
 
-
 ```text
 
 Maximum Requests Per Minute
-
-
-
 Maximum Parallel Downloads
-
-
-
 Cache First Strategy
 
 ```
 
-
-
 \---
-
-
 
 \# Event API
 
 
-
 Purpose:
-
-
 
 System notifications.
 
 
-
 \---
-
 
 
 \## Events
 
-
-
 ```text
 
 ObjectAdded
-
-
-
 ObjectRemoved
-
-
-
 ObjectMoved
-
-
-
 ObjectRotated
-
-
-
 AnalysisCompleted
-
-
-
 RecommendationGenerated
-
-
-
 ProfileUpdated
 
 ```
 
-
-
 \---
-
 
 
 \# Notification API
 
 
-
 Purpose:
-
 
 
 Display messages.
 
 
-
 \---
-
 
 
 \## Types
 
 
-
 ```text
 
 Info
-
-
-
 Success
-
-
-
 Warning
-
-
-
 Error
 
 ```
 
 
-
 \---
-
 
 
 \# Validation API
 
 
-
 Purpose:
-
 
 
 Validate imported data.
 
 
-
 \---
-
 
 
 \## STL Validation
 
 
-
 ```text
 
 File Structure
-
-
-
 Geometry
-
-
-
 Corruption
 
 ```
@@ -1801,7 +1685,6 @@ Corruption
 
 
 \## Profile Validation
-
 
 
 ```text
