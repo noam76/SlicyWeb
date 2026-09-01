@@ -212,11 +212,7 @@ Printer Profile
 
 
 
-\## Material
-
-
-
-```text
+## Material
 
 Material Profile
 
@@ -224,18 +220,15 @@ Material Profile
 
 ## Filament
 
-```text
 Filament Profile
+
 ---
 
 ## Print Preset
 
-```text
 Print Preset
-```
 
-
-\---
+---
 
 
 \## Model Analysis
