@@ -791,6 +791,18 @@ Increase Reliability
 ```
 
 ---
+# Print Preset Influence
+
+Classification may automatically select a preferred preset.
+
+Example:
+
+```text
+Prototype
+↓
+Draft Preset
+
+---
 
 # Future Extensions
 
