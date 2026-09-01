@@ -214,6 +214,32 @@ Modern 3D printing format supporting additional metadata.
 
 ---
 
+# WYPROJ
+
+Native Wichy project file format.
+
+Stores:
+
+```text
+Scene
+
+Objects
+
+Printer
+
+Material
+
+Filament
+
+Print Preset
+
+Analysis
+
+Recommendations
+```
+
+---
+
 # Object
 
 A single model imported into the workspace.
@@ -288,6 +314,26 @@ eSUN PETG
 
 ---
 
+# Print Preset
+
+Predefined print configuration optimized for a specific goal.
+
+Examples:
+
+```text
+Draft
+
+Balanced
+
+Quality
+
+Mechanical
+
+Miniature
+```
+
+---
+
 # Preset
 
 Predefined collection of print settings.
@@ -326,6 +372,18 @@ Range:
 
 ---
 
+# Printability Score
+
+Numerical estimation of the probability of a successful print.
+
+Range:
+
+```text
+0 - 100
+```
+
+---
+
 # Object Classification
 
 Process of determining the likely purpose of a model.
@@ -342,6 +400,18 @@ Gear
 Prototype
 
 Vase
+```
+
+---
+
+# Classification Confidence
+
+Confidence value associated with object classification.
+
+Range:
+
+```text
+0 - 100
 ```
 
 ---
@@ -404,11 +474,48 @@ Validation
 
 ---
 
+# Validation Engine
+
+Subsystem responsible for validating:
+
+```text
+Printer Limits
+
+Material Limits
+
+Filament Limits
+
+Geometry Constraints
+```
+
+before recommendations are accepted.
+
+---
+
 # Recommendation Engine
 
 Subsystem that converts analysis results into printing recommendations.
 
 ---
+
+# Support Generation
+
+Process used to determine:
+
+```text
+Support Need
+
+Support Type
+
+Support Placement
+
+Support Density
+```
+
+for a specific model.
+
+---
+
 
 # Printability
 
@@ -508,6 +615,26 @@ Scene
 
 ---
 
+# Project
+
+Saved Wichy workspace stored in a WYPROJ file.
+
+Contains:
+
+```text
+Scene
+
+Settings
+
+Profiles
+
+Analysis
+
+Recommendations
+```
+
+---
+
 # Validation
 
 Process of verifying data, settings, or recommendations before use.
@@ -523,6 +650,26 @@ Notification indicating a potential problem or risk.
 # Error
 
 Notification indicating a failure or invalid operation.
+
+---
+
+# Plugin
+
+Optional extension that adds functionality without modifying the application core.
+
+Examples:
+
+```text
+Import Plugins
+
+Export Plugins
+
+Analysis Plugins
+
+AI Plugins
+
+UI Plugins
+```
 
 ---
 
