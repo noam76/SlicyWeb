@@ -1215,13 +1215,10 @@ Access:
 
 
 ```text
-
 Printer Profiles
 Material Profiles
 Filament Profiles
 Community Data
-``
-
 ```
 
 
