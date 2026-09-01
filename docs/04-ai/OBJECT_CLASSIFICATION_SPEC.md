@@ -82,6 +82,12 @@ Topology
 Features
 
 Proportions
+
+Printer Context
+
+Material Context
+
+Filament Context
 ```
 
 Never use file names alone.
@@ -96,7 +102,8 @@ File names may assist classification but must never be considered authoritative.
 {
   "category": "",
   "subcategory": "",
-  "confidence": 0
+  "confidenceScore": 0,
+  "detectedFeatures": []
 }
 ```
 
@@ -559,6 +566,8 @@ Use:
 
 ```text
 Balanced Profile
+
+Balanced Print Preset
 ```
 
 Generate:
@@ -647,12 +656,30 @@ Mechanical Components
 
 ---
 
+## Thin Wall Detection
+
+Used to identify:
+
+```text
+Miniatures
+Functional Parts
+Vases
+```
+
+---
+
 # Classification Confidence
 
 Increase confidence when:
 
 ```text
 Multiple Indicators Match
+
+Verified Printer Profile
+
+Verified Material Profile
+
+Verified Filament Profile
 ```
 
 ---
@@ -677,6 +704,10 @@ RECOMMENDATION_RULES.md
 SUPPORT_GENERATION_SPEC.md
 
 PRINT_PRESETS_SPEC.md
+
+DATA_SCHEMA.md
+
+API_SPEC.md
 ```
 
 ---
@@ -773,6 +804,12 @@ Vision Analysis
 Community Models
 
 Classification Learning
+
+Vision Classification Learning
+
+Filament Performance Learning
+
+Community Recommendation Learning
 ```
 
 ---
