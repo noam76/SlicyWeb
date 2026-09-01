@@ -610,6 +610,46 @@ Manage filament profiles.
 
 ---
 
+# Print Preset API
+
+Purpose:
+
+Manage print presets.
+
+---
+
+## Get Presets
+
+GET
+
+/api/presets
+
+---
+
+## Get Preset
+
+GET
+
+/api/presets/{id}
+
+---
+
+## Select Preset
+
+POST
+
+/api/presets/select
+
+---
+
+## Import Preset
+
+POST
+
+/api/presets/import
+
+---
+
 ## Get Filaments
 
 ```text
@@ -1045,7 +1085,9 @@ POST
 
 &#x20; "dimensions": {},
 
-&#x20; "volume": {},
+&#x20; "geometry": {},
+
+&#x20; "mesh": {},
 
 &#x20; "stability": {},
 
@@ -1137,7 +1179,7 @@ POST
 
 {
 
-&#x20; "recommendations": {},
+&#x20; "recommendedProfile": {},
 
 &#x20; "printPreset": {},
 
@@ -1145,7 +1187,7 @@ POST
 
 &#x20; "warnings": \[],
 
-&#x20; "confidence": 95
+&#x20; "confidenceScore": 95
 
 }
 
