@@ -106,51 +106,31 @@ The support system must:
 
 Model Analysis
 
-
-
 ↓
-
-
 
 Overhang Detection
 
-
-
 ↓
-
-
 
 Bridge Detection
 
-
-
 ↓
-
-
 
 Risk Evaluation
 
-
-
 ↓
-
-
 
 Support Strategy Selection
 
-
-
 ↓
-
-
 
 Support Optimization
 
-
-
 ↓
 
+Confidence Evaluation
 
+↓
 
 Recommendation
 
@@ -210,25 +190,19 @@ The AI evaluates:
 
 Overhangs
 
-
-
 Bridges
-
-
 
 Object Category
 
-
-
 Material
 
-
+Filament
 
 Printer Capabilities
 
-
-
 Orientation
+
+Confidence Score
 
 ```
 
@@ -921,9 +895,14 @@ Supports Recommended
 \# Material Influence
 
 
-
 Different materials tolerate overhangs differently.
+Filament manufacturer profiles may further modify support recommendations.
 
+Examples:
+
+- High-performance PLA may reduce support requirements.
+- Flexible TPU may require additional stability supports.
+- Carbon fiber materials may require reinforced support structures.
 
 
 \---
@@ -1093,21 +1072,16 @@ Reduced
 \# Object Classification Influence
 
 
-
 Supports depend on object category.
-
 
 
 \---
 
 
-
 \# Figurine
 
 
-
 Preferred:
-
 
 
 ```text
@@ -1117,9 +1091,7 @@ Organic Supports
 ```
 
 
-
 Goal:
-
 
 
 ```text
@@ -1129,17 +1101,13 @@ Surface Preservation
 ```
 
 
-
 \---
-
 
 
 \# Miniature
 
 
-
 Preferred:
-
 
 
 ```text
@@ -1147,15 +1115,12 @@ Preferred:
 Organic
 
 
-
 Tree
 
 ```
 
 
-
 Goal:
-
 
 
 ```text
@@ -1165,9 +1130,7 @@ Maximum Detail
 ```
 
 
-
 \---
-
 
 
 \# Mechanical Part
@@ -1265,17 +1228,29 @@ Mechanical Reliability
 \---
 
 
+# Prototype
+
+Preferred:
+
+```text
+Standard Supports
+```
+
+Goal:
+
+```text
+Fast Printing
+
+Material Reduction
+```
 
 \# Support Density
-
 
 
 Purpose:
 
 
-
 Control support strength.
-
 
 
 \---
@@ -1670,6 +1645,18 @@ Each support strategy receives:
 
 0 - 100
 
+Higher scores indicate a better balance between:
+
+Print Reliability
+
+Surface Quality
+
+Material Usage
+
+Removal Difficulty
+
+Print Duration
+
 ```
 
 
@@ -1762,17 +1749,17 @@ Generate warnings when:
 
 Large Support Volume
 
-
-
 Critical Overhangs
-
-
 
 Extensive Interfaces
 
-
-
 Support Material Excessive
+
+Low Confidence Recommendation
+
+Unsupported Material Profile
+
+Unknown Filament Profile
 
 ```
 
@@ -1834,21 +1821,19 @@ Reserved:
 
 Custom Support Painting
 
-
-
 Hybrid Supports
-
-
 
 Multi-Material Supports
 
-
-
 Dissolvable Supports
 
-
-
 Adaptive AI Supports
+
+Vision-Based Support Detection
+
+Community Support Optimization
+
+Filament-Specific Support Learning
 
 ```
 
@@ -1870,17 +1855,15 @@ Generated support strategy must:
 
 Be Reproducible
 
-
-
 Be Explainable
-
-
 
 Be Consistent
 
-
-
 Respect Printer Limits
+
+Respect Material Limits
+
+Respect Filament Limits
 
 ```
 
