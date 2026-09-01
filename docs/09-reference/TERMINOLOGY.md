@@ -230,6 +230,15 @@ Bambu PLA Basic
 
 ---
 
+## Print Preset
+
+Definition:
+
+```text
+Named collection of print settings used to achieve a specific printing objective.
+```
+---
+
 ## Printer Profile
 
 Definition:
@@ -240,7 +249,13 @@ Printer configuration containing hardware capabilities and limits.
 
 ---
 
-# Geometry Analysis Terms
+## Material Profile
+
+Definition:
+
+```text
+Configuration describing the behavior and properties of a material category.
+```
 
 ---
 
@@ -449,6 +464,14 @@ Range:
 ```
 
 ---
+
+## Confidence Level
+
+Definition:
+
+```text
+Human-readable interpretation of a Confidence Score.
+```
 
 ## Rule-Based AI
 
@@ -691,6 +714,7 @@ Use:
 ```text
 Printer Profile
 Material Profile
+Confidence Score
 Filament Profile
 Print Preset
 Print Settings
