@@ -3,56 +3,38 @@
 \# FILAMENT SETTINGS SPECIFICATION
 
 
-
 Version: 1.0.0
-
 
 
 Status: Approved
 
 
-
 Priority: High
-
 
 
 \---
 
 
-
 \# Purpose
-
 
 
 This document defines the filament profile system used by Wichy.
 
-
-
 A filament profile represents a specific commercial filament.
 
 
-
 Examples:
-
 
 
 ```text
 
 Bambu PLA Basic
 
-
-
 Prusament PLA Galaxy Black
-
-
 
 Polymaker PolyLite PLA
 
-
-
 eSUN PETG
-
-
 
 Overture TPU
 
@@ -71,7 +53,6 @@ Overture TPU
 The filament profile system must:
 
 
-
 \- Store manufacturer settings
 
 \- Improve print reliability
@@ -81,7 +62,6 @@ The filament profile system must:
 \- Override generic material values when necessary
 
 \- Provide accurate cost calculations
-
 
 
 \---
@@ -214,6 +194,10 @@ Prusament PLA
 
 &#x20; "quality": {},
 
+&#x20; "visual": {},
+
+&#x20; "specialRequirements": {},
+
 &#x20; "cost": {}
 
 }
@@ -229,39 +213,28 @@ Prusament PLA
 \# Metadata
 
 
-
 Purpose:
-
 
 
 Identify filament.
 
 
-
 \---
-
 
 
 \## Schema
 
 
-
 ```json
 
 {
-
-&#x20; "id": "",
-
-&#x20; "name": "",
-
-&#x20; "brand": "",
-
-&#x20; "material": "",
-
-&#x20; "color": "",
-
-&#x20; "version": ""
-
+  &#x20; "id": "",
+  &#x20; "name": "",
+  &#x20; "brand": "",
+  &#x20; "material": "",
+  &#x20; "color": "",
+  &#x20; "verified": true,
+  &#x20; "profileVersion": "1.0.0"
 }
 
 ```
@@ -483,36 +456,33 @@ Store tested settings.
 \# Physical Properties
 
 
-
 Purpose:
-
 
 
 Improve calculations.
 
 
-
 \---
 
 
-
 \## Schema
-
 
 
 ```json
 
 {
 
-&#x20; "physical": {
+ &#x20; "physical": {
 
-&#x20;   "diameter": 1.75,
+ &#x20; "diameter": 1.75,
 
-&#x20;   "density": 1.24,
+ &#x20; "density": 1.24,
 
-&#x20;   "spoolWeight": 1000
+ &#x20; "spoolWeight": 1000,
 
-&#x20; }
+ &#x20; "remainingWeight": 1000
+
+ &#x20; }
 
 }
 
@@ -1005,10 +975,8 @@ Verified manufacturer profiles increase:
 ```text
 
 Recommendation Confidence
-
-
-
 Printability Confidence
+Classification Confidence
 
 ```
 
@@ -1030,27 +998,19 @@ Priority:
 
 Official Manufacturer
 
-
-
 ↓
 
+Manufacturer Cloud Repository
 
+↓
 
 Verified Repository
 
-
-
 ↓
-
-
 
 Community Profile
 
-
-
 ↓
-
-
 
 User Profile
 
@@ -1074,17 +1034,13 @@ Required:
 
 Metadata
 
-
-
 Material
-
-
 
 Thermal Settings
 
-
-
 Printing Settings
+
+Physical Properties
 
 ```
 
@@ -1138,32 +1094,26 @@ The AI engine uses:
 
 Thermal Settings
 
-
-
 Cooling
-
-
 
 Retraction
 
-
-
 Quality Scores
-
-
 
 Warp Risk
 
-
-
 Stringing Risk
+
+Manufacturer Data
+
+Physical Properties
+
+Special Requirements
 
 ```
 
 
-
 to fine-tune recommendations.
-
 
 
 \---
@@ -1218,22 +1168,19 @@ Reserved:
 
 RFID Identification
 
-
-
 Automatic Filament Detection
-
-
 
 Spool Usage Tracking
 
-
-
 Drying History
-
-
 
 Print History
 
+Vision-Based Filament Detection
+
+Community Reliability Rating
+
+Filament Performance Learning
 ```
 
 
