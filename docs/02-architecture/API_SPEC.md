@@ -602,7 +602,60 @@ POST
 
 \---
 
+# Filament API
 
+Purpose:
+
+Manage filament profiles.
+
+---
+
+## Get Filaments
+
+```text
+GET
+/api/filaments
+```
+
+---
+
+## Get Filament
+
+```text
+GET
+/api/filaments/{id}
+```
+
+---
+
+## Search Filaments
+
+```text
+GET
+/api/filaments/search
+```
+
+---
+
+## Parameters
+
+```json
+{
+  "brand": "",
+  "material": "",
+  "color": ""
+}
+```
+
+---
+
+## Import Filament
+
+```text
+POST
+/api/filaments/import
+```
+---
 
 \# Model Import API
 
@@ -998,7 +1051,11 @@ POST
 
 &#x20; "overhangs": {},
 
-&#x20; "bridges": {}
+&#x20; "bridges": {},
+
+&#x20; "thinWalls": {},
+
+&#x20; "classification": {}
 
 }
 
@@ -1058,6 +1115,8 @@ POST
 
 &#x20; "materialId": "",
 
+&#x20; "filamentId": "",
+
 &#x20; "objectIds": \[]
 
 }
@@ -1079,6 +1138,10 @@ POST
 {
 
 &#x20; "recommendations": {},
+
+&#x20; "printPreset": {},
+
+&#x20; "supportStrategy": {},
 
 &#x20; "warnings": \[],
 
@@ -1322,8 +1385,23 @@ POST
 
 /api/project/new
 
+---
+
+## Auto Save
+
+```text
+POST
+/api/project/autosave
 ```
 
+---
+
+## Recovery
+
+```text
+POST
+/api/project/recovery
+```
 
 
 \---
@@ -1729,13 +1807,9 @@ Corruption
 ```text
 
 Printer Profiles
-
-
-
 Material Profiles
-
-
-
+Filament Profiles
+Print Presets
 Schemas
 
 ```
@@ -1945,25 +2019,14 @@ RECOMMENDATION\_FAILED
 \# Logging Requirements
 
 
-
 Every API operation must log:
-
 
 
 ```text
 
 Timestamp
-
-
-
 Action
-
-
-
 Result
-
-
-
 Duration
 
 ```
@@ -1985,54 +2048,33 @@ Validate:
 ```text
 
 Files
-
-
-
 Profiles
-
-
-
 Repository Data
 
 ```
 
-
-
 Before processing.
 
-
-
 \---
-
 
 
 \# Future APIs
 
 
-
 Reserved
-
 
 
 ```text
 
 G-Code API
-
-
-
 Remote Print API
-
-
-
 Webcam API
-
-
-
 Machine Learning API
-
-
-
 Plugin API
+Plugin Marketplace API
+Community Profiles API
+Filament Tracking API
+Vision Classification API
 
 ```
 
@@ -2041,18 +2083,13 @@ Plugin API
 \---
 
 
-
 \# Golden Rule
-
 
 
 APIs must remain simple, predictable, documented, and backward compatible.
 
 
-
 \---
 
 
-
 \# End Of Document
-
