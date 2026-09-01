@@ -801,13 +801,14 @@ Example:
 Prototype
 ↓
 Draft Preset
+↓
 Figurine
 ↓
 Quality Preset
 
 Mechanical Part
 ↓
-Strength Preset
+Mechanical Preset
 
 ---
 
