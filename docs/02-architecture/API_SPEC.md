@@ -1373,22 +1373,21 @@ POST
 
 
 
-\## Create Project
-
+## Create Project
 
 ```text
-
 POST
 
-
 /api/project/new
----
+```
 
 ---
+
 ## Auto Save
 
 ```text
 POST
+
 /api/project/autosave
 ```
 
@@ -1398,6 +1397,7 @@ POST
 
 ```text
 POST
+
 /api/project/recovery
 ```
 
