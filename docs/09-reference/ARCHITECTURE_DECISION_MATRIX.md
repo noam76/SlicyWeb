@@ -651,11 +651,16 @@ Easier Collaboration
 
 ---
 
+
+# Object Classification
+
+---
+
 # Confidence Scoring
 
 ---
 
-# Object Classification
+# Recommendation Strategy
 
 ---
 
