@@ -133,25 +133,36 @@ Custom Machines
 ```json
 
 {
-
+  
 &#x20; "metadata": {},
-
-&#x20; "hardware": {},
-
+  
+&#x20; "buildVolume": {},
+  
 &#x20; "motion": {},
-
-&#x20; "thermal": {},
-
+  
 &#x20; "extrusion": {},
-
+  
+&#x20; "nozzle": {},
+ 
+&#x20; "thermal": {},
+  
 &#x20; "cooling": {},
-
-&#x20; "materials": {},
-
+  
+&#x20; "sensors": {},
+  
+&#x20; "supportedMaterials": [],
+  
 &#x20; "limits": {},
-
-&#x20; "features": {}
-
+  
+&#x20; "features": {},
+  
+&#x20; "power": {},
+  
+&#x20; "multiMaterial": {},
+  
+&#x20; "remote": {},
+  
+&#x20; "source": {}
 }
 
 ```
@@ -1260,23 +1271,13 @@ Every profile must contain:
 
 Metadata
 
-
-
 Build Volume
-
-
 
 Motion
 
-
-
 Extrusion
 
-
-
 Nozzle
-
-
 
 Thermal
 
