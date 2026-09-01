@@ -2035,11 +2035,11 @@ Thin Wall Detected
   &#x20; "analysis": {},
   &#x20; "classification": {},
   &#x20; "scores": {},
-  &#x20; "recommendations": {},
+  &#x20; "recommendedProfile": {},
   &#x20; "printPreset": {},
   &#x20; "optimization": {},
   &#x20; "warnings": [],
-  &#x20; "confidence": 95
+  &#x20; "confidenceScore": 95
 }
 
 ```
