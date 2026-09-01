@@ -31,21 +31,20 @@ The engine is responsible for transforming:
 ```text
 
 Printer Profile
-
-\+
-
++
 Material Profile
-
-\+
-
++
 Model Analysis
-
-\+
-
++
 User Constraints
++
+Filament Profile
++
+Print Preset
++
+Object Classification
 
 ```
-
 
 
 into:
@@ -1539,13 +1538,11 @@ Validates recommendations.
 
 Printer Limits
 
-
-
 Material Limits
 
-
-
 Geometry Limits
+
+Filament Limits
 
 ```
 
