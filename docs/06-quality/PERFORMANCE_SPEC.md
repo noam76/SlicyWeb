@@ -226,22 +226,17 @@ Target:
 < 100 ms
 ```
 
----
+\---
 
 \# Scene Management
 
 
-
 Only re-render modified objects.
-
-
 
 Avoid full scene refresh.
 
 
-
 \---
-
 
 
 \# Caching Rules
@@ -276,38 +271,23 @@ Recommendations
 
 
 
-\# AI Performance
-
-
-
-Classification:
-
+# AI Performance
 
 ```text
+Classification < 500 ms
 
-< 500 ms
+Recommendation Generation < 1 second
 
-Recommendation Generation:
-
-< 1 second
-
-Confidence Calculation:
-
-< 100 ms
-
+Confidence Calculation < 100 ms
 ```
 
-
 for standard models.
-
 
 
 \---
 
 
-
 \# Large Model Handling
-
 
 
 When geometry exceeds threshold:
