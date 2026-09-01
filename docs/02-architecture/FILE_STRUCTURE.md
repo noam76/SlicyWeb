@@ -185,6 +185,10 @@ src/
 ├── model_analysis/
 ├── recommendation_engine/
 ├── optimization_engine/
+├── filament_database/
+├── classification_engine/
+├── preset_engine/
+├── recovery/
 ├── cost_engine/
 ├── notifications/
 ├── repositories/
@@ -336,6 +340,16 @@ src/material_database/
 ```
 
 ---
+# Filament Database
+
+```text
+src/filament_database/
+
+├── FilamentRepository.ts
+├── FilamentValidator.ts
+```
+
+---
 
 # Analysis Engine
 
@@ -347,8 +361,34 @@ src/model_analysis/
 ├── PrintabilityAnalyzer.ts
 ├── StabilityAnalyzer.ts
 ├── MeshAnalyzer.ts
-├── ClassificationAnalyzer.ts
 └── reports/
+```
+
+---
+
+# Classification Engine
+
+```text
+src/classification_engine/
+
+├── ClassificationEngine.ts
+├── CategoryDetector.ts
+├── ConfidenceScorer.ts
+├── ClassificationValidator.ts
+└── rules/
+```
+---
+
+# Preset Engine
+
+```text
+src/preset_engine/
+
+├── PresetManager.ts
+├── PresetRepository.ts
+├── PresetValidator.ts
+├── PresetSelector.ts
+└── presets/
 ```
 
 ---
@@ -381,6 +421,20 @@ src/optimization_engine/
 
 ---
 
+# Recovery System
+
+```text
+src/recovery/
+
+├── RecoveryManager.ts
+├── AutoSaveService.ts
+├── SessionRestorer.ts
+├── RecoveryValidator.ts
+└── backups/
+```
+
+---
+
 # Cost Engine
 
 ```text
@@ -404,7 +458,10 @@ src/services/
 ├── PrinterService.ts
 ├── MaterialService.ts
 ├── NotificationService.ts
-└── ProjectService.ts
+├── ProjectService.ts
+├── FilamentService.ts
+├── PresetService.ts
+└── ClassificationService.ts
 ```
 
 ---
@@ -486,6 +543,8 @@ cache/
 ├── printers/
 ├── materials/
 ├── repositories/
+├── filaments/
+├── presets/
 └── analysis/
 ```
 
