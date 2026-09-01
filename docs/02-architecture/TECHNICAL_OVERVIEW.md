@@ -6,14 +6,17 @@
 ---
 
 ## 1. Executive Summary & Vision
+
 Wichy is a next-generation desktop application engineered to simplify, optimize, and secure the 3D print preparation workflow. Rather than serving as just another slicing utility, Wichy acts as an intelligent engineering assistant that evaluates:
+
 - **The Hardware:** Printer specifications, build volume, kinematics, and firmware limits.
-- **The Material:** Polymer properties, thermal limits, and manufacturer-specific profiles.
+- **The Material:** Polymer properties, thermal limits, and material-specific behavior.
+- **The Filament:** Manufacturer-specific settings, color, diameter, thermal recommendations, and cost characteristics.
+- **The Active Print Preset:** Quality objectives, speed targets, structural requirements, and optimization priorities.
 - **The Geometry:** Spatial dimensions, wall thickness, bridge spans, overhang angles, and functional classification.
-- **The User Objective:** Speed, visual surface finish, structural strength, or material economy.
+- **The User Objective:** Speed, visual surface finish, structural strength, reliability, or material economy.
 
-The system combines deterministic rule-based AI, geometry analytics, and continuous hardware database synchronization to output optimal slicing configurations.
-
+The system combines deterministic rule-based AI, geometry analytics, object classification, and continuous hardware database synchronization to generate validated and optimized print configurations.
 ---
 
 ## 2. Core Feature Matrix
