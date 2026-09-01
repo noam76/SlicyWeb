@@ -572,11 +572,11 @@ IPC Layer
 ```
 Technology:
 
+```text
 ipcMain
-
 ipcRenderer
-
 preload.ts
+```
 
 ```
 
@@ -1216,25 +1216,18 @@ Only when required.
 Access:
 
 
-
 ```text
 
 Printer Profiles
-
-
-
 Material Profiles
-
-
-
+Filament Profiles
 Community Data
+``
 
 ```
 
 
-
 \---
-
 
 
 \# Strategy
