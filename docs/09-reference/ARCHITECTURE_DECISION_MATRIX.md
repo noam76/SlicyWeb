@@ -521,6 +521,50 @@ Modern Tooling
 
 ---
 
+# Profile Storage Strategy
+
+---
+
+## Problem
+
+Store printer, material, filament, and preset profiles.
+
+---
+
+## Options
+
+```text
+Database
+
+JSON Files
+
+Remote Only
+```
+
+---
+
+## Selected
+
+```text
+JSON Files
+```
+
+---
+
+## Reason
+
+```text
+Human Readable
+
+Portable
+
+Version Control Friendly
+
+Easy Community Contributions
+```
+
+---
+
 ## Problem
 
 Store printer profiles, materials, and presets.
@@ -604,6 +648,92 @@ Easier Collaboration
 ---
 
 # AI Strategy
+
+---
+
+# Object Classification
+
+---
+
+# Confidence Scoring
+
+---
+
+## Problem
+
+Measure reliability of AI decisions.
+
+---
+
+## Options
+
+```text
+No Confidence
+
+Binary Confidence
+
+Scored Confidence
+```
+
+---
+
+## Selected
+
+```text
+Scored Confidence
+```
+
+---
+
+## Reason
+
+```text
+Transparency
+
+Better User Feedback
+
+Safer Recommendations
+```
+
+---
+
+## Problem
+
+Identify model categories automatically.
+
+---
+
+## Options
+
+```text
+No Classification
+
+Rule Based Classification
+
+Machine Learning Classification
+```
+
+---
+
+## Selected
+
+```text
+Rule Based Classification
+```
+
+---
+
+## Reason
+
+```text
+Explainable
+
+Deterministic
+
+Fast
+
+No Training Required
+```
 
 ---
 
@@ -693,6 +823,50 @@ Community Friendly
 
 ---
 
+# Filament Profiles
+
+---
+
+## Problem
+
+Store manufacturer-specific filament data.
+
+---
+
+## Options
+
+```text
+Material Only
+
+Filament Profiles
+
+Cloud Filament Database
+```
+
+---
+
+## Selected
+
+```text
+Filament Profiles
+```
+
+---
+
+## Reason
+
+```text
+Brand Specific Settings
+
+Improved Recommendations
+
+Improved Reliability
+
+Accurate Cost Calculations
+```
+
+---
+
 ## Problem
 
 Store material information.
@@ -730,6 +904,94 @@ Easy To Update
 ---
 
 # Plugin Support
+
+---
+
+# Security Strategy
+
+---
+
+# Performance Strategy
+
+---
+
+## Problem
+
+Maintain responsiveness with large models.
+
+---
+
+## Options
+
+```text
+Naive Rendering
+
+Partial Optimization
+
+Performance First Architecture
+```
+
+---
+
+## Selected
+
+```text
+Performance First Architecture
+```
+
+---
+
+## Reason
+
+```text
+Large Scene Support
+
+Scalability
+
+Better User Experience
+
+Future Growth
+```
+
+---
+
+## Problem
+
+Protect application integrity.
+
+---
+
+## Options
+
+```text
+Trust Inputs
+
+Partial Validation
+
+Zero Trust Validation
+```
+
+---
+
+## Selected
+
+```text
+Zero Trust Validation
+```
+
+---
+
+## Reason
+
+```text
+Safer Imports
+
+Safer Repositories
+
+Safer Profiles
+
+Improved Reliability
+```
 
 ---
 
