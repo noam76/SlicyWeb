@@ -1641,24 +1641,18 @@ Preset Search
 
 Supported
 
-
-
 Files can be dropped directly inside viewport.
 
-
-
 Accepted:
-
 
 
 ```text
 
 STL
 
-
-
 3MF
 
+WYPROJ
 ```
 
 
