@@ -154,19 +154,11 @@ Priority Order:
 
 1\. Print Success
 
-
-
 2\. Surface Quality
-
-
 
 3\. Support Reduction
 
-
-
 4\. Material Reduction
-
-
 
 5\. Print Time Reduction
 
