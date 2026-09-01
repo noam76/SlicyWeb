@@ -721,7 +721,7 @@ PrinterValidator
 
 
 
-\## Material Database Module
+\## Material Repository Module
 
 
 
@@ -747,11 +747,7 @@ Responsibilities:
 
 \- Validate materials
 
-\- Load filament profiles
-
-\- Validate filament profiles
-
-\- Manufacturer profile management
+\- Material profile management
 
 \---
 
