@@ -199,9 +199,7 @@ Layer 1
 Data Collection
 
 
-
 ↓
-
 
 
 Layer 2
@@ -209,9 +207,7 @@ Layer 2
 Model Understanding
 
 
-
 ↓
-
 
 
 Layer 3
@@ -219,9 +215,7 @@ Layer 3
 Risk Detection
 
 
-
 ↓
-
 
 
 Layer 4
@@ -229,9 +223,7 @@ Layer 4
 Decision Engine
 
 
-
 ↓
-
 
 
 Layer 5
@@ -239,9 +231,7 @@ Layer 5
 Validation Engine
 
 
-
 ↓
-
 
 
 Layer 6
@@ -249,9 +239,7 @@ Layer 6
 Optimization Engine
 
 
-
 ↓
-
 
 
 Layer 7
@@ -261,9 +249,7 @@ Final Output
 ```
 
 
-
 \---
-
 
 
 \# Layer 1
@@ -280,36 +266,28 @@ Collect information from:
 
 Printer
 
-
-
 Material
 
+Filament
 
+Print Preset
 
 Scene
 
-
-
 User Preferences
-
-
 
 Model Analysis
 
 ```
 
 
-
 \---
-
 
 
 \# Required Inputs
 
 
-
 \## Printer
-
 
 
 ```json
@@ -361,6 +339,20 @@ Model Analysis
 \---
 
 
+## Filament
+
+```json
+{
+  "brand": "",
+  "name": "",
+  "material": "",
+  "color": "",
+  "diameter": 1.75,
+  "recommendedProfile": {}
+}
+```
+
+\---
 
 \## Model
 
@@ -376,7 +368,11 @@ Model Analysis
 
 &#x20; "bridges": {},
 
-&#x20; "stability": {}
+&#x20; "stability": {},
+
+&#x20; "thinWalls": {},
+
+&#x20; "classification": {}
 
 }
 
@@ -818,104 +814,78 @@ The engine always follows:
 
 Printer
 
-
-
 Material
 
+Filament
 
+Print Preset
 
 Model
 
-
-
 Risk Analysis
+
+Classification
 
 ```
 
-
-
 \---
-
 
 
 \# Decision Outputs
 
 
-
 ```text
 
 Layer Height
-
-
-
 Supports
-
-
 
 Cooling
 
-
-
 Retraction
-
-
 
 Speed
 
-
-
 Infill
-
-
 
 Walls
 
-
-
 Adhesion
 
-```
+Print Preset
 
+Orientation Recommendation
+
+Confidence Score
+
+```
 
 
 \---
 
 
-
 \# Layer Height Logic
 
 
-
 Decision Factors:
-
 
 
 ```text
 
 Nozzle Size
 
-
-
 Detail Level
 
-
-
 Feature Size
-
-
 
 Target Quality
 
 ```
 
 
-
 \---
 
 
-
 \# Example Rules
-
 
 
 ```text
@@ -923,9 +893,7 @@ Target Quality
 Fine Details
 
 
-
 ↓
-
 
 
 0.08 - 0.12 mm
@@ -933,9 +901,7 @@ Fine Details
 ```
 
 
-
 \---
-
 
 
 ```text
@@ -943,9 +909,7 @@ Fine Details
 Balanced Quality
 
 
-
 ↓
-
 
 
 0.16 - 0.20 mm
@@ -953,9 +917,7 @@ Balanced Quality
 ```
 
 
-
 \---
-
 
 
 ```text
@@ -963,9 +925,7 @@ Balanced Quality
 Large Mechanical Parts
 
 
-
 ↓
-
 
 
 0.20 - 0.28 mm
@@ -973,37 +933,26 @@ Large Mechanical Parts
 ```
 
 
-
 \---
-
 
 
 \# Wall Count Logic
 
 
-
 Decision Factors:
-
 
 
 ```text
 
 Mechanical Load
 
-
-
 Thin Structure
-
-
 
 Expected Stress
 
 ```
 
-
-
 \---
-
 
 
 \# Example
@@ -1013,7 +962,6 @@ Expected Stress
 Decorative Object
 
 
-
 ```text
 
 2 Walls
@@ -1021,13 +969,10 @@ Decorative Object
 ```
 
 
-
 \---
 
 
-
 Mechanical Part
-
 
 
 ```text
@@ -1037,9 +982,7 @@ Mechanical Part
 ```
 
 
-
 \---
-
 
 
 \# Top/Bottom Layers Logic
@@ -2089,75 +2032,56 @@ Thin Wall Detected
 ```json
 
 {
-
-&#x20; "analysis": {},
-
-&#x20; "scores": {},
-
-&#x20; "recommendations": {},
-
-&#x20; "warnings": \[],
-
-&#x20; "optimization": {},
-
-&#x20; "confidence": 95
-
+  &#x20; "analysis": {},
+  &#x20; "classification": {},
+  &#x20; "scores": {},
+  &#x20; "recommendations": {},
+  &#x20; "printPreset": {},
+  &#x20; "optimization": {},
+  &#x20; "warnings": [],
+  &#x20; "confidence": 95
 }
 
 ```
 
 
-
 \---
-
 
 
 \# Future Machine Learning System
 
-
-
 Reserved For Future Versions.
 
-
-
 Potential Features:
-
 
 
 ```text
 
 Print Failure Prediction
 
-
-
 Automatic Error Detection
-
-
 
 Community Data Learning
 
-
-
 Printer Learning
-
-
 
 Material Learning
 
-```
+Vision Classification Learning
 
+Filament Performance Learning
+
+Community Recommendation Learning
+```
 
 
 \---
 
 
-
 \# AI Learning Rules
 
 
-
 Current Version:
-
 
 
 ```text
@@ -2167,73 +2091,54 @@ Rule Based Only
 ```
 
 
-
 No autonomous learning.
 
-
-
 No recommendation generation without validation.
-
 
 
 \---
 
 
-
 \# Safety Rules
 
 
-
 Never recommend values exceeding:
-
 
 
 ```text
 
 Printer Limits
 
-
-
 Material Limits
 
 ```
 
 
-
 Always prefer:
-
 
 
 ```text
 
 Reliability
 
-
-
 Over Speed
 
 ```
 
 
-
 Always produce warnings when uncertainty exists.
 
 
-
 \---
-
 
 
 \# Golden Rule
 
 
-
 The AI should maximize the probability of a successful print, not the probability of generating aggressive settings.
 
 
-
 \---
-
 
 
 \# End Of Document
