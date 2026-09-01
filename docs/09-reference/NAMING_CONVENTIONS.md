@@ -216,6 +216,12 @@ Material
 Project
 
 Analysis
+
+Filament
+
+PrintPreset
+
+Recommendation
 ```
 
 ---
@@ -288,6 +294,12 @@ PrinterProfile
 MaterialSettings
 
 SupportStrategy
+
+FilamentProfile
+
+PrintPreset
+
+ConfidenceScore
 ```
 
 ---
