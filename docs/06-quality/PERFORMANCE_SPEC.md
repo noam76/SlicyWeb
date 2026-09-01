@@ -206,7 +206,27 @@ GUI must remain responsive.
 
 \---
 
+# Classification Performance
 
+Target:
+
+```text
+< 500 ms
+```
+
+for standard models.
+
+---
+
+# Confidence Calculation Performance
+
+Target:
+
+```text
+< 100 ms
+```
+
+---
 
 \# Scene Management
 
@@ -238,9 +258,15 @@ Printers
 
 Materials
 
+Filaments
+
+Print Presets
+
 Analyses
 
 Downloads
+
+Recommendations
 
 ```
 
@@ -254,16 +280,22 @@ Downloads
 
 
 
-Recommendations:
-
+Classification:
 
 
 ```text
 
+< 500 ms
+
+Recommendation Generation:
+
 < 1 second
 
-```
+Confidence Calculation:
 
+< 100 ms
+
+```
 
 
 for standard models.
@@ -293,10 +325,23 @@ Enable Optimized Mode
 ```
 
 
-
 \---
 
+# Large Scene Handling
 
+When scene complexity exceeds threshold:
+
+```text
+Enable LOD
+
+Reduce Update Frequency
+
+Use Cached Analysis
+
+Enable Performance Mode
+```
+
+---
 
 \# Performance Monitoring
 
@@ -304,27 +349,23 @@ Enable Optimized Mode
 
 Track:
 
-
-
 ```text
 
 FPS
 
-
-
 RAM
-
-
 
 CPU
 
-
-
 GPU
 
-
-
 Render Time
+
+AI Response Time
+
+Classification Time
+
+Cache Hit Rate
 
 ```
 
@@ -346,13 +387,15 @@ Generate warnings when:
 
 Low FPS
 
-
-
 High RAM
 
-
-
 Slow Analysis
+
+Slow Classification
+
+Slow Recommendation Generation
+
+Cache Miss Rate High
 
 ```
 
@@ -360,7 +403,65 @@ Slow Analysis
 
 \---
 
+# Repository Performance
 
+Target:
+
+```text
+Profile Search < 500 ms
+
+Repository Sync < 10 sec
+
+Cache Refresh < 5 sec
+```
+
+---
+
+# Auto Save Performance
+
+Target:
+
+```text
+Auto Save < 1 second
+
+Recovery Load < 3 seconds
+```
+
+---
+
+# Database Performance
+
+Target:
+
+```text
+Printer Lookup < 100 ms
+
+Material Lookup < 100 ms
+
+Filament Lookup < 100 ms
+
+Preset Lookup < 100 ms
+```
+
+---
+
+# Future Performance Targets
+
+Reserved:
+
+```text
+10M Triangle Models
+
+Multi Build Plates
+
+Cloud Synchronization
+
+Distributed Analysis
+
+GPU Accelerated Classification
+```
+
+---
 
 \# Golden Rule
 
