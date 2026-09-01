@@ -473,6 +473,18 @@ Definition:
 Human-readable interpretation of a Confidence Score.
 ```
 
+Examples:
+
+```text
+Low
+
+Medium
+
+High
+```
+
+---
+
 ## Rule-Based AI
 
 Definition:
