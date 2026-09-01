@@ -158,41 +158,28 @@ Supported Categories
 
 Printer Plugins
 
-
-
 Material Plugins
 
+Filament Plugins
 
+Print Preset Plugins
 
-Analysis Plugins
-
-
+Analysis Plugin
 
 Optimization Plugins
 
-
-
 AI Plugins
-
-
 
 Import Plugins
 
-
-
 Export Plugins
-
-
 
 UI Plugins
 
-
-
 Cloud Plugins
 
-
-
 Utility Plugins
+
 
 ```
 
@@ -352,7 +339,11 @@ Example:
 
 &#x20; "description": "",
 
-&#x20; "apiVersion": "1.0.0"
+&#x20; "apiVersion": "1.0.0",
+
+&#x20; "category": "tool",
+
+&#x20; "permissions": []
 
 }
 
@@ -700,27 +691,19 @@ Plugins must request permissions.
 
 Read Project
 
-
-
 Modify Scene
-
-
 
 Read Printer Profiles
 
-
-
 Read Material Profiles
 
+Read Filament Profiles
 
+Read Print Presets
 
 Add Menu Items
 
-
-
 Access Network
-
-
 
 Access Storage
 
@@ -842,23 +825,17 @@ Available Services
 
 Scene API
 
-
-
 Analysis API
-
-
 
 Recommendation API
 
-
-
 Printer API
-
-
 
 Material API
 
+Filament API
 
+Print Preset API
 
 Project API
 
@@ -882,11 +859,11 @@ Examples:
 
 Printer Profiles
 
-
-
 Material Profiles
 
+Filament Profiles
 
+Print Presets
 
 Application Version
 
@@ -1276,18 +1253,34 @@ Provide additional material databases.
 
 \---
 
+# Filament Plugins
+
+Purpose:
+
+Provide additional filament databases.
+
+---
+
+# Examples
+
+```text
+Manufacturer Filaments
+
+Community Filaments
+
+Validated Filament Repositories
+```
+
+\---
 
 
 \# Update System
 
 
-
 Plugins can be updated.
 
 
-
 \---
-
 
 
 \# Update Validation
@@ -1302,13 +1295,13 @@ Verify:
 
 Version
 
-
-
 Signature
 
-
-
 Compatibility
+
+Permissions
+
+Manifest Integrity
 
 ```
 
@@ -1530,13 +1523,13 @@ Every plugin should pass:
 
 Compatibility Tests
 
-
-
 Permission Tests
 
-
-
 Stability Tests
+
+Security Tests
+
+Performance Tests
 
 ```
 
@@ -1586,17 +1579,17 @@ Reserved
 
 Plugin Marketplace
 
-
-
 Plugin Ratings
-
-
 
 Cloud Plugin Sync
 
-
-
 Plugin Analytics
+
+Verified Publisher Program
+
+Plugin Trust Score
+
+Digital Signature Requirements
 
 ```
 
