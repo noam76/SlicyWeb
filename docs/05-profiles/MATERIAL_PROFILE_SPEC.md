@@ -1559,14 +1559,10 @@ Supported Sources
 ```text
 
 Official Manufacturer
-
-Verified Repository
-
-Community
-
-Custom User Profile
-
 Manufacturer Cloud Repository
+Verified Repository
+Community
+Custom User Profile
 
 ```
 
