@@ -86,51 +86,35 @@ The print settings system must:
 
 Printer
 
-
-
 \+
-
-
 
 Material
 
+\+
 
+Filament
 
 \+
 
+Print Preset
 
+\+
 
 Model Analysis
 
-
-
 \+
-
-
 
 Object Classification
 
-
-
 ↓
-
-
 
 Print Settings
 
-
-
 ↓
-
-
 
 Validation
 
-
-
 ↓
-
-
 
 Final Profile
 
@@ -150,61 +134,35 @@ Final Profile
 
 Quality
 
-
-
 Shell
-
-
 
 Infill
 
-
-
 Support
-
-
 
 Adhesion
 
-
-
 Speed
-
-
 
 Cooling
 
-
-
 Retraction
 
-
+Temperature
 
 Advanced
 
 ```
 
-
-
 \---
-
-
 
 \# Quality Settings
 
-
-
 Controls surface quality and detail level.
-
-
 
 \---
 
-
-
 \## Layer Height
-
-
 
 Unit:
 
@@ -1285,57 +1243,54 @@ Travel Collisions Possible
 \# Temperature Settings
 
 
-
 \---
-
 
 
 \## Nozzle Temperature
 
 
-
 Derived from:
-
 
 
 ```text
 
 Material Profile
 
+---
+
+Also influenced by:
+
+```text
+Filament Profile
 ```
 
-
-
 \---
-
-
 
 \## Bed Temperature
 
-
-
 Derived from:
-
-
 
 ```text
 
 Material Profile
 
 ```
+---
 
+Also influenced by:
+
+```text
+Filament Profile
+```
 
 
 \---
-
 
 
 \## Chamber Temperature
 
 
-
 Derived from:
-
 
 
 ```text
@@ -1345,9 +1300,7 @@ Printer Profile
 ```
 
 
-
 and
-
 
 
 ```text
@@ -1446,30 +1399,21 @@ The AI may modify:
 
 Layer Height
 
-
-
 Walls
-
-
 
 Infill
 
-
-
 Supports
-
-
 
 Cooling
 
-
-
 Retraction
-
-
 
 Adhesion
 
+Print Preset
+
+Orientation Recommendation
 ```
 
 
@@ -1486,9 +1430,9 @@ The AI must NEVER exceed:
 
 Printer Limits
 
-
-
 Material Limits
+
+Filament Limits
 
 ```
 
@@ -1549,9 +1493,7 @@ Miniature
 \# Settings Confidence
 
 
-
 Every generated profile receives:
-
 
 
 ```text
@@ -1561,44 +1503,45 @@ Confidence Score
 ```
 
 
-
 Range:
-
 
 
 ```text
 
 0 - 100
 
-```
+Confidence is increased by:
 
+Verified Printer Profile
+
+Verified Material Profile
+
+Verified Filament Profile
+
+Complete Model Analysis
+
+```
 
 
 \---
 
 
-
 \# Validation Engine
-
 
 
 Before applying settings:
 
 
-
 Verify:
-
 
 
 ```text
 
 Printer Compatibility
 
-
-
 Material Compatibility
 
-
+Filament Compatibility
 
 Geometry Compatibility
 
@@ -1654,21 +1597,19 @@ Reserved:
 
 Machine Learning Tuning
 
-
-
 Community Profiles
-
-
 
 Cloud Profiles
 
-
-
 Automatic Calibration
 
-
-
 Print History Optimization
+
+Filament Performance Learning
+
+Vision Classification Integration
+
+Community Recommendation Learning
 
 ```
 
