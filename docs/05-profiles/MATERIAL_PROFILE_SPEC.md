@@ -179,26 +179,19 @@ Custom
 ```json
 
 {
-
-&#x20; "metadata": {},
-
-&#x20; "thermal": {},
-
-&#x20; "cooling": {},
-
-&#x20; "mechanical": {},
-
-&#x20; "printing": {},
-
-&#x20; "drying": {},
-
-&#x20; "behavior": {},
-
-&#x20; "compatibility": {},
-
-&#x20; "cost": {}
-
+  &#x20;"metadata": {},
+  &#x20;"thermal": {},
+  &#x20;"cooling": {},
+  &#x20;"mechanical": {},
+  &#x20;"physical": {},
+  &#x20;"printing": {},
+  &#x20;"drying": {},
+  &#x20;"behavior": {},
+  &#x20;"compatibility": {},
+  &#x20;"cost": {},
+  &#x20;"riskFactors": {}
 }
+
 
 ```
 
@@ -210,23 +203,13 @@ Custom
 
 \# Metadata Section
 
-
-
 Purpose:
-
-
 
 Identify material.
 
-
-
 \---
 
-
-
 \## Schema
-
-
 
 ```json
 
@@ -244,20 +227,19 @@ Identify material.
 
 &#x20; "color": "",
 
-&#x20; "verified": true
+&#x20; "verified": true,
+
+&#x20; "profileVersion": "1.0.0"
 
 }
 
 ```
 
 
-
 \---
 
 
-
 \# Example
-
 
 
 ```json
@@ -533,17 +515,13 @@ All properties:
 \# Physical Properties
 
 
-
 Purpose:
-
 
 
 Cost and material estimation.
 
 
-
 \---
-
 
 
 \## Schema
@@ -668,7 +646,9 @@ Recommended values.
 
 &#x20;   "recommendedRetractionDistance": 0.8,
 
-&#x20;   "recommendedRetractionSpeed": 35
+&#x20;   "recommendedRetractionSpeed": 35,
+
+&#x20;   "recommendedPrintPreset": "Balanced"
 
 &#x20; }
 
@@ -964,7 +944,9 @@ Used by validation engine.
 
 &#x20;   "enclosureRequired": false,
 
-&#x20;   "hardenedNozzleRequired": false
+&#x20;   "hardenedNozzleRequired": false,
+
+&#x20;   "supportedPrinterTypes": []
 
 &#x20; }
 
@@ -1265,17 +1247,13 @@ Optional.
 \# Material Risk Factors
 
 
-
 Used by AI.
-
 
 
 \---
 
 
-
 \## Schema
-
 
 
 ```json
@@ -1360,13 +1338,11 @@ Each material receives:
 
 Printability Score
 
-
-
 Strength Score
 
-
-
 Difficulty Score
+
+Confidence Score
 
 ```
 
@@ -1484,21 +1460,17 @@ Every profile must contain:
 
 Metadata
 
-
-
 Thermal
-
-
 
 Cooling
 
-
+Physical
 
 Printing
 
-
-
 Compatibility
+
+Risk Factors
 
 ```
 
@@ -1588,17 +1560,13 @@ Supported Sources
 
 Official Manufacturer
 
-
-
 Verified Repository
-
-
 
 Community
 
-
-
 Custom User Profile
+
+Manufacturer Cloud Repository
 
 ```
 
@@ -1714,7 +1682,11 @@ Reserved
 
 &#x20; "batchTracking": {},
 
-&#x20; "materialAging": {}
+&#x20; "materialAging": {},
+
+&#x20; "communityRating": {},
+
+&#x20; "filamentPerformanceHistory": {}
 
 }
 
