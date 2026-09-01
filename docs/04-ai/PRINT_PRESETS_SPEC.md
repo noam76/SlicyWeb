@@ -172,7 +172,9 @@ Custom
 
 &#x20; "cooling": {},
 
-&#x20; "speed": {}
+&#x20; "speed": {},
+
+&#x20; "confidenceScore": 0
 
 }
 
@@ -1269,17 +1271,9 @@ The AI Engine may automatically select presets based on:
 ```text
 
 Object Classification
-
-
-
 Material
-
-
-
+Filament
 Printer
-
-
-
 User Goal
 
 ```
@@ -1458,25 +1452,19 @@ Reserved
 
 Carbon Fiber
 
-
-
 High Temperature
-
-
 
 Industrial
 
-
-
 Toolhead Specific
-
-
 
 Resin Comparison
 
-
-
 Multi Material
+
+Low Cost
+
+Support Free
 
 ```
 
