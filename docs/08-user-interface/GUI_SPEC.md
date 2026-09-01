@@ -522,25 +522,31 @@ Functions:
 
 Select Material
 
-
-
 Manage Materials
 
-
-
 Import Material
-
-
 
 Export Material
 
 ```
 
 
-
 \---
 
+# Filament Menu
 
+Functions:
+
+```text
+Select Filament
+
+Manage Filaments
+
+Import Filament
+
+Export Filament
+```
+\---
 
 \# Tools Menu
 
@@ -1206,23 +1212,17 @@ Collapsible
 
 Printer
 
-
-
 Material
 
+Filament
 
+Print Preset
 
 Object
 
-
-
 Transform
 
-
-
 Analysis
-
-
 
 Recommendations
 
@@ -1336,19 +1336,11 @@ Displays:
 
 Material Name
 
-
-
 Nozzle Temperature
-
-
 
 Bed Temperature
 
-
-
 Cooling
-
-
 
 Speed Profile
 
@@ -1358,7 +1350,43 @@ Speed Profile
 
 \---
 
+# Filament Section
 
+Displays:
+
+```text
+Filament Name
+
+Brand
+
+Color
+
+Thermal Overrides
+
+Cooling Overrides
+
+Retraction Profile
+```
+
+\---
+
+# Print Preset Section
+
+Displays:
+
+```text
+Draft
+
+Balanced
+
+Quality
+
+Custom
+
+Active Preset
+```
+
+\---
 
 \# Transform Section
 
@@ -1492,29 +1520,21 @@ Displays:
 
 Recommended Quality
 
-
-
 Supports
-
-
 
 Infill
 
-
-
 Cooling
-
-
 
 Retraction
 
-
-
 Speed
 
-
-
 Warnings
+
+Confidence Score
+
+Recommended Preset
 
 ```
 
@@ -1580,22 +1600,17 @@ Displays:
 
 Selected Printer
 
-
-
 Selected Material
-
-
 
 Selected Object
 
-
-
 Object Count
-
-
 
 Analysis Status
 
+Selected Filament
+
+Active Preset
 ```
 
 
@@ -1606,19 +1621,15 @@ Analysis Status
 
 \# Search System
 
-
-
 Printer Search
-
-
 
 Material Search
 
-
-
 Object Search
 
+Filament Search
 
+Preset Search
 
 \---
 
@@ -1808,18 +1819,17 @@ Optional
 
 Warnings
 
-
-
 Recommendations
-
-
 
 Optimization Suggestions
 
-
-
 Printability Advice
 
+Confidence Score
+
+Recommended Filament
+
+Recommended Preset
 ```
 
 
@@ -1968,25 +1978,21 @@ Reserved:
 
 Slicing Preview
 
-
-
 G-Code Viewer
-
-
 
 Remote Printers
 
-
-
 Camera Monitoring
-
-
 
 Multi Material Visualization
 
-
-
 Cloud Projects
+
+Filament Manager
+
+Preset Library
+
+Profile Repository Browser
 
 ```
 
