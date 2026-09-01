@@ -651,11 +651,11 @@ Easier Collaboration
 
 ---
 
-# Object Classification
+# Confidence Scoring
 
 ---
 
-# Confidence Scoring
+# Object Classification
 
 ---
 
