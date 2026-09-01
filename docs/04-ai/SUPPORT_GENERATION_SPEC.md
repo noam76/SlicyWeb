@@ -1230,11 +1230,8 @@ Standard Supports
 
 Goal:
 
-```text
-Fast Printing
-
-Material Reduction
-```
+- Fast Printing
+- Material Reduction
 
 \# Support Density
 
