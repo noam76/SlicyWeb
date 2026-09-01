@@ -38,6 +38,10 @@ Material
 
 \+
 
+Filament
+
+\+
+
 Model Analysis
 
 \+
@@ -216,12 +220,22 @@ Printer Profile
 
 Material Profile
 
+---
+
+## Filament
+
+```text
+Filament Profile
+---
+
+## Print Preset
+
+```text
+Print Preset
 ```
 
 
-
 \---
-
 
 
 \## Model Analysis
@@ -486,7 +500,56 @@ Strength
 
 \---
 
+---
 
+# Print Preset Selection Rules
+
+## Draft
+
+Recommended For:
+
+```text
+Rapid Prototypes
+Large Simple Objects
+Low Detail Models
+```
+
+---
+
+## Balanced
+
+Recommended For:
+
+```text
+General Purpose Models
+Functional Parts
+Mixed Use Objects
+```
+
+---
+
+## Quality
+
+Recommended For:
+
+```text
+Miniatures
+Figurines
+Decorative Models
+High Detail Objects
+```
+
+---
+
+## Strength
+
+Recommended For:
+
+```text
+Mechanical Parts
+Structural Components
+Load Bearing Objects
+```
 
 \# Layer Height Rules
 
@@ -1888,76 +1951,66 @@ Confidence increases when:
 
 Verified Printer
 
-
-
 Verified Material
 
-
+Verified Filament
 
 Complete Analysis
 
 ```
 
 
-
 \---
-
 
 
 \# Confidence Reduction
 
 
-
 Unknown Printer
-
 
 
 ↓
 
 
-
 \-30
 
 
-
 \---
-
 
 
 Unknown Material
 
 
-
 ↓
-
 
 
 \-30
 
+\---
+
+Unknown Filament
+
+↓
+
+-15
 
 
 \---
-
 
 
 Incomplete Analysis
 
 
-
 ↓
-
 
 
 \-20
 
 
-
 \---
 
 
-
 \# Confidence Scale
-
 
 
 ```text
@@ -2258,17 +2311,17 @@ Reserved For:
 
 Machine Learning
 
-
-
 Print History Analysis
-
-
 
 Community Optimization
 
-
-
 Failure Prediction
+
+Vision Classification
+
+Filament Performance Learning
+
+Community Recommendation Learning
 
 ```
 
