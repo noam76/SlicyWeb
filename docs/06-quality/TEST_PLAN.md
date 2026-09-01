@@ -951,15 +951,21 @@ Printer Information Updated
 
 
 
-\# Workflow 4
-
-
+# Workflow 4
 
 Select Material
 
+---
 
+Expected
 
-\---
+```text
+Material Data Loaded
+
+Recommendations Updated
+```
+
+---
 
 # Workflow 5
 
@@ -977,22 +983,7 @@ Recommendations Updated
 Confidence Updated
 ```
 
-\---
-
-Expected
-
-
-
-```text
-
-Material Data Loaded
-
-
-
-Recommendations Updated
-
-```
-
+---
 
 
 \---
@@ -1002,73 +993,53 @@ Recommendations Updated
 \# Workflow 6
 
 
-
 Run Full Analysis
-
 
 
 \---
 
 
-
 Expected
-
 
 
 ```text
 
 Analysis Results Generated
 
-
-
 No Crashes
-
-
 
 Scores Produced
 
 ```
 
 
-
 \---
-
 
 
 \# Workflow 7
 
 
-
 Generate Recommendations
-
 
 
 \---
 
 
-
 Expected
-
 
 
 ```text
 
 Printer Safe
 
-
-
 Material Safe
-
-
 
 Geometry Safe
 
 ```
 
 
-
 \---
-
 
 
 \# END TO END TESTS
