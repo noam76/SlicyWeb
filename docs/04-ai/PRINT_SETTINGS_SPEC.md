@@ -1453,34 +1453,15 @@ Supported Presets:
 ```text
 
 Draft
-
-
-
 Fast
-
-
-
 Balanced
-
-
-
 Quality
-
-
-
 Ultra Quality
-
-
-
 Mechanical
-
-
-
 Prototype
-
-
-
 Miniature
+Support Free
+Low Cost
 
 ```
 
