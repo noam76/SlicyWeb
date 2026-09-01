@@ -782,12 +782,22 @@ Responsibilities:
 
 \- Printability analysis
 
-\- Object classification
-
-\- Confidence scoring
-
 \---
 
+## Classification Engine
+
+Folder
+
+/classification_engine
+
+Responsibilities:
+
+- Object classification
+- Confidence scoring
+- Category detection
+- Classification validation
+
+\---
 
 \# Analysis Engine Architecture
 
