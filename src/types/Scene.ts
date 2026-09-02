@@ -11,9 +11,10 @@ import type { Printer } from "./Printer";
 import type { Material } from "./Material";
 import type { Filament } from "./Filament";
 import type { PrintPreset } from "./PrintPreset";
+import type { Object3D } from "./Object3D";
 
 export interface Scene {
-  objects: string[];
+  objects: Object3D[];
 
   printer: Printer | null;
 
