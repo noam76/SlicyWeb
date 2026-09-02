@@ -18,7 +18,19 @@ export type PresetCategory =
   | "prototype"
   | "miniature"
   | "support_free"
-  | "low_cost";
+  | "low_cost
+
+export type SupportType =
+  | "none"
+  | "organic"
+  | "tree"
+  | "standard";
+
+export type AdhesionType =
+  | "none"
+  | "skirt"
+  | "brim"
+  | "raft";
 
 export interface PresetSettings {
   layerHeight: number;
@@ -35,9 +47,9 @@ export interface PresetSettings {
 
   supportEnabled: boolean;
 
-  supportType: string;
+  supportType: SupportType;
 
-  adhesionType: string;
+  adhesionType: AdhesionType;
 
   printSpeed: number;
 
@@ -52,4 +64,6 @@ export interface PrintPreset {
   description: string;
 
   settings: PresetSettings;
+
+  confidenceScore: number;
 }
