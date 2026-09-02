@@ -1,9 +1,24 @@
+/**
+ * Wichy
+ * Main Entry Point
+ *
+ * Application bootstrap.
+ */
+
 import { Startup } from "./Startup";
 
-async function bootstrap(): Promise<void> {
-  const startup = new Startup();
+async function main(): Promise<void> {
+  try {
+    const startup = new Startup();
 
-  await startup.initialize();
+    await startup.execute();
+
+    console.info("[Wichy] Startup completed.");
+  } catch (error) {
+    console.error("[Wichy] Startup failed.", error);
+
+    process.exit(1);
+  }
 }
 
-void bootstrap();
+void main();
