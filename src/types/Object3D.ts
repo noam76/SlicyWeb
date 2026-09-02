@@ -32,6 +32,19 @@ export interface Transform {
   scale: Scale;
 }
 
+export interface Geometry {
+  width: number;
+  depth: number;
+  height: number;
+  volume: number;
+  surfaceArea: number;
+}
+
+export interface Mesh {
+  vertices: number;
+  triangles: number;
+}
+
 export interface Object3D {
   objectId: string;
 
@@ -44,4 +57,8 @@ export interface Object3D {
   locked: boolean;
 
   transform: Transform;
+
+  geometry: Geometry;
+
+  mesh: Mesh;
 }
