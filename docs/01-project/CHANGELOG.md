@@ -1,14 +1,16 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# CHANGELOG
+# CHANGELOG
 
 Version: 1.1.0
 
-Status: Active
+Status: Approved
+
+Priority:
 
 This file records all significant changes made to the project.
 
-
+---
 
 The purpose of this document is to:
 
