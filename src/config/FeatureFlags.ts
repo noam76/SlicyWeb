@@ -1,33 +1,34 @@
 /**
  * Wichy
- * Feature Flags Defi*ition
+ * Feature Flags Definition
  *
  * Based on:
- * -*ROADMAP.md
+ * - ROADMAP.md
  * - ARCHITECTURE.md
- **
+ */
 
-*xport interface FeatureFlags {
-  c*assificationEngine: boolean;
+export interface FeatureFlags {
+  classificationEngine: boolean;
 
-  re*ommendation*ngine: boolean;
+  recommendationEngine: boolean;
 
-  optimizationEng*ne: boolean;
+  optimizationEngine: boolean;
 
-  filamentProfiles: *oolean;
+  filamentProfiles: boolean;
 
   printPresets: boolean;
-*  projectRecovery: boolean;
 
-  git*ubRepositories: boolean;
+  projectRecovery: boolean;
 
-  cloud*ync: boolean;
+  githubRepositories: boolean;
 
-  pluginSystem: boo*ean;
+  cloudSync: boolean;
 
-  g*odeEngine: boolean;
+  pluginSystem: boolean;
 
-  machineLear*ing: boolean;
+  gcodeEngine: boolean;
 
-  visionClassificat*on: boolean;
+  machineLearning: boolean;
+
+  visionClassification: boolean;
 }
