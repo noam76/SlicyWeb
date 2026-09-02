@@ -2,14 +2,9 @@
 
 \# GUI SPECIFICATION
 
-
-
 Version: 1.0.0
 
-
-
-Status: Active
-
+Status: Approved
 
 
 \---
