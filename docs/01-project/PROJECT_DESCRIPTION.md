@@ -1,16 +1,12 @@
-\# WICHY
+# WICHY
 
-\# AI SMART SLICER PLATFORM
-
-
+# AI SMART SLICER PLATFORM
 
 Version: 1.0.0
 
+Status: Approved
 
-
-Status: Active Development
-
-
+Priority:
 
 \---
 
