@@ -21,6 +21,7 @@ Wichy is an AI-assisted 3D printing preparation platform designed to simplify an
 The platform combines:
 
 - 3D Model Analysis
+- Object Classification
 - Printer Intelligence
 - Material Knowledge
 - Filament Profiles
