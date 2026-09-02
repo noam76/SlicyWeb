@@ -2,15 +2,9 @@
 
 \# PLUGIN SYSTEM SPECIFICATION
 
-
-
 Version: 1.0.0
 
-
-
-Status: Future Approved
-
-
+Status: Approved
 
 Priority: Future Release
 
