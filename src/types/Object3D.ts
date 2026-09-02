@@ -4,39 +4,32 @@
  *
  * Based on:
  * - DATA_SCHEMA.md
- * - ARCHITECTURE.md
  */
 
-export interface Vector3 {
+export interface Position {
+  x: number;
+  y: number;
+  z: number;
+}
+
+export interface Rotation {
+  x: number;
+  y: number;
+  z: number;
+}
+
+export interface Scale {
   x: number;
   y: number;
   z: number;
 }
 
 export interface Transform {
-  position: Vector3;
+  position: Position;
 
-  rotation: Vector3;
+  rotation: Rotation;
 
-  scale: Vector3;
-}
-
-export interface GeometryInfo {
-  width: number;
-
-  depth: number;
-
-  height: number;
-
-  volume: number;
-
-  surfaceArea: number;
-}
-
-export interface MeshStatistics {
-  vertices: number;
-
-  triangles: number;
+  scale: Scale;
 }
 
 export interface Object3D {
@@ -51,8 +44,4 @@ export interface Object3D {
   locked: boolean;
 
   transform: Transform;
-
-  geometry: GeometryInfo;
-
-  mesh: MeshStatistics;
 }
