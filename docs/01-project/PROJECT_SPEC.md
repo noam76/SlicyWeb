@@ -1,22 +1,22 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\## Project Specification
-
-
+## Project Specification
 
 Version: 1.0.0
 
+Status: Approved
 
+Priority:
 
-\---
-
-
-
-\# 1. Project Overview
+---
 
 
 
-\## Project Name
+# 1. Project Overview
+
+
+
+## Project Name
 
 
 
