@@ -4,7 +4,7 @@ Version:1.0.0
 
 Status: Approved
 
-Priority:
+Priority: High
 
 **Philosophy:** Documentation-First | Local-First | Rule-Based AI
 
