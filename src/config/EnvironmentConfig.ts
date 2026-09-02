@@ -7,21 +7,20 @@
  * - ARCHITECTURE.md
  */
 
-export interface Environme*tConfig {
-  isDevelopment: boolean*
+export interface EnvironmentConfig {
+  isDevelopment: boolean;
 
   isProduction: boolean;
 
-  isTe*ting: boolean;
+  isTesting: boolean;
 
-  application*ataPath: string;
+  applicationDataPath: string;
 
-  cache*ath* string;
+  cachePath: string;
 
   logsPath: string;
 
-  p*ofilesPath: string;
+  profilesPath: string;
 
-  projectsPat*: string;
+  projectsPath: string;
 }
-*
