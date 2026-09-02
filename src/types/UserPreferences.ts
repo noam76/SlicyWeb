@@ -1,30 +1,29 @@
 /**
  * Wichy
- * User *references Type Definition
+ * User Preferences Type Definition
  *
- * B*sed on:
+ * Based on:
  * - DATA_SCHEMA.md
- * -*USER_SETTINGS_SPEC.md
+ * - USER_SETTINGS_SPEC.md
  */
 
-export *ype*Theme =
+export type Theme =
   | "dark"
   | "light"
-  |*"system";
+  | "system";
 
 export type Language =
-* | "en"
+  | "en"
   | "fr"
- *| "he"
+  | "he"
   | "es"
   | "de"
- *|*"it";
+  | "it";
 
-export interface UserPrefer*nces {
+export interface UserPreferences {
   theme: Theme;
 
-  language* Language;
+  language: Language;
 
   units: string;
 }
-```*
