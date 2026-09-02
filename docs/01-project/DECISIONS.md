@@ -1,22 +1,20 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# ARCHITECTURAL DECISIONS RECORD
-
-
+# ARCHITECTURAL DECISIONS RECORD
 
 Version: 1.0.0
 
+Status: Approved
 
-
-Status: Active
-
-
-
-\---
+Priority:
 
 
 
-\# Purpose
+---
+
+
+
+# Purpose
 
 
 
@@ -28,7 +26,7 @@ Goals:
 
 
 
-\- Preserve decision history
+- Preserve decision history
 
 \- Explain why choices were made
 
