@@ -1,12 +1,8 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# TECHNOLOGY STACK
-
-
+# TECHNOLOGY STACK
 
 Version: 1.0.0
-
-
 
 Status: Approved
 
