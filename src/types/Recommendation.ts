@@ -9,6 +9,8 @@
  * - PRINT_SETTINGS_SPEC.md
  */
 
+import type { PrintPreset } from "./PrintPreset";
+
 export type SupportType =
   | "none"
   | "organic"
@@ -52,6 +54,8 @@ export interface SupportSettings {
 }
 
 export interface RecommendedProfile {
+  printPreset: PrintPreset;
+
   quality: QualitySettings;
 
   speed: SpeedSettings;
@@ -71,10 +75,17 @@ export interface RecommendedProfile {
   confidenceScore: number;
 }
 
+export type WarningSeverity =
+  | "info"
+  | "low"
+  | "medium"
+  | "high"
+  | "critical";
+
 export interface Warning {
   code: string;
 
-  severity: "info" | "low" | "medium" | "high" | "critical";
+  severity: WarningSeverity;
 
   message: string;
 }
@@ -92,7 +103,7 @@ export interface OptimizationResult {
 export interface Recommendation {
   recommendedProfile: RecommendedProfile;
 
-  printPreset: string;
+  printPreset: PrintPreset;
 
   optimization: OptimizationResult;
 
