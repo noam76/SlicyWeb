@@ -22,9 +22,9 @@ export interface Filament {
 
   density: number;
 
-  recommendedProfile: object;
+  recommendedProfile: Record<string, unknown>;
 
-  manufacturerSettings: object;
+  manufacturerSettings: Record<string, unknown>;
 
   pricePerKg: number;
 }
