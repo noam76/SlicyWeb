@@ -1,36 +1,52 @@
-// src/app/Startup.ts
+/**
+ * Wichy
+ * Startup Module
+ *
+ * Responsible for application startup initialization.
+ *
+ * Responsibilities:
+ * - Initialize core systems
+ * - Validate startup requirements
+ * - Prepare application environment
+ *
+ * No business logic should be placed here.
+ */
 
 export class Startup {
-  public async initialize(): Promise<void> {
-    console.log("[Startup] Initializing application...");
+  private initialized = false;
 
-    await this.initializeConfiguration();
-    await this.initializeState();
-    await this.initializeServices();
-    await this.initializeEvents();
+  /**
+   * Executes startup sequence.
+   */
+  public async execute(): Promise<void> {
+    if (this.initialized) {
+      return;
+    }
 
-    console.log("[Startup] Application initialized.");
+    await this.initializeEnvironment();
+    await this.initializeApplication();
+
+    this.initialized = true;
   }
 
-  public async shutdown(): Promise<void> {
-    console.log("[Startup] Shutting down application...");
-
-    console.log("[Startup] Shutdown complete.");
+  /**
+   * Returns startup state.
+   */
+  public isInitialized(): boolean {
+    return this.initialized;
   }
 
-  private async initializeConfiguration(): Promise<void> {
-    console.log("[Startup] Loading configuration...");
+  /**
+   * Initializes application environment.
+   */
+  private async initializeEnvironment(): Promise<void> {
+    console.info("[Startup] Initializing environment...");
   }
 
-  private async initializeState(): Promise<void> {
-    console.log("[Startup] Initializing state...");
-  }
-
-  private async initializeServices(): Promise<void> {
-    console.log("[Startup] Initializing services...");
-  }
-
-  private async initializeEvents(): Promise<void> {
-    console.log("[Startup] Initializing event system...");
+  /**
+   * Initializes application systems.
+   */
+  private async initializeApplication(): Promise<void> {
+    console.info("[Startup] Initializing application...");
   }
 }
