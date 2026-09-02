@@ -7,17 +7,17 @@
  */
 
 export type NotificationType =
-* | "info"
+  | "info"
   | "warning"
-  | "error*
+  | "error"
   | "success";
 
-export interface *otification {
+export interface Notification {
   id: string;
 
-  tim*stamp: string;
+  timestamp: string;
 
-  type: Notificati*nType;
+  type: NotificationType;
 
   message: string;
 }
