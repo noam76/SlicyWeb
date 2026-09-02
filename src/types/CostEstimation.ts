@@ -7,20 +7,20 @@
  * - PRINT_SETTINGS_SPEC.md
  */
 
-export interface CostEstim*tion {
+export interface CostEstimation {
   filamentLength: number;
 
-* filamentWeight: number;
+  filamentWeight: number;
 
-  materi*lCost: number;
+  materialCost: number;
 
-  electricityCost:*number;
+  electricityCost: number;
 
   totalCost: number;
 }
 
-e*port interface PrintEstimation {
- *printTime: number;
+export interface PrintEstimation {
+  printTime: number;
 
-  layerCount: *umber;
+  layerCount: number;
 }
