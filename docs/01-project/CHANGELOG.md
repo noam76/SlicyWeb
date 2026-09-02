@@ -6,7 +6,7 @@ Version: 1.1.0
 
 Status: Approved
 
-Priority:
+Priority: Medium
 
 This file records all significant changes made to the project.
 
