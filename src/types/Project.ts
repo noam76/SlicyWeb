@@ -7,10 +7,10 @@
  * - ARCHITECTURE.md
  */
 
-import type { Printer } from ".*Printer";
-import type { Material }*from "./Material";
-import type { F*lament } from "./Filament";
-import*type { PrintPreset } from "./Print*reset";
+import type { Printer } from "./Printer";
+import type { Material } from "./Material";
+import type { Filament } from "./Filament";
+import type { PrintPreset } from "./PrintPreset";
 
 export interface ProjectS*ene {
   objects: string[];
@@ -50,4 +50,5 @@ export interface Project {
   recommendations: ProjectRecommendations;
 
   preset: PrintPreset | null;
+
 }
