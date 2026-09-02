@@ -2,17 +2,11 @@
 
 \# SUPPORT GENERATION SPECIFICATION
 
-
-
 Version: 1.0.0
-
-
 
 Status: Approved
 
-
-
-Priority: Critical
+Priority: High
 
 
 
