@@ -141,6 +141,15 @@ Contains:
 - Modules
 - Dependencies
 - Communication flow
+- Layers
+- Modules
+- Dependencies
+- Communication flow
+- Object Classification
+- Recommendation Pipeline
+- Confidence Scoring
+- Filament Integration
+- Print Preset Integration
 
 Used For:
 - Technical design
@@ -171,6 +180,13 @@ Contains:
 - Three.js
 - TypeScript
 - Zustand
+- Tailwind CSS
+- shadcn/ui
+- Zod
+- Vitest
+- Playwright
+- Octokit
+- three-mesh-bvh
 
 Used For:
 - Technical choices
@@ -185,6 +201,12 @@ Contains:
 - Schemas
 - Relationships
 - Validation rules
+- Printer Profiles
+- Material Profiles
+- Filament Profiles
+- Object Classification
+- Print Presets
+- Recommendation Models
 
 Used For:
 - Data consistency
@@ -200,6 +222,11 @@ Contains:
 - Payloads
 - Response formats
 - Communication rules
+- Printer APIs
+- Material APIs
+- Filament APIs
+- Print Preset APIs
+- Repository APIs
 
 Used For:
 - Service communication
@@ -289,8 +316,11 @@ Main AI engine behavior.
 
 Contains:
 - Analysis pipeline
+- Object classification
+- Confidence scoring
 - Recommendation workflow
 - Validation process
+- Optimization process
 
 Used For:
 - AI system implementation
@@ -305,6 +335,8 @@ Contains:
 - Material rules
 - Printer rules
 - Geometry rules
+- Filament rules
+- Preset selection rules
 
 Used For:
 - Recommendation generation
@@ -319,6 +351,8 @@ Contains:
 - Categories
 - Detection rules
 - Confidence scoring
+- Classification outputs
+- Preset influence
 
 Used For:
 - Automatic object understanding
@@ -347,6 +381,8 @@ Contains:
 - Quality presets
 - Engineering presets
 - Prototype presets
+- Support-free presets
+- Low-cost presets
 
 Used For:
 - Quick profile selection
@@ -362,6 +398,9 @@ Contains:
 - Speed settings
 - Cooling settings
 - Support settings
+- Filament influence
+- Preset influence
+- Confidence scoring
 
 Used For:
 - Print configuration
@@ -401,12 +440,15 @@ Used For:
 
 FILAMENT_SETTINGS_SPEC.md
 Purpose:
-Filament configuration system.
+Filament profile and manufacturer-specific configuration system.
 
 Contains:
 - Filament settings
+- Manufacturer profiles
 - Retraction values
 - Cooling profiles
+- Thermal recommendations
+- Cost information
 
 Used For:
 - Material tuning
@@ -481,6 +523,7 @@ Contains:
 - Plugin lifecycle
 - APIs
 - Permissions
+- Marketplace Integration
 
 Used For:
 - Future extensibility
@@ -506,7 +549,7 @@ Used For:
 09-REFERENCE
 --------------------------------------------------------------------------------
 
-Glossary.md
+GLOSSARY.md
 Purpose:
 Project terminology dictionary.
 
@@ -515,7 +558,7 @@ Used For:
 
 --------------------------------------------------------------------------------
 
-Terminology.md
+TERMINOLOGY.md
 Purpose:
 Defines official project terms.
 
@@ -533,7 +576,54 @@ Used For:
 
 --------------------------------------------------------------------------------
 
-ArchitectureDecisionMatrix.md
+PROJECT_ACRONYMS.md
+Purpose:
+Official project acronyms.
+
+Contains:
+- Technical acronyms
+- Printing acronyms
+- Wichy acronyms
+
+Used For:
+- Consistent terminology
+
+--------------------------------------------------------------------------------
+
+DIRECTORY_PURPOSES.md
+Purpose:
+Defines the responsibility of every project directory.
+
+Used For:
+- Project organization
+- File placement
+--------------------------------------------------------------------------------
+
+VERSIONING_POLICY.md
+Purpose:
+Official versioning rules.
+
+Contains:
+- Semantic Versioning
+- Release strategy
+- Compatibility rules
+
+Used For:
+- Release management
+
+--------------------------------------------------------------------------------
+
+NAMING_CONVENTIONS.md
+Purpose:
+Official naming standards.
+
+Used For:
+- Code consistency
+- Documentation consistency
+
+--------------------------------------------------------------------------------
+
+ARCHITECTURE_DECISION_MATRIX.md
 Purpose:
 Architecture comparison and decision history.
 
