@@ -1,18 +1,14 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# PRINTER PROFILE SPECIFICATION
-
-
+# PRINTER PROFILE SPECIFICATION
 
 Version: 1.0.0
 
-
-
 Status: Approved
 
+Priority: High
 
-
-\---
+---
 
 
 
