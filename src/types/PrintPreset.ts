@@ -18,7 +18,7 @@ export type PresetCategory =
   | "prototype"
   | "miniature"
   | "support_free"
-  | "low_cost
+  | "low_cost";
 
 export type SupportType =
   | "none"
