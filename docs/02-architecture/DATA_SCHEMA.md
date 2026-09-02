@@ -1,16 +1,18 @@
-\# DATA SCHEMA
+# DATA SCHEMA
 
 
 
 Version: 1.0.0
 
+Status: Approved
+
+Priority:
+
+---
 
 
-\---
 
-
-
-\# Purpose
+# Purpose
 
 
 
