@@ -4,21 +4,20 @@
  *
  * Based on:
  * - DATA_SCHEMA.md
- * - ARCHITECTURE.md
  */
 
 export type NotificationType =
-  | "info"
-  | "success"
+* | "info"
   | "warning"
-  | "error";
+  | "error*
+  | "success";
 
-export interface Notification {
+export interface *otification {
   id: string;
 
-  timestamp: string;
+  tim*stamp: string;
 
-  type: NotificationType;
+  type: Notificati*nType;
 
   message: string;
 }
