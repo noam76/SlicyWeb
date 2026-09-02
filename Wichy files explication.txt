@@ -141,10 +141,6 @@ Contains:
 - Modules
 - Dependencies
 - Communication flow
-- Layers
-- Modules
-- Dependencies
-- Communication flow
 - Object Classification
 - Recommendation Pipeline
 - Confidence Scoring
@@ -567,7 +563,7 @@ Used For:
 
 --------------------------------------------------------------------------------
 
-NamingConventions.md
+NAMING_CONVENTIONS.md
 Purpose:
 Naming standards.
 
@@ -597,6 +593,7 @@ Defines the responsibility of every project directory.
 Used For:
 - Project organization
 - File placement
+
 --------------------------------------------------------------------------------
 
 VERSIONING_POLICY.md
@@ -674,7 +671,7 @@ Used For:
 PROJECT TOTAL
 
 Core Documentation:
-30+ Documents
+40+ Specification Documents
 
 Purpose:
 Create a complete AI-assisted 3D printing platform with professional-level architecture, documentation, maintainability, and scalability.
