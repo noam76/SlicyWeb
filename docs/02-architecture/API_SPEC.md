@@ -1,180 +1,123 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# API SPECIFICATION
-
+# API SPECIFICATION
 
 
 Version: 1.0.0
 
 
-
 Status: Approved
-
 
 
 \---
 
 
-
-\# Purpose
-
+# Purpose
 
 
 This document defines all internal and external APIs used by the project.
 
 
-
 The objectives are:
 
 
+- Standardized communication
 
-\- Standardized communication
+- Consistent data exchange
 
-\- Consistent data exchange
+- Reliable integrations
 
-\- Reliable integrations
+- Future scalability
 
-\- Future scalability
-
-\- Secure external access
-
+- Secure external access
 
 
 This document serves as the reference for:
 
 
+- Internal Services
 
-\- Internal Services
+- Local Databases
 
-\- Local Databases
+- GitHub Repositories
 
-\- GitHub Repositories
-
-\- Future Online Services
-
+- Future Online Services
 
 
-\---
+---
 
 
-
-\# API Philosophy
-
+# API Philosophy
 
 
 The project follows:
-
 
 
 ```text
 
 Local First
 
-
-
 ↓
-
-
 
 Cache
 
-
-
 ↓
-
-
 
 Remote Sources
 
 ```
 
 
-
 The application must always prioritize local data.
-
 
 
 Remote requests should only occur when necessary.
 
 
-
 \---
 
 
-
-\# API Categories
-
+# API Categories
 
 
 The system uses:
-
 
 
 ```text
 
 Internal APIs
 
-
-
 Repository APIs
-
-
 
 Profile APIs
 
-
-
 Cache APIs
-
-
 
 Future Cloud APIs
 
 ```
 
-
-
 \---
 
-
-
-\# API Architecture
-
-
+# API Architecture
 
 ```text
 
 GUI
 
-
-
 ↓
-
-
 
 Application Layer
 
-
-
 ↓
-
-
 
 Services
 
-
-
 ↓
-
-
 
 API Layer
 
-
-
 ↓
-
-
 
 Storage / Cache / Remote
 
@@ -182,49 +125,31 @@ Storage / Cache / Remote
 
 
 
-\---
+---
 
 
 
-\# Internal API Rules
-
-
+# Internal API Rules
 
 All internal APIs must:
-
-
 
 ```text
 
 Be Typed
 
-
-
 Be Validated
 
-
-
 Be Documented
-
-
 
 Be Testable
 
 ```
 
+---
 
-
-\---
-
-
-
-\# Response Format
-
-
+# Response Format
 
 Standard success format:
-
-
 
 ```json
 
@@ -240,15 +165,9 @@ Standard success format:
 
 ```
 
-
-
 \---
 
-
-
-\# Error Format
-
-
+# Error Format
 
 ```json
 
