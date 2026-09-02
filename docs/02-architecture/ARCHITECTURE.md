@@ -1,66 +1,52 @@
-\# SYSTEM ARCHITECTURE
-
-
+# SYSTEM ARCHITECTURE
 
 Version: 1.1.0
 
+Status: Approved
 
+Priority:
 
-\---
+---
 
-
-
-\# Purpose
-
-
+# Purpose
 
 This document defines the software architecture of the AI Smart Slicer project.
 
-
-
 It describes:
 
+- Modules
 
+- Responsibilities
 
-\- Modules
+- Communication rules
 
-\- Responsibilities
+- Dependencies
 
-\- Communication rules
+- Data flow
 
-\- Dependencies
-
-\- Data flow
-
-\- Project structure
-
-
+- Project structure
 
 This document is the architectural reference for all future development.
 
 
-
-\---
-
+---
 
 
-\# Architecture Goals
-
+# Architecture Goals
 
 
 The architecture must be:
 
 
+- Modular
 
-\- Modular
+- Maintainable
 
-\- Maintainable
+- Scalable
 
-\- Scalable
+- Testable
 
-\- Testable
-
-\- Extensible
+- Extensible
 
 \- Token Efficient
 
