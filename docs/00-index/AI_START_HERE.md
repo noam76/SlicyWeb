@@ -3,7 +3,9 @@
 
 Version: 1.1.0
 
-Status: Mandatory
+Status: Approved
+
+Priority: Mandatory
 
 ---
 
