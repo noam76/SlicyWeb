@@ -243,44 +243,30 @@ Supported materials:
 
 The AI engine analyzes:
 
-
-
-\- Object Geometry
-
-\- Printability
-
-\- Stability
-
-\- Supports
-
-\- Bridges
-
-\- Overhangs
-
-
+- Object Geometry
+- Printability
+- Stability
+- Supports
+- Bridges
+- Overhangs
+- Object Classification
+- Filament Profiles
+- Print Presets
 
 and automatically recommends:
 
-
-
-\- Layer Height
-
-\- Speed Settings
-
-\- Supports
-
-\- Cooling
-
-\- Retraction
-
-\- Infill
-
-\- Adhesion
-
+- Layer Height
+- Speed Settings
+- Supports
+- Cooling
+- Retraction
+- Infill
+- Adhesion
+- Print Presets
+- Confidence Score
 
 
 \---
-
 
 
 \### Optimization Engine
@@ -346,25 +332,19 @@ Main modules:
 ```text
 
 GUI
-
 Renderer
-
 Importer
-
 Printer Database
-
 Material Database
-
+Filament Database
 Analysis Engine
-
+Classification Engine
 Recommendation Engine
-
+Preset Engine
 Optimization Engine
-
 Cost Engine
-
+Recovery System
 Storage
-
 Services
 
 ```
@@ -475,71 +455,18 @@ Foundation
 
 Planned Phases:
 
-
-
 ```text
 
-Phase 1
-
-GUI Foundation
-
-
-
-Phase 2
-
-3D Engine
-
-
-
-Phase 3
-
-Model Import
-
-
-
-Phase 4
-
-Transform System
-
-
-
-Phase 5
-
-Printer Management
-
-
-
-Phase 6
-
-Material Management
-
-
-
-Phase 7
-
-Model Analysis
-
-
-
-Phase 8
-
-Recommendation Engine
-
-
-
-Phase 9
-
-Optimization Engine
-
-
-
-Phase 10+
-
-Advanced Features
+Phase 5:   Printer Management
+Phase 6:   Material Management
+Phase 7:   Filament Management
+Phase 8:   Model Analysis
+Phase 9:   Classification Engine
+Phase 10:  Recommendation Engine
+Phase 11:  Preset Engine
+Phase 12:  Optimization Engine
 
 ```
-
-
 
 More details:
 
@@ -764,24 +691,27 @@ The documentation, architecture, schemas, and specifications have been establish
 \## Long-Term Vision
 
 
-
 Build a professional AI-powered ecosystem capable of:
 
+- Assisting users with 3D printing decisions
 
+- Reducing print failures
 
-\- Assisting users with 3D printing decisions
+- Optimizing print quality
 
-\- Reducing print failures
+- Simplifying printer setup
 
-\- Optimizing print quality
+- Supporting future G-Code generation
 
-\- Simplifying printer setup
+- Supporting plugins and extensions
 
-\- Supporting future G-Code generation
+- Supporting cloud and remote printing services
 
-\- Supporting plugins and extensions
+- Intelligent Object Classification
 
-\- Supporting cloud and remote printing services
+- Confidence-Based Recommendations
+
+- Filament-Aware Optimization
 
 
 
