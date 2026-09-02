@@ -1,22 +1,21 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# PROJECT ROADMAP
-
+# PROJECT ROADMAP
 
 
 Version: 1.1.0
 
+Status: Approved
 
-
-Status: Planning
-
-
-
-\---
+Priority:
 
 
 
-\# Purpose
+---
+
+
+
+# Purpose
 
 
 
@@ -24,16 +23,15 @@ This roadmap defines:
 
 
 
-\- Development phases
+- Development phases
 
-\- Milestones
+- Milestones
 
-\- Deliverables
+- Deliverables
 
-\- Validation criteria
+- Validation criteria
 
-\- Dependencies
-
+- Dependencies
 
 
 The roadmap is the official project progression guide.
