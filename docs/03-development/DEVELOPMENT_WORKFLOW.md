@@ -5,7 +5,7 @@ Version: 1.1.0
 
 Status: Approved
 
-Priority:
+Priority: High
 
 
 ---
