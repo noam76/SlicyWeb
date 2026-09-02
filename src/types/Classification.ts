@@ -28,6 +28,7 @@ export type ConfidenceLevel =
   | "low"
   | "medium"
   | "high";
+  | "unknown";
 
 export interface Classification {
   /**
