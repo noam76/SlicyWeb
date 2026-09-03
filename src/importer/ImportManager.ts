@@ -1,6 +1,15 @@
 /**
  * Wichy
- * Import Manager Definition
+ * Import Manager
+ *
+ * Responsible for:
+ * - Import coordination
+ * - Import workflow management
+ * - Format routing
+ *
+ * No business logic.
+ * No AI logic.
+ * No scene management.
  *
  * Based on:
  * - ARCHITECTURE.md
@@ -10,83 +19,85 @@
 
 import type { Object3D } from "../types/Object3D";
 
+import { ObjectFactory } from "../object_manager/ObjectFactory";
+import { STLImporter } from "./STLImporter";
+import { ThreeMFImporter } from "./ThreeMFImporter";
+import { FileValidator } from "./FileValidator";
+
 export class ImportManager {
+  private readonly fileValidator =
+    new FileValidator();
+
+  private readonly stlImporter =
+    new STLImporter();
+
+  private readonly threeMFImporter =
+    new ThreeMFImporter();
+
+  /**
+   * Imports a file and creates an Object3D.
+   */
   public async importFile(
-    file: File
+    file: File,
   ): Promise<Object3D | null> {
-    const fileName = file.name;
-
-    const fileType =
-      this.getFileExtension(fileName);
-
     if (
-      !this.isSupportedFormat(
-        fileType
+      !this.fileValidator.validate(
+        file,
       )
     ) {
       return null;
     }
 
-    return {
-      objectId:
-        crypto.randomUUID(),
+    const fileName = file.name;
 
+    const fileType =
+      this.getFileExtension(
+        fileName,
+      );
+
+    switch (fileType) {
+      case "stl":
+        await this.stlImporter.import(
+          file,
+        );
+        break;
+
+      case "3mf":
+        await this.threeMFImporter.import(
+          file,
+        );
+        break;
+
+      default:
+        return null;
+    }
+
+    return ObjectFactory.create(
+      crypto.randomUUID(),
       fileName,
-
       fileType,
-
-      visible: true,
-
-      locked: false,
-
-      transform: {
-        position: {
-          x: 0,
-          y: 0,
-          z: 0
-        },
-
-        rotation: {
-          x: 0,
-          y: 0,
-          z: 0
-        },
-
-        scale: {
-          x: 1,
-          y: 1,
-          z: 1
-        }
-      },
-
-      geometry: {
-        width: 0,
-        depth: 0,
-        height: 0,
-        volume: 0,
-        surfaceArea: 0
-      },
-
-      mesh: {
-        vertices: 0,
-        triangles: 0
-      }
-    };
-  }
-
-  public isSupportedFormat(
-    fileType: string
-  ): boolean {
-    return [
-      "stl",
-      "3mf"
-    ].includes(
-      fileType.toLowerCase()
     );
   }
 
+  /**
+   * Returns whether a format is supported.
+   */
+  public isSupportedFormat(
+    fileType: string,
+  ): boolean {
+    return [
+      "stl",
+      "3mf",
+    ].includes(
+      fileType.toLowerCase(),
+    );
+  }
+
+  /**
+   * Extracts file extension.
+   */
   private getFileExtension(
-    fileName: string
+    fileName: string,
   ): string {
     const parts =
       fileName.split(".");
