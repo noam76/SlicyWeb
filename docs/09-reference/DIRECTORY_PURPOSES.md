@@ -473,6 +473,8 @@ Rotate
 Scale
 
 Transform Validation
+
+Undo/Redo History
 ```
 
 ---
@@ -493,6 +495,8 @@ STL Import
 3MF Import
 
 Import Validation
+
+File Processing
 ```
 
 ---
@@ -532,9 +536,11 @@ Contains:
 ```text
 Material Profiles
 
-Validation
+Material Validation
 
-Repositories
+Material Repositories
+
+Material Caching
 ```
 
 ---
@@ -554,9 +560,11 @@ Filament Profiles
 
 Manufacturer Data
 
-Validation
+Filament Validation
 
-Repositories
+Filament Repositories
+
+Filament Caching
 ```
 
 ---
@@ -618,11 +626,11 @@ Contains:
 ```text
 Decision Rules
 
-Validation
+Validation Engine
 
-Warnings
+Warning Generation
 
-Recommendations
+Recommendation Building
 ```
 
 ---
@@ -660,13 +668,13 @@ Cost Computation
 Contains:
 
 ```text
-Material Cost
+Material Cost Calculation
 
-Energy Cost
+Energy Cost Estimation
 
 Time Estimation
 
-Total Cost
+Total Cost Computation
 ```
 
 ---
@@ -685,6 +693,10 @@ Contains:
 Repository Implementations
 
 Storage Access Logic
+
+Sync Operations
+
+GitHub Integration
 ```
 
 ---
@@ -704,7 +716,9 @@ Local Storage
 
 File Storage
 
-Future Database Integrations
+Project Storage
+
+Cache Storage
 ```
 
 ---
@@ -720,7 +734,7 @@ Project Recovery System
 Contains:
 
 ```text
-Auto Save
+Auto Save Service
 
 Recovery Files
 
@@ -742,9 +756,21 @@ Shared Application Services
 Contains:
 
 ```text
-Reusable Business Logic
+Analysis Service
 
-Cross Module Operations
+Filament Service
+
+Material Service
+
+Preset Service
+
+Printer Service
+
+Project Service
+
+Recommendation Service
+
+Storage Service
 ```
 
 ---
@@ -760,11 +786,13 @@ Application Event System
 Contains:
 
 ```text
+Event Bus
+
 Event Dispatching
 
-Subscriptions
+Event Types
 
-Notifications
+Subscriptions
 ```
 
 ---
@@ -780,11 +808,23 @@ Application State Management
 Contains:
 
 ```text
-Global State
+Analysis Store
 
-Stores
+Application Store
 
-Session State
+Filament Store
+
+Material Store
+
+Object Store
+
+Preset Store
+
+Printer Store
+
+Recommendation Store
+
+Scene Store
 ```
 
 ---
@@ -820,11 +860,15 @@ Global Constants
 Contains:
 
 ```text
-Default Values
+Analysis Constants
 
-Limits
+Application Constants
 
-Shared Constants
+Material Constants
+
+Preset Constants
+
+Printer Constants
 ```
 
 ---
@@ -845,6 +889,8 @@ Zod Schemas
 Validation Definitions
 
 Data Models
+
+Type Validation
 ```
 
 ---
@@ -865,6 +911,8 @@ TypeScript Types
 Interfaces
 
 Enums
+
+Domain Models
 ```
 
 ---
@@ -915,6 +963,30 @@ Storage IPC
 
 ---
 
+# src-electron/
+
+Purpose:
+
+```text
+Electron Main Process Entry
+```
+
+Contains:
+
+```text
+Electron Entry Point
+
+Window Management
+
+Application Events
+
+Process Initialization
+
+Desktop Integration
+```
+
+---
+
 # data/
 
 Purpose:
@@ -926,15 +998,15 @@ Project Data Repository
 Contains:
 
 ```text
-Profiles
+Printer Profiles
 
-Materials
+Material Profiles
 
-Filaments
+Filament Profiles
 
-Presets
+Print Presets
 
-Repositories
+Configuration Files
 ```
 
 ---
@@ -953,6 +1025,8 @@ Contains:
 Printer Definitions
 
 Manufacturer Profiles
+
+Printer Configurations
 ```
 
 ---
@@ -968,17 +1042,17 @@ Material Profile Storage
 Contains:
 
 ```text
-PLA
+PLA Materials
 
-PETG
+PETG Materials
 
-ABS
+ABS Materials
 
-ASA
+ASA Materials
 
-TPU
+TPU Materials
 
-And Other Materials
+Other Material Types
 ```
 
 ---
@@ -995,6 +1069,10 @@ Contains:
 
 ```text
 Manufacturer-Specific Filaments
+
+Filament Definitions
+
+Brand Profiles
 ```
 
 ---
@@ -1010,15 +1088,15 @@ Print Preset Storage
 Contains:
 
 ```text
-Draft
+Draft Presets
 
-Balanced
+Balanced Presets
 
-Quality
+Quality Presets
 
-Mechanical
+Mechanical Presets
 
-Miniature
+Miniature Presets
 
 Custom Presets
 ```
@@ -1607,30 +1685,6 @@ Custom Extensions
 Plugin Configuration
 
 Plugin Resources
-```
-
----
-
-# src-electron/
-
-Purpose:
-
-```text
-Electron Main Process
-```
-
-Contains:
-
-```text
-Electron Entry Point
-
-Window Management
-
-Application Events
-
-Process Initialization
-
-Desktop Integration
 ```
 
 ---
