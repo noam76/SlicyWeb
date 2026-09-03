@@ -1,0 +1,30 @@
+/**
+ * Wichy
+ * Object Duplicator Definition
+ *
+ * Based on:
+ * - ARCHITECTURE.md
+ * - DATA_SCHEMA.md
+ */
+
+import type { Object3D } from "../types/Object3D";
+
+export class ObjectDuplicator {
+  public duplicate(
+    object: Object3D,
+    newObjectId: string
+  ): Object3D {
+    return {
+      ...object,
+      objectId: newObjectId,
+      fileName: `${object.fileName}_copy`,
+      transform: {
+        position: { ...object.transform.position },
+        rotation: { ...object.transform.rotation },
+        scale: { ...object.transform.scale }
+      },
+      geometry: { ...object.geometry },
+      mesh: { ...object.mesh }
+    };
+  }
+}
