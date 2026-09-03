@@ -10,54 +10,51 @@
 
 import type { Printer } from "../types/Printer";
 
+import { PrinterRepository } from "./PrinterRepository";
+
 export class PrinterManager {
-  private readonly printers =
-    new Map<string, Printer>();
+  private readonly repository =
+    new PrinterRepository();
 
   public addPrinter(
-    printer: Printer
+    printer: Printer,
   ): void {
-    this.printers.set(
-      printer.id,
-      printer
-    );
+    this.repository.add(printer);
   }
 
   public removePrinter(
-    printerId: string
-  ): void {
-    this.printers.delete(
-      printerId
+    printerId: string,
+  ): boolean {
+    return this.repository.remove(
+      printerId,
     );
   }
 
   public getPrinter(
-    printerId: string
+    printerId: string,
   ): Printer | undefined {
-    return this.printers.get(
-      printerId
+    return this.repository.get(
+      printerId,
     );
   }
 
   public getPrinters(): Printer[] {
-    return Array.from(
-      this.printers.values()
-    );
+    return this.repository.getAll();
   }
 
   public hasPrinter(
-    printerId: string
+    printerId: string,
   ): boolean {
-    return this.printers.has(
-      printerId
+    return this.repository.exists(
+      printerId,
     );
   }
 
   public getPrinterCount(): number {
-    return this.printers.size;
+    return this.repository.getCount();
   }
 
   public clear(): void {
-    this.printers.clear();
+    this.repository.clear();
   }
 }
