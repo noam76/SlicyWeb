@@ -8,85 +8,88 @@
  * - GUI_SPEC.md
  */
 
-import { app, BrowserWindow } f*om "electron";
+import { app, BrowserWindow } from "electron";
 
-import path from "*ode:path";
+import path from "node:path";
 
-let mainWindow: Browse*Window | null =
+let mainWindow: BrowserWindow | null =
   null;
 
-function *reateWindow(): void {
-  mainWindow*= new BrowserWindow({
-    width: 1*00,
+function createWindow(): void {
+  mainWindow = new BrowserWindow({
+    width: 1600,
 
     height: 900,
 
-    minWidt*: 1280,
+    minWidth: 1280,
 
     minHeight: 720,
 
-    *how: false,
+    show: false,
 
-    webPreferences: {*      preload: path.join(
-        *_dirname,
+    webPreferences: {
+      preload: path.join(
+        __dirname,
         "preload.js"
-   *  ),
+      ),
 
-      contextIsolation: true*
+      contextIsolation: true,
 
       nodeIntegration: false
-   *}
+    }
   });
 
   mainWindow.once(
-    "r*ady-to-show",
+    "ready-to-show",
     () => {
-      ma*nWindow?.show();
+      mainWindow?.show();
     }
   );
 
-  if *process.env.VITE_DEV_SERVER_URL) {*    void mainWindow.loadURL(
-     *process.env.VITE_DEV_SERVER_URL
-  * );
+  if (process.env.VITE_DEV_SERVER_URL) {
+    void mainWindow.loadURL(
+      process.env.VITE_DEV_SERVER_URL
+    );
   } else {
-    void mainWindow*loadFile(
+    void mainWindow.loadFile(
       path.join(
-       *__dirname,
-        "../renderer/in*ex.html"
+        __dirname,
+        "../renderer/index.html"
       )
     );
   }
 
-  mai*Window.on(
+  mainWindow.on(
     "closed",
-    () =>*{
+    () => {
       mainWindow = null;
     }
-**);
+  );
 }
 
-app.whenReady().then(() => {*  createWindow();
+app.whenReady().then(() => {
+  createWindow();
 
   app.on(
-    "*ctivate",
+    "activate",
     () => {
       if (
- *      BrowserWindow.getAllWindows(*
+        BrowserWindow.getAllWindows()
           .length === 0
-      ) {*        createWindow();
+      ) {
+        createWindow();
       }
-  * }
+    }
   );
 });
 
 app.on(
-  "window-all*closed",
+  "window-all-closed",
   () => {
     if (
-      *rocess.platform !== "darwin"
-    )*{
+      process.platform !== "darwin"
+    ) {
       app.quit();
     }
   }
 );
-`*
