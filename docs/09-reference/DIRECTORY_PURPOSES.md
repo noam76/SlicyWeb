@@ -75,6 +75,28 @@ Repository Settings
 
 ---
 
+# .github/workflows/
+
+Purpose:
+
+```text
+Automation Pipeline
+```
+
+Contains:
+
+```text
+Build Validation
+
+Testing
+
+Linting
+
+Release Automation
+```
+
+---
+
 # docs/
 
 Purpose:
@@ -1101,6 +1123,26 @@ Miniature Presets
 Custom Presets
 ```
 
+# tests/
+
+Purpose:
+
+```text
+Quality Validation
+```
+
+Contains:
+
+```text
+Unit Tests
+
+Integration Tests
+
+Regression Tests
+
+E2E Tests
+```
+
 ---
 
 # assets/
@@ -1688,3 +1730,14 @@ Plugin Resources
 ```
 
 ---
+
+
+# Golden Rule
+
+Every file should have a single clear responsibility and should be stored in the directory that best matches that responsibility.
+
+If a file does not clearly belong to a directory, the project structure should be reviewed before creating the file.
+
+---
+
+# End Of Document
