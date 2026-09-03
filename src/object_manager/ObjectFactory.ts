@@ -1,62 +1,68 @@
 /**
  * Wichy
- * Object Factory Definition
+ * Object Factory
+ *
+ * Responsible for:
+ * - Object creation
+ * - Default object initialization
+ * - Object data preparation
+ *
+ * No business logic.
+ * No rendering logic.
+ * No AI logic.
  *
  * Based on:
  * - ARCHITECTURE.md
  * - DATA_SCHEMA.md
- * - OBJECT_CLASSIFICATION_SPEC.md
  */
 
 import type {
   Object3D,
   Transform,
   Geometry,
-  Mesh
+  Mesh,
 } from "../types/Object3D";
 
 export class ObjectFactory {
-  public create(
+  /**
+   * Creates a new object.
+   */
+  public static create(
     objectId: string,
     fileName: string,
-    fileType: string
+    fileType: string,
   ): Object3D {
-    const defaultTransform: Transform = {
+    const transform: Transform = {
       position: {
         x: 0,
         y: 0,
-        z: 0
+        z: 0,
       },
 
       rotation: {
         x: 0,
         y: 0,
-        z: 0
+        z: 0,
       },
 
       scale: {
         x: 1,
         y: 1,
-        z: 1
-      }
+        z: 1,
+      },
     };
 
-    const defaultGeometry: Geometry = {
+    const geometry: Geometry = {
       width: 0,
-
       depth: 0,
-
       height: 0,
-
       volume: 0,
-
-      surfaceArea: 0
+      surfaceArea: 0,
     };
 
-    const defaultMesh: Mesh = {
+    const mesh: Mesh = {
       vertices: 0,
-
-      triangles: 0
+      triangles: 0,
     };
 
     return {
@@ -70,11 +76,11 @@ export class ObjectFactory {
 
       locked: false,
 
-      transform: defaultTransform,
+      transform,
 
-      geometry: defaultGeometry,
+      geometry,
 
-      mesh: defaultMesh
+      mesh,
     };
   }
 }
