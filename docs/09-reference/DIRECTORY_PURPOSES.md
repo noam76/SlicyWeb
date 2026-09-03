@@ -53,6 +53,28 @@ Runtime Resources
 
 ---
 
+# .github/
+
+Purpose:
+
+```text
+GitHub Configuration and Workflows
+```
+
+Contains:
+
+```text
+GitHub Actions Workflows
+
+CI/CD Configuration
+
+GitHub Templates
+
+Repository Settings
+```
+
+---
+
 # docs/
 
 Purpose:
@@ -627,28 +649,6 @@ Preset Storage
 
 ---
 
-# src/optimization_engine/
-
-Purpose:
-
-```text
-Print Optimization
-```
-
-Contains:
-
-```text
-Orientation Optimization
-
-Support Optimization
-
-Time Optimization
-
-Material Optimization
-```
-
----
-
 # src/cost_engine/
 
 Purpose:
@@ -849,26 +849,6 @@ Data Models
 
 ---
 
-# src/utils/
-
-Purpose:
-
-```text
-Utility Functions
-```
-
-Contains:
-
-```text
-Helpers
-
-Converters
-
-Reusable Utilities
-```
-
----
-
 # src/types/
 
 Purpose:
@@ -885,6 +865,52 @@ TypeScript Types
 Interfaces
 
 Enums
+```
+
+---
+
+# src/electron/
+
+Purpose:
+
+```text
+Electron Framework Integration
+```
+
+Contains:
+
+```text
+IPC Communication Handlers
+
+Main Process Modules
+
+Preload Scripts
+
+Process Integration
+```
+
+---
+
+# src/electron/ipc/
+
+Purpose:
+
+```text
+Inter-Process Communication Handlers
+```
+
+Contains:
+
+```text
+Import IPC
+
+Printer IPC
+
+Project IPC
+
+Settings IPC
+
+Storage IPC
 ```
 
 ---
@@ -999,34 +1025,12 @@ Custom Presets
 
 ---
 
-# tests/
-
-Purpose:
-
-```text
-Quality Validation
-```
-
-Contains:
-
-```text
-Unit Tests
-
-Integration Tests
-
-Regression Tests
-
-E2E Tests
-```
-
----
-
 # assets/
 
 Purpose:
 
 ```text
-Project Visual Resources
+Static Project Assets
 ```
 
 Contains:
@@ -1039,86 +1043,94 @@ Images
 Logos
 
 Themes
+
+Visual Resources
 ```
 
 ---
 
-# cache/
+# assets/icons/
 
 Purpose:
 
 ```text
-Temporary Runtime Data
+Application Icon Resources
 ```
 
 Contains:
 
 ```text
-Downloaded Profiles
+UI Icons
 
-Analysis Cache
+Toolbar Icons
 
-Repositories Cache
+Navigation Icons
+
+Symbol Assets
 ```
 
 ---
 
-# logs/
+# assets/images/
 
 Purpose:
 
 ```text
-Application Diagnostics
+Image Assets
 ```
 
 Contains:
 
 ```text
-Application Logs
+Screenshots
 
-Error Logs
+Promotional Images
 
-Diagnostic Information
+Documentation Images
+
+Visual Graphics
 ```
 
 ---
 
-# scripts/
+# assets/logos/
 
 Purpose:
 
 ```text
-Automation Tools
+Project Logo Resources
 ```
 
 Contains:
 
 ```text
-Setup Scripts
+Brand Logos
 
-Migration Scripts
+Logo Variants
 
-Release Scripts
+Application Branding
 ```
 
 ---
 
-# plugins/
+# assets/themes/
 
 Purpose:
 
 ```text
-Plugin Management
+UI Theme Resources
 ```
 
 Contains:
 
 ```text
-Installed Plugins
+Color Schemes
 
-Disabled Plugins
+Theme Definitions
 
-Plugin Cache
+Dark Mode Assets
+
+Light Mode Assets
 ```
 
 ---
@@ -1128,19 +1140,19 @@ Plugin Cache
 Purpose:
 
 ```text
-Public Resources
+Public Static Resources
 ```
 
 Contains:
 
 ```text
-Fonts
+Distributable Assets
 
-Icons
+Public Files
 
-Localization Files
+Static Content
 
-Static Resources
+Build Output
 ```
 
 ---
@@ -1150,7 +1162,7 @@ Static Resources
 Purpose:
 
 ```text
-Release Artifacts
+Application Release Distribution
 ```
 
 Contains:
@@ -1162,59 +1174,463 @@ Beta Releases
 
 Release Candidates
 
-Stable Builds
+Stable Releases
+
+Version Archives
 ```
 
 ---
 
-# .github/
+# releases/alpha/
 
 Purpose:
 
 ```text
-GitHub Configuration
+Alpha Release Storage
 ```
 
 Contains:
 
 ```text
-Workflows
+Experimental Features
 
-Automation
+Early Development Builds
 
-CI/CD Configuration
+Unstable Versions
 ```
 
 ---
 
-# .github/workflows/
+# releases/beta/
 
 Purpose:
 
 ```text
-Automation Pipeline
+Beta Release Storage
 ```
 
 Contains:
 
 ```text
-Build Validation
+Feature Complete Builds
 
-Testing
+Pre-Release Testing
 
-Linting
+Beta Versions
+```
 
+---
+
+# releases/rc/
+
+Purpose:
+
+```text
+Release Candidate Storage
+```
+
+Contains:
+
+```text
+Candidate Builds
+
+Final Testing
+
+RC Versions
+```
+
+---
+
+# releases/stable/
+
+Purpose:
+
+```text
+Stable Release Storage
+```
+
+Contains:
+
+```text
+Production Builds
+
+Official Releases
+
+Stable Versions
+```
+
+---
+
+# scripts/
+
+Purpose:
+
+```text
+Automation Scripts and Build Tools
+```
+
+Contains:
+
+```text
+Build Scripts
+
+Migration Scripts
+
+Release Scripts
+
+Setup Scripts
+
+Utility Scripts
+```
+
+---
+
+# scripts/build/
+
+Purpose:
+
+```text
+Build Automation Scripts
+```
+
+Contains:
+
+```text
+Compilation Scripts
+
+Build Configuration
+
+Package Scripts
+
+Bundling Tools
+```
+
+---
+
+# scripts/migration/
+
+Purpose:
+
+```text
+Data Migration Scripts
+```
+
+Contains:
+
+```text
+Schema Migrations
+
+Data Transformations
+
+Upgrade Scripts
+
+Version Transitions
+```
+
+---
+
+# scripts/release/
+
+Purpose:
+
+```text
+Release Management Scripts
+```
+
+Contains:
+
+```text
 Release Automation
+
+Version Tagging
+
+Distribution Packaging
+
+Changelog Generation
 ```
 
 ---
 
-# Golden Rule
+# scripts/release/alpha/
 
-Every file should have a single clear responsibility and should be stored in the directory that best matches that responsibility.
+Purpose:
 
-If a file does not clearly belong to a directory, the project structure should be reviewed before creating the file.
+```text
+Alpha Release Automation
+```
+
+Contains:
+
+```text
+Alpha Build Scripts
+
+Alpha Distribution
+
+Experimental Release Tools
+```
 
 ---
 
-# End Of Document
+# scripts/release/beta/
+
+Purpose:
+
+```text
+Beta Release Automation
+```
+
+Contains:
+
+```text
+Beta Build Scripts
+
+Beta Distribution
+
+Pre-Release Tools
+```
+
+---
+
+# scripts/release/rc/
+
+Purpose:
+
+```text
+Release Candidate Automation
+```
+
+Contains:
+
+```text
+RC Build Scripts
+
+RC Distribution
+
+Final Release Preparation
+```
+
+---
+
+# scripts/release/stable/
+
+Purpose:
+
+```text
+Stable Release Automation
+```
+
+Contains:
+
+```text
+Stable Build Scripts
+
+Stable Distribution
+
+Production Release Tools
+```
+
+---
+
+# scripts/setup/
+
+Purpose:
+
+```text
+Development Environment Setup
+```
+
+Contains:
+
+```text
+Installation Scripts
+
+Dependency Setup
+
+Configuration Initialization
+
+Development Environment Tools
+```
+
+---
+
+# tests/
+
+Purpose:
+
+```text
+Automated Testing Suite
+```
+
+Contains:
+
+```text
+Unit Tests
+
+Integration Tests
+
+End-to-End Tests
+
+Test Configuration
+
+Test Utilities
+```
+
+---
+
+# tests/unit/
+
+Purpose:
+
+```text
+Unit Testing
+```
+
+Contains:
+
+```text
+Component Tests
+
+Function Tests
+
+Module Tests
+
+Isolated Logic Tests
+```
+
+---
+
+# tests/integration/
+
+Purpose:
+
+```text
+Integration Testing
+```
+
+Contains:
+
+```text
+Multi-Module Tests
+
+System Integration Tests
+
+API Tests
+
+Cross-Component Tests
+```
+
+---
+
+# tests/e2e/
+
+Purpose:
+
+```text
+End-to-End Testing
+```
+
+Contains:
+
+```text
+User Workflow Tests
+
+Application Flow Tests
+
+Complete Scenario Tests
+
+UI Interaction Tests
+```
+
+---
+
+# cache/
+
+Purpose:
+
+```text
+Application Cache Storage
+```
+
+Contains:
+
+```text
+Temporary Cache Files
+
+Performance Cache
+
+Session Cache
+
+Compiled Cache
+```
+
+---
+
+# logs/
+
+Purpose:
+
+```text
+Application Logging
+```
+
+Contains:
+
+```text
+Runtime Logs
+
+Error Logs
+
+Debug Logs
+
+Session Logs
+
+Diagnostic Information
+```
+
+---
+
+# plugins/
+
+Purpose:
+
+```text
+Plugin System and Extensions
+```
+
+Contains:
+
+```text
+Third-Party Plugins
+
+Custom Extensions
+
+Plugin Configuration
+
+Plugin Resources
+```
+
+---
+
+# src-electron/
+
+Purpose:
+
+```text
+Electron Main Process
+```
+
+Contains:
+
+```text
+Electron Entry Point
+
+Window Management
+
+Application Events
+
+Process Initialization
+
+Desktop Integration
+```
+
+---
