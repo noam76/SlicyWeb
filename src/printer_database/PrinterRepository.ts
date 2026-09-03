@@ -81,7 +81,7 @@ export class PrinterRepository {
   }
 
   /**
-   * Removes a printer.
+   * Removes a printer profile.
    */
   public remove(
     printerId: string,
@@ -99,7 +99,7 @@ export class PrinterRepository {
   }
 
   /**
-   * Returns printer count.
+   * Returns repository size.
    */
   public getCount(): number {
     return this.printers.size;
