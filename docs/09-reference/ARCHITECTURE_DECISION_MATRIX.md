@@ -1,5 +1,5 @@
 # WICHY
-# ARCHITECTURE DECISION MATRIX
+# DIRECTORY PURPOSES
 
 Version: 1.0.0
 
@@ -9,1080 +9,1211 @@ Status: Approved
 
 # Purpose
 
-This document records major architectural decisions made throughout the Wichy project.
+This document defines the purpose and responsibility of every directory used within the Wichy project.
 
-Its purpose is to provide a structured comparison of competing solutions and explain why specific technologies, patterns, or approaches were selected.
+The objective is to ensure:
 
-This document complements:
+- Consistent project organization
+- Clear responsibilities
+- Easier onboarding
+- Improved maintainability
+- Predictable file placement
+
+Every file should be placed in the directory that matches its responsibility.
+
+---
+
+# Project Root
 
 ```text
-DECISIONS.md
+SlicyWeb/
+```
+
+Purpose:
+
+```text
+Project Root Directory
+```
+
+Contains:
+
+```text
+Project Configuration
+
+Documentation
+
+Source Code
+
+Assets
+
+Tests
+
+Runtime Resources
 ```
 
 ---
 
-# Decision Process
+# docs/
 
-Every major decision should follow:
+Purpose:
 
 ```text
-Problem
+Project Documentation
+```
 
-↓
+Contains:
 
-Options
+```text
+Specifications
 
-↓
+Architecture
 
-Evaluation
+Rules
 
-↓
+Roadmaps
 
-Decision
-
-↓
-
-Justification
+Guides
 ```
 
 ---
 
-# Evaluation Criteria
+# docs/00-index/
 
-All architectural decisions should be evaluated against:
+Purpose:
 
 ```text
+Documentation Entry Point
+```
+
+Contains:
+
+```text
+Documentation Index
+
+AI Reading Guide
+```
+
+---
+
+# docs/01-project/
+
+Purpose:
+
+```text
+Project Definition
+```
+
+Contains:
+
+```text
+Vision
+
+Scope
+
+Roadmap
+
+Planning
+
+Change History
+```
+
+---
+
+# docs/02-architecture/
+
+Purpose:
+
+```text
+System Design
+```
+
+Contains:
+
+```text
+Architecture
+
+Schemas
+
+Tech Stack
+
+File Structure
+
+API Definitions
+```
+
+---
+
+# docs/03-development/
+
+Purpose:
+
+```text
+Development Standards
+```
+
+Contains:
+
+```text
+Workflows
+
+Rules
+
+Error Definitions
+
+Settings Specifications
+```
+
+---
+
+# docs/04-ai/
+
+Purpose:
+
+```text
+Artificial Intelligence Specifications
+```
+
+Contains:
+
+```text
+Analysis Logic
+
+Recommendations
+
+Classification
+
+Presets
+
+Support Generation
+```
+
+---
+
+# docs/05-profiles/
+
+Purpose:
+
+```text
+Profile Definitions
+```
+
+Contains:
+
+```text
+Printer Profiles
+
+Material Profiles
+
+Filament Profiles
+```
+
+---
+
+# docs/06-quality/
+
+Purpose:
+
+```text
+Quality Assurance
+```
+
+Contains:
+
+```text
+Testing
+
+Security
+
 Performance
-
-Maintainability
-
-Scalability
-
-Complexity
-
-Cost
-
-Learning Curve
-
-Community Support
-
-Long-Term Viability
 ```
 
 ---
 
-# Frontend Framework
+# docs/07-future/
 
----
-
-## Problem
-
-Select a frontend framework.
-
----
-
-## Options
+Purpose:
 
 ```text
-React
-
-Vue
-
-Angular
-
-Svelte
+Future Systems
 ```
 
----
-
-## Selected
+Contains:
 
 ```text
-React
+G-Code Specifications
+
+Plugin System
+
+Future Extensions
 ```
 
 ---
 
-## Reason
+# docs/08-user-interface/
+
+Purpose:
 
 ```text
-Large Ecosystem
-
-Strong TypeScript Support
-
-Excellent Community
-
-Electron Compatibility
-
-Wide Industry Adoption
+User Interface Specifications
 ```
 
----
-
-# Language
-
----
-
-## Problem
-
-Select primary development language.
-
----
-
-## Options
+Contains:
 
 ```text
-JavaScript
+Layouts
 
-TypeScript
+Panels
+
+Menus
+
+User Experience Definitions
 ```
 
 ---
 
-## Selected
+# docs/09-reference/
+
+Purpose:
 
 ```text
-TypeScript
+Project Reference Material
 ```
 
----
-
-## Reason
+Contains:
 
 ```text
-Type Safety
+Glossary
 
-Maintainability
+Terminology
 
-Refactoring Support
+Naming Rules
 
-Reduced Runtime Errors
+Acronyms
+
+Versioning Policies
+
+Architecture Decisions
+
+Directory Definitions
 ```
 
 ---
 
-# Desktop Framework
+# src/
 
----
-
-## Problem
-
-Select desktop application technology.
-
----
-
-## Options
+Purpose:
 
 ```text
-Electron
-
-Tauri
-
-Qt
+Application Source Code
 ```
 
----
-
-## Selected
+Contains:
 
 ```text
-Electron
+Business Logic
+
+User Interface
+
+Data Processing
+
+Application Systems
 ```
 
 ---
 
-## Reason
+# src/app/
+
+Purpose:
 
 ```text
-React Integration
-
-Mature Ecosystem
-
-Large Community
-
-Cross Platform Support
+Application Bootstrap Layer
 ```
 
----
-
-# State Management
-
----
-
-## Problem
-
-Manage global application state.
-
----
-
-## Options
+Contains:
 
 ```text
-Redux
+Startup Logic
 
-MobX
+Shutdown Logic
 
-Zustand
+Application Initialization
 
-Context API
+Dependency Management
 ```
 
 ---
 
-## Selected
+# src/gui/
+
+Purpose:
 
 ```text
-Zustand
+User Interface Layer
 ```
 
----
-
-## Reason
+Contains:
 
 ```text
-Simple
+Layouts
 
-Lightweight
+Panels
 
-Minimal Boilerplate
+Dialogs
 
-TypeScript Friendly
+Menus
+
+Components
+
+Themes
 ```
 
 ---
 
-# 3D Engine
+# src/renderer/
 
----
-
-## Problem
-
-Render and manipulate 3D models.
-
----
-
-## Options
+Purpose:
 
 ```text
-Three.js
-
-Babylon.js
+3D Rendering System
 ```
 
----
-
-## Selected
+Contains:
 
 ```text
-Three.js
+Scene Rendering
+
+Viewport Rendering
+
+Camera Management
+
+Lighting Management
 ```
 
 ---
 
-## Reason
+# src/scene/
+
+Purpose:
 
 ```text
-Industry Standard
-
-Strong Ecosystem
-
-Large Community
-
-Excellent Documentation
+Scene Management
 ```
 
----
-
-# UI Framework
-
----
-
-## Problem
-
-Select UI component system.
-
----
-
-## Options
+Contains:
 
 ```text
-Material UI
+Workspace Data
 
-Ant Design
+Scene Validation
 
-shadcn/ui
-
-Custom Components
+Scene Serialization
 ```
 
 ---
 
-## Selected
+# src/object_manager/
+
+Purpose:
 
 ```text
-shadcn/ui
+Model Management
 ```
 
----
-
-## Reason
+Contains:
 
 ```text
-Modern Design
+Object Creation
 
-Customizable
+Object Storage
 
-Tailwind Integration
+Duplication
 
-Low Overhead
+Validation
 ```
 
 ---
 
-# CSS Framework
+# src/transform/
 
----
-
-## Problem
-
-Select styling framework.
-
----
-
-## Options
+Purpose:
 
 ```text
-Tailwind CSS
-
-Bootstrap
-
-Custom CSS
+Transformation Tools
 ```
 
----
-
-## Selected
+Contains:
 
 ```text
-Tailwind CSS
+Move
+
+Rotate
+
+Scale
+
+Transform Validation
 ```
 
 ---
 
-## Reason
+# src/importer/
+
+Purpose:
 
 ```text
-Fast Development
-
-Modern Workflow
-
-Excellent Ecosystem
-
-Design Consistency
+Model Import System
 ```
 
----
-
-# Validation Library
-
----
-
-## Problem
-
-Validate application data.
-
----
-
-## Options
+Contains:
 
 ```text
-Zod
+STL Import
 
-Yup
+3MF Import
 
-Joi
+Import Validation
 ```
 
 ---
 
-## Selected
+# src/printer_database/
+
+Purpose:
 
 ```text
-Zod
+Printer Management System
 ```
 
----
-
-## Reason
+Contains:
 
 ```text
-TypeScript Integration
+Printer Loading
 
-Schema Reuse
+Printer Validation
 
-Strong Validation Support
+Printer Storage
+
+Printer Repositories
 ```
 
 ---
 
-# Testing Strategy
+# src/material_database/
 
----
-
-## Problem
-
-Select testing approach.
-
----
-
-## Options
+Purpose:
 
 ```text
-Unit Only
-
-Integration Only
-
-End To End Only
-
-Multi Layer Testing
+Material Management System
 ```
 
----
-
-## Selected
+Contains:
 
 ```text
-Multi Layer Testing
+Material Profiles
+
+Validation
+
+Repositories
 ```
 
 ---
 
-## Reason
+# src/filament_database/
+
+Purpose:
 
 ```text
-Better Coverage
-
-Reduced Risk
-
-Improved Quality
+Filament Management System
 ```
 
----
-
-# Unit Testing
-
----
-
-## Selected
-
-```text
-Vitest
-```
-
----
-
-## Reason
-
-```text
-Fast
-
-TypeScript Friendly
-
-Excellent Vite Integration
-```
-
----
-
-# End To End Testing
-
----
-
-## Selected
-
-```text
-Playwright
-```
-
----
-
-## Reason
-
-```text
-Cross Platform
-
-Reliable Automation
-
-Modern Tooling
-```
-
----
-
-# Data Storage
-
----
-
-# Profile Storage Strategy
-
----
-
-## Problem
-
-Store printer, material, filament, and preset profiles.
-
----
-
-## Options
-
-```text
-Database
-
-JSON Files
-
-Remote Only
-```
-
----
-
-## Selected
-
-```text
-JSON Files
-```
-
----
-
-## Reason
-
-```text
-Human Readable
-
-Portable
-
-Version Control Friendly
-
-Easy Community Contributions
-```
-
----
-
-## Problem
-
-Store printer profiles, materials, and presets.
-
----
-
-## Options
-
-```text
-Embedded Database
-
-JSON Files
-
-Cloud Storage
-```
-
----
-
-## Selected
-
-```text
-JSON Files
-```
-
----
-
-## Reason
-
-```text
-Simple
-
-Portable
-
-Human Readable
-
-Version Control Friendly
-```
-
----
-
-# Project Philosophy
-
----
-
-## Problem
-
-Choose development strategy.
-
----
-
-## Options
-
-```text
-Code First
-
-Documentation First
-```
-
----
-
-## Selected
-
-```text
-Documentation First
-```
-
----
-
-## Reason
-
-```text
-Better Planning
-
-Reduced Rewrites
-
-Improved Consistency
-
-Easier Collaboration
-```
-
----
-
-# AI Strategy
-
----
-
-
-# Object Classification
-
----
-
-# Confidence Scoring
-
----
-
-# Recommendation Strategy
-
----
-
-## Problem
-
-Measure reliability of AI decisions.
-
----
-
-## Options
-
-```text
-No Confidence
-
-Binary Confidence
-
-Scored Confidence
-```
-
----
-
-## Selected
-
-```text
-Scored Confidence
-```
-
----
-
-## Reason
-
-```text
-Transparency
-
-Better User Feedback
-
-Safer Recommendations
-```
-
----
-
-## Problem
-
-Identify model categories automatically.
-
----
-
-## Options
-
-```text
-No Classification
-
-Rule Based Classification
-
-Machine Learning Classification
-```
-
----
-
-## Selected
-
-```text
-Rule Based Classification
-```
-
----
-
-## Reason
-
-```text
-Explainable
-
-Deterministic
-
-Fast
-
-No Training Required
-```
-
----
-
-## Problem
-
-Select recommendation strategy.
-
----
-
-## Options
-
-```text
-Rule Based AI
-
-Machine Learning
-
-Hybrid
-```
-
----
-
-## Selected
-
-```text
-Rule Based AI
-```
-
----
-
-## Reason
-
-```text
-Explainable
-
-Deterministic
-
-Predictable
-
-No Training Required
-```
-
----
-
-# Printer Profiles
-
----
-
-## Problem
-
-Manage printer capabilities.
-
----
-
-## Options
-
-```text
-Hardcoded
-
-External Profiles
-
-Cloud Profiles
-```
-
----
-
-## Selected
-
-```text
-External Profiles
-```
-
----
-
-## Reason
-
-```text
-Maintainable
-
-Expandable
-
-Community Friendly
-```
-
----
-
-# Material Profiles
-
----
-
-# Filament Profiles
-
----
-
-## Problem
-
-Store manufacturer-specific filament data.
-
----
-
-## Options
-
-```text
-Material Only
-
-Filament Profiles
-
-Cloud Filament Database
-```
-
----
-
-## Selected
+Contains:
 
 ```text
 Filament Profiles
+
+Manufacturer Data
+
+Validation
+
+Repositories
 ```
 
 ---
 
-## Reason
+# src/model_analysis/
+
+Purpose:
 
 ```text
-Brand Specific Settings
+Geometry Analysis Engine
+```
 
-Improved Recommendations
+Contains:
 
-Improved Reliability
+```text
+Mesh Analysis
 
-Accurate Cost Calculations
+Printability Analysis
+
+Stability Analysis
+
+Geometry Evaluation
 ```
 
 ---
 
-## Problem
+# src/classification_engine/
 
-Store material information.
-
----
-
-## Options
+Purpose:
 
 ```text
-Hardcoded
+Object Classification System
+```
 
-Profile Based
+Contains:
+
+```text
+Object Categories
+
+Classification Rules
+
+Confidence Scoring
+
+Classification Validation
 ```
 
 ---
 
-## Selected
+# src/recommendation_engine/
+
+Purpose:
 
 ```text
-Profile Based
+Recommendation Generation
+```
+
+Contains:
+
+```text
+Decision Rules
+
+Validation
+
+Warnings
+
+Recommendations
 ```
 
 ---
 
-## Reason
+# src/preset_engine/
+
+Purpose:
 
 ```text
-Flexible
+Print Preset Management
+```
 
-Future Proof
+Contains:
 
-Easy To Update
+```text
+Preset Selection
+
+Preset Validation
+
+Preset Recommendations
+
+Preset Storage
 ```
 
 ---
 
-# Plugin Support
+# src/optimization_engine/
 
----
-
-# Security Strategy
-
----
-
-# Performance Strategy
-
----
-
-## Problem
-
-Maintain responsiveness with large models.
-
----
-
-## Options
+Purpose:
 
 ```text
-Naive Rendering
+Print Optimization
+```
 
-Partial Optimization
+Contains:
 
-Performance First Architecture
+```text
+Orientation Optimization
+
+Support Optimization
+
+Time Optimization
+
+Material Optimization
 ```
 
 ---
 
-## Selected
+# src/cost_engine/
+
+Purpose:
 
 ```text
-Performance First Architecture
+Cost Computation
+```
+
+Contains:
+
+```text
+Material Cost
+
+Energy Cost
+
+Time Estimation
+
+Total Cost
 ```
 
 ---
 
-## Reason
+# src/repositories/
+
+Purpose:
 
 ```text
-Large Scene Support
+Data Access Layer
+```
 
-Scalability
+Contains:
 
-Better User Experience
+```text
+Repository Implementations
 
-Future Growth
+Storage Access Logic
 ```
 
 ---
 
-## Problem
+# src/storage/
 
-Protect application integrity.
-
----
-
-## Options
+Purpose:
 
 ```text
-Trust Inputs
+Persistence Layer
+```
 
-Partial Validation
+Contains:
 
-Zero Trust Validation
+```text
+Local Storage
+
+File Storage
+
+Future Database Integrations
 ```
 
 ---
 
-## Selected
+# src/recovery/
+
+Purpose:
 
 ```text
-Zero Trust Validation
+Project Recovery System
+```
+
+Contains:
+
+```text
+Auto Save
+
+Recovery Files
+
+Session Restoration
+
+Recovery Validation
 ```
 
 ---
 
-## Reason
+# src/services/
+
+Purpose:
 
 ```text
-Safer Imports
+Shared Application Services
+```
 
-Safer Repositories
+Contains:
 
-Safer Profiles
+```text
+Reusable Business Logic
 
-Improved Reliability
+Cross Module Operations
 ```
 
 ---
 
-## Problem
+# src/events/
 
-Extend functionality.
-
----
-
-## Options
+Purpose:
 
 ```text
-Closed System
+Application Event System
+```
 
-Plugin Architecture
+Contains:
+
+```text
+Event Dispatching
+
+Subscriptions
+
+Notifications
 ```
 
 ---
 
-## Selected
+# src/state/
+
+Purpose:
 
 ```text
-Plugin Architecture
+Application State Management
+```
+
+Contains:
+
+```text
+Global State
+
+Stores
+
+Session State
 ```
 
 ---
 
-## Reason
+# src/config/
+
+Purpose:
 
 ```text
-Scalable
+Configuration Management
+```
 
-Community Contributions
+Contains:
 
-Future Growth
+```text
+Application Configuration
+
+Feature Flags
+
+Environment Settings
 ```
 
 ---
 
-# Reserved Future Decisions
+# src/constants/
 
-Future architectural evaluations:
+Purpose:
 
 ```text
-Cloud Synchronization
+Global Constants
+```
 
-Machine Learning
+Contains:
 
-Remote Printing
+```text
+Default Values
 
-G-Code Engine
+Limits
 
-Multi Material Support
-
-Marketplace
-
-Telemetry
+Shared Constants
 ```
 
 ---
 
-# Decision Update Policy
+# src/schemas/
 
-When a major technology choice changes:
+Purpose:
 
 ```text
-Update This Document
+Runtime Validation Schemas
+```
 
-↓
+Contains:
 
-Update DECISIONS.md
+```text
+Zod Schemas
 
-↓
+Validation Definitions
 
-Update TECH_STACK.md
+Data Models
+```
 
-↓
+---
 
-Update CHANGELOG.md
+# src/utils/
+
+Purpose:
+
+```text
+Utility Functions
+```
+
+Contains:
+
+```text
+Helpers
+
+Converters
+
+Reusable Utilities
+```
+
+---
+
+# src/types/
+
+Purpose:
+
+```text
+Shared Type Definitions
+```
+
+Contains:
+
+```text
+TypeScript Types
+
+Interfaces
+
+Enums
+```
+
+---
+
+# data/
+
+Purpose:
+
+```text
+Project Data Repository
+```
+
+Contains:
+
+```text
+Profiles
+
+Materials
+
+Filaments
+
+Presets
+
+Repositories
+```
+
+---
+
+# data/printers/
+
+Purpose:
+
+```text
+Printer Profile Storage
+```
+
+Contains:
+
+```text
+Printer Definitions
+
+Manufacturer Profiles
+```
+
+---
+
+# data/materials/
+
+Purpose:
+
+```text
+Material Profile Storage
+```
+
+Contains:
+
+```text
+PLA
+
+PETG
+
+ABS
+
+ASA
+
+TPU
+
+And Other Materials
+```
+
+---
+
+# data/filaments/
+
+Purpose:
+
+```text
+Filament Profile Storage
+```
+
+Contains:
+
+```text
+Manufacturer-Specific Filaments
+```
+
+---
+
+# data/presets/
+
+Purpose:
+
+```text
+Print Preset Storage
+```
+
+Contains:
+
+```text
+Draft
+
+Balanced
+
+Quality
+
+Mechanical
+
+Miniature
+
+Custom Presets
+```
+
+---
+
+# tests/
+
+Purpose:
+
+```text
+Quality Validation
+```
+
+Contains:
+
+```text
+Unit Tests
+
+Integration Tests
+
+Regression Tests
+
+E2E Tests
+```
+
+---
+
+# assets/
+
+Purpose:
+
+```text
+Project Visual Resources
+```
+
+Contains:
+
+```text
+Icons
+
+Images
+
+Logos
+
+Themes
+```
+
+---
+
+# cache/
+
+Purpose:
+
+```text
+Temporary Runtime Data
+```
+
+Contains:
+
+```text
+Downloaded Profiles
+
+Analysis Cache
+
+Repositories Cache
+```
+
+---
+
+# logs/
+
+Purpose:
+
+```text
+Application Diagnostics
+```
+
+Contains:
+
+```text
+Application Logs
+
+Error Logs
+
+Diagnostic Information
+```
+
+---
+
+# scripts/
+
+Purpose:
+
+```text
+Automation Tools
+```
+
+Contains:
+
+```text
+Setup Scripts
+
+Migration Scripts
+
+Release Scripts
+```
+
+---
+
+# plugins/
+
+Purpose:
+
+```text
+Plugin Management
+```
+
+Contains:
+
+```text
+Installed Plugins
+
+Disabled Plugins
+
+Plugin Cache
+```
+
+---
+
+# public/
+
+Purpose:
+
+```text
+Public Resources
+```
+
+Contains:
+
+```text
+Fonts
+
+Icons
+
+Localization Files
+
+Static Resources
+```
+
+---
+
+# releases/
+
+Purpose:
+
+```text
+Release Artifacts
+```
+
+Contains:
+
+```text
+Alpha Releases
+
+Beta Releases
+
+Release Candidates
+
+Stable Builds
+```
+
+---
+
+# .github/
+
+Purpose:
+
+```text
+GitHub Configuration
+```
+
+Contains:
+
+```text
+Workflows
+
+Automation
+
+CI/CD Configuration
+```
+
+---
+
+# .github/workflows/
+
+Purpose:
+
+```text
+Automation Pipeline
+```
+
+Contains:
+
+```text
+Build Validation
+
+Testing
+
+Linting
+
+Release Automation
 ```
 
 ---
 
 # Golden Rule
 
-Architectural decisions must prioritize long-term maintainability and reliability over short-term convenience.
+Every file should have a single clear responsibility and should be stored in the directory that best matches that responsibility.
+
+If a file does not clearly belong to a directory, the project structure should be reviewed before creating the file.
 
 ---
 
