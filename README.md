@@ -48,198 +48,155 @@ The project combines:
 
 
 
-\- 3D Model Visualization
+- 3D Model Visualization
 
-\- Geometry Analysis
+- Geometry Analysis
 
-\- Printer Management
+- Printer Management
 
-\- Material Management
+- Material Management
 
-\- Intelligent Recommendation Systems
+- Intelligent Recommendation Systems
 
-\- Print Optimization Tools
-
+- Print Optimization Tools
 
 
 The long-term objective is to provide an experience comparable to modern slicers such as:
 
 
 
-\- OrcaSlicer
+- OrcaSlicer
 
-\- Bambu Studio
+- Bambu Studio
 
-\- PrusaSlicer
+- PrusaSlicer
 
-\- Cura
-
-
+- Cura
 
 while introducing advanced AI-powered assistance.
 
 
-
-\---
-
+---
 
 
-\## Main Features
+## Main Features
 
 
-
-\### Model Import
+### Model Import
 
 
 
 Supported formats:
-
-
-
-\- STL
-
-\- 3MF
-
-
+- STL
+- 3MF
 
 Future formats:
-
-
-
-\- OBJ
-
-\- STEP
-
-\- AMF
-
-
+- OBJ
+- STEP
+- AMF
 
 \---
 
-
-
-\### 3D Workspace
-
+### 3D Workspace
 
 
 Features:
 
+- Build Plate Visualization
 
+- Grid System
 
-\- Build Plate Visualization
+- XYZ Axis Display
 
-\- Grid System
+- Camera Controls
 
-\- XYZ Axis Display
+- Multiple Object Support
 
-\- Camera Controls
-
-\- Multiple Object Support
-
-\- Transform Controls
-
+- Transform Controls
 
 
 \---
 
 
-
-\### Object Management
-
+### Object Management
 
 
 Supported operations:
 
 
+- Move
 
-\- Move
+- Rotate
 
-\- Rotate
+- Scale
 
-\- Scale
+- Center on Bed
 
-\- Center on Bed
+- Duplicate
 
-\- Duplicate
-
-\- Delete
-
+- Delete
 
 
 \---
 
 
-
-\### Printer Profiles
-
+### Printer Profiles
 
 
 Manage:
 
 
+- Printer Databases
 
-\- Printer Databases
+- Manufacturer Profiles
 
-\- Manufacturer Profiles
+- Community Profiles
 
-\- Community Profiles
-
-\- GitHub Repository Profiles
-
+- GitHub Repository Profiles
 
 
 Supported categories:
 
 
+- Consumer Printers
 
-\- Consumer Printers
+- Prosumer Printers
 
-\- Prosumer Printers
-
-\- Industrial Printers
-
+- Industrial Printers
 
 
-\---
+---
 
 
-
-\### Material Profiles
-
-
+### Material Profiles
 
 Supported materials:
 
+- PLA
+
+- PLA+
+
+- PETG
+
+- ABS
+
+- ASA
+
+- TPU
+
+- Nylon
+
+- PC
+
+- PP
+
+- Custom Materials
 
 
-\- PLA
-
-\- PLA+
-
-\- PETG
-
-\- ABS
-
-\- ASA
-
-\- TPU
-
-\- Nylon
-
-\- PC
-
-\- PP
-
-\- Custom Materials
+---
 
 
-
-\---
-
-
-
-\### AI Recommendation Engine
-
+### AI Recommendation Engine
 
 
 The AI engine analyzes:
@@ -267,67 +224,50 @@ and automatically recommends:
 - Confidence Score
 
 
-\---
+---
 
-
-\### Optimization Engine
-
+### Optimization Engine
 
 
 Provides:
 
+- Orientation Optimization
 
+- Support Reduction
 
-\- Orientation Optimization
+- Material Optimization
 
-\- Support Reduction
-
-\- Material Optimization
-
-\- Print Time Optimization
-
+- Print Time Optimization
 
 
 \---
 
 
-
-\### Cost Estimation
-
+### Cost Estimation
 
 
 Calculates:
 
+- Filament Usage
 
+- Filament Weight
 
-\- Filament Usage
+- Material Cost
 
-\- Filament Weight
+- Electricity Cost
 
-\- Material Cost
+- Total Cost
 
-\- Electricity Cost
-
-\- Total Cost
-
-\- Estimated Print Duration
-
-
+- Estimated Print Duration
 
 \---
 
-
-
-\## Project Architecture
-
+## Project Architecture
 
 
 The project follows a modular architecture.
 
-
-
 Main modules:
-
 
 
 ```text
@@ -351,9 +291,7 @@ Services
 ```
 
 
-
 Detailed architecture:
-
 
 
 ```text
@@ -363,17 +301,13 @@ docs/02-architecture/ARCHITECTURE.md
 ```
 
 
-
-\---
-
+---
 
 
-\## Technology Stack
+## Technology Stack
 
 
-
-\### Core
-
+### Core
 
 
 ```text
@@ -389,8 +323,7 @@ Three.js
 ```
 
 
-
-\### State Management
+### State Management
 
 
 
@@ -401,9 +334,7 @@ Zustand
 ```
 
 
-
-\### Styling
-
+### Styling
 
 
 ```text
@@ -415,9 +346,7 @@ shadcn/ui
 ```
 
 
-
-\### Testing
-
+### Testing
 
 
 ```text
@@ -431,18 +360,13 @@ Playwright
 ```
 
 
-
 \---
 
 
-
-\## Development Roadmap
-
+## Development Roadmap
 
 
 Current Progress:
-
-
 
 ```text
 
@@ -451,8 +375,6 @@ Phase 0
 Foundation
 
 ```
-
-
 
 Planned Phases:
 
@@ -472,7 +394,6 @@ Phase 12:  Optimization Engine
 More details:
 
 
-
 ```text
 
 docs/01-project/ROADMAP.md
@@ -480,18 +401,11 @@ docs/01-project/ROADMAP.md
 ```
 
 
+---
 
-\---
-
-
-
-\## Documentation
-
-
+## Documentation
 
 Complete project documentation is available in:
-
-
 
 ```text
 
@@ -500,9 +414,7 @@ docs/
 ```
 
 
-
 Start here:
-
 
 
 ```text
@@ -512,9 +424,7 @@ docs/00-index/AI\_START\_HERE.md
 ```
 
 
-
 Documentation index:
-
 
 
 ```text
@@ -523,21 +433,15 @@ docs/00-index/PROJECT\_DOCUMENTATION\_INDEX.md
 
 ```
 
+---
 
 
-\---
-
-
-
-\## Project Structure
-
+## Project Structure
 
 
 ```text
 
 wichy/
-
-
 
 ├── docs/
 
@@ -562,7 +466,6 @@ wichy/
 ```
 
 
-
 Complete structure:
 
 
@@ -575,34 +478,28 @@ docs/02-architecture/FILE\_STRUCTURE.md
 
 
 
-\---
+---
 
 
-
-\## Development Rules
-
+## Development Rules
 
 
 Key principles:
 
+- Patch existing code
 
+- Avoid full file rewrites
 
-\- Patch existing code
+- Preserve backward compatibility
 
-\- Avoid full file rewrites
+- Follow documented architecture
 
-\- Preserve backward compatibility
+- Update only impacted sections
 
-\- Follow documented architecture
-
-\- Update only impacted sections
-
-\- Maintain modularity
-
+- Maintain modularity
 
 
 Detailed rules:
-
 
 
 ```text
@@ -612,65 +509,43 @@ docs/03-development/DEVELOPMENT\_RULES.md
 ```
 
 
-
-\---
-
+---
 
 
-\## Documentation Reading Order
-
+## Documentation Reading Order
 
 
 Before contributing:
-
 
 
 ```text
 
 1\. AI\_START\_HERE.md
 
-
-
 2\. PROJECT\_DOCUMENTATION\_INDEX.md
-
-
 
 3\. PROJECT\_SPEC.md
 
-
-
 4\. SYSTEM\_RULES.md
-
-
 
 5\. ARCHITECTURE.md
 
-
-
 6\. FILE\_STRUCTURE.md
 
-
-
 7\. DATA\_SCHEMA.md
-
-
 
 8\. DEVELOPMENT\_RULES.md
 
 ```
 
 
-
-\---
-
+---
 
 
-\## Current Status
-
+## Current Status
 
 
 Project Status:
-
 
 
 ```text
@@ -680,17 +555,11 @@ Planning / Foundation Phase
 ```
 
 
-
 The documentation, architecture, schemas, and specifications have been established before implementation begins.
 
+---
 
-
-\---
-
-
-
-\## Long-Term Vision
-
+## Long-Term Vision
 
 Build a professional AI-powered ecosystem capable of:
 
@@ -714,38 +583,22 @@ Build a professional AI-powered ecosystem capable of:
 
 - Filament-Aware Optimization
 
-
-
-\---
-
-
+---
 
 ## License
 
-
 See the LICENSE file for details.
 
+---
 
-
-\---
-
-
-
-\## Author
-
-
+## Author
 
 Wichy Project
 
 
-
 AI Smart Slicer Platform
 
-
-
-\---
-
-
+---
 
 ## Motto
 
