@@ -21,32 +21,58 @@ export class ObjectFactory {
     fileType: string
   ): Object3D {
     const transform: Transform = {
-      position: { x: 0, y: 0, z: 0 },
-      rotation: { x: 0, y: 0, z: 0 },
-      scale: { x: 1, y: 1, z: 1 }
+      position: {
+        x: 0,
+        y: 0,
+        z: 0
+      },
+
+      rotation: {
+        x: 0,
+        y: 0,
+        z: 0
+      },
+
+      scale: {
+        x: 1,
+        y: 1,
+        z: 1
+      }
     };
 
     const geometry: Geometry = {
       width: 0,
+
       depth: 0,
+
       height: 0,
+
       volume: 0,
+
       surfaceArea: 0
     };
 
     const mesh: Mesh = {
       vertices: 0,
+
       triangles: 0
     };
 
     return {
       objectId,
+
       fileName,
+
       fileType,
+
       visible: true,
+
       locked: false,
+
       transform,
+
       geometry,
+
       mesh
     };
   }
