@@ -1,6 +1,16 @@
 /**
  * Wichy
- * Transform Validator Definition
+ * Transform Validator
+ *
+ * Responsible for:
+ * - Transform validation
+ * - Position validation
+ * - Rotation validation
+ * - Scale validation
+ *
+ * No business logic.
+ * No rendering logic.
+ * No AI logic.
  *
  * Based on:
  * - ARCHITECTURE.md
@@ -10,64 +20,99 @@
 import type { Object3D } from "../types/Object3D";
 
 export class TransformValidator {
-  public validate(
-    object: Object3D
+  /**
+   * Validates object transform.
+   */
+  public static validate(
+    object: Object3D | null | undefined,
   ): boolean {
+    if (!object) {
+      return false;
+    }
+
+    const { position, rotation, scale } =
+      object.transform;
+
+    if (
+      !Number.isFinite(position.x) ||
+      !Number.isFinite(position.y) ||
+      !Number.isFinite(position.z)
+    ) {
+      return false;
+    }
+
+    if (
+      !Number.isFinite(rotation.x) ||
+      !Number.isFinite(rotation.y) ||
+      !Number.isFinite(rotation.z)
+    ) {
+      return false;
+    }
+
+    if (
+      !Number.isFinite(scale.x) ||
+      !Number.isFinite(scale.y) ||
+      !Number.isFinite(scale.z)
+    ) {
+      return false;
+    }
+
+    if (
+      scale.x <= 0 ||
+      scale.y <= 0 ||
+      scale.z <= 0
+    ) {
+      return false;
+    }
+
+    return true;
+  }
+
+  /**
+   * Validates position values.
+   */
+  public static validatePosition(
+    object: Object3D,
+  ): boolean {
+    const { position } = object.transform;
+
     return (
-      this.validatePosition(object) &&
-      this.validateRotation(object) &&
-      this.validateScale(object)
+      Number.isFinite(position.x) &&
+      Number.isFinite(position.y) &&
+      Number.isFinite(position.z)
     );
   }
 
-  private validatePosition(
-    object: Object3D
+  /**
+   * Validates rotation values.
+   */
+  public static validateRotation(
+    object: Object3D,
   ): boolean {
+    const { rotation } = object.transform;
+
     return (
-      Number.isFinite(
-        object.transform.position.x
-      ) &&
-      Number.isFinite(
-        object.transform.position.y
-      ) &&
-      Number.isFinite(
-        object.transform.position.z
-      )
+      Number.isFinite(rotation.x) &&
+      Number.isFinite(rotation.y) &&
+      Number.isFinite(rotation.z)
     );
   }
 
-  private validateRotation(
-    object: Object3D
+  /**
+   * Validates scale values.
+   */
+  public static validateScale(
+    object: Object3D,
   ): boolean {
-    return (
-      Number.isFinite(
-        object.transform.rotation.x
-      ) &&
-      Number.isFinite(
-        object.transform.rotation.y
-      ) &&
-      Number.isFinite(
-        object.transform.rotation.z
-      )
-    );
-  }
+    const { scale } = object.transform;
 
-  private validateScale(
-    object: Object3D
-  ): boolean {
     return (
-      Number.isFinite(
-        object.transform.scale.x
-      ) &&
-      Number.isFinite(
-        object.transform.scale.y
-      ) &&
-      Number.isFinite(
-        object.transform.scale.z
-      ) &&
-      object.transform.scale.x > 0 &&
-      object.transform.scale.y > 0 &&
-      object.transform.scale.z > 0
+      Number.isFinite(scale.x) &&
+      Number.isFinite(scale.y) &&
+      Number.isFinite(scale.z) &&
+      scale.x > 0 &&
+      scale.y > 0 &&
+      scale.z > 0
     );
   }
 }
