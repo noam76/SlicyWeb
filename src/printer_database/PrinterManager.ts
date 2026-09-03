@@ -1,6 +1,15 @@
 /**
  * Wichy
- * Printer Manager Definition
+ * Printer Manager
+ *
+ * Responsible for:
+ * - Printer management
+ * - Active printer access
+ * - Repository coordination
+ *
+ * No business logic.
+ * No AI logic.
+ * No cache logic.
  *
  * Based on:
  * - ARCHITECTURE.md
@@ -16,12 +25,20 @@ export class PrinterManager {
   private readonly repository =
     new PrinterRepository();
 
+  /**
+   * Adds a printer profile.
+   */
   public addPrinter(
     printer: Printer,
   ): void {
-    this.repository.add(printer);
+    this.repository.add(
+      printer,
+    );
   }
 
+  /**
+   * Removes a printer profile.
+   */
   public removePrinter(
     printerId: string,
   ): boolean {
@@ -30,6 +47,9 @@ export class PrinterManager {
     );
   }
 
+  /**
+   * Returns a printer by id.
+   */
   public getPrinter(
     printerId: string,
   ): Printer | undefined {
@@ -38,10 +58,16 @@ export class PrinterManager {
     );
   }
 
+  /**
+   * Returns all printers.
+   */
   public getPrinters(): Printer[] {
     return this.repository.getAll();
   }
 
+  /**
+   * Checks whether a printer exists.
+   */
   public hasPrinter(
     printerId: string,
   ): boolean {
@@ -50,10 +76,16 @@ export class PrinterManager {
     );
   }
 
+  /**
+   * Returns printer count.
+   */
   public getPrinterCount(): number {
     return this.repository.getCount();
   }
 
+  /**
+   * Clears all printers.
+   */
   public clear(): void {
     this.repository.clear();
   }
