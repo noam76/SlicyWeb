@@ -274,6 +274,38 @@ src/renderer/
 
 ---
 
+# repositories
+
+```text
+src/repositories/
+
+├── GitHubRepository.ts
+├── PrinterRepositorySync.ts
+├── MaterialRepositorySync.ts
+├── FilamentRepositorySync.ts
+└── PresetRepositorySync.ts
+
+```
+
+---
+
+# schemas
+
+```text
+src/schemas/
+
+├── schemas/
+├── PrinterSchema.ts
+├── MaterialSchema.ts
+├── FilamentSchema.ts
+├── PrintPresetSchema.ts
+└── AnalysisSchema.ts
+└── RecommendationSchema.ts
+	
+```
+
+---
+
 # Scene
 
 ```text
@@ -511,18 +543,33 @@ src/state/
 src/types/
 
 ├── Printer.ts
+├── Material.ts
 ├── Filament.ts
 ├── PrintPreset.ts
-├── Material.ts
+├── Analysis.ts
+├── Classification.ts
+├── Recommendation.ts
+├── Project.ts
 ├── Scene.ts
 ├── Object3D.ts
-├── Analysis.ts
-├── Recommendation.ts
-└── Project.ts
+├── Warning.ts
+├── Notification.ts
+├── Optimization.ts
+├── CostEstimation.ts
+└── UserPreferences.ts
 ```
+---
 
-```constants
+# constants
+
+```text
 src/constants
+
+├── AnalysisConstants.ts
+├── ApplicationConstants.ts
+├── MaterialConstants.ts
+├── PresetConstants.ts
+└── PrinterConstants.ts
 ```
 ---
 
