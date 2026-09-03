@@ -5,6 +5,7 @@
  * Based on:
  * - ARCHITECTURE.md
  * - DATA_SCHEMA.md
+ * - OBJECT_CLASSIFICATION_SPEC.md
  */
 
 import type {
@@ -20,7 +21,7 @@ export class ObjectFactory {
     fileName: string,
     fileType: string
   ): Object3D {
-    const transform: Transform = {
+    const defaultTransform: Transform = {
       position: {
         x: 0,
         y: 0,
@@ -40,7 +41,7 @@ export class ObjectFactory {
       }
     };
 
-    const geometry: Geometry = {
+    const defaultGeometry: Geometry = {
       width: 0,
 
       depth: 0,
@@ -52,7 +53,7 @@ export class ObjectFactory {
       surfaceArea: 0
     };
 
-    const mesh: Mesh = {
+    const defaultMesh: Mesh = {
       vertices: 0,
 
       triangles: 0
@@ -69,11 +70,11 @@ export class ObjectFactory {
 
       locked: false,
 
-      transform,
+      transform: defaultTransform,
 
-      geometry,
+      geometry: defaultGeometry,
 
-      mesh
+      mesh: defaultMesh
     };
   }
 }
