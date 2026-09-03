@@ -212,11 +212,8 @@ src/
 ```text
 src/app/
 
-├── Application.ts
-├── Startup.ts
-├── Shutdown.ts
-├── Version.ts
-└── DependencyContainer.ts
+├── Main.ts
+└── Startup.ts
 ```
 
 ---
@@ -226,16 +223,37 @@ src/app/
 ```text
 src/gui/
 
-├── layouts/
-├── windows/
-├── panels/
-├── dialogs/
-├── menus/
-├── toolbars/
-├── components/
-├── themes/
-├── hooks/
-└── styles/
+├── src/gui/
+├── App.tsx
+└── MainLayout.tsx
+
+├── src/gui/viewport/
+├── Viewport.tsx
+├── ViewportToolbar.tsx
+└── ViewportStatus.tsx
+	
+├── src/gui/sidebar/
+├── LeftSidebar.tsx
+├── RightSidebar.tsx
+└── SidebarSection.tsx
+
+├── src/gui/panels/
+├── PrinterPanel.tsx
+├── MaterialPanel.tsx
+├── FilamentPanel.tsx
+├── PresetPanel.tsx
+├── AnalysisPanel.tsx
+└── RecommendationPanel.tsx
+	
+├── src/gui/layouts/
+├── src/gui/windows/
+├── src/gui/dialogs/
+├── src/gui/menus/
+├── src/gui/toolbars/
+├── src/gui/components/
+├── src/gui/themes/
+├── src/gui/hooks/
+└── src/gui/styles/
 ```
 
 ---
@@ -336,8 +354,6 @@ src/material_database/
 ├── MaterialRepository.ts
 ├── MaterialValidator.ts
 ├── MaterialCache.ts
-├── FilamentRepository.ts
-├── FilamentValidator.ts
 └── profiles/
 ```
 
@@ -347,8 +363,11 @@ src/material_database/
 ```text
 src/filament_database/
 
+├── FilamentManager.ts
 ├── FilamentRepository.ts
 ├── FilamentValidator.ts
+├── FilamentCache.ts
+└── FilamentImporter.ts
 ```
 
 ---
