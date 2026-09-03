@@ -8,7 +8,10 @@
  * - API_SPEC.md
  */
 
-import { contextBridge } from "electron";
+import {
+  contextBridge,
+  ipcRenderer,
+} from "electron";
 
 contextBridge.exposeInMainWorld(
   "wichy",
@@ -17,6 +20,43 @@ contextBridge.exposeInMainWorld(
 
     platform: process.platform,
 
-    isElectron: true
-  }
+    isElectron: true,
+
+    send: (
+      channel: string,
+      data?: unknown,
+    ): void => {
+      ipcRenderer.send(
+        channel,
+        data,
+      );
+    },
+
+    invoke: (
+      channel: string,
+      data?: unknown,
+    ): Promise<unknown> => {
+      return ipcRenderer.invoke(
+        channel,
+        data,
+      );
+    },
+
+    on: (
+      channel: string,
+      callback: (
+        data: unknown,
+      ) => void,
+    ): void => {
+      ipcRenderer.on(
+        channel,
+        (
+          _event,
+          data,
+        ) => {
+          callback(data);
+        },
+      );
+    },
+  },
 );
