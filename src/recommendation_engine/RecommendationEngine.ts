@@ -29,7 +29,28 @@ export class RecommendationEngine {
   private readonly recommendationBuilder =
     new RecommendationBuilder();
 
-  public generate(
+  public generateRecommendation(
     analysis: Analysis
   ): Recommendation {
-    
+    const profile =
+      this.decisionEngine.generate(
+        analysis
+      );
+
+    const validatedProfile =
+      this.validationEngine.validate(
+        profile
+      );
+
+    const warnings =
+      this.warningEngine.generate(
+        analysis,
+        validatedProfile
+      );
+
+    return this.recommendationBuilder.build(
+      validatedProfile,
+      warnings
+    );
+  }
+}
