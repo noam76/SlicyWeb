@@ -1024,52 +1024,6 @@ Domain Models
 
 ---
 
-# src/electron/
-
-Purpose:
-
-```text
-Electron Framework Integration
-```
-
-Contains:
-
-```text
-IPC Communication Handlers
-
-Main Process Modules
-
-Preload Scripts
-
-Process Integration
-```
-
----
-
-# src/electron/ipc/
-
-Purpose:
-
-```text
-Inter-Process Communication Handlers
-```
-
-Contains:
-
-```text
-Import IPC
-
-Printer IPC
-
-Project IPC
-
-Settings IPC
-
-Storage IPC
-```
-
----
-
 # src-electron/
 
 Purpose:
@@ -1098,6 +1052,30 @@ Used For:
 ```text
 Future Electron Refactoring
 Desktop Architecture Separation
+```
+
+---
+
+# src/electron/ipc/
+
+Purpose:
+
+```text
+Inter-Process Communication Handlers
+```
+
+Contains:
+
+```text
+Import IPC
+
+Printer IPC
+
+Project IPC
+
+Settings IPC
+
+Storage IPC
 ```
 
 ---
