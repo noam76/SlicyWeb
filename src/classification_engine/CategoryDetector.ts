@@ -27,7 +27,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Gear";
+      return "gear";
     }
 
     if (
@@ -40,7 +40,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Bracket";
+      return "bracket";
     }
 
     if (
@@ -53,7 +53,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Figurine";
+      return "figurine";
     }
 
     if (
@@ -66,7 +66,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Miniature";
+      return "miniature";
     }
 
     if (
@@ -79,7 +79,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Container";
+      return "container";
     }
 
     if (
@@ -92,7 +92,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Vase";
+      return "vase";
     }
 
     if (
@@ -105,7 +105,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Enclosure";
+      return "enclosure";
     }
 
     if (
@@ -118,7 +118,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Tool";
+      return "tool";
     }
 
     if (
@@ -131,7 +131,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Articulated Model";
+      return "articulated Model";
     }
 
     if (
@@ -143,7 +143,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Prototype";
+      return "prototype";
     }
 
     if (
@@ -155,7 +155,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Structural Part";
+      return "structural Part";
     }
 
     if (
@@ -168,7 +168,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Mechanical Part";
+      return "mechanical Part";
     }
 
     if (
@@ -180,7 +180,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Decorative Object";
+      return "decorative Object";
     }
 
     if (
@@ -192,10 +192,10 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "Functional Part";
+      return "mechanical_part";
     }
 
-    return "Unknown";
+    return "unknown";
   }
 
   private hasAny(
