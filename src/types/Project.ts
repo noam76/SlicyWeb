@@ -7,24 +7,10 @@
  * - ARCHITECTURE.md
  */
 
-import type { Printer } from "./Printer";
-import type { Material } from "./Material";
-import type { Filament } from "./Filament";
+import type { Scene } from "./Scene";
 import type { PrintPreset } from "./PrintPreset";
 
-export interface ProjectS*ene {
-  objects: string[];
-
-  prin*er: Printer | null;
-
-  material: M*terial | null;
-
-  filament: Filame*t | null;
-
-  preset: PrintPreset |*null;
-}
-
-export interface ProjectS*ttings {
+export interface ProjectSettings {
   [key: string]: unknown;
 }
 
@@ -43,7 +29,7 @@ export interface Project {
 
   version: string;
 
-  scene: ProjectScene;
+  scene: Scene;
 
   settings: ProjectSettings;
 
