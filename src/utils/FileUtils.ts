@@ -1,8 +1,8 @@
 /**
  * Wichy
- * JSON Utilities
+ * File Utilities
  *
- * Shared JSON helper functions.
+ * Shared file helper functions.
  */
 
-export class JsonUtils {}
+export class FileUtils {}
