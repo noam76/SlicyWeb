@@ -1,5 +1,4 @@
-\# SYSTEM RULES
-
+# SYSTEM RULES
 
 
 Version: 1.0.0
@@ -8,12 +7,11 @@ Status: Approved
 
 Priority: Mandatory
 
-\---
+---
 
 
 
-\# Purpose
-
+# Purpose
 
 
 These rules define how the AI, development tools, and contributors must interact with the project.
@@ -22,19 +20,17 @@ These rules define how the AI, development tools, and contributors must interact
 
 The objective is to:
 
+- reduce token consumption
 
+- reduce bugs
 
-\- reduce token consumption
+- avoid regressions
 
-\- reduce bugs
+- preserve project stability
 
-\- avoid regressions
+- guarantee maintainability
 
-\- preserve project stability
-
-\- guarantee maintainability
-
-\- keep all modules compatible
+- keep all modules compatible
 
 
 
@@ -42,16 +38,15 @@ These rules have priority over implementation preferences.
 
 
 
-\---
+---
 
 
 
-\# Core Principles
+# Core Principles
 
 
 
 Priority Order:
-
 
 
 1\. Stability
@@ -69,68 +64,57 @@ Priority Order:
 A working feature must never be broken to add a new feature.
 
 
-
-\---
-
+---
 
 
-\# Development Philosophy
 
+# Development Philosophy
 
 
 The project is developed incrementally.
 
 
-
 The project is never rebuilt from scratch unless explicitly requested.
-
 
 
 Every modification must preserve:
 
 
+- existing features
 
-\- existing features
+- existing APIs
 
-\- existing APIs
+- existing interfaces
 
-\- existing interfaces
-
-\- existing data structures
-
+- existing data structures
 
 
 Whenever possible:
 
-
-
 PATCH existing code.
-
-
 
 DO NOT rewrite complete systems.
 
 
 
-\---
+---
 
 
 
-\# AI Behavior Rules
+# AI Behavior Rules
 
 
 
 The AI must:
 
 
+- read existing files first
 
-\- read existing files first
+- analyze project structure first
 
-\- analyze project structure first
+- understand dependencies first
 
-\- understand dependencies first
-
-\- modify only what is necessary
+- modify only what is necessary
 
 
 
@@ -138,11 +122,11 @@ The AI should act as a software maintainer, not as a code regenerator.
 
 
 
-\---
+---
 
 
 
-\# Forbidden Actions
+# Forbidden Actions
 
 
 
@@ -150,26 +134,25 @@ The AI must not:
 
 
 
-\- regenerate the entire project
+- regenerate the entire project
 
-\- recreate existing files unnecessarily
+- recreate existing files unnecessarily
 
-\- duplicate existing code
+- duplicate existing code
 
-\- remove stable features
+- remove stable features
 
-\- rename working APIs without authorization
+- rename working APIs without authorization
 
-\- restructure the project without explicit request
-
-
-
-\---
+- restructure the project without explicit request
 
 
 
-\# Update Policy
+---
 
+
+
+# Update Policy
 
 
 Before modifying code:
@@ -178,15 +161,11 @@ Before modifying code:
 
 Step 1
 
-
-
 Read existing implementation.
 
 
 
 Step 2
-
-
 
 Determine impacted modules.
 
@@ -194,15 +173,11 @@ Determine impacted modules.
 
 Step 3
 
-
-
 Identify dependencies.
 
 
 
 Step 4
-
-
 
 Apply minimal modifications.
 
@@ -210,17 +185,14 @@ Apply minimal modifications.
 
 Step 5
 
-
-
 Validate compatibility.
 
 
-
-\---
-
+---
 
 
-\# Modification Strategy
+
+# Modification Strategy
 
 
 
@@ -239,102 +211,73 @@ Preferred Order:
 5\. System update
 
 
-
 Avoid large-scale rewrites.
 
 
 
-\---
+---
 
 
 
-\# Token Optimization Rules
-
+# Token Optimization Rules
 
 
 The AI must minimize token usage.
 
 
-
 Use:
 
+- existing files
 
+- existing classes
 
-\- existing files
+- existing components
 
-\- existing classes
-
-\- existing components
-
-\- existing services
-
-
-
-Prefer:
+- existing services
 
 
 
-PATCHES
+Prefer: PATCHES
+
+instead of COMPLETE FILE REGENERATION
 
 
 
-instead of
+---
 
 
 
-COMPLETE FILE REGENERATION
-
-
-
-\---
-
-
-
-\# Documentation Rules
-
+# Documentation Rules
 
 
 Every major module must have documentation.
 
-
-
 Documentation updates are required whenever:
 
 
+- architecture changes
 
-\- architecture changes
+- new module added
 
-\- new module added
+- API modified
 
-\- API modified
-
-\- data schema modified
-
-
-
-\---
+- data schema modified
 
 
 
-\# Naming Rules
+---
 
+
+# Naming Rules
 
 
 Use consistent naming.
 
 
-
-Preferred:
-
-
-
-PascalCase
-
+Preferred: PascalCase
 
 
 Examples:
-
-
 
 PrinterManager
 
@@ -344,21 +287,14 @@ ModelAnalyzer
 
 
 
-\---
+---
 
 
 
-Variables:
-
-
-
-camelCase
-
+Variables: camelCase
 
 
 Examples:
-
-
 
 printerProfile
 
@@ -366,34 +302,24 @@ materialProfile
 
 
 
-\---
+---
 
 
-
-Constants:
-
-
-
-UPPER\_CASE
+Constants: UPPER\_CASE
 
 
 
 Examples:
-
-
 
 MAX\_PRINT\_SPEED
 
 DEFAULT\_LAYER\_HEIGHT
 
 
-
-\---
-
+---
 
 
-\# Architecture Respect Rules
-
+# Architecture Respect Rules
 
 
 No module shall directly access unrelated modules.
@@ -403,14 +329,13 @@ No module shall directly access unrelated modules.
 Communication must occur through:
 
 
+- interfaces
 
-\- interfaces
+- services
 
-\- services
+- repositories
 
-\- repositories
-
-\- events
+- events
 
 
 
@@ -418,31 +343,25 @@ Avoid direct coupling.
 
 
 
-\---
+---
 
 
-
-\# Dependency Rules
-
+# Dependency Rules
 
 
 Every new dependency must be justified.
 
-
-
 Before adding a dependency:
-
 
 
 Verify:
 
 
+- existing solution unavailable
 
-\- existing solution unavailable
+- dependency maintained
 
-\- dependency maintained
-
-\- dependency lightweight
+- dependency lightweight
 
 
 
@@ -450,53 +369,48 @@ Avoid unnecessary packages.
 
 
 
-\---
+---
 
 
 
-\# GUI Rules
-
+# GUI Rules
 
 
 GUI must be independent.
 
 
-
 GUI must never contain:
 
 
+- printer logic
 
-\- printer logic
+- analysis logic
 
-\- analysis logic
+- AI logic
 
-\- AI logic
-
-\- database logic
-
+- database logic
 
 
 GUI only displays data.
 
 
 
-\---
+---
 
 
 
-\# Analysis Engine Rules
-
+# Analysis Engine Rules
 
 
 Analysis Engine must:
 
 
 
-\- work independently
+- work independently
 
-\- have no GUI dependency
+- have no GUI dependency
 
-\- expose data through APIs
+- expose data through APIs
 
 
 
@@ -504,49 +418,40 @@ The engine should be reusable.
 
 
 
-\---
+---
 
 
 
-\# AI Recommendation Rules
-
+# AI Recommendation Rules
 
 
 Recommendations must be based only on:
 
 
 
-\- printer profile
+- printer profile
 
-\- material profile
+- material profile
 
-\- model analysis
-
+- model analysis
 
 
 The AI must never invent printer capabilities.
 
-
-
 The AI must never invent material properties.
-
-
 
 Unknown data must be marked as unknown.
 
 
 
-\---
+---
 
 
 
-\# Printer Rules
-
+# Printer Rules
 
 
 Printer profiles are authoritative.
-
-
 
 Printer limitations cannot be exceeded.
 
@@ -555,12 +460,11 @@ Printer limitations cannot be exceeded.
 If a recommendation exceeds:
 
 
+- speed
 
-\- speed
+- acceleration
 
-\- acceleration
-
-\- temperature
+- temperature
 
 
 
@@ -568,36 +472,28 @@ it must be rejected automatically.
 
 
 
-\---
+---
 
 
 
-\# Material Rules
-
-
+# Material Rules
 
 Material profiles are authoritative.
 
-
-
 Recommendations must remain inside material limits.
-
-
 
 Unknown material data must trigger warnings.
 
 
-
-\---
-
+---
 
 
-\# Recommendation Priorities
+
+# Recommendation Priorities
 
 
 
 Always prioritize:
-
 
 
 1\. Successful Print
@@ -613,38 +509,33 @@ Always prioritize:
 6\. Material Savings
 
 
-
 Never sacrifice reliability for speed.
 
 
-
-\---
-
+---
 
 
-\# Warning Rules
-
+# Warning Rules
 
 
 Warnings must be generated when:
 
 
+- object exceeds volume
 
-\- object exceeds volume
+- collision detected
 
-\- collision detected
+- support required
 
-\- support required
+- excessive overhang detected
 
-\- excessive overhang detected
+- high warping risk detected
 
-\- high warping risk detected
+- stability risk detected
 
-\- stability risk detected
+- unknown printer data
 
-\- unknown printer data
-
-\- unknown material data
+- unknown material data
 
 
 
@@ -652,44 +543,36 @@ Warnings may never be hidden.
 
 
 
-\---
+---
 
 
 
-\# Validation Rules
-
+# Validation Rules
 
 
 Each recommendation must pass validation.
 
 
-
 Validation includes:
 
+- printer capabilities
 
+- material limits
 
-\- printer capabilities
-
-\- material limits
-
-\- geometry constraints
-
+- geometry constraints
 
 
 Invalid recommendations must be rejected.
 
 
-
-\---
-
+---
 
 
-\# Data Rules
 
+# Data Rules
 
 
 Data sources priority:
-
 
 
 1\. Local Database
@@ -701,294 +584,209 @@ Data sources priority:
 4\. Verified GitHub Sources
 
 
-
 Never trust unverified sources.
 
 
-
-\---
-
+---
 
 
-\# Local First Policy
-
+# Local First Policy
 
 
 Always use local data first.
-
-
 
 Network requests should occur only when:
 
 
 
-\- data unavailable locally
+- data unavailable locally
 
-\- user explicitly requests refresh
+- user explicitly requests refresh
 
 
 
 Cache results whenever possible.
 
 
-
-\---
-
+---
 
 
-\# Version Control Rules
 
+# Version Control Rules
 
 
 Every modification must increment version.
 
+Format: MAJOR.MINOR.PATCH
+
+Example: 1.0.0
 
 
-Format:
+---
 
 
-
-MAJOR.MINOR.PATCH
-
-
-
-Example:
-
-
-
-1.0.0
-
-
-
-\---
-
-
-
-Major:
-
-
-
-Breaking changes
-
+Major: Breaking changes
 
 
 Examples:
 
+- architecture change
+
+- schema change
 
 
-\- architecture change
-
-\- schema change
-
-
-
-\---
-
+---
 
 
 Minor:
 
-
-
 New features
 
 
-
 Examples:
 
+- support generation
 
-
-\- support generation
-
-\- optimization tools
-
-
-
-\---
+- optimization tools
 
 
 
-Patch:
+---
 
 
 
-Bug fixes
-
+Patch: Bug fixes
 
 
 Examples:
 
+- calculation corrections
+
+- GUI fixes
 
 
-\- calculation corrections
-
-\- GUI fixes
-
-
-
-\---
+---
 
 
 
-\# Testing Rules
-
+# Testing Rules
 
 
 Every new feature requires testing.
 
 
-
 Minimum tests:
 
 
-
-\- functional test
-
-\- regression test
-
+- functional test
+- 
+- regression test
 
 
 No feature is complete without validation.
 
 
-
-\---
-
+---
 
 
-\# Release Rules
-
+# Release Rules
 
 
 A release is acceptable only if:
 
 
+- all tests pass
 
-\- all tests pass
+- documentation updated
 
-\- documentation updated
+- schema validated
 
-\- schema validated
-
-\- compatibility maintained
-
+- compatibility maintained
 
 
-\---
+---
 
 
-
-\# AI Session Rules
-
+# AI Session Rules
 
 
 At the beginning of each development session:
 
-
-
 Read:
 
-
-
-1\. PROJECT\_SPEC.md
-
-2\. SYSTEM\_RULES.md
-
-3\. ARCHITECTURE.md
-
-4\. ROADMAP.md
-
-5\. CHANGELOG.md
-
-
+1. PROJECT_DOCUMENTATION_INDEX.md
+2. PROJECT_SPEC.md
+3. SYSTEM_RULES.md
+4. ARCHITECTURE.md
+5. FILE_STRUCTURE.md
+6. DATA_SCHEMA.md
+7. ROADMAP.md
+8. CHANGELOG.md
 
 Before making modifications.
 
+---
 
 
-\---
-
-
-
-\# Compatibility Rules
-
+# Compatibility Rules
 
 
 Backward compatibility is mandatory.
 
 
-
 Existing:
 
 
+- project files
 
-\- project files
+- profiles
 
-\- profiles
+- databases
 
-\- databases
-
-\- APIs
-
+- APIs
 
 
 must remain operational.
 
-
-
 Whenever compatibility is impossible:
-
-
 
 Document the breaking change.
 
 
 
-\---
+---
 
 
 
-\# Emergency Rule
+# Emergency Rule
 
 
 
 If multiple solutions exist:
 
-
-
 Choose the solution that:
 
+- modifies the least code
 
+- introduces the fewest risks
 
-\- modifies the least code
+- preserves the highest compatibility
 
-\- introduces the fewest risks
-
-\- preserves the highest compatibility
-
-\- consumes the fewest tokens
-
-
-
-\---
+- consumes the fewest tokens
 
 
 
-\# Golden Rule
+---
 
 
+# Golden Rule
 
 A working system should be improved carefully.
 
-
-
 Never destroy stability to gain functionality.
-
-
 
 Prefer evolution over reconstruction.
 
+---
 
-
-End of Document
-
+# End of Document
