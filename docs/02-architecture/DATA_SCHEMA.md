@@ -11,124 +11,51 @@ Priority: Mandatory
 ---
 
 
-
 # Purpose
-
 
 
 This document defines every data structure used by the project.
 
-
-
 All modules must follow these schemas.
 
-
-
 No module may introduce incompatible structures without updating this document.
-
-
 
 This document is considered the single source of truth for data modeling.
 
 
+---
 
-\---
 
+# Global Rules
 
 
-\# Global Rules
+## Units
 
+Distances: mm
 
+Temperatures: °C
 
-\## Units
+Speed: mm/s
 
+Acceleration: mm/s²
 
+Weight: g
 
-Distances:
+Length: mm
 
+Volume: mm³
 
+Area: mm²
 
-mm
+Time: seconds
 
+Cost: local currency
 
 
-Temperatures:
+---
 
 
-
-°C
-
-
-
-Speed:
-
-
-
-mm/s
-
-
-
-Acceleration:
-
-
-
-mm/s²
-
-
-
-Weight:
-
-
-
-g
-
-
-
-Length:
-
-
-
-mm
-
-
-
-Volume:
-
-
-
-mm³
-
-
-
-Area:
-
-
-
-mm²
-
-
-
-Time:
-
-
-
-seconds
-
-
-
-Cost:
-
-
-
-local currency
-
-
-
-\---
-
-
-
-\# Entity Relationship Overview
+# Entity Relationship Overview
 
 Printer
 ↓
@@ -151,12 +78,10 @@ Print Preset
 Warnings
 
 
-\---
+---
 
 
-
-\# Printer Schema
-
+# Printer Schema
 
 
 ```json
@@ -184,13 +109,10 @@ Warnings
 ```
 
 
-
-\---
-
+---
 
 
-\# Build Volume Schema
-
+# Build Volume Schema
 
 
 ```json
@@ -212,13 +134,10 @@ Warnings
 ```
 
 
-
-\---
-
+---
 
 
-\# Nozzle Schema
-
+# Nozzle Schema
 
 
 ```json
@@ -226,8 +145,6 @@ Warnings
 {
 
 &#x20; "defaultNozzle": 0.4,
-
-
 
 &#x20; "supportedNozzles": \[
 
@@ -246,13 +163,10 @@ Warnings
 ```
 
 
-
-\---
-
+---
 
 
-\# Extruder Schema
-
+# Extruder Schema
 
 
 ```json
@@ -272,9 +186,7 @@ Warnings
 ```
 
 
-
 Possible Values
-
 
 
 ```text
@@ -288,12 +200,10 @@ unknown
 ```
 
 
-
-\---
-
+---
 
 
-\# Motion System Schema
+# Motion System Schema
 
 
 
@@ -318,13 +228,11 @@ unknown
 ```
 
 
-
-\---
-
+---
 
 
-\# Thermal Schema
 
+# Thermal Schema
 
 
 ```json
@@ -346,13 +254,10 @@ unknown
 ```
 
 
-
-\---
-
+---
 
 
-\# Cooling Schema
-
+# Cooling Schema
 
 
 ```json
@@ -374,13 +279,10 @@ unknown
 ```
 
 
-
-\---
-
+---
 
 
-\# Complete Printer Schema
-
+# Complete Printer Schema
 
 
 ```json
@@ -418,12 +320,10 @@ unknown
 ```
 
 
-
-\---
-
+---
 
 
-\# Material Schema
+# Material Schema
 
 
 
@@ -446,13 +346,10 @@ unknown
 ```
 
 
-
-\---
-
+---
 
 
-\# Material Thermal Properties
-
+# Material Thermal Properties
 
 
 ```json
@@ -476,12 +373,10 @@ unknown
 ```
 
 
-
-\---
-
+---
 
 
-\# Material Cooling
+# Material Cooling
 
 
 
@@ -503,11 +398,11 @@ unknown
 
 
 
-\---
+---
 
 
 
-\# Material Physical Properties
+# Material Physical Properties
 
 
 
@@ -531,11 +426,11 @@ unknown
 
 
 
-\---
+---
 
 
 
-\# Material Print Settings
+# Material Print Settings
 
 
 
@@ -561,11 +456,11 @@ unknown
 
 
 
-\---
+---
 
 
 
-\# Complete Material Schema
+# Complete Material Schema
 
 
 
@@ -591,9 +486,9 @@ unknown
 
 ```
 
-\--- 
+--- 
 
-\# Filament Schema
+# Filament Schema
 
 ```json
 {
@@ -610,10 +505,10 @@ unknown
 }
 ```
 
-\---
+---
 
 
-\# Project Schema
+# Project Schema
 
 
 Represents an entire workspace.
@@ -647,11 +542,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Scene Schema
+# Scene Schema
 
 
 
@@ -679,7 +574,7 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
@@ -707,11 +602,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Transform Schema
+# Transform Schema
 
 
 
@@ -763,11 +658,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Model Geometry Schema
+# Model Geometry Schema
 
 
 
@@ -795,7 +690,7 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
@@ -821,11 +716,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Stability Analysis Schema
+# Stability Analysis Schema
 
 
 
@@ -851,11 +746,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Overhang Analysis Schema
+# Overhang Analysis Schema
 
 
 
@@ -879,11 +774,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Bridge Analysis Schema
+# Bridge Analysis Schema
 
 
 
@@ -907,11 +802,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Thin Wall Schema
+# Thin Wall Schema
 
 
 
@@ -933,10 +828,10 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
-\# Complete Analysis Schema
+# Complete Analysis Schema
 
 
 ```json
@@ -963,9 +858,9 @@ Represents an entire workspace.
 
 ```
 
-\---
+---
 
-\# Object Classification Schema
+# Object Classification Schema
 
 ```json
 {
@@ -981,7 +876,7 @@ Represents an entire workspace.
 \---
 
 
-\# Recommended Settings Schema
+# Recommended Settings Schema
 
 
 ```json
@@ -1012,10 +907,10 @@ Represents an entire workspace.
 
 ```
 
-\---
+---
 
 
-\# Print Preset Schema
+# Print Preset Schema
 
 ```json
 {
@@ -1028,10 +923,10 @@ Represents an entire workspace.
 }
 ```
 
-\---
+---
 
 
-\# Speed Schema
+# Speed Schema
 
 
 ```json
@@ -1058,11 +953,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Cooling Settings Schema
+# Cooling Settings Schema
 
 
 
@@ -1083,12 +978,11 @@ Represents an entire workspace.
 ```
 
 
-
-\---
-
+---
 
 
-\# Retraction Schema
+
+# Retraction Schema
 
 
 
@@ -1109,13 +1003,10 @@ Represents an entire workspace.
 ```
 
 
-
-\---
-
+---
 
 
-\# Recommended Profile Schema
-
+# Recommended Profile Schema
 
 
 ```json
@@ -1148,11 +1039,11 @@ Represents an entire workspace.
 
 
 
-\---
+---
 
 
 
-\# Warning Schema
+# Warning Schema
 
 
 
@@ -1175,13 +1066,10 @@ Represents an entire workspace.
 ```
 
 
-
-\---
-
+---
 
 
-\# Warning Severity
-
+# Warning Severity
 
 
 ```text
@@ -1199,13 +1087,10 @@ critical
 ```
 
 
-
-\---
-
+---
 
 
-\# Notification Schema
-
+# Notification Schema
 
 
 ```json
@@ -1229,12 +1114,10 @@ critical
 ```
 
 
-
-\---
-
+---
 
 
-\# Optimization Result Schema
+# Optimization Result Schema
 
 
 
@@ -1259,12 +1142,10 @@ critical
 ```
 
 
-
-\---
-
+---
 
 
-\# Cost Estimation Schema
+# Cost Estimation Schema
 
 
 
@@ -1291,12 +1172,10 @@ critical
 ```
 
 
-
-\---
-
+---
 
 
-\# Print Estimation Schema
+# Print Estimation Schema
 
 
 
@@ -1317,12 +1196,10 @@ critical
 ```
 
 
-
-\---
-
+---
 
 
-\# GitHub Printer Repository Schema
+# GitHub Printer Repository Schema
 
 
 
@@ -1347,12 +1224,10 @@ critical
 ```
 
 
-
-\---
-
+---
 
 
-\# Cache Schema
+# Cache Schema
 
 
 
@@ -1376,11 +1251,9 @@ critical
 
 ```
 
+---
 
-\---
-
-
-\# User Preferences Schema
+# User Preferences Schema
 
 
 ```json
@@ -1402,12 +1275,10 @@ critical
 ```
 
 
-
-\---
-
+---
 
 
-\# Theme Values
+# Theme Values
 
 
 
@@ -1422,12 +1293,10 @@ system
 ```
 
 
-
-\---
-
+---
 
 
-\# Language Values
+# Language Values
 
 
 
@@ -1448,12 +1317,10 @@ it
 ```
 
 
-
-\---
-
+---
 
 
-\# Future Extensions
+# Future Extensions
 
 ```json
 
@@ -1486,35 +1353,27 @@ it
 
 ```
 
+---
 
-\---
 
-
-\# Schema Compatibility Rules
-
+# Schema Compatibility Rules
 
 Existing fields must never be removed.
 
-
 New fields should be added whenever possible.
-
 
 Breaking schema changes require:
 
+- PROJECT\_SPEC update
 
-\- PROJECT\_SPEC update
+- ARCHITECTURE update
 
-\- ARCHITECTURE update
+- CHANGELOG entry
 
-\- CHANGELOG entry
-
-\- Version increase
-
+- Version increase
 
 
-\---
+---
 
 
-
-\# End Of Document
-
+# End Of Document
