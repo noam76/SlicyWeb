@@ -233,6 +233,7 @@ src/electron/
     ├── ProjectIPC.ts
     ├── SettingsIPC.ts
     └── StorageIPC.ts
+```
 
 ---
 
