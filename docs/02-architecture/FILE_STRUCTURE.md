@@ -66,10 +66,12 @@ SlicyWeb/
 
 ```text
 data/
-│   ├── printers/
-│   ├── materials/
+│   ├── cache/
 │   ├── filaments/
-│   └── presets/
+│   ├── materials/
+│   ├── presets/
+│   ├── printers/
+│   └── templates/
 
 docs/
 │
@@ -268,7 +270,7 @@ src/renderer/
 ├── CameraManager.ts
 ├── LightingManager.ts
 ├── SceneRenderer.ts
-├── SelectionRenderer.ts
+└── SelectionRenderer.ts
 └── helpers/
 ```
 
