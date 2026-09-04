@@ -131,7 +131,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "articulated Model";
+      return "articulated_model";
     }
 
     if (
@@ -155,7 +155,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "structural Part";
+      return "structural_component";
     }
 
     if (
@@ -168,7 +168,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "mechanical Part";
+      return "mechanical_part";
     }
 
     if (
@@ -180,7 +180,7 @@ export class CategoryDetector {
         ]
       )
     ) {
-      return "decorative Object";
+      return "decorative_object";
     }
 
     if (
