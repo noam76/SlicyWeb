@@ -300,6 +300,43 @@ Importance:
 
 ---
 
+## IMPORT_EXPORT_SPEC.md
+
+Purpose:
+
+Import and Export Architecture.
+
+Contains:
+
+- STL Import
+- 3MF Import
+- Project Export
+- Data Exchange Rules
+
+Importance:
+
+★★★★☆
+
+---
+
+## TECHNICAL_OVERVIEW.md
+
+Purpose:
+
+Global Technical Overview.
+
+Contains:
+
+- System Summary
+- Module Overview
+- Technology Integration
+
+Importance:
+
+★★★★☆
+
+---
+
 # 03-DEVELOPMENT
 
 ---
