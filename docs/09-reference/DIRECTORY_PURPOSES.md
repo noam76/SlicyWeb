@@ -413,6 +413,64 @@ Themes
 
 ---
 
+# src/gui/viewport/
+
+Purpose:
+```text
+3D Workspace User Interface
+```
+
+Contains:
+
+```text
+Viewport Rendering Components
+Viewport Controls
+Viewport Status Display
+Workspace Interaction Tools
+```
+
+---
+
+# src/gui/panels/
+
+Purpose:
+
+```text
+Application Functional Panels
+```
+
+Contains:
+
+```text
+Printer Configuration Panels
+Material Panels
+Filament Panels
+Preset Panels
+Analysis Panels
+Recommendation Panels
+```
+
+---
+
+# src/gui/statusbar/
+
+Purpose:
+
+```text
+Application Status Display
+```
+
+Contains:
+
+```text
+Status Messages
+Progress Indicators
+Notifications
+System Information
+```
+
+---
+
 # src/renderer/
 
 Purpose:
@@ -891,6 +949,33 @@ Material Constants
 Preset Constants
 
 Printer Constants
+```
+
+---
+
+# src/utils/
+
+Purpose:
+
+```text
+Shared Utility Functions
+```
+
+Contains:
+
+```text
+File Utilities
+JSON Utilities
+Validation Helpers
+Mathematical Helpers
+```
+
+Must Not Contain:
+
+```text
+Business Logic
+AI Logic
+Application State
 ```
 
 ---
