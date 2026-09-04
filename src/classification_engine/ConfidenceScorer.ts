@@ -39,18 +39,21 @@ export class ConfidenceScorer {
   /**
    * Calculates a confidence score.
    */
+  
   public static calculate(
-    matchedFeatures: number,
-    totalFeatures: number,
+    features: string[],
+    category: string,
   ): number {
-    if (totalFeatures <= 0) {
+    if (features.length === 0) {
       return 0;
     }
 
-    const score =
-      (matchedFeatures /
-        totalFeatures) *
-      100;
+    let score = 50;
+
+    score += Math.min(
+      features.length * 5,
+      50,
+    );
 
     return this.normalize(score);
   }
