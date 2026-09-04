@@ -241,8 +241,6 @@ src/electron/
 
 ```text
 src/gui/
-
-├── src/gui/
 ├── App.tsx
 └── MainLayout.tsx
 
