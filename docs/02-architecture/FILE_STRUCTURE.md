@@ -577,6 +577,7 @@ src/types/
 ├── Notification.ts
 ├── Optimization.ts
 ├── CostEstimation.ts
+├── DefaultMaterial.ts
 └── UserPreferences.ts
 ```
 ---
