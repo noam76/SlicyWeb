@@ -217,6 +217,22 @@ src/app/
 ├── Main.ts
 └── Startup.ts
 ```
+---
+
+# Electron
+
+```text
+src/electron/
+
+├── main.ts
+├── preload.ts
+
+└── ipc/
+    ├── ImportIPC.ts
+    ├── PrinterIPC.ts
+    ├── ProjectIPC.ts
+    ├── SettingsIPC.ts
+    └── StorageIPC.ts
 
 ---
 
@@ -246,6 +262,9 @@ src/gui/
 ├── PresetPanel.tsx
 ├── AnalysisPanel.tsx
 └── RecommendationPanel.tsx
+
+src/gui/statusbar/
+└── StatusBar.tsx
 	
 ├── src/gui/layouts/
 ├── src/gui/windows/
@@ -296,7 +315,6 @@ src/repositories/
 ```text
 src/schemas/
 
-├── schemas/
 ├── PrinterSchema.ts
 ├── MaterialSchema.ts
 ├── FilamentSchema.ts
@@ -573,6 +591,19 @@ src/constants
 ├── PresetConstants.ts
 └── PrinterConstants.ts
 ```
+---
+
+# Utils
+
+```text
+src/utils/
+
+├── FileUtils.ts
+├── JsonUtils.ts
+├── MathUtils.ts
+└── ValidationUtils.ts
+```
+
 ---
 
 # Tests
