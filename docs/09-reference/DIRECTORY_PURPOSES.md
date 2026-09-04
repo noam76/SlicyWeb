@@ -1056,6 +1056,26 @@ Desktop Architecture Separation
 
 ---
 
+# src/electron/
+
+Purpose:
+
+```text
+Electron Framework Integration
+```
+
+Contains:
+
+```text
+Main Process Logic
+Preload Scripts
+IPC Communication
+Desktop Application Integration
+Runtime Services
+```
+
+---
+
 # src/electron/ipc/
 
 Purpose:
