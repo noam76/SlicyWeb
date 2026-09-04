@@ -1571,12 +1571,11 @@ Project Snapshots
 ```
 
 
-
-\---
-
+---
 
 
-\# Integration Points
+
+# Integration Points
 
 
 
@@ -1588,23 +1587,13 @@ Used By:
 
 GUI\_SPEC.md
 
-
-
 OBJECT\_MANAGER
-
-
 
 SCENE\_MANAGER
 
-
-
 TRANSFORM\_SYSTEM
 
-
-
 PRINT\_SETTINGS\_SPEC.md
-
-
 
 PROJECT\_SYSTEM
 
@@ -1612,11 +1601,11 @@ PROJECT\_SYSTEM
 
 
 
-\---
+---
 
 
 
-\# Golden Rule
+# Golden Rule
 
 
 
@@ -1628,9 +1617,8 @@ Predictability is more important than complexity.
 
 
 
-\---
+---
 
 
 
-\# End Of Document
-
+# End Of Document
