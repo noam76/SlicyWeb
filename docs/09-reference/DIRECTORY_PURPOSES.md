@@ -1075,21 +1075,29 @@ Storage IPC
 Purpose:
 
 ```text
-Electron Main Process Entry
+Reserved Electron Workspace
 ```
 
 Contains:
 
 ```text
-Electron Entry Point
+Future Electron Entry Point/Modules
 
-Window Management
+Future Main Process Organization
 
-Application Events
+Electron Architecture Extensions
+```
 
-Process Initialization
+Status:
+```text
+Placeholder Directory
+```
 
-Desktop Integration
+Used For:
+
+```text
+Future Electron Refactoring
+Desktop Architecture Separation
 ```
 
 ---
@@ -1206,26 +1214,6 @@ Mechanical Presets
 Miniature Presets
 
 Custom Presets
-```
-
-# tests/
-
-Purpose:
-
-```text
-Quality Validation
-```
-
-Contains:
-
-```text
-Unit Tests
-
-Integration Tests
-
-Regression Tests
-
-E2E Tests
 ```
 
 ---
@@ -1700,6 +1688,20 @@ Function Tests
 Module Tests
 
 Isolated Logic Tests
+```
+
+Used For:
+
+```text
+Quality Assurance
+
+Regression Prevention
+
+Feature Validation
+
+System Reliability
+
+Release Verification
 ```
 
 ---
