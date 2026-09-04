@@ -8,35 +8,65 @@
  * - DATA_SCHEMA.md
  */
 
-import type { Classification } *rom "../types/Classification";
+import type {
+  Classification,
+  ConfidenceLevel,
+  ClassificationCategory,
+} from "../types/Classification";
 
-im*ort { CategoryDetector } from "./C*tegoryDetector";
-import { Confiden*eScorer } from "./ConfidenceScorer*;
+import { CategoryDetector } from "./CategoryDetector";
+import { ConfidenceScorer } from "./ConfidenceScorer";
 
-export class ClassificationEngi*e {
-  private readonly categoryDet*ctor =
-    new CategoryDetector();*
-  private readonly confidenceScor*r =
+export class ClassificationEngine {
+  private readonly categoryDetector =
+    new CategoryDetector();
+
+  private readonly confidenceScorer =
     new ConfidenceScorer();
 
- *public classify(
-    features: str*ng[]
+  public classify(
+    features: string[],
   ): Classification {
-    con*t category =
-      this.categoryDe*ector.detect(
-        features
-   *  );
+    const category =
+      this.categoryDetector.detect(
+        features,
+      ) as ClassificationCategory;
 
     const confidenceScore =
-*     this.confidenceScorer.calcula*e(
+      this.confidenceScorer.calculate(
         features,
-        categ*ry
+        category,
+      );
+
+    const confidenceLevel =
+      this.getConfidenceLevel(
+        confidenceScore,
       );
 
     return {
-      ca*egory,
+      category,
       confidenceScore,
-    * detectedFeatures: features
+      confidenceLevel,
+      detectedFeatures: features,
+      validated: true,
     };
+  }
+
+  private getConfidenceLevel(
+    score: number,
+  ): ConfidenceLevel {
+    if (score >= 80) {
+      return "high";
+    }
+
+    if (score >= 50) {
+      return "medium";
+    }
+
+    if (score > 0) {
+      return "low";
+    }
+
+    return "unknown";
   }
 }
