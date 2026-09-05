@@ -44,8 +44,7 @@ export class RecommendationEngine {
 
     const warnings =
       this.warningEngine.generate(
-        analysis,
-        validatedProfile
+        analysis
       );
 
     return this.recommendationBuilder.build(
