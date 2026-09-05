@@ -20,7 +20,7 @@ export class RecommendationService {
   public generateRecommendation(
     analysis: Analysis
   ): Recommendation {
-    return this.recommendationEngine.generate(
+    return this.recommendationEngine.generateRecommendation(
       analysis
     );
   }
