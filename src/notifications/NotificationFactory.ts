@@ -1,12 +1,11 @@
 /**
  * Wichy
- * Notification Manager
+ * Notification Factory
  *
  * Responsible for:
- * - Notification registration
- * - Notification storage
- * - Notification retrieval
- * - Notification lifecycle management
+ * - Notification creation
+ * - Notification initialization
+ * - Notification default values
  *
  * No rendering logic.
  * No repository logic.
@@ -20,102 +19,73 @@
 
 import type { Notification } from "../types/Notification";
 
-export class NotificationManager {
-  private readonly notifications: Notification[] =
-    [];
-
+export class NotificationFactory {
   /**
-   * Adds a notification.
+   * Creates a notification.
    */
-  public add(
-    notification: Notification,
-  ): void {
-    this.notifications.push(
-      notification,
-    );
-  }
-
-  /**
-   * Returns all notifications.
-   */
-  public getAll(): Notification[] {
-    return [
-      ...this.notifications,
-    ];
-  }
-
-  /**
-   * Returns notification by id.
-   */
-  public getById(
-    id: string,
-  ): Notification | null {
-    return (
-      this.notifications.find(
-        (
-          notification,
-        ) =>
-          notification.id === id,
-      ) ?? null
-    );
-  }
-
-  /**
-   * Removes notification by id.
-   */
-  public remove(
-    id: string,
-  ): boolean {
-    const index =
-      this.notifications.findIndex(
-        (notification) =>
-          notification.id === id,
-      );
-
-    if (index === -1) {
-      return false;
-    }
-
-    this.notifications.splice(
-      index,
-      1,
-    );
-
-    return true;
-  }
-
-  /**
-   * Clears all notifications.
-   */
-  public clear(): void {
-    this.notifications.length = 0;
-  }
-
-  /**
-   * Returns total count.
-   */
-  public count(): number {
-    return this.notifications.length;
-  }
-
-  /**
-   * Returns whether notifications exist.
-   */
-  public hasNotifications(): boolean {
-    return (
-      this.notifications.length > 0
-    );
-  }
-
-  /**
-   * Returns notifications by type.
-   */
-  public getByType(
+  public create(
     type: string,
-  ): Notification[] {
-    return this.notifications.filter(
-      (notification) =>
-        notification.type === type,
+    message: string,
+  ): Notification {
+    return {
+      id: this.generateId(),
+
+      timestamp:
+        new Date().toISOString(),
+
+      type,
+
+      message,
+    };
+  }
+
+  /**
+   * Creates an information notification.
+   */
+  public createInfo(
+    message: string,
+  ): Notification {
+    return this.create(
+      "info",
+      message,
+    );
+  }
+
+  /**
+   * Creates a warning notification.
+   */
+  public createWarning(
+    message: string,
+  ): Notification {
+    return this.create(
+      "warning",
+      message,
+    );
+  }
+
+  /**
+   * Creates an error notification.
+   */
+  public createError(
+    message: string,
+  ): Notification {
+    return this.create(
+      "error",
+      message,
+    );
+  }
+
+  /**
+   * Generates a unique notification id.
+   */
+  private generateId(): string {
+    return (
+      "notification_" +
+      Date.now().toString() +
+      "_" +
+      Math.floor(
+        Math.random() * 100000,
+      ).toString()
     );
   }
 }
