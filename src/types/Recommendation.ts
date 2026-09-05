@@ -10,6 +10,7 @@
  */
 
 import type { PrintPreset } from "./PrintPreset";
+import type { Warning } from "./Warning";
 
 export type SupportType =
   | "none"
@@ -73,21 +74,6 @@ export interface RecommendedProfile {
   infillPattern: string;
 
   confidenceScore: number;
-}
-
-export type WarningSeverity =
-  | "info"
-  | "low"
-  | "medium"
-  | "high"
-  | "critical";
-
-export interface Warning {
-  code: string;
-
-  severity: WarningSeverity;
-
-  message: string;
 }
 
 export interface OptimizationResult {
