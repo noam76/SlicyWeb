@@ -58,3 +58,21 @@ export interface ThinWalls {
   detected: boolean;
   minimumThickness: number;
 }
+
+export interface Analysis {
+  dimensions: Dimensions;
+
+  geometry: Geometry;
+
+  mesh: MeshStatistics;
+
+  stability: Stability;
+
+  overhangs: Overhangs;
+
+  bridges: Bridges;
+
+  thinWalls: ThinWalls;
+
+  classification: Classification;
+}
