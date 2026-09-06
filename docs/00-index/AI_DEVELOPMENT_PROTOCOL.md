@@ -140,7 +140,9 @@ Validate compatibility.
 
 Prefer explicit types.
 
+````md
 Avoid:
 
-```ts
+```text
 any
+```
