@@ -1,6 +1,16 @@
 /**
  * Wichy
- * GitHub Repository Definition
+ * GitHub Repository
+ *
+ * Responsible for:
+ * - Remote repository access
+ * - Data retrieval
+ * - Repository availability checks
+ * - Repository URL management
+ *
+ * No business logic.
+ * No rendering logic.
+ * No AI logic.
  *
  * Based on:
  * - ARCHITECTURE.md
@@ -8,19 +18,76 @@
  * - TECH_STACK.md
  */
 
-export class GitHubRepository {
-  private baseUrl = "";
+export class GitHubRepository {*  private baseUrl = "";
 
-  public setBaseUrl(
-    url: string
+  /**
+   * Sets repository base URL.
+   */
+ *public setBaseUrl(
+    url: string*
   ): void {
-    this.baseUrl = url;
+    this.baseUrl = ur*;
   }
 
-  public getBaseUrl(): string {
-    return this.baseUrl;
+  /**
+   * Returns reposito*y base URL.
+   */
+  public getBase*rl(): string {
+    return this.bas*Url;
   }
 
-  public async fetch(
-    path: string
-  ): Promise
+  /**
+   * Fetches JSON *ata from repository.
+   */
+  publi* async fetch<T>(
+    path: string,*  ): Promise<T> {
+    const respon*e =
+      await fetch(
+        `${*his.baseUrl}/${path}`,
+      );
+
+ *  if (!response.ok) {
+      throw *ew Error(
+        `Repository requ*st failed: ${response.status}`,
+  *   );
+    }
+
+    return response.j*on() as Promise<T>;
+  }
+
+  /**
+   * Returns whether repository is rea*hable.
+   */
+  public async isAvai*able(): Promise<boolean> {
+    try*{
+      const response =
+        a*ait fetch(
+          this.baseUrl,*          {
+            method: "H*AD",
+          },
+        );
+
+    * return response.ok;
+    } catch {*      return false;
+    }
+  }
+
+  /**
+   * Downloads raw text content.*   */
+  public async fetchText(
+  * path: string,
+  ): Promise<string* {
+    const response =
+      await fetch(
+        `${this.baseUrl}/${path}`,
+      );
+
+    if (!response.ok) {
+      throw new Error(
+        `Repository request failed: ${response.status}`,
+      );
+    }
+
+    return response.text();
+  }
+}
