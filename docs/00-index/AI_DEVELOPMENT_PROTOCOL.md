@@ -8,6 +8,20 @@ Priority: Mandatory
 
 ---
 
+# Relationship With SYSTEM_RULES
+
+This document supplements SYSTEM_RULES.md.
+
+If any conflict exists:
+
+SYSTEM_RULES.md takes precedence.
+
+AI_DEVELOPMENT_PROTOCOL.md defines the recommended workflow.
+
+SYSTEM_RULES.md defines mandatory project rules.
+
+---
+
 # Purpose
 
 This document defines the mandatory workflow that any AI assistant must follow before creating, modifying, reviewing, or validating code within the Wichy project.
