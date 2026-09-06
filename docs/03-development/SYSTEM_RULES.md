@@ -66,7 +66,20 @@ A working feature must never be broken to add a new feature.
 
 ---
 
+# Change Impact Principle
 
+A file must never be modified in isolation.
+
+Before modifying a file:
+
+- identify dependencies
+- identify impacted modules
+- identify impacted documentation
+- validate compatibility
+
+Always consult CHANGE_IMPACT_RULES.md before modifying project files.
+
+---
 
 # Development Philosophy
 
