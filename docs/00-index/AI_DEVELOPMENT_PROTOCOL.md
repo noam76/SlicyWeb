@@ -44,6 +44,20 @@ This protocol applies to:
 
 ---
 
+# Core Principles
+
+Priority Order:
+
+1. Stability
+2. Compatibility
+3. Reliability
+4. Performance
+5. New Features
+
+A working feature must never be broken to add a new feature.
+
+---
+
 # Documentation First Policy
 
 Before analyzing code, the AI must read:
@@ -52,11 +66,12 @@ Before analyzing code, the AI must read:
 2. AI_START_HERE.md
 3. PROJECT_SPEC.md
 4. SYSTEM_RULES.md
-5. ARCHITECTURE.md
-6. DATA_SCHEMA.md
-7. FILE_STRUCTURE.md
-8. ROADMAP.md
-9. CHANGELOG.md
+5. AI_DEVELOPMENT_PROTOCOL.md
+7. ARCHITECTURE.md
+8. DATA_SCHEMA.md
+9. FILE_STRUCTURE.md
+10. ROADMAP.md
+11. CHANGELOG.md
 
 Documentation has priority over assumptions.
 
@@ -80,43 +95,37 @@ The AI must understand the surrounding system before making modifications.
 
 # Modification Policy
 
-Preferred order:
+Preferred Order:
 
 1. Configuration update
-2. Type update
-3. Schema update
-4. Small function patch
-5. Module update
-6. System update
+2. Data update
+3. Small function update
+4. Module update
+5. System update
 
-Avoid large rewrites whenever possible.
+Avoid large-scale rewrites.
 
 ---
 
-# Patch First Rule
+# Mandatory Patch Rule
 
-Always prefer:
+Whenever possible:
 
-PATCH
+PATCH existing code.
 
-instead of:
+DO NOT rewrite complete systems.
 
-REWRITE
+Prefer:
 
-Allowed:
-
-- adding methods
-- fixing validation
-- correcting references
-- adding missing types
-- improving safety checks
+- extending existing modules
+- improving existing code
+- fixing existing implementations
 
 Avoid:
 
-- rewriting complete modules
-- recreating existing files
-- changing working APIs
-- changing stable architecture
+- file recreation
+- architecture rewrites
+- large-scale refactoring without justification
 
 ---
 
@@ -154,9 +163,23 @@ Validate compatibility.
 
 Prefer explicit types.
 
-````md
 Avoid:
 
 ```text
 any
 ```
+
+Prefer:
+
+```ts
+Analysis
+Classification
+Recommendation
+Printer
+Material
+Filament
+```
+
+Strong typing is mandatory whenever possible.
+
+---
