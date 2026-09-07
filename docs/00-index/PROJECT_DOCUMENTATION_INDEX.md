@@ -48,6 +48,27 @@ docs/
 
 ---
 
+## AI_DEVELOPMENT_PROTOCOL.md
+
+Purpose:
+
+AI development workflow and review protocol.
+
+Contains:
+
+- Documentation reading order
+- Modification workflow
+- Review process
+- Patch-first policy
+- Type safety rules
+- Validation process
+
+Importance:
+
+★★★★★
+
+---
+
 ## AI_START_HERE.md
 
 Purpose:
@@ -64,6 +85,26 @@ Contains:
 Importance:
 
 ★★★★★
+
+---
+
+## API_START_HERE.md
+
+Purpose:
+
+API and integration onboarding document.
+
+Contains:
+
+- API reading order
+- API architecture overview
+- IPC communication references
+- Repository integration references
+- Service communication flow
+
+Importance:
+
+★★★★☆
 
 ---
 
@@ -359,6 +400,25 @@ Importance:
 
 ---
 
+## CHANGE_IMPACT_RULES.md
+
+Purpose:
+
+Change impact analysis rules.
+
+Contains:
+
+- Dependency analysis
+- Compatibility evaluation
+- Risk assessment
+- Impact management
+
+Importance:
+
+★★★★★
+
+---
+
 ## DEVELOPMENT_RULES.md
 
 Purpose:
@@ -389,6 +449,24 @@ Contains:
 - Implementation
 - Validation
 - Release flow
+
+Importance:
+
+★★★★★
+
+---
+
+## UNDO_REDO_SPEC.md
+
+Purpose:
+
+Undo / Redo architecture.
+
+Contains:
+
+- History stack
+- Transactions
+- Recovery logic
 
 Importance:
 
@@ -429,24 +507,6 @@ Contains:
 Importance:
 
 ★★★★☆
-
----
-
-## UNDO_REDO_SPEC.md
-
-Purpose:
-
-Undo / Redo architecture.
-
-Contains:
-
-- History stack
-- Transactions
-- Recovery logic
-
-Importance:
-
-★★★★★
 
 ---
 
@@ -749,6 +809,25 @@ Importance:
 
 ---
 
+## ARCHITECTURE_DECISION_MATRIX.md
+
+Purpose:
+
+Technology comparison matrix.
+
+Contains:
+
+- Architecture evaluations
+- Tradeoff analysis
+- Technical comparisons
+- Decision rationale
+
+Importance:
+
+★★★★☆
+
+---
+
 ## GLOSSARY.md
 
 Purpose:
@@ -782,18 +861,6 @@ Naming standards.
 Importance:
 
 ★★★★★
-
----
-
-## ARCHITECTURE_DECISION_MATRIX.md
-
-Purpose:
-
-Technology comparison matrix.
-
-Importance:
-
-★★★★☆
 
 ---
 
@@ -864,23 +931,25 @@ Importance:
 ```text
 1. AI_START_HERE.md
 
-2. PROJECT_DOCUMENTATION_INDEX.md
+2. AI_DEVELOPMENT_PROTOCOL.md
 
-3. PROJECT_SPEC.md
+3. PROJECT_DOCUMENTATION_INDEX.md
 
-4. SYSTEM_RULES.md
+4. PROJECT_SPEC.md
 
-5. ARCHITECTURE.md
+5. SYSTEM_RULES.md
 
-6. FILE_STRUCTURE.md
+6. ARCHITECTURE.md
 
-7. DATA_SCHEMA.md
+7. FILE_STRUCTURE.md
 
-8. DEVELOPMENT_RULES.md
+8. DATA_SCHEMA.md
 
-9. CHANGELOG.md
+9. DEVELOPMENT_RULES.md
 
-10. DECISIONS.md
+10. CHANGELOG.md
+
+11. DECISIONS.md
 ```
 
 ---
@@ -917,6 +986,8 @@ Architecture Defined
 Reference Documents Complete
 
 Ready For Development
+
+Ready For AI Assisted Development
 ```
 
 ---
