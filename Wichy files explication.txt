@@ -21,6 +21,26 @@ Used For:
 
 --------------------------------------------------------------------------------
 
+AI_DEVELOPMENT_PROTOCOL.md
+
+Purpose:
+AI development workflow and review protocol.
+
+Contains:
+- Documentation reading order
+- Modification workflow
+- Review process
+- Patch-first policy
+- Type safety rules
+- Validation process
+
+Used For:
+- AI onboarding
+- AI development sessions
+- Regression prevention
+
+--------------------------------------------------------------------------------
+
 AI_START_HERE.md
 Purpose:
 Entry point for AI systems and contributors.
@@ -189,6 +209,24 @@ Used For:
 
 --------------------------------------------------------------------------------
 
+TECHNICAL_OVERVIEW.md
+
+Purpose:
+High-level technical overview.
+
+Contains:
+- Core systems
+- Engines overview
+- Data flow
+- Application workflow
+- Technical relationships
+
+Used For:
+- Project understanding
+- Technical onboarding
+
+--------------------------------------------------------------------------------
+
 DATA_SCHEMA.md
 Purpose:
 Defines data models.
@@ -229,6 +267,24 @@ Used For:
 - Future integrations
 
 --------------------------------------------------------------------------------
+
+IMPORT_EXPORT_SPEC.md
+
+Purpose:
+Import and export system specification.
+
+Contains:
+- STL import
+- 3MF import
+- Validation process
+- Export workflow
+- Supported formats
+
+Used For:
+- Import implementation
+- Export implementation
+
+--------------------------------------------------------------------------------
 03-DEVELOPMENT
 --------------------------------------------------------------------------------
 
@@ -243,6 +299,23 @@ Contains:
 
 Used For:
 - Consistency
+
+--------------------------------------------------------------------------------
+
+CHANGE_IMPACT_RULES.md
+
+Purpose:
+Defines impact analysis rules before modifications.
+
+Contains:
+- Dependency analysis
+- Impact evaluation
+- Risk assessment
+- Compatibility checks
+
+Used For:
+- Safe modifications
+- Regression prevention
 
 --------------------------------------------------------------------------------
 
@@ -286,6 +359,23 @@ Contains:
 
 Used For:
 - Configuration management
+
+--------------------------------------------------------------------------------
+
+UNDO_REDO_SPEC.md
+
+Purpose:
+Undo and redo system specification.
+
+Contains:
+- History management
+- Action tracking
+- Restore rules
+- State recovery
+
+Used For:
+- Transform system
+- User actions
 
 --------------------------------------------------------------------------------
 
@@ -467,6 +557,23 @@ Used For:
 
 --------------------------------------------------------------------------------
 
+PERFORMANCE_SPEC.md
+
+Purpose:
+Performance goals and requirements.
+
+Contains:
+- FPS targets
+- Memory limits
+- Optimization goals
+- Performance benchmarks
+
+Used For:
+- Performance validation
+- Optimization planning
+
+--------------------------------------------------------------------------------
+
 SECURITY_SPEC.md
 Purpose:
 Security requirements.
@@ -478,20 +585,6 @@ Contains:
 
 Used For:
 - Application protection
-
---------------------------------------------------------------------------------
-
-PERFORMANCE_SPEC.md
-Purpose:
-Performance objectives.
-
-Contains:
-- FPS targets
-- Memory targets
-- Optimization requirements
-
-Used For:
-- Performance monitoring
 
 --------------------------------------------------------------------------------
 07-FUTURE
@@ -543,6 +636,31 @@ Used For:
 
 --------------------------------------------------------------------------------
 09-REFERENCE
+--------------------------------------------------------------------------------
+
+ARCHITECTURE_DECISION_MATRIX.md
+
+Purpose:
+Architecture comparison and decision history.
+
+Contains:
+- Architecture evaluations
+- Design alternatives
+- Tradeoff analysis
+- Technology comparisons
+- Architecture scoring
+- Technical decision records
+- Decision rationale
+- Rejected solutions
+- Approved solutions
+
+Used For:
+- Architecture reviews
+- Future architecture decisions
+- Technical governance
+- Decision traceability
+- Long-term maintainability
+
 --------------------------------------------------------------------------------
 
 GLOSSARY.md
@@ -604,9 +722,11 @@ Contains:
 - Semantic Versioning
 - Release strategy
 - Compatibility rules
+- Version increment process
 
 Used For:
 - Release management
+- Version control
 
 --------------------------------------------------------------------------------
 
@@ -617,15 +737,6 @@ Official naming standards.
 Used For:
 - Code consistency
 - Documentation consistency
-
---------------------------------------------------------------------------------
-
-ARCHITECTURE_DECISION_MATRIX.md
-Purpose:
-Architecture comparison and decision history.
-
-Used For:
-- Future architecture reviews
 
 --------------------------------------------------------------------------------
 ROOT DOCUMENTS
