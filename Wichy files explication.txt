@@ -57,6 +57,26 @@ Used For:
 - Preventing regressions
 
 --------------------------------------------------------------------------------
+
+API_START_HERE.md
+
+Purpose:
+Entry point for API and integration development.
+
+Contains:
+- API reading order
+- API architecture overview
+- IPC communication references
+- Repository integration references
+- Service communication flow
+
+Used For:
+- API onboarding
+- Service integration
+- IPC development
+- External integrations
+
+--------------------------------------------------------------------------------
 01-PROJECT
 --------------------------------------------------------------------------------
 
@@ -172,61 +192,6 @@ Used For:
 
 --------------------------------------------------------------------------------
 
-FILE_STRUCTURE.md
-Purpose:
-Defines project structure.
-
-Contains:
-- Folder organization
-- Module locations
-- Naming strategy
-
-Used For:
-- Project organization
-
---------------------------------------------------------------------------------
-
-TECH_STACK.md
-Purpose:
-Defines technologies.
-
-Contains:
-- React
-- Electron
-- Three.js
-- TypeScript
-- Zustand
-- Tailwind CSS
-- shadcn/ui
-- Zod
-- Vitest
-- Playwright
-- Octokit
-- three-mesh-bvh
-
-Used For:
-- Technical choices
-
---------------------------------------------------------------------------------
-
-TECHNICAL_OVERVIEW.md
-
-Purpose:
-High-level technical overview.
-
-Contains:
-- Core systems
-- Engines overview
-- Data flow
-- Application workflow
-- Technical relationships
-
-Used For:
-- Project understanding
-- Technical onboarding
-
---------------------------------------------------------------------------------
-
 DATA_SCHEMA.md
 Purpose:
 Defines data models.
@@ -244,6 +209,20 @@ Contains:
 
 Used For:
 - Data consistency
+
+--------------------------------------------------------------------------------
+
+FILE_STRUCTURE.md
+Purpose:
+Defines project structure.
+
+Contains:
+- Folder organization
+- Module locations
+- Naming strategy
+
+Used For:
+- Project organization
 
 --------------------------------------------------------------------------------
 
@@ -283,6 +262,47 @@ Contains:
 Used For:
 - Import implementation
 - Export implementation
+
+--------------------------------------------------------------------------------
+
+TECHNICAL_OVERVIEW.md
+
+Purpose:
+High-level technical overview.
+
+Contains:
+- Core systems
+- Engines overview
+- Data flow
+- Application workflow
+- Technical relationships
+
+Used For:
+- Project understanding
+- Technical onboarding
+
+--------------------------------------------------------------------------------
+
+TECH_STACK.md
+Purpose:
+Defines technologies.
+
+Contains:
+- React
+- Electron
+- Three.js
+- TypeScript
+- Zustand
+- Tailwind CSS
+- shadcn/ui
+- Zod
+- Vitest
+- Playwright
+- Octokit
+- three-mesh-bvh
+
+Used For:
+- Technical choices
 
 --------------------------------------------------------------------------------
 03-DEVELOPMENT
@@ -729,16 +749,6 @@ Used For:
 - Version control
 
 --------------------------------------------------------------------------------
-
-NAMING_CONVENTIONS.md
-Purpose:
-Official naming standards.
-
-Used For:
-- Code consistency
-- Documentation consistency
-
---------------------------------------------------------------------------------
 ROOT DOCUMENTS
 --------------------------------------------------------------------------------
 
@@ -770,7 +780,7 @@ Used For:
 
 --------------------------------------------------------------------------------
 
-LICENSE
+LICENSE.md
 Purpose:
 Project legal usage rights.
 
