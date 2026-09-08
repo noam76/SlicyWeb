@@ -48,7 +48,7 @@ SlicyWeb/
 ├── README.md
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
-├── LICENSE
+├── LICENSE.md
 │
 ├── package.json
 ├── tsconfig.json
@@ -77,6 +77,7 @@ docs/
 │
 ├── 00-index/
 │   ├── AI_START_HERE.md                 = Point d'entrée principal pour l'IA et les nouveaux contributeurs
+│   ├── AI_DEVELOPMENT_PROTOCOL.md       = Protocole officiel de développement et de revue pour les IA
 │   ├── API_START_HERE.md                = Guide de démarrage rapide pour l'API et les services
 │   └── PROJECT_DOCUMENTATION_INDEX.md   = Index complet de toute la documentation du projet
 │
@@ -99,6 +100,7 @@ docs/
 │
 ├── 03-development/
 │   ├── SYSTEM_RULES.md                  = Règles globales du projet
+│   ├── CHANGE_IMPACT_RULES.md           = Analyse d'impact obligatoire avant modification
 │   ├── DEVELOPMENT_WORKFLOW.md          = Workflow officiel de développement
 │   ├── DEVELOPMENT_RULES.md             = Règles de codage, refactoring et maintenance
 │   ├── USER_SETTINGS_SPEC.md            = Paramètres utilisateur et préférences
@@ -131,18 +133,18 @@ docs/
 │   └── GUI_SPEC.md                      = Spécification complète de l'interface utilisateur
 │
 ├── 09-reference/
-│   ├── GLOSSARY.md                      = Dictionnaire des termes techniques du projet
-│   ├── TERMINOLOGY.md                   = Terminologie officielle à utiliser partout
-│   ├── NAMING_CONVENTIONS.md            = Conventions de nommage du code et fichiers
 │   ├── ARCHITECTURE_DECISION_MATRIX.md  = Comparatif et justification des choix techniques
-│   ├── PROJECT_ACRONYMS.md              = Liste des acronymes utilisés dans le projet
 │   ├── DIRECTORY_PURPOSES.md            = Description du rôle de chaque dossier
+│   ├── GLOSSARY.md                      = Dictionnaire des termes techniques du projet
+│   ├── NAMING_CONVENTIONS.md            = Conventions de nommage du code et fichiers
+│   ├── PROJECT_ACRONYMS.md              = Liste des acronymes utilisés dans le projet
+│   ├── TERMINOLOGY.md                   = Terminologie officielle à utiliser partout
 │   └── VERSIONING_POLICY.md             = Politique de gestion des versions
 │
 ├── README.md                            = Page d'accueil du dépôt GitHub
 ├── CONTRIBUTING.md                      = Guide de contribution au projet
 ├── CODE_OF_CONDUCT.md                   = Règles de conduite pour les contributeurs
-└── LICENSE                              = Conditions légales d'utilisation du projet
+└── LICENSE.md                           = Conditions légales d'utilisation du projet
 ```
 
 ---
@@ -152,7 +154,7 @@ docs/
 Current Documentation:
 
 ```text
-30+ Documentation Files
+45+ Documentation Files
 ```
 
 GitHub Governance Files:
@@ -161,13 +163,13 @@ GitHub Governance Files:
 README.md
 CONTRIBUTING.md
 CODE_OF_CONDUCT.md
-LICENSE
+LICENSE.md
 ```
 
 Total Documentation Assets:
 
 ```text
-35+
+49+
 ```
 
 ---
@@ -196,9 +198,10 @@ src/
 ├── cost_engine/
 ├── notifications/
 ├── repositories/
-├── cache/
+├── schemas/
 ├── storage/
 ├── events/
+├── electron/
 ├── services/
 ├── state/
 ├── config/
@@ -244,17 +247,17 @@ src/gui/
 ├── App.tsx
 └── MainLayout.tsx
 
-├── src/gui/viewport/
+src/gui/viewport/
 ├── Viewport.tsx
 ├── ViewportToolbar.tsx
 └── ViewportStatus.tsx
 	
-├── src/gui/sidebar/
+src/gui/sidebar/
 ├── LeftSidebar.tsx
 ├── RightSidebar.tsx
 └── SidebarSection.tsx
 
-├── src/gui/panels/
+src/gui/panels/
 ├── PrinterPanel.tsx
 ├── MaterialPanel.tsx
 ├── FilamentPanel.tsx
@@ -309,18 +312,17 @@ src/repositories/
 
 ---
 
-# schemas
+# Schemas
 
 ```text
 src/schemas/
 
-├── PrinterSchema.ts
-├── MaterialSchema.ts
+├── AnalysisSchema.ts
 ├── FilamentSchema.ts
+├── MaterialSchema.ts
 ├── PrintPresetSchema.ts
-└── AnalysisSchema.ts
+├── PrinterSchema.ts
 └── RecommendationSchema.ts
-	
 ```
 
 ---
@@ -390,8 +392,7 @@ src/printer_database/
 ├── PrinterRepository.ts
 ├── PrinterValidator.ts
 ├── PrinterCache.ts
-├── PrinterImporter.ts
-└── profiles/
+└── PrinterImporter.ts
 ```
 
 ---
@@ -405,7 +406,7 @@ src/material_database/
 ├── MaterialRepository.ts
 ├── MaterialValidator.ts
 ├── MaterialCache.ts
-└── profiles/
+└── MaterialImporter.ts
 ```
 
 ---
@@ -428,12 +429,12 @@ src/filament_database/
 ```text
 src/model_analysis/
 
-├── ModelAnalyzer.ts
 ├── GeometryAnalyzer.ts
-├── PrintabilityAnalyzer.ts
-├── StabilityAnalyzer.ts
 ├── MeshAnalyzer.ts
-└── reports/
+├── MeshValidator.ts
+├── ModelAnalyzer.ts
+├── PrintabilityAnalyzer.ts
+└── StabilityAnalyzer.ts
 ```
 
 ---
@@ -446,8 +447,7 @@ src/classification_engine/
 ├── ClassificationEngine.ts
 ├── CategoryDetector.ts
 ├── ConfidenceScorer.ts
-├── ClassificationValidator.ts
-└── rules/
+└── ClassificationValidator.ts
 ```
 ---
 
@@ -459,8 +459,7 @@ src/preset_engine/
 ├── PresetManager.ts
 ├── PresetRepository.ts
 ├── PresetValidator.ts
-├── PresetSelector.ts
-└── presets/
+└── PresetSelector.ts
 ```
 
 ---
@@ -520,20 +519,32 @@ src/cost_engine/
 
 ---
 
+# Notifications
+
+```text
+src/notifications/
+
+├── NotificationFactory.ts
+├── NotificationManager.ts
+├── NotificationService.ts
+└── NotificationValidator.ts
+```
+
+---
+
 # Services
 
 ```text
 src/services/
 
 ├── AnalysisService.ts
-├── RecommendationService.ts
-├── PrinterService.ts
-├── MaterialService.ts
-├── NotificationService.ts
-├── ProjectService.ts
 ├── FilamentService.ts
+├── MaterialService.ts
 ├── PresetService.ts
-└── ClassificationService.ts
+├── PrinterService.ts
+├── ProjectService.ts
+├── RecommendationService.ts
+└── StorageService.ts
 ```
 
 ---
@@ -613,11 +624,7 @@ tests/
 
 ├── unit/
 ├── integration/
-├── regression/
-├── e2e/
-├── gui/
-├── analysis/
-└── recommendations/
+└── e2e/
 ```
 
 ---
@@ -630,8 +637,7 @@ assets/
 ├── icons/
 ├── images/
 ├── logos/
-├── themes/
-└── placeholders/
+└── themes/
 ```
 
 ---
@@ -640,13 +646,6 @@ assets/
 
 ```text
 cache/
-
-├── printers/
-├── materials/
-├── repositories/
-├── filaments/
-├── presets/
-└── analysis/
 ```
 
 ---
@@ -668,11 +667,10 @@ logs/
 ```text
 scripts/
 
-├── setup/
-├── migrations/
-├── profile_import/
-├── cache_tools/
-└── release/
+├── build/
+├── migration/
+├── release/
+└── setup/
 ```
 
 ---
@@ -681,10 +679,6 @@ scripts/
 
 ```text
 plugins/
-
-├── installed/
-├── disabled/
-└── cache/
 ```
 
 ---
@@ -693,11 +687,6 @@ plugins/
 
 ```text
 public/
-
-├── fonts/
-├── icons/
-├── localization/
-└── static/
 ```
 
 ---
