@@ -48,59 +48,49 @@ The architecture must be:
 
 - Extensible
 
-\- Token Efficient
+- Token Efficient
 
-\- AI Friendly
-
+- AI Friendly
 
 
 The architecture must support incremental development without requiring major rewrites.
 
 
-
-\---
-
+---
 
 
-\# Design Principles
-
+# Design Principles
 
 
 The project follows:
 
 
-
-\## Separation Of Concerns
-
+## Separation Of Concerns
 
 
 Each module must have one primary responsibility.
-
-
 
 Avoid modules that perform multiple unrelated functions.
 
 
 
-\---
+---
 
 
 
-\## Loose Coupling
-
+## Loose Coupling
 
 
 Modules communicate through:
 
 
+- Services
 
-\- Services
+- Interfaces
 
-\- Interfaces
+- Events
 
-\- Events
-
-\- APIs
+- APIs
 
 
 
@@ -108,11 +98,11 @@ Direct access between unrelated modules is not allowed.
 
 
 
-\---
+---
 
 
 
-\## High Cohesion
+## High Cohesion
 
 
 
@@ -120,23 +110,21 @@ Each module should contain closely related functionality.
 
 
 
-\---
+---
 
 
 
-\## Local First
+## Local First
 
 
 
 Always use:
 
+1. Local Data
 
+2. Cache
 
-1\. Local Data
-
-2\. Cache
-
-3\. Online Sources
+3. Online Sources
 
 
 
@@ -144,7 +132,7 @@ in that order.
 
 
 
-\---
+---
 
 
 
@@ -156,11 +144,11 @@ New functionality must be added through:
 
 
 
-\- modules
+- modules
 
-\- services
+- services
 
-\- interfaces
+- interfaces
 
 
 
@@ -168,12 +156,11 @@ Avoid replacing existing systems.
 
 
 
-\---
+---
 
 
 
-\# Architectural Overview
-
+# Architectural Overview
 
 
 ```text
@@ -247,144 +234,119 @@ Avoid replacing existing systems.
 ```
 
 
-
-\---
-
+---
 
 
-\# Layer Architecture
+# Layer Architecture
 
 
-
-\## Layer 1
-
+## Layer 1
 
 
 GUI Layer
 
 
-
 Responsible for:
 
 
+- Rendering
 
-\- Rendering
+- Interaction
 
-\- Interaction
+- Menus
 
-\- Menus
+- Panels
 
-\- Panels
-
-\- User Input
-
+- User Input
 
 
 No business logic allowed.
 
-
-
 No analysis logic allowed.
-
-
 
 No printer logic allowed.
 
 
-
-\---
-
+---
 
 
-\## Layer 2
-
-
+## Layer 2
 
 Application Layer
 
-
-
 Coordinates all modules.
-
-
 
 Responsibilities:
 
+- Commands
+
+- Workflow
+
+- Event Routing
+
+- State Management
 
 
-\- Commands
+---
 
-\- Workflow
-
-\- Event Routing
-
-\- State Management
-
-
-
-\---
-
-
-
-\## Layer 3
-
-
-
-Core Services
-
-
-
-Central project services.
-
-
-
-Examples:
-
-
-
-\- Project Service
-
-\- Scene Service
-
-\- Object Service
-
-
-
-\---
-
-
-
-\## Layer 4
-
-
-
-Analysis Services
-
-
+## IPC Layer
 
 Responsible for:
 
+- Electron IPC communication
+- Renderer to Main process communication
+- Project requests
+- Storage requests
+- Import requests
+- Settings requests
 
+Folder:
 
-\- Geometry calculations
+```text
+/electron/ipc
+```
+---
 
-\- Model analysis
+## Layer 3
 
-\- Stability analysis
+Core Services
 
-\- Optimization analysis
+Central project services.
 
+Examples:
+
+- Project Service
+
+- Scene Service
+
+- Object Service
 
 
 \---
 
 
+## Layer 4
 
-\## Layer 5
+Analysis Services
 
+Responsible for:
+
+- Geometry calculations
+
+- Model analysis
+
+- Stability analysis
+
+- Optimization analysis
+
+
+
+---
+
+
+## Layer 5
 
 Data Services
-
 
 Responsible for:
 
@@ -395,38 +357,47 @@ Responsible for:
 - Cached repositories
 
 
-\---
+---
 
-
-\## Layer 6
-
-
-Storage Layer
-
+## Repository Layer
 
 Responsible for:
 
+- Remote synchronization
+- GitHub access
+- Repository downloads
+- Repository validation
 
-\- Files
+Folder:
 
-\- Databases
+```text
+/repositories
+```
 
-\- Cache
+---
 
-\- Online repositories
+## Layer 6
 
+Storage Layer
 
-\---
+Components:
+- StorageManager
+- ProjectStorage
+- CacheStorage
 
+Responsible for:
+- Files
+- Databases
+- Cache
+- Online repositories
 
-\# Module Structure
+---
 
+# Module Structure
 
-\## GUI Module
-
+## GUI Module
 
 Folder
-
 
 ```text
 
@@ -434,37 +405,21 @@ Folder
 
 ```
 
-
-
 Responsibilities:
-
-
-
-\- Window management
-
-\- Menus
-
-\- Panels
-
-\- User Controls
-
-
+- Window management
+- Menus
+- Panels
+- User Controls
 
 Never performs calculations.
-
 
 
 \---
 
 
-
-\## Renderer Module
-
-
+## Renderer Module
 
 Folder
-
-
 
 ```text
 
@@ -472,23 +427,16 @@ Folder
 
 ```
 
-
-
 Responsibilities:
 
+- Rendering 3D scene
 
+- Rendering build plate
 
-\- Rendering 3D scene
-
-\- Rendering build plate
-
-\- Rendering transformations
-
+- Rendering transformations
 
 
 Submodules:
-
-
 
 ```text
 
@@ -506,16 +454,14 @@ SelectionRenderer
 
 
 
-\---
+---
 
 
 
-\## Scene Module
-
+## Scene Module
 
 
 Folder
-
 
 
 ```text
@@ -525,29 +471,22 @@ Folder
 ```
 
 
-
 Responsibilities:
 
+- Scene management
+
+- Object registration
+
+- Selection state
 
 
-\- Scene management
-
-\- Object registration
-
-\- Selection state
+---
 
 
-
-\---
-
-
-
-\## Object Module
-
+## Object Module
 
 
 Folder
-
 
 
 ```text
@@ -557,32 +496,23 @@ Folder
 ```
 
 
-
 Responsibilities:
 
+- Create objects
 
+- Delete objects
 
-\- Create objects
+- Rename objects
 
-\- Delete objects
-
-\- Rename objects
-
-\- Duplicate objects
-
+- Duplicate objects
 
 
 \---
 
 
-
-\## Transform Module
-
-
+## Transform Module
 
 Folder
-
-
 
 ```text
 
@@ -593,30 +523,28 @@ Folder
 
 Responsibilities:
 
+- Move
 
-\- Move
+- Rotate
 
-\- Rotate
+- Scale
 
-\- Scale
+- Reset
 
-\- Reset
+- Undo
 
-\- Undo
+- Redo
 
-\- Redo
+- History Tracking
 
-\- History Tracking
-
-\- Transaction Management
-
+- Transaction Management
 
 
-\---
+
+---
 
 
-\## Import Module
-
+## Import Module
 
 
 Folder
@@ -624,7 +552,7 @@ Folder
 
 ```text
 
-/importer
+importer
 
 ```
 
@@ -1224,90 +1152,51 @@ Folder
 
 Responsibilities:
 
+- Store downloaded profiles
+- Reduce network requests
+- Improve startup speed
 
 
-\- Store downloaded profiles
-
-\- Reduce network requests
-
-\- Improve startup speed
-
-
-
-\---
+---
 
 
 
-\# Online Repository System
-
+# Online Repository System
 
 
 Folder
 
-
-
 ```text
 
-/repositories
+repositories
 
 ```
-
-
-
 Responsibilities:
 
+- GitHub access
+- Profile refresh
+- Data synchronization
 
+---
 
-\- GitHub access
-
-\- Profile refresh
-
-\- Data synchronization
-
-
-
-\---
-
-
-
-\# Event Architecture
-
-
+# Event Architecture
 
 Modules communicate through events.
 
 
-
 Example:
-
-
-
 ```text
 
 Object Imported
-
-
-
 ↓
-
-
 
 Scene Updated
 
-
-
 ↓
-
-
 
 Analysis Triggered
 
-
-
 ↓
-
-
-
 Recommendation Updated
 
 ```
