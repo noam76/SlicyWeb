@@ -188,6 +188,17 @@ Avoid replacing existing systems.
 &#x20;         ↓
 
 
++----------------------------------------------------+
+
+|                    IPC                             |
+
++----------------------------------------------------+
+
+
+
+&#x20;         ↓
+
+
 
 +----------------------------------------------------+
 
@@ -216,6 +227,30 @@ Avoid replacing existing systems.
 +----------------------------------------------------+
 
 |                  DATA SERVICES                     |
+
++----------------------------------------------------+
+
+
+
+&#x20;         ↓
+
+
+
++----------------------------------------------------+
+
+|                 Repository Layer                   |
+
++----------------------------------------------------+
+
+
+
+&#x20;         ↓
+
+
+
++----------------------------------------------------+
+
+|                   Schema Layer                     |
 
 +----------------------------------------------------+
 
@@ -305,6 +340,15 @@ Folder:
 ```text
 /electron/ipc
 ```
+
+Components:
+
+- ProjectIPC
+- StorageIPC
+- ImportIPC
+- SettingsIPC
+- PrinterIPC
+
 ---
 
 ## Layer 3
@@ -313,13 +357,16 @@ Core Services
 
 Central project services.
 
-Examples:
+Current Services:
 
-- Project Service
-
-- Scene Service
-
-- Object Service
+- AnalysisService
+- RecommendationService
+- ProjectService
+- StorageService
+- PrinterService
+- MaterialService
+- FilamentService
+- PresetService
 
 
 ---
@@ -332,13 +379,9 @@ Analysis Services
 Responsible for:
 
 - Geometry calculations
-
 - Model analysis
-
 - Stability analysis
-
 - Optimization analysis
-
 
 
 ---
@@ -367,12 +410,51 @@ Responsible for:
 - GitHub access
 - Repository downloads
 - Repository validation
+- Printer repository synchronization
+- Material repository synchronization
+- Filament repository synchronization
+- Preset repository synchronization
 
 Folder:
 
 ```text
 /repositories
 ```
+
+Components:
+
+- GitHubRepository
+- PrinterRepositorySync
+- MaterialRepositorySync
+- FilamentRepositorySync
+- PresetRepositorySync
+
+---
+
+## Schema Layer
+
+Responsible for:
+
+- Runtime validation
+- Data validation
+- Import validation
+- API payload validation
+- Recommendation validation
+
+Folder:
+
+```text
+/schemas
+```
+
+Components:
+
+- PrinterSchema
+- MaterialSchema
+- FilamentSchema
+- PrintPresetSchema
+- AnalysisSchema
+- RecommendationSchema
 
 ---
 
@@ -523,19 +605,12 @@ Folder
 Responsibilities:
 
 - Move
-
 - Rotate
-
 - Scale
-
 - Reset
-
 - Undo
-
 - Redo
-
 - History Tracking
-
 - Transaction Management
 
 
@@ -547,36 +622,25 @@ Responsibilities:
 
 Folder
 
-
 ```text
-
-importer
-
+/importer
 ```
 
 
 Responsibilities:
 
-
 - STL Import
-
 - 3MF Import
-
 - Validation
 
-
 Submodules
-
 
 
 ```text
 
 STLImporter
-
 ThreeMFImporter
-
 FileValidator
-
 ```
 
 
@@ -936,30 +1000,15 @@ Confidence Score
 
 # Optimization Engine
 
-
-
-Folder
-
-
-```text
-
-/optimization\_engine
-
-```
-
-
 Responsibilities:
 
-- Orientation search
-
+- Orientation optimization
 - Material optimization
-
 - Speed optimization
-
+- Support optimization
 
 
 ---
-
 
 
 # Orientation Optimizer
@@ -971,11 +1020,8 @@ Responsibilities:
 Evaluate:
 
 - Stability
-
 - Overhangs
-
 - Supports
-
 - Surface Quality
 
 
@@ -999,75 +1045,55 @@ Folder
 
 ```
 
-
 Responsibilities:
 
 
 - Material cost calculation
-
 - Electricity cost estimation
-
 - Time estimation
-
 
 
 ---
 
 
-
 # Notification System
 
+Components:
 
-
-Folder
-
-
-
-```text
-
-/notifications
-
-```
-
-
+- NotificationFactory
+- NotificationManager
+- NotificationService
+- NotificationValidator
 
 Responsibilities:
 
-
 - Errors
-
 - Warnings
-
 - Information messages
 
+Folder:
+
+```text
+/notifications
+```
 
 ---
 
 
 # Configuration System
 
-
-Folder
-
-
-```text
-
-/config
-
-```
-
-
-
 Responsibilities:
 
 
-
 - Application settings
-
 - User settings
-
 - Defaults
 
+Folder:
+
+```text
+/config
+```
 
 ---
 
@@ -1103,10 +1129,9 @@ Responsibilities:
 Folder
 
 ```text
-
-repositories
-
+/repositories
 ```
+
 Responsibilities:
 
 - GitHub access
@@ -1287,13 +1312,11 @@ GUI → AI Engine
 Single Source Of Truth
 
 
-
 ```text
 
 Application State
 
 ```
-
 
 
 Contains:
@@ -1303,15 +1326,13 @@ Contains:
 - Printer
 - Material
 - Filament
+- Analysis
 - Recommendations
 - Print Presets
 
-
 All modules read from state.
 
-
 Only services may modify state.
-
 
 ---
 
@@ -1326,21 +1347,14 @@ Contains:
 
 ```text
 
-Objects
-
-Transforms
-
-Printer
-
-Material
-
-Filament
-
-Settings
-
-Recommendations
-
-Print Presets
+- Objects
+- Transforms
+- Printer
+- Material
+- Filament
+- Settings
+- Recommendations
+- Print Presets
 
 ```
 
@@ -1357,7 +1371,6 @@ Downloaded Files
 Logs
 
 ```
-
 
 ---
 
@@ -1392,21 +1405,14 @@ Logs stored separately from project files.
 # Security Principles
 
 
-
 Never execute imported file content.
-
 
 
 Always validate:
 
-
-
 - STL
-
 - 3MF
-
 - Remote Data
-
 
 
 Reject malformed files.
@@ -1419,26 +1425,19 @@ Reject malformed files.
 # Performance Principles
 
 
-
 Large models must:
 
-
-
 - load asynchronously
-
 - be cached
-
 - use optimized rendering
-
-
 
 Avoid recalculating unchanged analyses.
 
 
-\---
+---
 
 
-\# Testing Architecture
+# Testing Architecture
 
 
 Every module requires:
@@ -1462,7 +1461,7 @@ Test communication between modules.
 ---
 
 
-\## Regression Tests
+## Regression Tests
 
 
 Verify previous functionality remains operational.
@@ -1509,24 +1508,15 @@ project_persistence
 
 # Architectural Golden Rules
 
-
 1. No module owns another module.
-
 2. Communication occurs through interfaces.
-
 3. Data flows downward.
-
 4. Events flow upward.
-
 5. New features must be added without rewriting existing systems.
-
 6. Preserve backward compatibility whenever possible.
-
 7. Every module must remain independently testable.
-
 8. Stability has priority over complexity.
 
 ---
 
-\# End Of Document
-
+# End Of Document
