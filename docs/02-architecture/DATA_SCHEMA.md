@@ -1024,35 +1024,24 @@ Represents an entire workspace.
 
 ---
 
-# Recommendation Schema
+# Recommended Profile Schema
 
 
 ```json
 
 {
 
-&#x20; "recommendedProfile": {
-
-&#x20;   "recommendation": {},
-
-&#x20;   "preset": {},
-
-&#x20;   "quality": {},
-
-&#x20;   "speed": {},
-
-&#x20;   "cooling": {},
-
-&#x20;   "retraction": {},
-
-&#x20;   "supports": {},
-
-&#x20;   "adhesion": {},
-
-&#x20;   "confidenceScore": 0
-
-&#x20; }
-
+{
+  "recommendedProfile": {
+    "preset": {},
+    "quality": {},
+    "speed": {},
+    "cooling": {},
+    "retraction": {},
+    "supports": {},
+    "adhesion": {},
+    "confidenceScore": 0
+  }
 }
 ```
 
@@ -1069,7 +1058,8 @@ Represents an entire workspace.
     "preset": {},
     "warnings": [],
     "confidenceScore": 0,
-    "createdAt": ""
+    "createdAt": "",
+    "status": "generated"
   }
 }
 
