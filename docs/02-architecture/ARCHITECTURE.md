@@ -136,7 +136,7 @@ in that order.
 
 
 
-\## Update Over Rewrite
+## Update Over Rewrite
 
 
 
@@ -322,7 +322,7 @@ Examples:
 - Object Service
 
 
-\---
+---
 
 
 ## Layer 4
@@ -414,7 +414,7 @@ Responsibilities:
 Never performs calculations.
 
 
-\---
+---
 
 
 ## Renderer Module
@@ -507,7 +507,7 @@ Responsibilities:
 - Duplicate objects
 
 
-\---
+---
 
 
 ## Transform Module
@@ -958,7 +958,7 @@ Responsibilities:
 
 
 
-\---
+---
 
 
 
@@ -1011,7 +1011,7 @@ Responsibilities:
 
 
 
-\---
+---
 
 
 
@@ -1478,55 +1478,55 @@ Reserved Modules
 
 ```text
 
-/gcode\_engine
+gcode\_engine
 
-/multi\_material
+multi\_material
 
-/cloud
+cloud
 
-/remote\_printer
+remote\_printer
 
-/webcam
+webcam
 
-/machine\_learning
+machine\_learning
 
-/profile\_marketplace
+profile\_marketplace
 
-/filament_tracking
+filament_tracking
 
-/community_profiles
+community_profiles
 
-/vision_classification
+vision_classification
 
-/undo_redo
+undo_redo
 
-/project_persistence
+project_persistence
 
 ```
 
-\---
+---
 
 
-\# Architectural Golden Rules
+# Architectural Golden Rules
 
 
-1\. No module owns another module.
+1. No module owns another module.
 
-2\. Communication occurs through interfaces.
+2. Communication occurs through interfaces.
 
-3\. Data flows downward.
+3. Data flows downward.
 
-4\. Events flow upward.
+4. Events flow upward.
 
-5\. New features must be added without rewriting existing systems.
+5. New features must be added without rewriting existing systems.
 
-6\. Preserve backward compatibility whenever possible.
+6. Preserve backward compatibility whenever possible.
 
-7\. Every module must remain independently testable.
+7. Every module must remain independently testable.
 
-8\. Stability has priority over complexity.
+8. Stability has priority over complexity.
 
-\---
+---
 
 \# End Of Document
 
