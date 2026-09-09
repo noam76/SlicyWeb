@@ -1497,10 +1497,6 @@ community_profiles
 
 vision_classification
 
-undo_redo
-
-project_persistence
-
 ```
 
 ---
