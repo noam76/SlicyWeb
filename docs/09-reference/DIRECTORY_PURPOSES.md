@@ -9,7 +9,7 @@ Status: Approved
 
 # Purpose
 
-This document defines the purpose and responsibility of every directory used within the Wichy project.
+This document defines the purpose and responsibility of every directory used within the SlicyWeb project.
 
 The objective is to ensure:
 
@@ -39,15 +39,10 @@ Contains:
 
 ```text
 Project Configuration
-
 Documentation
-
 Source Code
-
 Assets
-
 Tests
-
 Runtime Resources
 ```
 
@@ -65,11 +60,8 @@ Contains:
 
 ```text
 GitHub Actions Workflows
-
 CI/CD Configuration
-
 GitHub Templates
-
 Repository Settings
 ```
 
@@ -87,11 +79,8 @@ Contains:
 
 ```text
 Build Validation
-
 Testing
-
 Linting
-
 Release Automation
 ```
 
@@ -109,13 +98,9 @@ Contains:
 
 ```text
 Specifications
-
 Architecture
-
 Rules
-
 Roadmaps
-
 Guides
 ```
 
@@ -133,8 +118,9 @@ Contains:
 
 ```text
 Documentation Index
-
 AI Reading Guide
+API Reading Guide
+AI Development Protocol
 ```
 
 ---
@@ -151,13 +137,9 @@ Contains:
 
 ```text
 Vision
-
 Scope
-
 Roadmap
-
 Planning
-
 Change History
 ```
 
@@ -175,13 +157,9 @@ Contains:
 
 ```text
 Architecture
-
 Schemas
-
 Tech Stack
-
 File Structure
-
 API Definitions
 ```
 
@@ -199,13 +177,23 @@ Contains:
 
 ```text
 Workflows
-
 Rules
-
 Error Definitions
-
 Settings Specifications
+Impact Analysis Rules
+Documentation Update Rules
 ```
+
+Documents:
+ 
+- SYSTEM_RULES.md
+- DEVELOPMENT_RULES.md
+- DEVELOPMENT_WORKFLOW.md
+- CHANGE_IMPACT_RULES.md
+- DOCUMENT_UPDATE_RULES.md
+- ERROR_CODES_SPEC.md
+- UNDO_REDO_SPEC.md
+- USER_SETTINGS_SPEC.md
 
 ---
 
@@ -221,13 +209,9 @@ Contains:
 
 ```text
 Analysis Logic
-
 Recommendations
-
 Classification
-
 Presets
-
 Support Generation
 ```
 
@@ -245,9 +229,7 @@ Contains:
 
 ```text
 Printer Profiles
-
 Material Profiles
-
 Filament Profiles
 ```
 
@@ -265,9 +247,7 @@ Contains:
 
 ```text
 Testing
-
 Security
-
 Performance
 ```
 
@@ -285,9 +265,7 @@ Contains:
 
 ```text
 G-Code Specifications
-
 Plugin System
-
 Future Extensions
 ```
 
@@ -305,11 +283,8 @@ Contains:
 
 ```text
 Layouts
-
 Panels
-
 Menus
-
 User Experience Definitions
 ```
 
@@ -327,17 +302,11 @@ Contains:
 
 ```text
 Glossary
-
 Terminology
-
 Naming Rules
-
 Acronyms
-
 Versioning Policies
-
 Architecture Decisions
-
 Directory Definitions
 ```
 
@@ -355,11 +324,8 @@ Contains:
 
 ```text
 Business Logic
-
 User Interface
-
 Data Processing
-
 Application Systems
 ```
 
@@ -377,11 +343,8 @@ Contains:
 
 ```text
 Startup Logic
-
 Shutdown Logic
-
 Application Initialization
-
 Dependency Management
 ```
 
@@ -399,15 +362,10 @@ Contains:
 
 ```text
 Layouts
-
 Panels
-
 Dialogs
-
 Menus
-
 Components
-
 Themes
 ```
 
@@ -483,11 +441,8 @@ Contains:
 
 ```text
 Scene Rendering
-
 Viewport Rendering
-
 Camera Management
-
 Lighting Management
 ```
 
@@ -505,9 +460,7 @@ Contains:
 
 ```text
 Workspace Data
-
 Scene Validation
-
 Scene Serialization
 ```
 
@@ -525,11 +478,8 @@ Contains:
 
 ```text
 Object Creation
-
 Object Storage
-
 Duplication
-
 Validation
 ```
 
@@ -546,12 +496,21 @@ Print Optimization Engine
 Contains:
 
 ```text
-Orientation Optimization
-Material Optimization
-Support Optimization
-Speed Optimization
+OptimizationEngine
+OrientationOptimizer
+MaterialOptimizer
+SpeedOptimizer
+SupportOptimizer
 ```
 
+Components:
+
+- OptimizationEngine.ts
+- OrientationOptimizer.ts
+- MaterialOptimizer.ts
+- SpeedOptimizer.ts
+- SupportOptimizer.ts
+  
 ---
 
 # src/transform/
@@ -568,11 +527,8 @@ Contains:
 Move
 
 Rotate
-
 Scale
-
 Transform Validation
-
 Undo/Redo History
 ```
 
@@ -590,11 +546,8 @@ Contains:
 
 ```text
 STL Import
-
 3MF Import
-
 Import Validation
-
 File Processing
 ```
 
@@ -612,11 +565,8 @@ Contains:
 
 ```text
 Printer Loading
-
 Printer Validation
-
 Printer Storage
-
 Printer Repositories
 ```
 
@@ -634,11 +584,8 @@ Contains:
 
 ```text
 Material Profiles
-
 Material Validation
-
 Material Repositories
-
 Material Caching
 ```
 
@@ -656,13 +603,9 @@ Contains:
 
 ```text
 Filament Profiles
-
 Manufacturer Data
-
 Filament Validation
-
 Filament Repositories
-
 Filament Caching
 ```
 
@@ -680,11 +623,8 @@ Contains:
 
 ```text
 Mesh Analysis
-
 Printability Analysis
-
 Stability Analysis
-
 Geometry Evaluation
 ```
 
@@ -707,6 +647,13 @@ NotificationService
 NotificationValidator
 ```
 
+Components:
+ 
+- NotificationFactory.ts
+- NotificationManager.ts
+- NotificationService.ts
+- NotificationValidator.ts
+  
 ---
 
 # src/classification_engine/
@@ -721,14 +668,18 @@ Contains:
 
 ```text
 Object Categories
-
 Classification Rules
-
 Confidence Scoring
-
 Classification Validation
 ```
 
+Components:
+ 
+- ClassificationEngine.ts
+- CategoryDetector.ts
+- ConfidenceScorer.ts
+- ClassificationValidator.ts
+  
 ---
 
 # src/recommendation_engine/
@@ -743,13 +694,18 @@ Contains:
 
 ```text
 Decision Rules
-
 Validation Engine
-
 Warning Generation
-
 Recommendation Building
 ```
+
+Components:
+
+- RecommendationEngine.ts
+- DecisionEngine.ts
+- ValidationEngine.ts
+- WarningEngine.ts
+- RecommendationBuilder.ts
 
 ---
 
@@ -765,11 +721,8 @@ Contains:
 
 ```text
 Preset Selection
-
 Preset Validation
-
 Preset Recommendations
-
 Preset Storage
 ```
 
@@ -787,11 +740,8 @@ Contains:
 
 ```text
 Material Cost Calculation
-
 Energy Cost Estimation
-
 Time Estimation
-
 Total Cost Computation
 ```
 
@@ -808,15 +758,23 @@ Data Access Layer
 Contains:
 
 ```text
-Repository Implementations
-
-Storage Access Logic
-
+GitHub Repository
+Printer Repository Synchronization
+Material Repository Synchronization
+Filament Repository Synchronization
+Preset Repository Synchronization
+Remote Data Access
 Sync Operations
-
-GitHub Integration
 ```
 
+Components:
+
+- GitHubRepository.ts
+- PrinterRepositorySync.ts
+- MaterialRepositorySync.ts
+- FilamentRepositorySync.ts
+- PresetRepositorySync.ts
+  
 ---
 
 # src/storage/
@@ -830,14 +788,19 @@ Persistence Layer
 Contains:
 
 ```text
+StorageManager
+ProjectStorage
+CacheStorage
+Project Persistence
 Local Storage
-
-File Storage
-
-Project Storage
-
-Cache Storage
+Cache Management
 ```
+
+Components:
+
+- StorageManager.ts
+- ProjectStorage.ts
+- CacheStorage.ts
 
 ---
 
@@ -853,11 +816,8 @@ Contains:
 
 ```text
 Auto Save Service
-
 Recovery Files
-
 Session Restoration
-
 Recovery Validation
 ```
 
@@ -875,22 +835,26 @@ Contains:
 
 ```text
 Analysis Service
-
 Filament Service
-
 Material Service
-
 Preset Service
-
 Printer Service
-
 Project Service
-
 Recommendation Service
-
 Storage Service
 ```
 
+Components:
+
+- AnalysisService.ts
+- FilamentService.ts
+- MaterialService.ts
+- PresetService.ts
+- PrinterService.ts
+- ProjectService.ts
+- RecommendationService.ts
+- StorageService.ts
+  
 ---
 
 # src/events/
@@ -905,11 +869,8 @@ Contains:
 
 ```text
 Event Bus
-
 Event Dispatching
-
 Event Types
-
 Subscriptions
 ```
 
@@ -929,19 +890,12 @@ Contains:
 Analysis Store
 
 Application Store
-
 Filament Store
-
 Material Store
-
 Object Store
-
 Preset Store
-
 Printer Store
-
 Recommendation Store
-
 Scene Store
 ```
 
@@ -959,9 +913,7 @@ Contains:
 
 ```text
 Application Configuration
-
 Feature Flags
-
 Environment Settings
 ```
 
@@ -979,13 +931,9 @@ Contains:
 
 ```text
 Analysis Constants
-
 Application Constants
-
 Material Constants
-
 Preset Constants
-
 Printer Constants
 ```
 
@@ -1023,21 +971,30 @@ Application State
 Purpose:
 
 ```text
-Runtime Validation Schemas
+Runtime Validation Layer
 ```
-
 Contains:
 
 ```text
-Zod Schemas
-
-Validation Definitions
-
-Data Models
-
-Type Validation
+PrinterSchema
+MaterialSchema
+FilamentSchema
+PrintPresetSchema
+AnalysisSchema
+RecommendationSchema
+Zod Validation Rules
+Runtime Type Validation
 ```
 
+Components:
+ 
+- PrinterSchema.ts
+- MaterialSchema.ts
+- FilamentSchema.ts
+- PrintPresetSchema.ts
+- AnalysisSchema.ts
+- RecommendationSchema.ts
+  
 ---
 
 # src/types/
@@ -1052,11 +1009,8 @@ Contains:
 
 ```text
 TypeScript Types
-
 Interfaces
-
 Enums
-
 Domain Models
 ```
 
@@ -1074,9 +1028,7 @@ Contains:
 
 ```text
 Future Electron Entry Point/Modules
-
 Future Main Process Organization
-
 Electron Architecture Extensions
 ```
 
@@ -1125,15 +1077,13 @@ Inter-Process Communication Handlers
 Contains:
 
 ```text
-Import IPC
-
-Printer IPC
-
-Project IPC
-
-Settings IPC
-
-Storage IPC
+ImportIPC
+PrinterIPC
+ProjectIPC
+SettingsIPC
+StorageIPC
+Electron Communication Handlers
+Renderer ↔ Main Process Communication
 ```
 
 ---
@@ -1150,13 +1100,9 @@ Contains:
 
 ```text
 Printer Profiles
-
 Material Profiles
-
 Filament Profiles
-
 Print Presets
-
 Configuration Files
 ```
 
@@ -1174,9 +1120,7 @@ Contains:
 
 ```text
 Printer Definitions
-
 Manufacturer Profiles
-
 Printer Configurations
 ```
 
@@ -1196,13 +1140,9 @@ Contains:
 PLA Materials
 
 PETG Materials
-
 ABS Materials
-
 ASA Materials
-
 TPU Materials
-
 Other Material Types
 ```
 
@@ -1220,9 +1160,7 @@ Contains:
 
 ```text
 Manufacturer-Specific Filaments
-
 Filament Definitions
-
 Brand Profiles
 ```
 
@@ -1242,13 +1180,9 @@ Contains:
 Draft Presets
 
 Balanced Presets
-
 Quality Presets
-
 Mechanical Presets
-
 Miniature Presets
-
 Custom Presets
 ```
 
@@ -1266,13 +1200,9 @@ Contains:
 
 ```text
 Icons
-
 Images
-
 Logos
-
 Themes
-
 Visual Resources
 ```
 
@@ -1290,11 +1220,8 @@ Contains:
 
 ```text
 UI Icons
-
 Toolbar Icons
-
 Navigation Icons
-
 Symbol Assets
 ```
 
@@ -1312,11 +1239,8 @@ Contains:
 
 ```text
 Screenshots
-
 Promotional Images
-
 Documentation Images
-
 Visual Graphics
 ```
 
@@ -1334,9 +1258,7 @@ Contains:
 
 ```text
 Brand Logos
-
 Logo Variants
-
 Application Branding
 ```
 
@@ -1354,11 +1276,8 @@ Contains:
 
 ```text
 Color Schemes
-
 Theme Definitions
-
 Dark Mode Assets
-
 Light Mode Assets
 ```
 
@@ -1376,11 +1295,8 @@ Contains:
 
 ```text
 Distributable Assets
-
 Public Files
-
 Static Content
-
 Build Output
 ```
 
@@ -1398,13 +1314,9 @@ Contains:
 
 ```text
 Alpha Releases
-
 Beta Releases
-
 Release Candidates
-
 Stable Releases
-
 Version Archives
 ```
 
@@ -1422,9 +1334,7 @@ Contains:
 
 ```text
 Experimental Features
-
 Early Development Builds
-
 Unstable Versions
 ```
 
@@ -1442,9 +1352,7 @@ Contains:
 
 ```text
 Feature Complete Builds
-
 Pre-Release Testing
-
 Beta Versions
 ```
 
@@ -1462,9 +1370,7 @@ Contains:
 
 ```text
 Candidate Builds
-
 Final Testing
-
 RC Versions
 ```
 
@@ -1482,9 +1388,7 @@ Contains:
 
 ```text
 Production Builds
-
 Official Releases
-
 Stable Versions
 ```
 
@@ -1504,11 +1408,8 @@ Contains:
 Build Scripts
 
 Migration Scripts
-
 Release Scripts
-
 Setup Scripts
-
 Utility Scripts
 ```
 
@@ -1526,11 +1427,8 @@ Contains:
 
 ```text
 Compilation Scripts
-
 Build Configuration
-
 Package Scripts
-
 Bundling Tools
 ```
 
@@ -1548,11 +1446,8 @@ Contains:
 
 ```text
 Schema Migrations
-
 Data Transformations
-
 Upgrade Scripts
-
 Version Transitions
 ```
 
@@ -1570,11 +1465,8 @@ Contains:
 
 ```text
 Release Automation
-
 Version Tagging
-
 Distribution Packaging
-
 Changelog Generation
 ```
 
@@ -1592,9 +1484,7 @@ Contains:
 
 ```text
 Alpha Build Scripts
-
 Alpha Distribution
-
 Experimental Release Tools
 ```
 
@@ -1612,9 +1502,7 @@ Contains:
 
 ```text
 Beta Build Scripts
-
 Beta Distribution
-
 Pre-Release Tools
 ```
 
@@ -1632,9 +1520,7 @@ Contains:
 
 ```text
 RC Build Scripts
-
 RC Distribution
-
 Final Release Preparation
 ```
 
@@ -1652,9 +1538,7 @@ Contains:
 
 ```text
 Stable Build Scripts
-
 Stable Distribution
-
 Production Release Tools
 ```
 
@@ -1672,11 +1556,8 @@ Contains:
 
 ```text
 Installation Scripts
-
 Dependency Setup
-
 Configuration Initialization
-
 Development Environment Tools
 ```
 
@@ -1694,13 +1575,9 @@ Contains:
 
 ```text
 Unit Tests
-
 Integration Tests
-
 End-to-End Tests
-
 Test Configuration
-
 Test Utilities
 ```
 
@@ -1718,11 +1595,8 @@ Contains:
 
 ```text
 Component Tests
-
 Function Tests
-
 Module Tests
-
 Isolated Logic Tests
 ```
 
@@ -1730,13 +1604,9 @@ Used For:
 
 ```text
 Quality Assurance
-
 Regression Prevention
-
 Feature Validation
-
 System Reliability
-
 Release Verification
 ```
 
@@ -1754,11 +1624,8 @@ Contains:
 
 ```text
 Multi-Module Tests
-
 System Integration Tests
-
 API Tests
-
 Cross-Component Tests
 ```
 
@@ -1776,11 +1643,8 @@ Contains:
 
 ```text
 User Workflow Tests
-
 Application Flow Tests
-
 Complete Scenario Tests
-
 UI Interaction Tests
 ```
 
@@ -1798,11 +1662,8 @@ Contains:
 
 ```text
 Temporary Cache Files
-
 Performance Cache
-
 Session Cache
-
 Compiled Cache
 ```
 
@@ -1820,13 +1681,9 @@ Contains:
 
 ```text
 Runtime Logs
-
 Error Logs
-
 Debug Logs
-
 Session Logs
-
 Diagnostic Information
 ```
 
@@ -1844,11 +1701,8 @@ Contains:
 
 ```text
 Third-Party Plugins
-
 Custom Extensions
-
 Plugin Configuration
-
 Plugin Resources
 ```
 
