@@ -1,4 +1,4 @@
-# WICHY
+# SLICYWEB
 # DIRECTORY PURPOSES
 
 Version: 1.0.0
@@ -535,6 +535,25 @@ Validation
 
 ---
 
+# src/optimization_engine/
+
+Purpose:
+
+```text
+Print Optimization Engine
+```
+
+Contains:
+
+```text
+Orientation Optimization
+Material Optimization
+Support Optimization
+Speed Optimization
+```
+
+---
+
 # src/transform/
 
 Purpose:
@@ -667,6 +686,25 @@ Printability Analysis
 Stability Analysis
 
 Geometry Evaluation
+```
+
+---
+
+# src/notifications/
+
+Purpose:
+
+```text
+Application Notification System
+```
+
+Contains:
+
+```text
+NotificationFactory
+NotificationManager
+NotificationService
+NotificationValidator
 ```
 
 ---
