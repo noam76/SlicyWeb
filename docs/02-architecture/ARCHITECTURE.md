@@ -520,7 +520,6 @@ Folder
 
 ```
 
-
 Responsibilities:
 
 - Move
@@ -538,7 +537,6 @@ Responsibilities:
 - History Tracking
 
 - Transaction Management
-
 
 
 ---
@@ -560,11 +558,11 @@ importer
 Responsibilities:
 
 
-\- STL Import
+- STL Import
 
-\- 3MF Import
+- 3MF Import
 
-\- Validation
+- Validation
 
 
 Submodules
@@ -582,12 +580,10 @@ FileValidator
 ```
 
 
-
-\---
-
+---
 
 
-\## Printer Database Module
+## Printer Database Module
 
 
 
@@ -602,22 +598,18 @@ Folder
 ```
 
 
-
 Responsibilities:
 
 
+- Load printers
 
-\- Load printers
+- Update printers
 
-\- Update printers
-
-\- Validate printers
+- Validate printers
 
 
 
 Submodules
-
-
 
 ```text
 
@@ -630,12 +622,10 @@ PrinterValidator
 ```
 
 
-
-\---
-
+---
 
 
-\## Material Repository Module
+## Material Repository Module
 
 
 
@@ -655,19 +645,19 @@ Responsibilities:
 
 
 
-\- Load materials
+- Load materials
 
-\- Update materials
+- Update materials
 
-\- Validate materials
+- Validate materials
 
-\- Material profile management
+- Material profile management
 
-\---
+---
 
 
 
-\## Analysis Engine
+## Analysis Engine
 
 
 
@@ -686,13 +676,13 @@ Folder
 Responsibilities:
 
 
-\- Geometry analysis
+- Geometry analysis
 
-\- Stability analysis
+- Stability analysis
 
-\- Printability analysis
+- Printability analysis
 
-\---
+---
 
 ## Classification Engine
 
@@ -707,10 +697,9 @@ Responsibilities:
 - Confidence scoring
 - Category detection
 - Classification validation
+---
 
-\---
-
-\# Analysis Engine Architecture
+# Analysis Engine Architecture
 
 
 
@@ -718,35 +707,19 @@ Responsibilities:
 
 Model
 
-
-
 &#x20;↓
-
-
 
 Geometry Analyzer
 
-
-
 &#x20;↓
-
-
 
 Printability Analyzer
 
-
-
 &#x20;↓
-
-
 
 Stability Analyzer
 
-
-
 &#x20;↓
-
-
 
 Result Generator
 
@@ -754,83 +727,72 @@ Result Generator
 
 
 
-\---
+---
 
 
 
-\# Geometry Analyzer
+# Geometry Analyzer
 
 
 
 Responsibilities:
 
+- Dimensions
 
+- Volume
 
-\- Dimensions
+- Surface Area
 
-\- Volume
-
-\- Surface Area
-
-\- Bounding Box
+- Bounding Box
 
 
 
 Output:
-
-
 
 Geometry Report
 
 
 
-\---
+---
 
 
 
-\# Printability Analyzer
+# Printability Analyzer
 
 
 
 Responsibilities:
 
 
+- Overhangs
 
-\- Overhangs
+- Bridges
 
-\- Bridges
+- Thin Walls
 
-\- Thin Walls
-
-\- Small Features
-
+- Small Features
 
 
 Output:
 
-
-
 Printability Report
-
 
 
 \---
 
 
 
-\# Stability Analyzer
-
+# Stability Analyzer
 
 
 Responsibilities:
 
 
+- Contact Area
 
-\- Contact Area
+- Height Ratio
 
-\- Height Ratio
-
-\- Center Of Gravity
+- Center Of Gravity
 
 
 
@@ -842,11 +804,11 @@ Stability Report
 
 
 
-\---
+---
 
 
 
-\# Recommendation Engine
+# Recommendation Engine
 
 
 Folder
@@ -862,11 +824,11 @@ Folder
 Responsibilities:
 
 
-\- Generate print settings
+- Generate print settings
 
-\- Generate warnings
+- Generate warnings
 
-\- Generate recommendations
+- Generate recommendations
 
 
 
@@ -877,19 +839,19 @@ Input:
 
 Printer
 
-\+
++
 
 Material
 
-\+
++
 
 Filament
 
-\+
++
 
 Analysis
 
-\+
++
 
 Object Classification
 ```
@@ -912,10 +874,10 @@ Confidence Score
 
 ```
 
-\---
+---
 
 
-\# Recommendation Flow
+# Recommendation Flow
 
 
 ```text
@@ -969,15 +931,14 @@ Confidence Score
 ```
 
 
-\---
+---
 
 
-\# Optimization Engine
+# Optimization Engine
 
 
 
 Folder
-
 
 
 ```text
@@ -987,16 +948,13 @@ Folder
 ```
 
 
-
 Responsibilities:
 
+- Orientation search
 
+- Material optimization
 
-\- Orientation search
-
-\- Material optimization
-
-\- Speed optimization
+- Speed optimization
 
 
 
@@ -1004,46 +962,35 @@ Responsibilities:
 
 
 
-\# Orientation Optimizer
-
+# Orientation Optimizer
 
 
 Responsibilities:
-
 
 
 Evaluate:
 
+- Stability
+
+- Overhangs
+
+- Supports
+
+- Surface Quality
 
 
-\- Stability
-
-\- Overhangs
-
-\- Supports
-
-\- Surface Quality
-
-
-
-Scoring:
+Scoring: 0-100
 
 
 
-0-100
+---
 
 
 
-\---
-
-
-
-\# Cost Engine
-
+# Cost Engine
 
 
 Folder
-
 
 
 ```text
@@ -1053,16 +1000,14 @@ Folder
 ```
 
 
-
 Responsibilities:
 
 
+- Material cost calculation
 
-\- Material cost calculation
+- Electricity cost estimation
 
-\- Electricity cost estimation
-
-\- Time estimation
+- Time estimation
 
 
 
@@ -1070,7 +1015,7 @@ Responsibilities:
 
 
 
-\# Notification System
+# Notification System
 
 
 
@@ -1089,25 +1034,20 @@ Folder
 Responsibilities:
 
 
+- Errors
 
-\- Errors
+- Warnings
 
-\- Warnings
-
-\- Information messages
-
+- Information messages
 
 
-\---
+---
 
 
-
-\# Configuration System
-
+# Configuration System
 
 
 Folder
-
 
 
 ```text
@@ -1122,24 +1062,21 @@ Responsibilities:
 
 
 
-\- Application settings
+- Application settings
 
-\- User settings
+- User settings
 
-\- Defaults
-
-
-
-\---
+- Defaults
 
 
+---
 
-\# Cache System
 
+
+# Cache System
 
 
 Folder
-
 
 
 ```text
@@ -1147,7 +1084,6 @@ Folder
 /cache
 
 ```
-
 
 
 Responsibilities:
@@ -1203,15 +1139,14 @@ Recommendation Updated
 
 
 
-\---
+---
 
 
 
-\# Event Types
+# Event Types
 
 
-
-\## Object Events
+## Object Events
 
 
 
@@ -1229,11 +1164,11 @@ ObjectSelected
 
 
 
-\---
+---
 
 
 
-\## Transformation Events
+## Transformation Events
 
 
 
@@ -1249,11 +1184,11 @@ ObjectScaled
 
 
 
-\---
+---
 
 
 
-\## Analysis Events
+## Analysis Events
 
 
 
@@ -1269,11 +1204,11 @@ AnalysisFailed
 
 
 
-\---
+---
 
 
 
-\## Recommendation Events
+## Recommendation Events
 
 
 
@@ -1287,11 +1222,11 @@ RecommendationUpdated
 
 
 
-\---
+---
 
 
 
-\# Dependency Rules
+# Dependency Rules
 
 
 
@@ -1303,27 +1238,15 @@ Allowed
 
 GUI
 
-
-
 ↓
-
-
 
 Application
 
-
-
 ↓
-
-
 
 Services
 
-
-
 ↓
-
-
 
 Data
 
@@ -1331,7 +1254,7 @@ Data
 
 
 
-\---
+---
 
 
 
@@ -1343,15 +1266,9 @@ Forbidden
 
 GUI → Database
 
-
-
 GUI → Repository
 
-
-
 GUI → Analysis
-
-
 
 GUI → AI Engine
 
@@ -1359,11 +1276,11 @@ GUI → AI Engine
 
 
 
-\---
+---
 
 
 
-\# State Management
+# State Management
 
 
 
@@ -1396,10 +1313,9 @@ All modules read from state.
 Only services may modify state.
 
 
-\---
+---
 
-
-\# Persistence Architecture
+# Persistence Architecture
 
 
 Saved Project
@@ -1443,10 +1359,10 @@ Logs
 ```
 
 
-\---
+---
 
 
-\# Logging Architecture
+# Logging Architecture
 
 
 Levels
@@ -1470,10 +1386,10 @@ Critical
 Logs stored separately from project files.
 
 
-\---
+---
 
 
-\# Security Principles
+# Security Principles
 
 
 
@@ -1485,23 +1401,22 @@ Always validate:
 
 
 
-\- STL
+- STL
 
-\- 3MF
+- 3MF
 
-\- Remote Data
+- Remote Data
 
 
 
 Reject malformed files.
 
 
-
-\---
-
+---
 
 
-\# Performance Principles
+
+# Performance Principles
 
 
 
@@ -1509,11 +1424,11 @@ Large models must:
 
 
 
-\- load asynchronously
+- load asynchronously
 
-\- be cached
+- be cached
 
-\- use optimized rendering
+- use optimized rendering
 
 
 
@@ -1529,22 +1444,22 @@ Avoid recalculating unchanged analyses.
 Every module requires:
 
 
-\## Unit Tests
+## Unit Tests
 
 
 Test isolated functionality.
 
 
-\---
+---
 
 
-\## Integration Tests
+## Integration Tests
 
 
 Test communication between modules.
 
 
-\---
+---
 
 
 \## Regression Tests
@@ -1553,10 +1468,10 @@ Test communication between modules.
 Verify previous functionality remains operational.
 
 
-\---
+---
 
 
-\# Future Architecture Extensions
+# Future Architecture Extensions
 
 
 Reserved Modules
