@@ -499,9 +499,17 @@ unknown
   "color": "",
   "diameter": 1.75,
   "density": 1.24,
-  "recommendedProfile": {},
-  "manufacturerSettings": {},
-   "pricePerKg": 0
+  "pricePerKg": 0,
+
+  "manufacturerSettings": {
+    "retractionDistance": 0,
+    "retractionSpeed": 0,
+    "fanSpeed": 0,
+    "nozzleTemperature": 0,
+    "bedTemperature": 0
+  },
+
+  "recommendedProfile": {}
 }
 ```
 
@@ -517,25 +525,19 @@ Represents an entire workspace.
 ```json
 
 {
-
-&#x20; "projectId": "",
-
-&#x20; "projectName": "",
-
-&#x20; "createdAt": "",
-
-&#x20; "updatedAt": "",
-
-&#x20; "version": "",
-
-&#x20;   "scene": {},
-
-&#x20;   "settings": {},
-
-&#x20;   "recommendations": {},
-
-&#x20;   "preset": {}
-
+  "projectId": "",
+  "projectName": "",
+  "createdAt": "",
+  "updatedAt": "",
+  "version": "",
+  "scene": {},
+  "settings": {},
+  "analysis": {},
+  "recommendations": {},
+  "preset": {},
+  "printer": {},
+  "material": {},
+  "filament": {}
 }
 
 ```
@@ -578,7 +580,7 @@ Represents an entire workspace.
 
 
 
-\# Object Schema
+# Object Schema
 
 
 
@@ -694,7 +696,7 @@ Represents an entire workspace.
 
 
 
-\# Mesh Statistics Schema
+# Mesh Statistics Schema
 
 
 
@@ -866,14 +868,17 @@ Represents an entire workspace.
 {
   "classification": {
     "category": "",
+    "subcategory": "",
     "confidenceScore": 0,
-    "detectedFeatures": []
+    "detectedFeatures": [],
+    "detectedTags": [],
+    "classificationVersion": ""
   }
 }
 ```
 
 
-\---
+---
 
 
 # Recommended Settings Schema
@@ -1002,11 +1007,24 @@ Represents an entire workspace.
 
 ```
 
+---
+
+# Support Schema
+
+```json
+{
+  "supports": {
+    "required": false,
+    "type": "",
+    "density": 0,
+    "overhangThreshold": 50
+  }
+}
+```
 
 ---
 
-
-# Recommended Profile Schema
+# Recommendation Schema
 
 
 ```json
@@ -1014,6 +1032,8 @@ Represents an entire workspace.
 {
 
 &#x20; "recommendedProfile": {
+
+&#x20;   "recommendation": {},
 
 &#x20;   "preset": {},
 
@@ -1034,6 +1054,24 @@ Represents an entire workspace.
 &#x20; }
 
 }
+```
+
+```json
+{
+  "recommendation": {
+    "recommendationId": "",
+    "printerId": "",
+    "materialId": "",
+    "filamentId": "",
+    "analysisId": "",
+    "classification": {},
+    "recommendedProfile": {},
+    "preset": {},
+    "warnings": [],
+    "confidenceScore": 0,
+    "createdAt": ""
+  }
+}
 
 ```
 
@@ -1050,17 +1088,13 @@ Represents an entire workspace.
 ```json
 
 {
-
-&#x20; "warning": {
-
-&#x20;   "code": "",
-
-&#x20;   "severity": "",
-
-&#x20;   "message": ""
-
-&#x20; }
-
+  "warning": {
+    "code": "",
+    "severity": "",
+    "message": "",
+    "source": "",
+    "recommendedAction": ""
+  }
 }
 
 ```
@@ -1094,32 +1128,23 @@ critical
 
 
 ```json
-
 {
-
-&#x20; "notification": {
-
-&#x20;   "id": "",
-
-&#x20;   "timestamp": "",
-
-&#x20;   "type": "",
-
-&#x20;   "message": ""
-
-&#x20; }
-
+  "notification": {
+    "id": "",
+    "timestamp": "",
+    "type": "",
+    "severity": "",
+    "message": "",
+    "source": "",
+    "read": false
+  }
 }
-
 ```
-
 
 ---
 
 
 # Optimization Result Schema
-
-
 
 ```json
 
@@ -1199,26 +1224,18 @@ critical
 ---
 
 
-# GitHub Printer Repository Schema
-
-
+# Repository Schema
 
 ```json
 
 {
-
-&#x20; "repository": {
-
-&#x20;   "name": "",
-
-&#x20;   "url": "",
-
-&#x20;   "lastUpdated": "",
-
-&#x20;   "verified": true
-
-&#x20; }
-
+  "repository": {
+    "name": "",
+    "type": "",
+    "url": "",
+    "lastUpdated": "",
+    "verified": true
+  }
 }
 
 ```
@@ -1234,19 +1251,13 @@ critical
 ```json
 
 {
-
-&#x20; "cache": {
-
-&#x20;   "createdAt": "",
-
-&#x20;   "expiresAt": "",
-
-&#x20;   "source": "",
-
-&#x20;   "version": ""
-
-&#x20; }
-
+  "cache": {
+    "createdAt": "",
+    "expiresAt": "",
+    "source": "",
+    "version": "",
+    "checksum": ""
+  }
 }
 
 ```
