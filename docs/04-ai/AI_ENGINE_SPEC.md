@@ -214,13 +214,13 @@ Model Analysis
 ```
 
 
-\---
+---
 
 
-\# Required Inputs
+# Required Inputs
 
 
-\## Printer
+## Printer
 
 
 ```json
@@ -243,11 +243,11 @@ Model Analysis
 
 
 
-\---
+---
 
 
 
-\## Material
+## Material
 
 
 
@@ -269,7 +269,7 @@ Model Analysis
 
 
 
-\---
+---
 
 
 ## Filament
@@ -285,9 +285,9 @@ Model Analysis
 }
 ```
 
-\---
+---
 
-\## Model
+## Model
 
 
 
@@ -335,7 +335,6 @@ source: src/classification_engine/
 ---
 
 
-
 # Supported Categories
 
 
@@ -378,7 +377,7 @@ Unknown
 
 
 
-\# Classification Goals
+# Classification Goals
 
 
 
@@ -390,15 +389,9 @@ Determine:
 
 Required Strength
 
-
-
 Required Appearance
 
-
-
 Required Accuracy
-
-
 
 Required Support Strategy
 
@@ -406,31 +399,22 @@ Required Support Strategy
 
 
 
-\---
+---
 
 
 
-\# Example
-
+# Example
 
 
 Gear
 
-
-
 Results:
-
-
 
 ```text
 
 Strength: High
 
-
-
 Accuracy: High
-
-
 
 Support Priority: Medium
 
@@ -438,15 +422,13 @@ Support Priority: Medium
 
 
 
-\---
+---
 
 
 
-\# Layer 3
+# Layer 3
 
-\# Risk Detection
-
-
+# Risk Detection
 
 The engine evaluates risks before recommendations.
 
@@ -456,27 +438,20 @@ The engine evaluates risks before recommendations.
 
 
 
-\# Risk Categories
+# Risk Categories
 
 
-
-\## Stability Risk
-
+## Stability Risk
 
 
 Factors:
-
 
 
 ```text
 
 Base Area
 
-
-
 Height Ratio
-
-
 
 Center Of Gravity
 
@@ -484,27 +459,22 @@ Center Of Gravity
 
 
 
-\---
+---
 
 
 
-\## Support Risk
+## Support Risk
 
 
 
 Factors:
 
 
-
 ```text
 
 Overhang Quantity
 
-
-
 Overhang Angle
-
-
 
 Bridge Length
 
@@ -512,11 +482,11 @@ Bridge Length
 
 
 
-\---
+---
 
 
 
-\## Warping Risk
+## Warping Risk
 
 
 
@@ -528,11 +498,7 @@ Factors:
 
 Material
 
-
-
 Object Dimensions
-
-
 
 Contact Area
 
@@ -540,27 +506,22 @@ Contact Area
 
 
 
-\---
+---
 
 
 
-\## Failure Risk
+## Failure Risk
 
 
 
 Factors:
 
 
-
 ```text
 
 Thin Walls
 
-
-
 Extremely Small Features
-
-
 
 Unsupported Structures
 
@@ -568,11 +529,11 @@ Unsupported Structures
 
 
 
-\---
+---
 
 
 
-\## Collision Risk
+## Collision Risk
 
 
 
@@ -584,19 +545,17 @@ Factors:
 
 Multi Object Distance
 
-
-
 Object Placement
 
 ```
 
 
 
-\---
+---
 
 
 
-\# Risk Score System
+# Risk Score System
 
 
 
@@ -615,11 +574,9 @@ Each category receives:
 Where:
 
 
-
 ```text
 
 0 = none
-
 
 
 100 = critical
@@ -628,31 +585,22 @@ Where:
 
 
 
-\---
+---
 
 
 
-\# Risk Levels
-
+# Risk Levels
 
 
 ```text
 
 0 - 20      Very Low
 
-
-
 21 - 40     Low
-
-
 
 41 - 60     Moderate
 
-
-
 61 - 80     High
-
-
 
 81 - 100    Critical
 
@@ -660,7 +608,7 @@ Where:
 
 
 
-\---
+---
 
 
 
@@ -682,7 +630,7 @@ Recommendation Engine Components:
 
 
 
-\# Priority System
+# Priority System
 
 
 
@@ -694,23 +642,13 @@ The engine always follows:
 
 1 Reliability
 
-
-
 2 Print Success
-
-
 
 3 Mechanical Strength
 
-
-
 4 Surface Quality
 
-
-
 5 Print Time
-
-
 
 6 Material Savings
 
@@ -718,11 +656,11 @@ The engine always follows:
 
 
 
-\---
+---
 
 
 
-\# Decision Inputs
+# Decision Inputs
 
 
 
@@ -744,10 +682,10 @@ Classification
 
 ```
 
-\---
+---
 
 
-\# Decision Outputs
+# Decision Outputs
 
 
 ```text
@@ -776,10 +714,10 @@ Confidence Score
 ```
 
 
-\---
+---
 
 
-\# Layer Height Logic
+# Layer Height Logic
 
 
 Decision Factors:
@@ -797,20 +735,17 @@ Target Quality
 
 ```
 
+---
 
-\---
 
-
-\# Example Rules
+# Example Rules
 
 
 ```text
 
 Fine Details
 
-
 ↓
-
 
 0.08 - 0.12 mm
 
@@ -824,36 +759,31 @@ Fine Details
 
 Balanced Quality
 
-
 ↓
-
 
 0.16 - 0.20 mm
 
 ```
 
 
-\---
+---
 
 
 ```text
 
 Large Mechanical Parts
 
-
 ↓
-
 
 0.20 - 0.28 mm
 
 ```
 
 
-\---
+---
 
 
-\# Wall Count Logic
-
+# Wall Count Logic
 
 Decision Factors:
 
@@ -868,11 +798,10 @@ Expected Stress
 
 ```
 
-\---
+---
 
 
-\# Example
-
+# Example
 
 
 Decorative Object
@@ -898,10 +827,9 @@ Mechanical Part
 ```
 
 
-\---
+---
 
-
-\# Top/Bottom Layers Logic
+# Top/Bottom Layers Logic
 
 
 
@@ -913,27 +841,25 @@ Increase when:
 
 High Strength Required
 
-
-
 Large Flat Surfaces
 
 ```
 
 
 
-\---
+---
 
 
 
-\# Infill Decision Logic
+# Infill Decision Logic
 
 
 
-\---
+---
 
 
 
-\## Decorative
+## Decorative
 
 
 
@@ -945,11 +871,11 @@ Large Flat Surfaces
 
 
 
-\---
+---
 
 
 
-\## Functional
+## Functional
 
 
 
@@ -961,11 +887,11 @@ Large Flat Surfaces
 
 
 
-\---
+---
 
 
 
-\## Structural
+## Structural
 
 
 
@@ -977,19 +903,19 @@ Large Flat Surfaces
 
 
 
-\---
+---
 
 
 
-\# Infill Pattern Selection
+# Infill Pattern Selection
 
 
 
-\---
+---
 
 
 
-\## General Purpose
+## General Purpose
 
 
 
@@ -1001,11 +927,11 @@ Gyroid
 
 
 
-\---
+---
 
 
 
-\## Speed
+## Speed
 
 
 
@@ -1017,11 +943,11 @@ Lightning
 
 
 
-\---
+---
 
 
 
-\## Strength
+## Strength
 
 
 
@@ -1033,11 +959,11 @@ Cubic
 
 
 
-\---
+---
 
 
 
-\## Rigidity
+## Rigidity
 
 
 
@@ -1049,11 +975,11 @@ Honeycomb
 
 
 
-\---
+---
 
 
 
-\# Support Decision Engine
+# Support Decision Engine
 
 
 
@@ -1061,11 +987,11 @@ Generate supports only when justified.
 
 
 
-\---
+---
 
 
 
-\# Support Evaluation
+# Support Evaluation
 
 
 
@@ -1089,11 +1015,11 @@ Material Capability
 
 
 
-\---
+---
 
 
 
-\# Support Types
+# Support Types
 
 
 
@@ -1101,11 +1027,7 @@ Material Capability
 
 Organic
 
-
-
 Tree
-
-
 
 Standard
 
@@ -1113,16 +1035,13 @@ Standard
 
 
 
-\---
+---
 
 
-
-\# Selection Rules
-
+# Selection Rules
 
 
 Figurines:
-
 
 
 ```text
@@ -1132,9 +1051,7 @@ Organic
 ```
 
 
-
-\---
-
+---
 
 
 Mechanical Parts:
@@ -1148,13 +1065,11 @@ Standard
 ```
 
 
-
-\---
+---
 
 
 
 Complex Organic Shapes:
-
 
 
 ```text
@@ -1165,71 +1080,59 @@ Tree
 
 
 
+---
+
+
+
+# Adhesion Decision Engine
+
+
+
 \---
 
 
 
-\# Adhesion Decision Engine
-
-
-
-\---
-
-
-
-\# Conditions
+# Conditions
 
 
 
 Small Contact Area
 
-
-
 ↓
-
-
 
 Brim
 
 
 
-\---
+---
 
 
 
 Very Difficult Object
 
-
-
 ↓
-
-
 
 Raft
 
 
 
-\---
+---
 
 
 
 Stable Object
 
-
-
 ↓
-
-
 
 None or Skirt
 
 
 
-\---
+---
 
 
 
-\# Cooling Decision Engine
+# Cooling Decision Engine
 
 
 
@@ -1241,11 +1144,7 @@ Inputs:
 
 Material Type
 
-
-
 Bridge Count
-
-
 
 Feature Size
 
@@ -1253,16 +1152,15 @@ Feature Size
 
 
 
-\---
+---
 
 
 
-\# Example
+# Example
 
 
 
 PLA
-
 
 
 ```text
@@ -1272,13 +1170,10 @@ PLA
 ```
 
 
-
-\---
-
+---
 
 
 ABS
-
 
 
 ```text
@@ -1288,13 +1183,10 @@ ABS
 ```
 
 
-
-\---
-
+---
 
 
 TPU
-
 
 
 ```text
@@ -1304,28 +1196,21 @@ TPU
 ```
 
 
-
-\---
-
+---
 
 
-\# Retraction Decision Engine
 
+# Retraction Decision Engine
 
 
 Inputs:
-
 
 
 ```text
 
 Extruder Type
 
-
-
 Material
-
-
 
 Travel Distance
 
@@ -1333,16 +1218,15 @@ Travel Distance
 
 
 
-\---
+---
 
 
 
-\# Example
+# Example
 
 
 
 Direct Drive
-
 
 
 ```text
@@ -1352,13 +1236,11 @@ Short Retraction
 ```
 
 
-
-\---
+---
 
 
 
 Bowden
-
 
 
 ```text
@@ -1368,28 +1250,21 @@ Longer Retraction
 ```
 
 
-
-\---
-
+---
 
 
-\# Speed Decision Engine
 
+# Speed Decision Engine
 
 
 Inputs:
-
 
 
 ```text
 
 Printer Capability
 
-
-
 Object Complexity
-
-
 
 Material
 
@@ -1397,11 +1272,11 @@ Material
 
 
 
-\---
+---
 
 
 
-\# Speed Reduction Rules
+# Speed Reduction Rules
 
 
 
@@ -1413,15 +1288,9 @@ Reduce speed when:
 
 High Detail
 
-
-
 Thin Walls
 
-
-
 Tall Objects
-
-
 
 Bridge Heavy Models
 
@@ -1429,11 +1298,11 @@ Bridge Heavy Models
 
 
 
-\---
+---
 
 
 
-\# Layer 5
+# Layer 5
 
 # Validation Engine
 
@@ -1471,11 +1340,11 @@ Filament Limits
 
 
 
-\---
+---
 
 
 
-\# Printer Validation
+# Printer Validation
 
 
 
@@ -1487,15 +1356,9 @@ Verify:
 
 Speed
 
-
-
 Acceleration
 
-
-
 Temperature
-
-
 
 Build Volume
 
@@ -1503,11 +1366,11 @@ Build Volume
 
 
 
-\---
+---
 
 
 
-\# Material Validation
+# Material Validation
 
 
 
@@ -1519,15 +1382,9 @@ Verify:
 
 Nozzle Temperature
 
-
-
 Bed Temperature
 
-
-
 Cooling Limits
-
-
 
 Retraction Limits
 
@@ -1535,27 +1392,22 @@ Retraction Limits
 
 
 
-\---
+---
 
 
 
-\# Geometry Validation
+# Geometry Validation
 
 
 
 Verify:
 
 
-
 ```text
 
 Wall Thickness
 
-
-
 Layer Height
-
-
 
 Nozzle Compatibility
 
@@ -1563,7 +1415,7 @@ Nozzle Compatibility
 
 
 
-\---
+---
 
 
 
@@ -1575,11 +1427,7 @@ Nozzle Compatibility
 
 Valid
 
-
-
 Corrected
-
-
 
 Rejected
 
@@ -1587,7 +1435,7 @@ Rejected
 
 
 
-\---
+---
 
 
 
@@ -1607,7 +1455,6 @@ Optimization Components
 - SupportOptimizer
 
 ---
-
 
 
 # Optimization Goals
@@ -1685,11 +1532,11 @@ Inputs:
 
 
 
-\---
+---
 
 
 
-\# Evaluation Factors
+# Evaluation Factors
 
 
 
@@ -1697,48 +1544,36 @@ Inputs:
 
 Support Volume
 
-
-
 Stability
 
-
-
 Finish Quality
-
-
 
 Print Duration
 
 ```
 
 
-
-\---
-
+---
 
 
-\# Recommended Orientation
+
+# Recommended Orientation
 
 
 
 Highest Score wins.
 
 
-
-\---
-
+---
 
 
-\# Printability Score
 
+# Printability Score
 
 
 Global score.
 
-
-
 Range:
-
 
 
 ```text
@@ -1749,11 +1584,11 @@ Range:
 
 
 
-\---
+---
 
 
 
-\# Score Meaning
+# Score Meaning
 
 
 
@@ -1761,19 +1596,11 @@ Range:
 
 90 - 100 Excellent
 
-
-
 75 - 89 Good
-
-
 
 60 - 74 Acceptable
 
-
-
 40 - 59 Risky
-
-
 
 0 - 39 Poor
 
@@ -1781,11 +1608,11 @@ Range:
 
 
 
-\---
+---
 
 
 
-\# Confidence Score
+# Confidence Score
 
 
 
@@ -1796,20 +1623,13 @@ Represents recommendation confidence.
 Based on:
 
 
-
 ```text
 
 Known Printer
 
-
-
 Known Material
 
-
-
 Complete Analysis
-
-
 
 Validated Database
 
@@ -1817,11 +1637,11 @@ Validated Database
 
 
 
-\---
+---
 
 
 
-\# Confidence Range
+# Confidence Range
 
 
 
@@ -1874,11 +1694,11 @@ Information
 
 
 
-\---
+---
 
 
 
-\# Examples
+# Examples
 
 
 
@@ -1890,7 +1710,7 @@ Object Exceeds Build Volume
 
 
 
-\---
+---
 
 
 
@@ -1902,7 +1722,7 @@ High Warp Risk
 
 
 
-\---
+---
 
 
 
@@ -1914,7 +1734,7 @@ Support Required
 
 
 
-\---
+---
 
 
 
@@ -1926,7 +1746,7 @@ Tall Object Stability Risk
 
 
 
-\---
+---
 
 
 
@@ -1938,7 +1758,7 @@ Thin Wall Detected
 
 
 
-\---
+---
 
 
 
@@ -1989,10 +1809,10 @@ Community Recommendation Learning
 ```
 
 
-\---
+---
 
 
-\# AI Learning Rules
+# AI Learning Rules
 
 
 Current Version:
@@ -2010,10 +1830,10 @@ No autonomous learning.
 No recommendation generation without validation.
 
 
-\---
+---
 
 
-\# Safety Rules
+# Safety Rules
 
 
 Never recommend values exceeding:
@@ -2043,17 +1863,17 @@ Over Speed
 Always produce warnings when uncertainty exists.
 
 
-\---
+---
 
 
-\# Golden Rule
+# Golden Rule
 
 
 The AI should maximize the probability of a successful print, not the probability of generating aggressive settings.
 
 
-\---
+---
 
 
-\# End Of Document
+# End Of Document
 
