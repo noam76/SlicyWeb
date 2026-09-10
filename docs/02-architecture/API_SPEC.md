@@ -9,7 +9,7 @@ Status: Approved
 
 Priority: High
 
-\---
+---
 
 
 # Purpose
@@ -74,7 +74,7 @@ The application must always prioritize local data.
 Remote requests should only occur when necessary.
 
 
-\---
+---
 
 
 # API Categories
@@ -97,7 +97,7 @@ Future Cloud APIs
 
 ```
 
-\---
+---
 
 # API Architecture
 
@@ -127,7 +127,20 @@ Storage / Cache / Remote
 
 ---
 
+# IPC API
 
+Purpose:
+Electron Renderer ↔ Main communication.
+
+Endpoints:
+
+ProjectIPC
+StorageIPC
+ImportIPC
+SettingsIPC
+PrinterIPC
+
+---
 
 # Internal API Rules
 
@@ -143,6 +156,18 @@ Be Documented
 
 Be Testable
 
+Use Defined Schemas
+```
+
+All payloads must be validated against:
+
+```text
+PrinterSchema
+MaterialSchema
+FilamentSchema
+AnalysisSchema
+RecommendationSchema
+PrintPresetSchema
 ```
 
 ---
@@ -165,7 +190,7 @@ Standard success format:
 
 ```
 
-\---
+---
 
 # Error Format
 
@@ -195,11 +220,11 @@ Standard success format:
 
 
 
-\---
+---
 
 
 
-\# Printer API
+# Printer API
 
 
 
@@ -211,11 +236,11 @@ Manage printer profiles.
 
 
 
-\---
+---
 
 
 
-\## Get All Printers
+## Get All Printers
 
 
 
@@ -231,11 +256,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Response
+## Response
 
 
 
@@ -251,11 +276,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Get Printer
+## Get Printer
 
 
 
@@ -271,11 +296,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Response
+## Response
 
 
 
@@ -291,11 +316,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Search Printers
+## Search Printers
 
 
 
@@ -311,11 +336,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Parameters
+## Parameters
 
 
 
@@ -333,11 +358,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Import Printer Profile
+## Import Printer Profile
 
 
 
@@ -353,11 +378,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Input
+## Input
 
 
 
@@ -373,11 +398,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Validation
+## Validation
 
 
 
@@ -401,11 +426,11 @@ Version
 
 
 
-\---
+---
 
 
 
-\# Material API
+# Material API
 
 
 
@@ -417,11 +442,11 @@ Manage materials.
 
 
 
-\---
+---
 
 
 
-\## Get Materials
+## Get Materials
 
 
 
@@ -437,11 +462,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Get Material
+## Get Material
 
 
 
@@ -457,11 +482,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Search Material
+## Search Material
 
 
 
@@ -477,11 +502,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Parameters
+## Parameters
 
 
 
@@ -499,11 +524,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Import Material
+## Import Material
 
 
 
@@ -519,7 +544,7 @@ POST
 
 
 
-\---
+---
 
 # Filament API
 
@@ -616,7 +641,7 @@ POST
 ```
 ---
 
-\# Model Import API
+# Model Import API
 
 
 
@@ -628,11 +653,11 @@ Handle STL and 3MF imports.
 
 
 
-\---
+---
 
 
 
-\## Import File
+## Import File
 
 
 
@@ -648,11 +673,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Accepted Formats
+## Accepted Formats
 
 
 
@@ -668,11 +693,11 @@ STL
 
 
 
-\---
+---
 
 
 
-\## Response
+## Response
 
 
 
@@ -690,11 +715,11 @@ STL
 
 
 
-\---
+---
 
 
 
-\# Scene API
+# Scene API
 
 
 
@@ -706,11 +731,11 @@ Manage workspace objects.
 
 
 
-\---
+---
 
 
 
-\## Get Scene
+## Get Scene
 
 
 
@@ -726,11 +751,11 @@ GET
 
 
 
-\---
+---
 
 
 
-\## Add Object
+## Add Object
 
 
 
@@ -746,11 +771,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Remove Object
+## Remove Object
 
 
 
@@ -766,11 +791,11 @@ DELETE
 
 
 
-\---
+---
 
 
 
-\## Duplicate Object
+## Duplicate Object
 
 
 
@@ -786,11 +811,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\# Transform API
+# Transform API
 
 
 
@@ -802,11 +827,11 @@ Move, rotate and scale objects.
 
 
 
-\---
+---
 
 
 
-\## Move Object
+## Move Object
 
 
 
@@ -822,11 +847,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Input
+## Input
 
 
 
@@ -846,11 +871,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Rotate Object
+## Rotate Object
 
 
 
@@ -866,11 +891,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Input
+## Input
 
 
 
@@ -890,11 +915,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Scale Object
+## Scale Object
 
 
 
@@ -910,11 +935,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Input
+## Input
 
 
 
@@ -934,11 +959,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\# Analysis API
+# Analysis API
 
 
 
@@ -950,11 +975,11 @@ Launch and retrieve analysis.
 
 
 
-\---
+---
 
 
 
-\## Analyze Object
+## Analyze Object
 
 
 
@@ -970,11 +995,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Analyze Scene
+## Analyze Scene
 
 
 
@@ -990,11 +1015,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Analysis Result
+## Analysis Result
 
 
 
@@ -1024,11 +1049,31 @@ POST
 
 
 
-\---
+---
 
+# Classification API
 
+Purpose:
 
-\# Recommendation API
+Classify imported objects.
+
+## Classify Object
+
+POST
+
+/api/classification/object/{id}
+
+## Response
+
+{
+  "category": "",
+  "subcategory": "",
+  "confidenceScore": 0
+}
+
+---
+
+# Recommendation API
 
 
 
@@ -1040,11 +1085,11 @@ Generate AI recommendations.
 
 
 
-\---
+---
 
 
 
-\## Generate Recommendation
+## Generate Recommendation
 
 
 
@@ -1060,11 +1105,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Input
+## Input
 
 
 
@@ -1086,11 +1131,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Response
+## Response
 
 
 
@@ -1114,28 +1159,22 @@ POST
 
 
 
-\---
+---
 
 
-
-\# Optimization API
-
+# Optimization API
 
 
 Purpose:
 
-
-
 Optimize print settings.
 
 
-
-\---
-
+---
 
 
-\## Optimize Orientation
 
+## Optimize Orientation
 
 
 ```text
@@ -1150,11 +1189,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Response
+## Response
 
 
 
@@ -1172,11 +1211,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Optimize Supports
+## Optimize Supports
 
 
 
@@ -1192,11 +1231,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Optimize Time
+## Optimize Time
 
 
 
@@ -1211,12 +1250,17 @@ POST
 ```
 
 
+Optimize Material
 
-\---
+```text
+POST
 
+/api/optimization/material
+```
 
+---
 
-\# Cost API
+# Cost API
 
 
 
@@ -1228,11 +1272,11 @@ Estimate production cost.
 
 
 
-\---
+---
 
 
 
-\## Estimate Cost
+## Estimate Cost
 
 
 
@@ -1248,11 +1292,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Response
+## Response
 
 
 
@@ -1274,11 +1318,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\# Project API
+# Project API
 
 
 
@@ -1290,11 +1334,11 @@ Save and load projects.
 
 
 
-\---
+---
 
 
 
-\## Save Project
+## Save Project
 
 
 
@@ -1310,11 +1354,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Load Project
+## Load Project
 
 
 
@@ -1330,7 +1374,7 @@ POST
 
 
 
-\---
+---
 
 
 
@@ -1363,10 +1407,10 @@ POST
 ```
 
 
-\---
+---
 
 
-\# Cache API
+# Cache API
 
 
 
@@ -1378,11 +1422,11 @@ Manage local cache.
 
 
 
-\---
+---
 
 
 
-\## Refresh Cache
+## Refresh Cache
 
 
 
@@ -1398,11 +1442,11 @@ POST
 
 
 
-\---
+---
 
 
 
-\## Clear Cache
+## Clear Cache
 
 
 
@@ -1418,11 +1462,11 @@ DELETE
 
 
 
-\---
+---
 
 
 
-\# Repository API
+# Repository API
 
 
 Purpose:
@@ -1431,10 +1475,10 @@ Purpose:
 Access online repositories.
 
 
-\---
+---
 
 
-\## GitHub Repository Service
+## GitHub Repository Service
 
 
 Sources:
@@ -1449,26 +1493,32 @@ Community Sources
 ```
 
 
-\---
+---
 
 
-\## Refresh Printer Profiles
+## Refresh Printer Profiles
 
 
 ```text
 
 POST
 
-
 /api/repositories/printers/refresh
 
 ```
 
+Refresh Print Presets
 
-\---
+```text
+POST
+
+/api/repositories/presets/refresh
+```
+
+---
 
 
-\## Refresh Material Profiles
+## Refresh Material Profiles
 
 
 ```text
@@ -1479,7 +1529,7 @@ POST
 ```
 
 
-\---
+---
 
 ---
 
@@ -1492,7 +1542,7 @@ POST
 ```
 
 
-\# Repository Validation
+# Repository Validation
 
 
 Every downloaded file must pass:
@@ -1508,20 +1558,20 @@ Version Validation
 
 Before import.
 
-\---
+---
 
 
-\# Download Queue
+# Download Queue
 
 
 Purpose:
 
 Prevent excessive requests.
 
-\---
+---
 
 
-\## Queue States
+## Queue States
 
 
 ```text
@@ -1534,19 +1584,19 @@ Failed
 ```
 
 
-\---
+---
 
 
-\# Rate Limiting
+# Rate Limiting
 
 
 Remote requests should be limited.
 
 
-\---
+---
 
 
-\## Recommended Rules
+## Recommended Rules
 
 
 ```text
@@ -1557,9 +1607,9 @@ Cache First Strategy
 
 ```
 
-\---
+---
 
-\# Event API
+# Event API
 
 
 Purpose:
@@ -1567,10 +1617,10 @@ Purpose:
 System notifications.
 
 
-\---
+---
 
 
-\## Events
+## Events
 
 ```text
 
@@ -1584,10 +1634,10 @@ ProfileUpdated
 
 ```
 
-\---
+---
 
 
-\# Notification API
+# Notification API
 
 
 Purpose:
@@ -1596,10 +1646,10 @@ Purpose:
 Display messages.
 
 
-\---
+---
 
 
-\## Types
+## Types
 
 
 ```text
@@ -1612,10 +1662,10 @@ Error
 ```
 
 
-\---
+---
 
 
-\# Validation API
+# Validation API
 
 
 Purpose:
@@ -1624,10 +1674,10 @@ Purpose:
 Validate imported data.
 
 
-\---
+---
 
 
-\## STL Validation
+## STL Validation
 
 
 ```text
@@ -1640,11 +1690,11 @@ Corruption
 
 
 
-\---
+---
 
 
 
-\## Profile Validation
+## Profile Validation
 
 
 ```text
@@ -1659,11 +1709,11 @@ Schemas
 
 
 
-\---
+---
 
 
 
-\# Authentication
+# Authentication
 
 
 
@@ -1683,11 +1733,11 @@ Application is local.
 
 
 
-\---
+---
 
 
 
-\# Future Authentication
+# Future Authentication
 
 
 
@@ -1711,11 +1761,11 @@ Organization Account
 
 
 
-\---
+---
 
 
 
-\# Cloud APIs
+# Cloud APIs
 
 
 
@@ -1743,11 +1793,11 @@ Remote Printers
 
 
 
-\---
+---
 
 
 
-\# API Versioning
+# API Versioning
 
 
 
@@ -1767,11 +1817,11 @@ v3
 
 
 
-\---
+---
 
 
 
-\## Example
+## Example
 
 
 
@@ -1783,11 +1833,11 @@ v3
 
 
 
-\---
+---
 
 
 
-\# Backward Compatibility
+# Backward Compatibility
 
 
 
@@ -1815,11 +1865,11 @@ Changelog Entry
 
 
 
-\---
+---
 
 
 
-\# Error Codes
+# Error Codes
 
 
 
@@ -1855,11 +1905,11 @@ RECOMMENDATION\_FAILED
 
 
 
-\---
+---
 
 
 
-\# Logging Requirements
+# Logging Requirements
 
 
 Every API operation must log:
@@ -1876,11 +1926,11 @@ Duration
 
 
 
-\---
+---
 
 
 
-\# Security Requirements
+# Security Requirements
 
 
 
@@ -1898,10 +1948,10 @@ Repository Data
 
 Before processing.
 
-\---
+---
 
 
-\# Future APIs
+# Future APIs
 
 
 Reserved
@@ -1923,16 +1973,16 @@ Vision Classification API
 
 
 
-\---
+---
 
 
-\# Golden Rule
+# Golden Rule
 
 
 APIs must remain simple, predictable, documented, and backward compatible.
 
 
-\---
+---
 
 
-\# End Of Document
+# End Of Document
