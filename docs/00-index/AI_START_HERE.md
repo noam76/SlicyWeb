@@ -123,6 +123,32 @@ Understand module architecture.
 
 ---
 
+# IPC RULE
+
+Before creating any direct communication between modules:
+
+Verify whether an IPC handler already exists.
+
+Preferred Flow:
+
+Renderer
+↓
+IPC Layer
+↓
+Service Layer
+↓
+Repository Layer
+
+Never bypass the IPC architecture without explicit justification.
+
+Reference:
+
+src/electron/ipc/
+ARCHITECTURE.md
+API_SPEC.md
+
+---
+
 # STEP 5
 
 Read:
