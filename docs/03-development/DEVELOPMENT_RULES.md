@@ -1,6 +1,6 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# DEVELOPMENT RULES
+# DEVELOPMENT RULES
 
 Version: 1.0.0
 
@@ -8,11 +8,11 @@ Status: Approved
 
 Priority: Mandatory
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -24,19 +24,19 @@ These rules exist to:
 
 
 
-\- Prevent regressions
+- Prevent regressions
 
-\- Prevent unnecessary rewrites
+- Prevent unnecessary rewrites
 
-\- Reduce bug creation
+- Reduce bug creation
 
-\- Reduce token consumption
+- Reduce token consumption
 
-\- Improve maintainability
+- Improve maintainability
 
-\- Preserve compatibility
+- Preserve compatibility
 
-\- Simplify future development
+- Simplify future development
 
 
 
@@ -44,105 +44,85 @@ All contributors, tools and AI assistants must follow these rules.
 
 
 
-\---
+---
 
 
 
-\# Development Philosophy
-
-
+# Development Philosophy
 
 The project must evolve progressively.
 
-
-
 The project must never be rebuilt from scratch without explicit approval.
-
-
 
 Development should focus on:
 
 
 
-\- Stability
+- Stability
 
-\- Modularity
+- Modularity
 
-\- Predictability
+- Predictability
 
-\- Reusability
-
+- Reusability
 
 
 New functionality must extend the system rather than replace it.
 
 
 
-\---
+---
 
 
 
-\# Fundamental Rules
+# Fundamental Rules
 
-
-
-\## Rule 1
-
+## Rule 1
 
 
 Working code has value.
-
-
 
 Never rewrite stable code simply because a better implementation exists.
 
 
 
-\---
+---
 
 
 
-\## Rule 2
-
+## Rule 2
 
 
 Modify only what is necessary.
-
-
 
 Avoid touching unrelated files.
 
 
 
-\---
+---
 
 
 
-\## Rule 3
-
+## Rule 3
 
 
 Always prefer extension over replacement.
 
 
-
-\---
-
+---
 
 
-\## Rule 4
-
+## Rule 4
 
 
 Every modification must be traceable.
 
 
-
-\---
-
+---
 
 
-\## Rule 5
+
+## Rule 5
 
 
 
@@ -150,11 +130,11 @@ Every modification must have a clear purpose.
 
 
 
-\---
+---
 
 
 
-\# Project Development Strategy
+# Project Development Strategy
 
 
 
@@ -165,98 +145,49 @@ Development follows:
 ```text
 
 Analyze
-
-
-
 ↓
-
-
-
 Understand
-
-
-
 ↓
-
-
-
 Design
-
-
-
 ↓
-
-
-
 Implement
-
-
-
 ↓
-
-
-
 Test
-
-
-
 ↓
-
-
-
 Validate
-
-
-
 ↓
-
-
-
 Document
-
-
-
 ↓
-
-
-
 Merge
 
 ```
 
 
-
 Never skip steps.
 
 
-
-\---
-
+---
 
 
-\# AI Development Rules
 
+# AI Development Rules
 
 
 AI assistants must behave as maintainers.
 
-
-
 Not as generators.
-
 
 
 The AI must:
 
 
+- read existing files
 
-\- read existing files
+- understand project structure
 
-\- understand project structure
+- understand dependencies
 
-\- understand dependencies
-
-\- understand architecture
+- understand architecture
 
 
 
@@ -264,37 +195,35 @@ before making changes.
 
 
 
-\---
+---
 
 
 
-\# AI Forbidden Actions
+# AI Forbidden Actions
 
 
 
 The AI must not:
 
+- regenerate the entire project
 
+- regenerate entire folders
 
-\- regenerate the entire project
+- replace architecture
 
-\- regenerate entire folders
+- rename modules unnecessarily
 
-\- replace architecture
+- duplicate existing functionality
 
-\- rename modules unnecessarily
-
-\- duplicate existing functionality
-
-\- create alternative implementations of existing systems
-
-
-
-\---
+- create alternative implementations of existing systems
 
 
 
-\# Preferred Modification Strategy
+---
+
+
+
+# Preferred Modification Strategy
 
 
 
@@ -305,84 +234,51 @@ Priority order:
 ```text
 
 Configuration Update
-
-
-
 ↓
-
-
-
 Data Update
-
-
-
 ↓
-
-
-
 Function Modification
-
-
-
 ↓
-
-
-
 Class Modification
-
-
-
 ↓
-
-
-
 Module Modification
-
-
-
 ↓
-
-
-
 System Modification
 
 ```
 
 
-
 Always modify the smallest possible scope.
 
 
-
-\---
-
+---
 
 
-\# File Update Policy
 
+# File Update Policy
 
 
 Before modifying a file:
 
 
 
-1\. Read file
+1. Read file
 
-2\. Identify impacted section
+2. Identify impacted section
 
-3\. Update only impacted section
+3. Update only impacted section
 
-4\. Verify compatibility
+4. Verify compatibility
 
-5\. Update documentation if necessary
-
-
-
-\---
+5. Update documentation if necessary
 
 
 
-\# Large File Rules
+---
+
+
+
+# Large File Rules
 
 
 
@@ -401,24 +297,21 @@ For files larger than:
 Never rewrite the entire file.
 
 
-
 Use:
 
+- patches
 
+- isolated modifications
 
-\- patches
-
-\- isolated modifications
-
-\- targeted updates
-
-
-
-\---
+- targeted updates
 
 
 
-\# Patch First Rule
+---
+
+
+
+# Patch First Rule
 
 
 
@@ -430,16 +323,11 @@ Preferred:
 
 Update Section
 
++ Add new method
 
-
-\+ Add new method
-
-
-
-\- Remove obsolete method
+- Remove obsolete method
 
 ```
-
 
 
 Avoid:
@@ -453,16 +341,13 @@ Generate complete file again
 ```
 
 
-
 unless specifically requested.
 
 
-
-\---
-
+---
 
 
-\# Module Creation Rules
+# Module Creation Rules
 
 
 
@@ -470,11 +355,11 @@ Create a new module only if:
 
 
 
-\- responsibility is clearly separate
+- responsibility is clearly separate
 
-\- existing modules become overloaded
+- existing modules become overloaded
 
-\- feature is reusable
+- feature is reusable
 
 
 
@@ -482,11 +367,11 @@ Do not create unnecessary modules.
 
 
 
-\---
+---
 
 
 
-\# Single Responsibility Rule
+# Single Responsibility Rule
 
 
 
@@ -526,11 +411,11 @@ Avoid mixed responsibilities.
 
 
 
-\---
+---
 
 
 
-\# Dependency Rules
+# Dependency Rules
 
 
 
@@ -545,29 +430,11 @@ Allowed:
 ```text
 
 GUI
-
-
-
 ↓
-
-
-
 Application
-
-
-
 ↓
-
-
-
 Services
-
-
-
 ↓
-
-
-
 Storage
 
 ```
@@ -582,11 +449,7 @@ Forbidden:
 
 Storage → GUI
 
-
-
 Database → Renderer
-
-
 
 Renderer → Database
 
@@ -594,29 +457,25 @@ Renderer → Database
 
 
 
-\---
+---
 
 
 
-\# Coupling Rules
-
+# Coupling Rules
 
 
 Minimize coupling.
 
 
-
 Use:
 
+- APIs
 
+- Services
 
-\- APIs
+- Interfaces
 
-\- Services
-
-\- Interfaces
-
-\- Events
+- Events
 
 
 
@@ -624,7 +483,7 @@ Avoid direct module access whenever possible.
 
 
 
-\---
+---
 
 # Repository Rules
 
@@ -656,7 +515,7 @@ Do not access remote repositories directly from:
 
 ---
 
-\# Code Reuse Rules
+# Code Reuse Rules
 
 
 
@@ -668,59 +527,52 @@ Verify:
 
 
 
-1\. Existing implementation?
+1. Existing implementation?
 
-2\. Existing utility?
+2. Existing utility?
 
-3\. Existing service?
+3. Existing service?
 
-4\. Existing module?
+4. Existing module?
 
 
 
 Reuse first.
 
-
-
 Create second.
 
 
 
-\---
+---
 
 
 
-\# Code Duplication Rules
-
+# Code Duplication Rules
 
 
 Duplicate code is prohibited.
 
-
-
 If logic is used multiple times:
-
 
 
 Extract:
 
 
+- helper
 
-\- helper
+- service
 
-\- service
+- utility
 
-\- utility
-
-\- shared component
-
-
-
-\---
+- shared component
 
 
 
-\# Naming Rules
+---
+
+
+
+# Naming Rules
 
 
 
@@ -732,11 +584,11 @@ Avoid abbreviations.
 
 
 
-\---
+---
 
 
 
-\# Classes
+# Classes
 
 
 
@@ -760,11 +612,11 @@ GeometryAnalyzer
 
 
 
-\---
+---
 
 
 
-\# Variables
+# Variables
 
 
 
@@ -788,11 +640,11 @@ analysisResult
 
 
 
-\---
+---
 
 
 
-\# Constants
+# Constants
 
 
 
@@ -814,11 +666,11 @@ DEFAULT\_LAYER\_HEIGHT
 
 
 
-\---
+---
 
 
 
-\# File Naming Rules
+# File Naming Rules
 
 
 
@@ -854,11 +706,11 @@ tempFile.ts
 
 
 
-\---
+---
 
 
 
-\# Folder Organization Rules
+# Folder Organization Rules
 
 
 
@@ -904,29 +756,24 @@ new\_version/
 
 
 
-\---
+---
 
 
 
-\# Documentation Rules
-
-
+# Documentation Rules
 
 Documentation is mandatory.
-
-
 
 Update documentation whenever:
 
 
+- architecture changes
 
-\- architecture changes
+- schema changes
 
-\- schema changes
+- module changes
 
-\- module changes
-
-\- public APIs change
+- public APIs change
 
 Follow:
 
@@ -940,11 +787,11 @@ before modifying project documentation.
 
 
 
-\---
+---
 
 
 
-\# Comment Rules
+# Comment Rules
 
 
 
@@ -992,11 +839,11 @@ x++
 
 
 
-\---
+---
 
 
 
-\# Error Handling Rules
+# Error Handling Rules
 
 
 
@@ -1008,11 +855,11 @@ Never fail silently.
 
 
 
-\---
+---
 
 
 
-\# Required Validation
+# Required Validation
 
 
 
@@ -1020,15 +867,15 @@ Validate:
 
 
 
-\- user input
+- user input
 
-\- imported files
+- imported files
 
-\- printer profiles
+- printer profiles
 
-\- material profiles
+- material profiles
 
-\- repository data
+- repository data
 
 - schema validation
 
@@ -1042,11 +889,11 @@ Never trust external data.
 
 
 
-\---
+---
 
 
 
-\# Logging Rules
+# Logging Rules
 
 
 
@@ -1074,11 +921,11 @@ Critical
 
 
 
-\---
+---
 
 
 
-\# Performance Rules
+# Performance Rules
 
 
 
@@ -1086,11 +933,11 @@ Avoid:
 
 
 
-\- unnecessary recalculations
+- unnecessary recalculations
 
-\- unnecessary rendering
+- unnecessary rendering
 
-\- duplicated analysis
+- duplicated analysis
 
 
 
@@ -1098,7 +945,7 @@ Cache whenever possible.
 
 
 
-\---
+---
 
 
 
@@ -1120,11 +967,11 @@ GUI components must never mutate state directly.
 
 
 
-\---
+---
 
 
 
-\# GUI Rules
+# GUI Rules
 
 
 
@@ -1132,11 +979,11 @@ GUI responsibilities:
 
 
 
-\- display data
+- display data
 
-\- collect user input
+- collect user input
 
-\- show feedback
+- show feedback
 
 
 
@@ -1144,19 +991,19 @@ GUI must not:
 
 
 
-\- analyze models
+- analyze models
 
-\- access databases directly
+- access databases directly
 
-\- generate recommendations
-
-
-
-\---
+- generate recommendations
 
 
 
-\# Analysis Rules
+---
+
+
+
+# Analysis Rules
 
 
 
@@ -1164,11 +1011,11 @@ Analysis modules must:
 
 
 
-\- be deterministic
+- be deterministic
 
-\- be reproducible
+- be reproducible
 
-\- be testable
+- be testable
 
 
 
@@ -1176,11 +1023,11 @@ Same input must generate same output.
 
 
 
-\---
+---
 
 
 
-\# Recommendation Rules
+# Recommendation Rules
 
 
 
@@ -1188,11 +1035,11 @@ Recommendations must always remain within:
 
 
 
-\- printer limits
+- printer limits
 
-\- material limits
+- material limits
 
-\- geometry limits
+- geometry limits
 
 
 
@@ -1200,11 +1047,11 @@ Invalid recommendations are forbidden.
 
 
 
-\---
+---
 
 
 
-\# Testing Rules
+# Testing Rules
 
 
 
@@ -1212,7 +1059,7 @@ Every new feature requires:
 
 
 
-\## Unit Test
+## Unit Test
 
 
 
@@ -1220,11 +1067,11 @@ Tests isolated functionality.
 
 
 
-\---
+---
 
 
 
-\## Integration Test
+## Integration Test
 
 
 
@@ -1232,11 +1079,11 @@ Tests module interaction.
 
 
 
-\---
+---
 
 
 
-\## Regression Test
+## Regression Test
 
 
 
@@ -1244,11 +1091,11 @@ Protects existing functionality.
 
 
 
-\---
+---
 
 
 
-\# Merge Rules
+# Merge Rules
 
 
 
@@ -1256,21 +1103,21 @@ A feature is not complete until:
 
 
 
-\- implemented
+- implemented
 
-\- tested
+- tested
 
-\- documented
+- documented
 
-\- validated
-
-
-
-\---
+- validated
 
 
 
-\# Versioning Rules
+---
+
+
+
+# Versioning Rules
 
 
 
@@ -1302,11 +1149,11 @@ Examples:
 
 
 
-\---
+---
 
 
 
-\# Major Update
+# Major Update
 
 
 
@@ -1318,17 +1165,17 @@ Examples:
 
 
 
-\- Architecture change
+- Architecture change
 
-\- Data schema change
-
-
-
-\---
+- Data schema change
 
 
 
-\# Minor Update
+---
+
+
+
+# Minor Update
 
 
 
@@ -1340,17 +1187,17 @@ Examples:
 
 
 
-\- Printer import
+- Printer import
 
-\- Optimization engine
-
-
-
-\---
+- Optimization engine
 
 
 
-\# Patch Update
+---
+
+
+
+# Patch Update
 
 
 
@@ -1362,17 +1209,17 @@ Examples:
 
 
 
-\- Calculation correction
+- Calculation correction
 
-\- UI correction
-
-
-
-\---
+- UI correction
 
 
 
-\# Release Rules
+---
+
+
+
+# Release Rules
 
 
 
@@ -1380,21 +1227,21 @@ Release only if:
 
 
 
-\- tests pass
+- tests pass
 
-\- documentation updated
+- documentation updated
 
-\- schema validated
+- schema validated
 
-\- compatibility maintained
-
-
-
-\---
+- compatibility maintained
 
 
 
-\# Backward Compatibility Rules
+---
+
+
+
+# Backward Compatibility Rules
 
 
 
@@ -1402,29 +1249,27 @@ Always preserve:
 
 
 
-\- project files
+- project files
 
-\- profiles
+- profiles
 
-\- APIs
+- APIs
 
-\- settings
+- settings
 
 
 
 When impossible:
 
-
-
 Document the breaking change.
 
 
 
-\---
+---
 
 
 
-\# Refactoring Rules
+# Refactoring Rules
 
 
 
@@ -1432,11 +1277,11 @@ Refactor only when:
 
 
 
-\- measurable benefit exists
+- measurable benefit exists
 
-\- risk is low
+- risk is low
 
-\- tests exist
+- tests exist
 
 
 
@@ -1444,57 +1289,46 @@ Refactoring must not change behavior.
 
 
 
-\---
+---
 
 
 
-\# Emergency Rule
+# Emergency Rule
 
 
 
 When multiple solutions exist:
 
-
-
 Choose the solution that:
 
 
+1. Modifies the least code
 
-1\. Modifies the least code
+2. Introduces the fewest risks
 
-2\. Introduces the fewest risks
+3. Requires the fewest dependencies
 
-3\. Requires the fewest dependencies
+4. Preserves compatibility
 
-4\. Preserves compatibility
-
-5\. Consumes the fewest tokens
-
-
-
-\---
+5. Consumes the fewest tokens
 
 
 
-\# Golden Development Rule
+---
 
+
+
+# Golden Development Rule
 
 
 Improve the existing system.
 
-
-
 Do not rebuild the existing system.
-
-
 
 Evolution is preferred over reconstruction.
 
 
 
-\---
+---
 
-
-
-\# End Of Document
-
+# End Of Document
