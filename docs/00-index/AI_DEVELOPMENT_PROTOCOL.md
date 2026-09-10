@@ -67,11 +67,11 @@ Before analyzing code, the AI must read:
 3. PROJECT_SPEC.md
 4. SYSTEM_RULES.md
 5. AI_DEVELOPMENT_PROTOCOL.md
-7. ARCHITECTURE.md
-8. DATA_SCHEMA.md
-9. FILE_STRUCTURE.md
-10. ROADMAP.md
-11. CHANGELOG.md
+6. ARCHITECTURE.md
+7. DATA_SCHEMA.md
+8. FILE_STRUCTURE.md
+9. ROADMAP.md
+10. CHANGELOG.md
 
 Documentation has priority over assumptions.
 
