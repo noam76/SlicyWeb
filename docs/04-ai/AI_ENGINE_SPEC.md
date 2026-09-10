@@ -1,6 +1,6 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# AI ENGINE SPECIFICATION
+# AI ENGINE SPECIFICATION
 
 Version: 1.0.0
 
@@ -10,17 +10,15 @@ Priority: Critical
 
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
 This document defines the complete behavior of the AI Recommendation Engine.
-
-
 
 The engine is responsible for transforming:
 
@@ -48,7 +46,6 @@ Object Classification
 into:
 
 
-
 ```text
 
 Recommended Print Settings
@@ -64,194 +61,133 @@ Confidence Score
 ```
 
 
-
-\---
-
+---
 
 
-\# Primary Objectives
-
-
+# Primary Objectives
 
 The AI engine must:
 
 
 
-\- Increase print success rate
+- Increase print success rate
 
-\- Reduce user configuration effort
+- Reduce user configuration effort
 
-\- Detect potential failures
+- Detect potential failures
 
-\- Recommend optimal settings
+- Recommend optimal settings
 
-\- Respect printer limits
+- Respect printer limits
 
-\- Respect material limits
+- Respect material limits
 
-\- Respect geometry constraints
-
+- Respect geometry constraints
 
 
 The engine does not replace the user.
-
-
 
 The engine assists the user.
 
 
 
-\---
+---
 
 
 
-\# AI System Overview
-
+# AI System Overview
 
 
 ```text
 
 Model Import
 
-
-
 ↓
-
-
 
 Geometry Analysis
 
-
-
 ↓
-
-
 
 Printer Analysis
 
-
-
 ↓
-
-
 
 Material Analysis
 
-
-
 ↓
-
-
 
 Risk Analysis
 
-
-
 ↓
-
-
 
 Recommendation Generation
 
-
-
 ↓
-
-
 
 Validation
 
-
-
 ↓
-
-
 
 Optimization
 
-
-
 ↓
-
-
 
 Final Recommendation
 
 ```
 
 
-
-\---
-
+---
 
 
-\# AI Engine Layers
+# AI Engine Layers
 
 
 
 ```text
 
 Layer 1
-
 Data Collection
 
-
 ↓
-
 
 Layer 2
-
 Model Understanding
 
-
 ↓
-
 
 Layer 3
-
 Risk Detection
 
-
 ↓
-
 
 Layer 4
-
 Decision Engine
 
-
 ↓
-
 
 Layer 5
-
 Validation Engine
 
-
 ↓
-
 
 Layer 6
-
 Optimization Engine
-
 
 ↓
 
-
 Layer 7
-
 Final Output
 
 ```
 
 
-\---
+---
 
 
-\# Layer 1
+# Layer 1
 
-\# Data Collection
+# Data Collection
 
 
 
@@ -377,25 +313,30 @@ Model Analysis
 
 
 
-\---
+---
 
 
 
-\# Layer 2
+# Layer 2
 
-\# Model Understanding
-
+# Model Understanding
 
 
 The AI must classify the imported object.
 
+Classification Engine Components:
+
+- CategoryDetector
+- ConfidenceScorer
+- ClassificationValidator
+
+source: src/classification_engine/
+
+---
 
 
-\---
 
-
-
-\# Supported Categories
+# Supported Categories
 
 
 
@@ -403,55 +344,29 @@ The AI must classify the imported object.
 
 Miniature
 
-
-
 Mechanical Part
-
-
 
 Gear
 
-
-
 Bracket
-
-
 
 Tool
 
-
-
 Prototype
-
-
 
 Decorative Object
 
-
-
 Container
-
-
 
 Vase
 
-
-
 Figurine
-
-
 
 Articulated Model
 
-
-
 Enclosure
 
-
-
 Structural Component
-
-
 
 Unknown
 
@@ -749,17 +664,21 @@ Where:
 
 
 
-\# Layer 4
+# Layer 4
 
-\# Decision Engine
-
+# Decision Engine
 
 
 The Decision Engine creates settings.
 
+Recommendation Engine Components:
 
-
-\---
+- RecommendationEngine
+- DecisionEngine
+- ValidationEngine
+- WarningEngine
+- RecommendationBuilder
+---
 
 
 
@@ -1516,20 +1435,26 @@ Bridge Heavy Models
 
 \# Layer 5
 
-\# Validation Engine
-
+# Validation Engine
 
 
 Validates recommendations.
 
+# Validation Schemas
+
+Used Schemas:
+
+- PrinterSchema
+- MaterialSchema
+- FilamentSchema
+- PrintPresetSchema
+- AnalysisSchema
+- RecommendationSchema
+
+---
 
 
-\---
-
-
-
-\# Validation Categories
-
+# Validation Categories
 
 
 ```text
@@ -1666,98 +1591,90 @@ Rejected
 
 
 
-\# Layer 6
+# Layer 6
 
-\# Optimization Engine
-
-
-
-Improve recommendations.
+# Optimization Engine
 
 
+Improve recommendations:
 
-\---
+Optimization Components
+
+- OptimizationEngine
+- OrientationOptimizer
+- MaterialOptimizer
+- SpeedOptimizer
+- SupportOptimizer
+
+---
 
 
 
-\# Optimization Goals
-
+# Optimization Goals
 
 
 ```text
 
 Reduce Supports
 
-
-
 Reduce Print Time
-
-
 
 Reduce Material
 
-
-
 Increase Reliability
-
-
 
 Increase Quality
 
 ```
 
 
-
-\---
-
+---
 
 
-\# Orientation Optimizer
-
+# Orientation Optimizer
 
 
 Tests multiple orientations.
 
-
-
 Example:
-
-
 
 ```text
 
 0°
 
-
-
 15°
-
-
 
 30°
 
-
-
 45°
 
-
-
 60°
-
-
 
 90°
 
 ```
 
 
+---
 
-\---
+# Support Optimizer
 
+Goals:
 
+- Reduce support volume
+- Improve support accessibility
+- Reduce post-processing effort
 
-\# Orientation Score
+Inputs:
 
+- Overhang Analysis
+- Bridge Analysis
+- Classification
+- Material Capabilities
+
+---
+
+# Orientation Score
 
 
 ```text
@@ -1916,23 +1833,32 @@ Validated Database
 
 
 
-\---
+---
 
+# Notification System
 
+The AI engine may generate:
 
-\# Warning Engine
+- Information notifications
+- Warning notifications
+- Critical notifications
+
+Notification severity follows DATA_SCHEMA.md.
+
+---
+
+# Warning Engine
 
 
 
 Creates warnings automatically.
 
 
-
-\---
-
+---
 
 
-\# Warning Types
+
+# Warning Types
 
 
 
@@ -1940,11 +1866,7 @@ Creates warnings automatically.
 
 Critical
 
-
-
 Warning
-
-
 
 Information
 
@@ -2020,30 +1942,27 @@ Thin Wall Detected
 
 
 
-\# Recommendation Output Structure
-
+# Recommendation Output Structure
 
 
 ```json
 
 {
-  &#x20; "analysis": {},
-  &#x20; "classification": {},
-  &#x20; "scores": {},
-  &#x20; "recommendedProfile": {},
-  &#x20; "printPreset": {},
-  &#x20; "optimization": {},
-  &#x20; "warnings": [],
-  &#x20; "confidenceScore": 95
+  "recommendation": {},
+  "analysis": {},
+  "classification": {},
+  "optimization": {},
+  "warnings": [],
+  "confidenceScore": 95
 }
 
 ```
 
 
-\---
+---
 
 
-\# Future Machine Learning System
+# Future Machine Learning System
 
 Reserved For Future Versions.
 
