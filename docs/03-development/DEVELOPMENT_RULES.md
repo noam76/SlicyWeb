@@ -626,7 +626,23 @@ Avoid direct module access whenever possible.
 
 \---
 
+# Repository Rules
 
+Repository access must be centralized.
+
+Use:
+
+- Repository Services
+- Repository Interfaces
+- RepositorySync Modules
+
+Do not access remote repositories directly from:
+
+- GUI
+- Renderer
+- Analysis Engines
+
+---
 
 \# Code Reuse Rules
 
@@ -900,6 +916,16 @@ Update documentation whenever:
 
 \- public APIs change
 
+Follow:
+
+CHANGE_IMPACT_RULES.md
+
+and
+
+DOCUMENT_UPDATE_RULES.md
+
+before modifying project documentation.
+
 
 
 \---
@@ -992,7 +1018,13 @@ Validate:
 
 \- repository data
 
+- schema validation
 
+All runtime validation must use the schemas defined in:
+docs/02-architecture/DATA_SCHEMA.md
+
+and implemented in:
+src/schemas/
 
 Never trust external data.
 
@@ -1058,19 +1090,21 @@ Cache whenever possible.
 
 
 
-\# State Management Rules
-
-
+# State Management Rules
 
 Single source of truth.
 
-
-
 Data should not exist in multiple places.
 
-
-
 Avoid state duplication.
+
+Application state must be managed through:
+
+src/state/
+
+Only services may modify application state.
+
+GUI components must never mutate state directly.
 
 
 
