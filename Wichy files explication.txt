@@ -177,10 +177,14 @@ Purpose:
 Defines system architecture.
 
 Contains:
+
 - Layers
 - Modules
 - Dependencies
-- Communication flow
+- Communication Flow
+- Schema Layer
+- Repository Layer
+- Notification System
 - Object Classification
 - Recommendation Pipeline
 - Confidence Scoring
@@ -206,6 +210,12 @@ Contains:
 - Object Classification
 - Print Presets
 - Recommendation Models
+- Notifications
+- Warnings
+- Optimization Results
+- Repository Models
+- Cache Models
+
 
 Used For:
 - Data consistency
@@ -421,15 +431,24 @@ Purpose:
 Main AI engine behavior.
 
 Contains:
-- Analysis pipeline
-- Object classification
-- Confidence scoring
-- Recommendation workflow
-- Validation process
-- Optimization process
+
+- Analysis Pipeline
+- Classification Engine
+- Recommendation Engine
+- Validation Engine
+- Optimization Engine
+- Support Optimization
+- Notification Generation
+- Warning Generation
+- Confidence Scoring
+- Recommendation Workflow
 
 Used For:
-- AI system implementation
+
+- AI implementation
+- Recommendation Engine
+- Classification Engine
+- Optimization Engine
 
 --------------------------------------------------------------------------------
 
@@ -731,6 +750,8 @@ Defines the responsibility of every project directory.
 Used For:
 - Project organization
 - File placement
+- Architecture navigation
+- AI file discovery
 
 --------------------------------------------------------------------------------
 
