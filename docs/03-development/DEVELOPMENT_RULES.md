@@ -636,6 +636,18 @@ Use:
 - Repository Interfaces
 - RepositorySync Modules
 
+Preferred Flow:
+
+GUI
+↓
+Service
+↓
+Repository
+↓
+RepositorySync
+↓
+Remote Source
+
 Do not access remote repositories directly from:
 
 - GUI
