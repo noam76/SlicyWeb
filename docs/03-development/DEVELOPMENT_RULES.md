@@ -646,7 +646,7 @@ Repository
 ↓
 RepositorySync
 ↓
-Remote Source
+Remote Source (GitHub, APIs, External Repositories)
 
 Do not access remote repositories directly from:
 
