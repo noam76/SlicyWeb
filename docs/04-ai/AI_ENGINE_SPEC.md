@@ -1667,6 +1667,39 @@ Notification severity follows DATA_SCHEMA.md.
 
 ---
 
+# Notification Rules
+
+Notifications must only be generated when useful to the user.
+
+Avoid notification spam.
+
+Priority Order:
+
+1 Critical
+2 Warning
+3 Information
+
+Rules:
+
+Critical
+- Print impossible
+- Safety issue
+- Hardware limitation
+
+Warning
+- High failure probability
+- Support required
+- Material risk
+
+Information
+- Optimization available
+- Better preset available
+- Optional recommendation
+
+Notification severity must follow DATA_SCHEMA.md.
+
+---
+
 # Warning Engine
 
 
