@@ -1026,10 +1026,7 @@ Represents an entire workspace.
 
 # Recommended Profile Schema
 
-
 ```json
-
-{
 
 {
   "recommendedProfile": {
@@ -1044,6 +1041,9 @@ Represents an entire workspace.
   }
 }
 ```
+---
+
+# Recommendation Schema
 
 ```json
 {
