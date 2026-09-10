@@ -1140,21 +1140,14 @@ POST
 
 
 ```json
-
 {
-
-&#x20; "recommendedProfile": {},
-
-&#x20; "printPreset": {},
-
-&#x20; "supportStrategy": {},
-
-&#x20; "warnings": \[],
-
-&#x20; "confidenceScore": 95
-
+  "recommendation": {
+    "recommendedProfile": {},
+    "printPreset": {},
+    "warnings": [],
+    "confidenceScore": 95
+  }
 }
-
 ```
 
 
