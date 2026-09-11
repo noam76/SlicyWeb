@@ -1,7 +1,7 @@
 # AI SMART SLICER
 # AI START HERE
 
-Version: 1.1.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -10,6 +10,14 @@ Priority: Mandatory
 ---
 
 # Purpose
+
+This document is the high-level onboarding entry point.
+
+Detailed reading order is defined in:
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+Reading priority is defined in:
+docs/00-index/CLAUDE_READING_PRIORITY.md
 
 This is the entry point for any AI system working on the project.
 
@@ -59,9 +67,43 @@ G-Code generation is planned for a future phase.
 
 ---
 
+# GOVERNANCE DOCUMENTS
+
+All AI systems must first read:
+
+CLAUDE.md
+
+CLAUDE_PROJECT_CONTEXT.md
+
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+CLAUDE_CHANGE_IMPACT_RULES.md
+
+CLAUDE_FILE_UPDATE_RULES.md
+
+docs/00-index/CLAUDE_GOVERNANCE_PROTOCOL.md
+
+docs/00-index/CLAUDE_READING_PRIORITY.md
+
+These documents define:
+
+- AI behavior
+- Reading priorities
+- Governance rules
+- Impact analysis requirements
+- File update requirements
+
+---
+
 # REQUIRED READING ORDER
 
-Read documents in the exact order below.
+Follow:
+
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+This document contains the official document reading workflow.
+
+The reading sequence defined there overrides any simplified reading sequence found elsewhere.
 
 ---
 
@@ -209,6 +251,40 @@ and architectural decisions.
 
 ---
 
+# Mandatory Governance Reading
+
+Read:
+
+CLAUDE_CHANGE_IMPACT_RULES.md
+
+CLAUDE_FILE_UPDATE_RULES.md
+
+docs/03-development/DOMAIN_BOUNDARIES.md
+
+docs/03-development/DOMAINS_DEPENDENCY_MATRIX.md
+
+docs/03-development/FILE_OWNERSHIP_MATRIX.md
+
+docs/03-development/CHANGE_CLASSIFICATION_RULES.md
+
+docs/03-development/PROJECT_IMPACT_MATRIX.md
+
+docs/03-development/CROSS_DOCUMENT_DEPENDENCIES.md
+
+docs/03-development/DOCUMENT_UPDATE_MATRIX.md
+
+docs/03-development/CHANGE_VERIFICATION_CHECKLIST.md
+
+docs/03-development/BUG_ANALYSIS_PROTOCOL.md
+
+docs/03-development/UPDATE_GOVERNANCE_PROTOCOL.md
+
+docs/03-development/UPDATE_IMPACT_RULES.md
+
+docs/03-development/UPDATE_REPORT_TEMPLATE.md
+
+---
+
 # AFTER STEP 8
 
 Determine which module is involved.
@@ -260,8 +336,6 @@ Read:
 ```text
 docs/05-profiles/PRINTER_PROFILE_SPEC.md
 ```
-
----
 
 ---
 
@@ -431,6 +505,27 @@ Before modifying a file:
 
 ---
 
+# IMPACT ANALYSIS REQUIREMENT
+
+Before implementing any change:
+
+- Identify ownership
+- Identify dependencies
+- Identify affected domains
+- Identify affected files
+- Identify affected documents
+- Identify testing requirements
+
+Reference:
+
+PROJECT_IMPACT_MATRIX.md
+
+CLAUDE_CHANGE_IMPACT_RULES.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+---
+
 # PROJECT PRIORITIES
 
 Priority Order:
@@ -455,6 +550,8 @@ Before working, determine current phase from:
 
 ```text
 ROADMAP.md
+
+PHASES_IMPLEMENTATION_PLAN.md
 ```
 
 Never implement future phase features unless explicitly requested.
@@ -654,6 +751,14 @@ Update only the impacted section.
 
 Do not regenerate the whole document.
 
+Reference:
+
+DOCUMENT_UPDATE_MATRIX.md
+CROSS_DOCUMENT_DEPENDENCIES.md
+FILE_OWNERSHIP_MATRIX.md
+PROJECT_IMPACT_MATRIX.md
+CLAUDE_FILE_UPDATE_RULES.md
+
 ---
 
 # Code Update Rule
@@ -680,6 +785,9 @@ Module Updates
 
 Never start with file replacement.
 
+Reference:
+CLAUDE_FILE_UPDATE_RULES.md
+
 ---
 
 # Exception
@@ -693,6 +801,22 @@ A complete file rewrite is allowed only if:
 
 ---
 
+# BUG INVESTIGATION RULE
+
+Bug fixes must follow:
+
+BUG_ANALYSIS_PROTOCOL.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+Never implement fixes before:
+
+- Root Cause Analysis
+- Impact Analysis
+- Dependency Review
+
+---
+
 # Golden Modification Rule
 
 Preserve existing work.
@@ -700,6 +824,20 @@ Preserve existing work.
 Modify only what is required.
 
 The smallest safe change is the preferred change.
+
+---
+
+# EXTERNAL UPDATE RULE
+
+External updates must follow:
+
+UPDATE_GOVERNANCE_PROTOCOL.md
+
+UPDATE_IMPACT_RULES.md
+
+UPDATE_REPORT_TEMPLATE.md
+
+Human approval is required before applying external updates.
 
 ---
 
@@ -713,17 +851,21 @@ Never modify a system you have not fully understood.
 
 ---
 
----
-
 # DOCUMENTATION VERSION
 
 Documentation Status:
 
-Version 1.0
+Version 2.0.0
 
 Core Documentation Complete
 
 Architecture Defined
+
+Governance Layer Complete
+
+Impact Analysis Layer Complete
+
+Bug Analysis Layer Complete
 
 Ready For Development Phase
 
