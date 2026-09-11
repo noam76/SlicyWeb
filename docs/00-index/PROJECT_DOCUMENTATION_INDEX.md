@@ -88,6 +88,26 @@ Importance:
 
 ---
 
+## API_START_HERE.md
+
+Purpose:
+
+API and integration onboarding document.
+
+Contains:
+
+- API reading order
+- API architecture overview
+- IPC communication references
+- Repository integration references
+- Service communication flow
+
+Importance:
+
+★★★★☆
+
+---
+
 ## CLAUDE_GOVERNANCE_PROTOCOL.md
 
 Purpose:
