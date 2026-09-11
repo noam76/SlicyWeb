@@ -45,6 +45,12 @@ SlicyWeb/
 ├── releases/
 ├── .github/
 │
+├── CLAUDE.md
+├── CLAUDE_PROJECT_CONTEXT.md
+├── CLAUDE_DOCUMENT_READING_ORDER.md
+├── CLAUDE_CHANGE_IMPACT_RULES.md
+├── CLAUDE_FILE_UPDATE_RULES.md
+│
 ├── README.md
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
@@ -76,6 +82,8 @@ data/
 docs/
 │
 ├── 00-index/
+│	├── CLAUDE_READING_PRIORITY.md       = Priorités de lecture et hiérarchie documentaire
+│   ├── CLAUDE_GOVERNANCE_PROTOCOL.md 	 = Gouvernance officielle des modifications et validations
 │   ├── AI_START_HERE.md                 = Point d'entrée principal pour l'IA et les nouveaux contributeurs
 │   ├── AI_DEVELOPMENT_PROTOCOL.md       = Protocole officiel de développement et de revue pour les IA
 │   ├── API_START_HERE.md                = Guide de démarrage rapide pour l'API et les services
@@ -105,6 +113,18 @@ docs/
 │   ├── DEVELOPMENT_RULES.md             = Règles de codage, refactoring et maintenance
 │   ├── USER_SETTINGS_SPEC.md            = Paramètres utilisateur et préférences
 │   ├── ERROR_CODES_SPEC.md              = Liste normalisée des erreurs et avertissements
+│   ├── DOMAIN_BOUNDARIES.md             = Limites et responsabilités des domaines
+│   ├── DOMAINS_DEPENDENCY_MATRIX.md     = Dépendances autorisées entre domaines
+│   ├── FILE_OWNERSHIP_MATRIX.md         = Ownership et responsabilité officiels des fichiers
+│   ├── PROJECT_IMPACT_MATRIX.md         = Analyse d'impact des changements
+│   ├── CROSS_DOCUMENT_DEPENDENCIES.md   = Dépendances entre documents
+│   ├── DOCUMENT_UPDATE_MATRIX.md        = Règles de mise à jour documentaire
+│   ├── CHANGE_CLASSIFICATION_RULES.md   = Classification officielle des changements
+│   ├── CHANGE_VERIFICATION_CHECKLIST.md = Vérification obligatoire avant changement
+│   ├── BUG_ANALYSIS_PROTOCOL.md         = Analyse et résolution des bugs
+│   ├── UPDATE_IMPACT_RULES.md           = Analyse d'impact des mises à jour
+│   ├── UPDATE_GOVERNANCE_PROTOCOL.md    = Gouvernance des mises à jour externes
+│   ├── UPDATE_REPORT_TEMPLATE.md        = Modèle de rapport de mise à jour
 │   └── UNDO_REDO_SPEC.md                = Fonctionnement du système Undo / Redo
 │
 ├── 04-ai/
@@ -151,25 +171,87 @@ docs/
 
 # Documentation Statistics
 
-Current Documentation:
+Current Documentation Files:
 
 ```text
-45+ Documentation Files
+45+ Project Documentation Files
 ```
 
-GitHub Governance Files:
+Governance & AI Control Files:
+
+```text
+CLAUDE.md
+
+CLAUDE_PROJECT_CONTEXT.md
+
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+CLAUDE_CHANGE_IMPACT_RULES.md
+
+CLAUDE_FILE_UPDATE_RULES.md
+
+CLAUDE_GOVERNANCE_PROTOCOL.md
+
+CLAUDE_READING_PRIORITY.md
+```
+
+---
+
+# Governance Documentation:
+
+```text
+Domain Governance
+
+Impact Analysis
+
+Document Dependency Management
+
+File Ownership Management
+
+Bug Analysis Framework
+
+Update Governance Framework
+
+Change Verification Framework
+```
+
+GitHub Repository Documents:
 
 ```text
 README.md
+
 CONTRIBUTING.md
+
 CODE_OF_CONDUCT.md
+
 LICENSE.md
 ```
 
 Total Documentation Assets:
 
 ```text
-49+
+55+ Documentation Assets
+```
+---
+
+# Documentation Status:
+
+```text
+Core Documentation Complete
+
+Architecture Documentation Complete
+
+AI Governance Layer Complete
+
+Impact Analysis Layer Complete
+
+Update Governance Layer Complete
+
+Bug Analysis Layer Complete
+
+Reference Documentation Complete
+
+Ready For AI Assisted Development
 ```
 
 ---
@@ -733,6 +815,18 @@ releases/
 
 6. Documentation structure must remain synchronized with implementation structure.
 
+7. File ownership must follow FILE_OWNERSHIP_MATRIX.md
+
+8. Domain boundaries must follow DOMAIN_BOUNDARIES.md
+
+9. Domain dependencies must follow DOMAINS_DEPENDENCY_MATRIX.md
+
+10. Impact analysis is mandatory before modifications
+
+11. Documentation updates must follow DOCUMENT_UPDATE_MATRIX.md
+
+12. Bug fixes must follow BUG_ANALYSIS_PROTOCOL.md
+
 ---
 
 # Future Reserved Modules
@@ -757,7 +851,33 @@ project_persistence/
 
 ---
 
+# Governance Rules
+
+All modifications must follow:
+
+CLAUDE_GOVERNANCE_PROTOCOL.md
+
+CLAUDE_CHANGE_IMPACT_RULES.md
+
+CLAUDE_FILE_UPDATE_RULES.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+BUG_ANALYSIS_PROTOCOL.md
+
+UPDATE_GOVERNANCE_PROTOCOL.md
+
+---
+
 # Golden Rule
+
+---
 
 A new contributor should be able to understand where a file belongs in less than 60 seconds.
 
