@@ -12,127 +12,127 @@ Priority: Critical
 
 # Purpose
 
-This document defines when project documentation must be reviewed and when documentation updates are required.
+This document defines when documentation must be:
+
+- Reviewed
+- Updated
+- Verified
+- Left Unchanged
 
 The objective is to:
 
 - Prevent documentation drift
 - Prevent incomplete updates
-- Improve consistency
-- Reduce regression risks
+- Prevent unnecessary updates
+- Ensure consistency
 - Improve traceability
-- Maintain documentation reliability
+- Reduce regressions
+- Maintain project integrity
 
 This document must be consulted before modifying:
 
-- Architecture
+- Documentation
 - Schemas
 - APIs
-- Project Structure
+- Architecture
 - Features
 - Domains
-- Repositories
-- External Update Systems
+- Project Structure
+- Governance Rules
 
 ---
 
-# Documentation Update Philosophy
+# Update Philosophy
 
-Documentation must remain synchronized with the project.
+Every change requires documentation review.
 
-Not every modification requires documentation updates.
+Not every change requires documentation updates.
 
-However:
-
-Every modification requires documentation review.
-
-The workflow is:
+Required workflow:
 
 ```text
-Change
-↓
-Dependency Analysis
+Modification
 ↓
 Impact Analysis
+↓
+Dependency Review
 ↓
 Documentation Review
 ↓
 Determine Required Updates
 ↓
-Apply Only Necessary Updates
+Update Only What Is Necessary
 ```
 
-Never update documentation automatically.
+Documentation must remain synchronized with the project.
 
-Always verify necessity first.
+Documentation must not be updated without a valid reason.
 
 ---
 
-# Update Categories
+# Update Classification
 
-Documentation actions are classified as:
+Documentation actions belong to one of four categories:
 
 ```text
 Mandatory Update
 
-Mandatory Review
-
 Conditional Update
 
-Optional Update
+Review Only
 
 No Action Required
 ```
 
 ---
 
-# Documentation Text Correction
+# Mandatory Update
 
-Examples:
+A document must be updated.
 
-```text
-Grammar Fix
+The update is required.
 
-Typo Fix
-
-Formatting Fix
-
-Clarification
-```
-
-Mandatory Review:
-
-```text
-Target Document
-```
-
-Documentation Updates:
-
-```text
-Target Document Only
-```
-
-Changelog:
-
-```text
-Not Required
-```
+Failure to update creates inconsistency.
 
 ---
 
-# New Document Added
+# Conditional Update
+
+The document must be reviewed.
+
+Update only if the affected content changed.
+
+---
+
+# Review Only
+
+Review required.
+
+No update unless inconsistency is detected.
+
+---
+
+# No Action Required
+
+No documentation action needed.
+
+---
+
+# New Documentation File
 
 Examples:
 
 ```text
-New Specification
-
 New Protocol
 
+New Specification
+
 New Reference Document
+
+New Governance Document
 ```
 
-Mandatory Review:
+Mandatory Updates:
 
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
@@ -140,23 +140,17 @@ PROJECT_DOCUMENTATION_INDEX.md
 Wichy files explication.txt
 ```
 
-Conditional Review:
+Conditional Updates:
 
 ```text
 AI_START_HERE.md
 
 CLAUDE_DOCUMENT_READING_ORDER.md
+
+CLAUDE_READING_PRIORITY.md
 ```
 
-Mandatory Update:
-
-```text
-PROJECT_DOCUMENTATION_INDEX.md
-
-Wichy files explication.txt
-```
-
-Changelog:
+Changelog Evaluation:
 
 ```text
 Required
@@ -164,29 +158,27 @@ Required
 
 ---
 
-# Document Removed
+# Documentation File Removed
 
-Mandatory Review:
+Mandatory Updates:
 
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
 Wichy files explication.txt
+```
 
+Conditional Updates:
+
+```text
 AI_START_HERE.md
 
 CLAUDE_DOCUMENT_READING_ORDER.md
+
+CLAUDE_READING_PRIORITY.md
 ```
 
-Mandatory Update:
-
-```text
-PROJECT_DOCUMENTATION_INDEX.md
-
-Wichy files explication.txt
-```
-
-Changelog:
+Changelog Evaluation:
 
 ```text
 Required
@@ -194,29 +186,29 @@ Required
 
 ---
 
-# Document Renamed
+# Documentation File Renamed
 
-Mandatory Review:
+Mandatory Updates:
 
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
 Wichy files explication.txt
 
-AI_START_HERE.md
-
-CLAUDE_DOCUMENT_READING_ORDER.md
-
-Referenced Documents
-```
-
-Mandatory Update:
-
-```text
 All References
 ```
 
-Changelog:
+Conditional Updates:
+
+```text
+AI_START_HERE.md
+
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+CLAUDE_READING_PRIORITY.md
+```
+
+Changelog Evaluation:
 
 ```text
 Required
@@ -224,25 +216,27 @@ Required
 
 ---
 
-# Document Moved
+# Documentation File Moved
 
-Mandatory Review:
+Mandatory Updates:
 
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
 Wichy files explication.txt
 
-FILE_STRUCTURE.md
-```
-
-Mandatory Update:
-
-```text
 All Path References
 ```
 
-Changelog:
+Conditional Updates:
+
+```text
+AI_START_HERE.md
+
+CLAUDE_DOCUMENT_READING_ORDER.md
+```
+
+Changelog Evaluation:
 
 ```text
 Required
@@ -257,45 +251,123 @@ Examples:
 ```text
 New Layer
 
-New Domain
+Removed Layer
+
+Communication Changes
+
+Domain Changes
 
 Dependency Changes
-
-Communication Flow Changes
 ```
 
-Mandatory Review:
+Mandatory Reviews:
 
 ```text
 ARCHITECTURE.md
 
+DOMAINS_DEPENDENCY_MATRIX.md
+
+DOMAIN_BOUNDARIES.md
+```
+
+Mandatory Update Evaluation:
+
+```text
 DATA_SCHEMA.md
 
 API_SPEC.md
 
 FILE_STRUCTURE.md
 
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGELOG.md
+```
+
+Conditional Updates:
+
+```text
+AI_START_HERE.md
+
+README.md
+
+DIRECTORY_PURPOSES.md
+```
+
+---
+
+# Domain Creation
+
+Examples:
+
+```text
+New Architectural Domain
+
+New Business Domain
+```
+
+Mandatory Updates:
+
+```text
+ARCHITECTURE.md
+
 DOMAIN_BOUNDARIES.md
 
 DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+```
+
+Mandatory Update Evaluation:
+
+```text
+FILE_STRUCTURE.md
+
+DIRECTORY_PURPOSES.md
+
+PROJECT_DOCUMENTATION_INDEX.md
+
+Wichy files explication.txt
+
+CHANGELOG.md
+```
+
+---
+
+# Domain Responsibility Change
+
+Examples:
+
+```text
+Ownership Change
+
+Responsibility Change
+
+Boundary Change
+```
+
+Mandatory Updates:
+
+```text
+DOMAIN_BOUNDARIES.md
+
+FILE_OWNERSHIP_MATRIX.md
+```
+
+Mandatory Review:
+
+```text
+DOMAINS_DEPENDENCY_MATRIX.md
+
+ARCHITECTURE.md
 ```
 
 Mandatory Update Evaluation:
 
 ```text
 CHANGELOG.md
-
-TECHNICAL_OVERVIEW.md
-
-PROJECT_DOCUMENTATION_INDEX.md
-```
-
-Conditional Update:
-
-```text
-README.md
-
-AI_START_HERE.md
 ```
 
 ---
@@ -309,30 +381,30 @@ New Field
 
 Removed Field
 
-Schema Changes
+Contract Change
 
-Data Contract Changes
+Validation Change
+
+New Schema
+```
+
+Mandatory Updates:
+
+```text
+DATA_SCHEMA.md
 ```
 
 Mandatory Review:
 
 ```text
-DATA_SCHEMA.md
-
-ARCHITECTURE.md
-
 API_SPEC.md
 
 AI_ENGINE_SPEC.md
+
+ARCHITECTURE.md
 ```
 
-Mandatory Update Evaluation:
-
-```text
-CHANGELOG.md
-```
-
-Conditional Update:
+Conditional Updates:
 
 ```text
 PRINTER_PROFILE_SPEC.md
@@ -346,6 +418,12 @@ PRINT_SETTINGS_SPEC.md
 PRINT_PRESETS_SPEC.md
 ```
 
+Mandatory Update Evaluation:
+
+```text
+CHANGELOG.md
+```
+
 ---
 
 # API Change
@@ -353,32 +431,32 @@ PRINT_PRESETS_SPEC.md
 Examples:
 
 ```text
-Endpoint Changes
+New Endpoint
 
-Payload Changes
+Modified Endpoint
 
-IPC Contract Changes
+Payload Change
 
-Response Changes
+Response Change
+
+IPC Change
+```
+
+Mandatory Updates:
+
+```text
+API_SPEC.md
 ```
 
 Mandatory Review:
 
 ```text
-API_SPEC.md
+ARCHITECTURE.md
 
 DATA_SCHEMA.md
-
-ARCHITECTURE.md
 ```
 
-Mandatory Update Evaluation:
-
-```text
-CHANGELOG.md
-```
-
-Conditional Update:
+Conditional Updates:
 
 ```text
 AI_ENGINE_SPEC.md
@@ -388,9 +466,25 @@ SECURITY_SPEC.md
 IMPORT_EXPORT_SPEC.md
 ```
 
+Mandatory Update Evaluation:
+
+```text
+CHANGELOG.md
+```
+
 ---
 
 # IPC Change
+
+Examples:
+
+```text
+New IPC Channel
+
+Modified IPC Payload
+
+IPC Flow Changes
+```
 
 Mandatory Review:
 
@@ -398,20 +492,20 @@ Mandatory Review:
 API_SPEC.md
 
 ARCHITECTURE.md
+```
 
+Conditional Updates:
+
+```text
 AI_START_HERE.md
+
+CLAUDE_DOCUMENT_READING_ORDER.md
 ```
 
 Mandatory Update Evaluation:
 
 ```text
 CHANGELOG.md
-```
-
-Conditional Update:
-
-```text
-CLAUDE_DOCUMENT_READING_ORDER.md
 ```
 
 ---
@@ -423,28 +517,24 @@ Examples:
 ```text
 New Directory
 
-Directory Removed
+Directory Removal
 
-Directory Renamed
+File Relocation
 
-Module Relocation
+Project Reorganization
+```
+
+Mandatory Updates:
+
+```text
+FILE_STRUCTURE.md
+
+DIRECTORY_PURPOSES.md
 ```
 
 Mandatory Review:
 
 ```text
-FILE_STRUCTURE.md
-
-DIRECTORY_PURPOSES.md
-```
-
-Mandatory Update:
-
-```text
-FILE_STRUCTURE.md
-
-DIRECTORY_PURPOSES.md
-
 PROJECT_DOCUMENTATION_INDEX.md
 
 Wichy files explication.txt
@@ -456,7 +546,7 @@ Mandatory Update Evaluation:
 CHANGELOG.md
 ```
 
-Conditional Update:
+Conditional Updates:
 
 ```text
 README.md
@@ -464,66 +554,44 @@ README.md
 
 ---
 
-# New Domain
+# AI Engine Change
 
 Examples:
 
 ```text
-New Architectural Domain
+Decision Logic
+
+Validation Logic
+
+Recommendation Logic
+
+Notification Logic
+
+Optimization Logic
 ```
 
 Mandatory Review:
 
 ```text
-ARCHITECTURE.md
+AI_ENGINE_SPEC.md
 
-DOMAIN_BOUNDARIES.md
+DATA_SCHEMA.md
 
-DOMAINS_DEPENDENCY_MATRIX.md
-
-FILE_OWNERSHIP_MATRIX.md
+API_SPEC.md
 ```
 
-Mandatory Update:
+Conditional Updates:
 
 ```text
-ARCHITECTURE.md
+RECOMMENDATION_RULES.md
 
-DOMAIN_BOUNDARIES.md
+OBJECT_CLASSIFICATION_SPEC.md
 
-DOMAINS_DEPENDENCY_MATRIX.md
+PRINT_SETTINGS_SPEC.md
 
-FILE_OWNERSHIP_MATRIX.md
-```
+PRINT_PRESETS_SPEC.md
 
-Mandatory Update Evaluation:
-
-```text
-CHANGELOG.md
-
-FILE_STRUCTURE.md
-
-DIRECTORY_PURPOSES.md
-
-PROJECT_DOCUMENTATION_INDEX.md
-
-Wichy files explication.txt
-```
-
----
-
-# Domain Boundary Change
-
-Mandatory Review:
-
-```text
-DOMAIN_BOUNDARIES.md
-
-DOMAINS_DEPENDENCY_MATRIX.md
-
-ARCHITECTURE.md
-
-FILE_OWNERSHIP_MATRIX.md
+SUPPORT_GENERATION_SPEC.md
 ```
 
 Mandatory Update Evaluation:
@@ -534,7 +602,7 @@ CHANGELOG.md
 
 ---
 
-# Recommendation Engine Change
+# Recommendation Logic Change
 
 Mandatory Review:
 
@@ -542,19 +610,9 @@ Mandatory Review:
 AI_ENGINE_SPEC.md
 
 RECOMMENDATION_RULES.md
-
-DATA_SCHEMA.md
-
-API_SPEC.md
 ```
 
-Mandatory Update Evaluation:
-
-```text
-CHANGELOG.md
-```
-
-Conditional Update:
+Conditional Updates:
 
 ```text
 PRINT_SETTINGS_SPEC.md
@@ -562,17 +620,27 @@ PRINT_SETTINGS_SPEC.md
 PRINT_PRESETS_SPEC.md
 ```
 
+Mandatory Update Evaluation:
+
+```text
+CHANGELOG.md
+```
+
 ---
 
-# Classification Change
+# Classification Logic Change
 
 Mandatory Review:
 
 ```text
-AI_ENGINE_SPEC.md
-
 OBJECT_CLASSIFICATION_SPEC.md
 
+AI_ENGINE_SPEC.md
+```
+
+Conditional Updates:
+
+```text
 DATA_SCHEMA.md
 ```
 
@@ -584,14 +652,12 @@ CHANGELOG.md
 
 ---
 
-# Optimization Change
+# Optimization Logic Change
 
 Mandatory Review:
 
 ```text
 AI_ENGINE_SPEC.md
-
-ARCHITECTURE.md
 ```
 
 Mandatory Update Evaluation:
@@ -604,16 +670,6 @@ CHANGELOG.md
 
 # Printer Profile Change
 
-Examples:
-
-```text
-Printer Contract Change
-
-Profile Structure Change
-
-Validation Rule Change
-```
-
 Mandatory Review:
 
 ```text
@@ -624,16 +680,16 @@ DATA_SCHEMA.md
 API_SPEC.md
 ```
 
+Conditional Updates:
+
+```text
+AI_ENGINE_SPEC.md
+```
+
 Mandatory Update Evaluation:
 
 ```text
 CHANGELOG.md
-```
-
-Conditional Update:
-
-```text
-AI_ENGINE_SPEC.md
 ```
 
 ---
@@ -650,16 +706,16 @@ DATA_SCHEMA.md
 API_SPEC.md
 ```
 
+Conditional Updates:
+
+```text
+AI_ENGINE_SPEC.md
+```
+
 Mandatory Update Evaluation:
 
 ```text
 CHANGELOG.md
-```
-
-Conditional Update:
-
-```text
-AI_ENGINE_SPEC.md
 ```
 
 ---
@@ -706,12 +762,34 @@ CHANGELOG.md
 
 ---
 
-# GUI Specification Change
+# GUI Change
+
+Examples:
+
+```text
+Layout
+
+Menu
+
+Toolbar
+
+Dialog
+
+Navigation
+
+Panels
+```
 
 Mandatory Review:
 
 ```text
 GUI_SPEC.md
+```
+
+Conditional Updates:
+
+```text
+README.md
 
 ARCHITECTURE.md
 ```
@@ -722,24 +800,18 @@ Mandatory Update Evaluation:
 CHANGELOG.md
 ```
 
-Conditional Update:
-
-```text
-README.md
-```
-
 ---
 
-# Repository System Change
+# Repository Change
 
 Examples:
 
 ```text
-Repository Logic
+Repository Workflow
 
 Synchronization Logic
 
-Repository Sources
+External Sources
 ```
 
 Mandatory Review:
@@ -752,16 +824,16 @@ ARCHITECTURE.md
 UPDATE_GOVERNANCE_PROTOCOL.md
 ```
 
+Conditional Updates:
+
+```text
+SECURITY_SPEC.md
+```
+
 Mandatory Update Evaluation:
 
 ```text
 CHANGELOG.md
-```
-
-Conditional Update:
-
-```text
-SECURITY_SPEC.md
 ```
 
 ---
@@ -773,9 +845,9 @@ Mandatory Review:
 ```text
 SECURITY_SPEC.md
 
-API_SPEC.md
-
 ARCHITECTURE.md
+
+API_SPEC.md
 ```
 
 Mandatory Update Evaluation:
@@ -784,7 +856,7 @@ Mandatory Update Evaluation:
 CHANGELOG.md
 ```
 
-Conditional Update:
+Conditional Updates:
 
 ```text
 README.md
@@ -810,28 +882,6 @@ CHANGELOG.md
 
 ---
 
-# Versioning Policy Change
-
-Mandatory Review:
-
-```text
-VERSIONING_POLICY.md
-
-CHANGELOG.md
-
-CONTRIBUTING.md
-```
-
-Mandatory Update:
-
-```text
-VERSIONING_POLICY.md
-
-CONTRIBUTING.md
-```
-
----
-
 # Governance Change
 
 Examples:
@@ -839,9 +889,11 @@ Examples:
 ```text
 New Rule
 
-Rule Removal
+Removed Rule
 
-Workflow Changes
+Workflow Change
+
+Validation Change
 ```
 
 Mandatory Review:
@@ -856,12 +908,64 @@ AI_DEVELOPMENT_PROTOCOL.md
 CLAUDE_GOVERNANCE_PROTOCOL.md
 ```
 
-Mandatory Update Evaluation:
+Conditional Updates:
 
 ```text
 CONTRIBUTING.md
 
+CLAUDE.md
+```
+
+Mandatory Update Evaluation:
+
+```text
 CHANGELOG.md
+```
+
+---
+
+# Versioning Policy Change
+
+Mandatory Updates:
+
+```text
+VERSIONING_POLICY.md
+```
+
+Mandatory Review:
+
+```text
+CHANGELOG.md
+
+CONTRIBUTING.md
+```
+
+---
+
+# User Visible Feature Change
+
+Examples:
+
+```text
+New Functionality
+
+Feature Removal
+
+User Workflow Changes
+```
+
+Mandatory Review:
+
+```text
+CHANGELOG.md
+```
+
+Conditional Updates:
+
+```text
+README.md
+
+PROJECT_DESCRIPTION.md
 ```
 
 ---
@@ -888,21 +992,17 @@ Mandatory Review:
 UPDATE_GOVERNANCE_PROTOCOL.md
 
 UPDATE_IMPACT_RULES.md
+
+UPDATE_REPORT_TEMPLATE.md
 ```
 
-Mandatory Output:
+Documentation Updates:
 
 ```text
-Update Report
+Only If Impact Analysis Requires It
 ```
 
-Documentation Update:
-
-```text
-Only If Required
-```
-
-Automatic Documentation Updates:
+Automatic Updates:
 
 ```text
 Forbidden
@@ -916,55 +1016,55 @@ Required
 
 ---
 
-# README Update Rules
+# README.md Rules
 
-README.md should be updated when:
+Update When:
 
 ```text
-User Visible Features Change
+Major Feature Added
 
-Installation Changes
+User Workflow Changed
 
-Major Capabilities Change
+Installation Changed
 
-Project Scope Changes
-
-Major Architectural Milestones
+Important Capability Added
 ```
 
-README.md should not be updated for:
+Do Not Update For:
 
 ```text
 Internal Refactoring
 
-Schema Changes
+Minor Fixes
 
-Small Fixes
+Schema Updates
+
+Implementation Details
 ```
 
-unless user impact exists.
+unless user-visible impact exists.
 
 ---
 
-# CONTRIBUTING Update Rules
+# CONTRIBUTING.md Rules
 
-CONTRIBUTING.md should be updated when:
+Update When:
 
 ```text
 Contribution Workflow Changes
 
 Governance Changes
 
-Versioning Changes
-
 Review Process Changes
+
+Versioning Changes
 ```
 
 ---
 
-# PROJECT_DOCUMENTATION_INDEX Rules
+# PROJECT_DOCUMENTATION_INDEX.md Rules
 
-Must be updated when:
+Update When:
 
 ```text
 Document Added
@@ -976,13 +1076,17 @@ Document Renamed
 Document Moved
 ```
 
+Always review during documentation structure changes.
+
 ---
 
 # Wichy files explication.txt Rules
 
-Must be updated when:
+Update When:
 
 ```text
+Documentation Structure Changes
+
 Document Added
 
 Document Removed
@@ -992,15 +1096,15 @@ Document Renamed
 Document Moved
 
 Documentation Category Added
-
-Documentation Structure Changes
 ```
 
 ---
 
-# CHANGELOG Evaluation Rules
+# CHANGELOG.md Rules
 
-Always evaluate CHANGELOG.md when:
+Always evaluate.
+
+Mandatory evaluation when:
 
 ```text
 Architecture Changes
@@ -1014,50 +1118,44 @@ Feature Changes
 Project Structure Changes
 
 User Visible Changes
+
+Domain Changes
 ```
 
 Never ignore changelog impact.
 
 ---
 
-# Documentation Verification Checklist
+# Final Verification Checklist
 
-Before finishing any change verify:
+Before closing a task verify:
 
 ```text
-Documentation Reviewed
-
 Dependencies Reviewed
 
-Update Requirements Reviewed
+Impacts Reviewed
+
+Required Documents Updated
+
+Unnecessary Updates Avoided
 
 Changelog Evaluated
 
 Ownership Verified
 
-Impact Verified
+Architecture Preserved
 ```
-
-All items must be completed.
 
 ---
 
 # Golden Rule
 
-Review first.
+Review every related document.
 
-Update second.
+Update only documents that truly require updating.
 
-Only update documents that truly require updating.
+Missing updates create inconsistency.
 
-Avoid both:
+Unnecessary updates create noise.
 
-```text
-Missing Updates
-```
-
-and
-
-```text
-Unnecessary Updates
-```
+Avoid both.
