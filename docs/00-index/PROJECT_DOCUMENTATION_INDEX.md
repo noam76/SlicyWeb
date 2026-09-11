@@ -88,23 +88,41 @@ Importance:
 
 ---
 
-## API_START_HERE.md
+## CLAUDE_GOVERNANCE_PROTOCOL.md
 
 Purpose:
 
-API and integration onboarding document.
+Global governance framework for AI systems.
 
 Contains:
 
-- API reading order
-- API architecture overview
-- IPC communication references
-- Repository integration references
-- Service communication flow
+- Governance rules
+- Dependency controls
+- Documentation controls
+- Update controls
+- Architecture protection rules
 
 Importance:
 
-★★★★☆
+★★★★★
+
+---
+
+## CLAUDE_READING_PRIORITY.md
+
+Purpose:
+
+Reading priority matrix for AI systems.
+
+Contains:
+
+- Critical documents
+- High priority documents
+- Conditional reading requirements
+
+Importance:
+
+★★★★★
 
 ---
 
@@ -119,6 +137,103 @@ Contains:
 - Documentation map
 - File responsibilities
 - Reading guidance
+
+Importance:
+
+★★★★★
+
+---
+
+# ROOT DOCUMENTS
+
+---
+
+## CLAUDE.md
+
+Purpose:
+
+Primary AI governance file.
+
+Contains:
+
+- AI responsibilities
+- Modification rules
+- Documentation rules
+- Architecture protections
+
+Importance:
+
+★★★★★
+
+---
+
+## CLAUDE_PROJECT_CONTEXT.md
+
+Purpose:
+
+Complete AI project context.
+
+Contains:
+
+- Project mission
+- Architecture overview
+- Domain overview
+- AI responsibilities
+
+Importance:
+
+★★★★★
+
+---
+
+## CLAUDE_DOCUMENT_READING_ORDER.md
+
+Purpose:
+
+Official document reading sequence.
+
+Contains:
+
+- Reading workflow
+- Reading priorities
+- Mandatory reading paths
+
+Importance:
+
+★★★★★
+
+---
+
+## CLAUDE_CHANGE_IMPACT_RULES.md
+
+Purpose:
+
+AI-specific impact analysis rules.
+
+Contains:
+
+- Dependency analysis
+- Compatibility evaluation
+- Risk assessment
+- Impact management
+
+Importance:
+
+★★★★★
+
+---
+
+## CLAUDE_FILE_UPDATE_RULES.md
+
+Purpose:
+
+AI-specific file update rules.
+
+Contains:
+
+- File modification workflow
+- Update validation
+- Ownership verification
 
 Importance:
 
@@ -412,6 +527,225 @@ Contains:
 - Compatibility evaluation
 - Risk assessment
 - Impact management
+
+Importance:
+
+★★★★★
+
+---
+
+## DOMAINS_DEPENDENCY_MATRIX.md
+
+Purpose:
+
+Official domain dependency matrix.
+
+Contains:
+
+- Allowed dependencies
+- Forbidden dependencies
+- Layer interaction rules
+
+Importance:
+
+★★★★★
+
+---
+
+## DOMAIN_BOUNDARIES.md
+
+Purpose:
+
+Domain ownership and responsibility definition.
+
+Contains:
+
+- Domain responsibilities
+- Ownership rules
+- Boundary protections
+
+Importance:
+
+★★★★★
+
+---
+
+## CROSS_DOCUMENT_DEPENDENCIES.md
+
+Purpose:
+
+Documentation dependency mapping.
+
+Contains:
+
+- Document relationships
+- Update requirements
+- Dependency references
+
+Importance:
+
+★★★★★
+
+---
+
+## FILE_OWNERSHIP_MATRIX.md
+
+Purpose:
+
+Ownership reference for every important file.
+
+Contains:
+
+- Owners
+- Domains
+- Responsibilities
+- Review requirements
+
+Importance:
+
+★★★★★
+
+---
+
+## PROJECT_IMPACT_MATRIX.md
+
+Purpose:
+
+Project-wide impact analysis matrix.
+
+Contains:
+
+- Impact categories
+- Review requirements
+- Validation requirements
+
+Importance:
+
+★★★★★
+
+---
+
+## DOCUMENT_UPDATE_MATRIX.md
+
+Purpose:
+
+Documentation update requirements.
+
+Contains:
+
+- Update rules
+- Review rules
+- Changelog evaluation requirements
+
+Importance:
+
+★★★★★
+
+---
+
+## CHANGE_CLASSIFICATION_RULES.md
+
+Purpose:
+
+Official change classification framework.
+
+Contains:
+
+- Change categories
+- Risk categories
+- Validation requirements
+
+Importance:
+
+★★★★★
+
+---
+
+## CHANGE_VERIFICATION_CHECKLIST.md
+
+Purpose:
+
+Mandatory verification checklist before changes.
+
+Contains:
+
+- Review checks
+- Dependency checks
+- Documentation checks
+- Compatibility checks
+
+Importance:
+
+★★★★★
+
+---
+
+## BUG_ANALYSIS_PROTOCOL.md
+
+Purpose:
+
+Official bug investigation protocol.
+
+Contains:
+
+- Root cause analysis
+- Risk analysis
+- Regression analysis
+- Validation workflow
+
+Importance:
+
+★★★★★
+
+---
+
+## UPDATE_GOVERNANCE_PROTOCOL.md
+
+Purpose:
+
+External update governance workflow.
+
+Contains:
+
+- Approval workflow
+- Risk management
+- Update validation
+
+Importance:
+
+★★★★★
+
+---
+
+## UPDATE_IMPACT_RULES.md
+
+Purpose:
+
+Update impact analysis framework.
+
+Contains:
+
+- Dependency analysis
+- Impact analysis
+- Compatibility analysis
+
+Importance:
+
+★★★★★
+
+---
+
+## UPDATE_REPORT_TEMPLATE.md
+
+Purpose:
+
+Standard update analysis report.
+
+Contains:
+
+- Risk reporting
+- Impact reporting
+- Approval reporting
 
 Importance:
 
@@ -929,27 +1263,41 @@ Importance:
 # Recommended Reading Order For AI
 
 ```text
-1. PROJECT_DOCUMENTATION_INDEX.md
+1. CLAUDE.md
+2. CLAUDE_PROJECT_CONTEXT.md
+3. CLAUDE_DOCUMENT_READING_ORDER.md
+4. CLAUDE_GOVERNANCE_PROTOCOL.md
+5. CLAUDE_CHANGE_IMPACT_RULES.md
+6. CLAUDE_FILE_UPDATE_RULES.md
+7. CLAUDE_READING_PRIORITY.md
 
-2. AI_START_HERE.md
+8. PROJECT_DOCUMENTATION_INDEX.md
 
-3. AI_DEVELOPMENT_PROTOCOL.md
+9. AI_START_HERE.md
 
-4. PROJECT_SPEC.md
+10. PROJECT_SPEC.md
 
-5. SYSTEM_RULES.md
+11. SYSTEM_RULES.md
 
-6. ARCHITECTURE.md
+12. DEVELOPMENT_RULES.md
 
-7. FILE_STRUCTURE.md
+13. ARCHITECTURE.md
 
-8. DATA_SCHEMA.md
+14. DATA_SCHEMA.md
 
-9. DEVELOPMENT_RULES.md
+15. FILE_STRUCTURE.md
 
-10. CHANGELOG.md
+16. DOMAIN_BOUNDARIES.md
 
-11. DECISIONS.md
+17. DOMAINS_DEPENDENCY_MATRIX.md
+
+18. PROJECT_IMPACT_MATRIX.md
+
+19. CHANGE_VERIFICATION_CHECKLIST.md
+
+20. CHANGELOG.md
+
+21. DECISIONS.md
 ```
 
 ---
@@ -970,6 +1318,8 @@ SYSTEM_RULES.md
 DEVELOPMENT_RULES.md
 
 DECISIONS.md
+
+DOMAIN_BOUNDARIES.md
 ```
 
 These files define the foundation of the project.
@@ -983,7 +1333,13 @@ Documentation Complete
 
 Architecture Defined
 
-Reference Documents Complete
+Governance Layer Complete
+
+Impact Analysis Layer Complete
+
+Update Governance Layer Complete
+
+Bug Analysis Layer Complete
 
 Ready For Development
 
