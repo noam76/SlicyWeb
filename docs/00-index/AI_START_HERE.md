@@ -299,6 +299,28 @@ to ensure the requested feature belongs to the current development phase.
 
 ---
 
+# API TASKS
+
+Read:
+
+docs/00-index/API_START_HERE.md
+
+Purpose:
+
+Understand:
+
+- API architecture
+- IPC communication
+- Service layer interactions
+- Repository interactions
+- Communication contracts
+
+Read additionally:
+
+docs/02-architecture/API_SPEC.md
+
+---
+                           
 # GUI TASKS
 
 Read:
