@@ -1,4 +1,4 @@
-WICHY DOCUMENT ORGANIZATION
+SLICYWEB DOCUMENTATION ORGANIZATION
 
 --------------------------------------------------------------------------------
 00-INDEX
@@ -75,6 +75,39 @@ Used For:
 - Service integration
 - IPC development
 - External integrations
+
+--------------------------------------------------------------------------------
+
+CLAUDE_GOVERNANCE_PROTOCOL.md
+
+Purpose:
+Global AI governance framework.
+
+Contains:
+- Governance rules
+- Documentation governance
+- Architecture protection
+- Modification governance
+
+Used For:
+- AI governance
+- Safe development
+
+--------------------------------------------------------------------------------
+
+CLAUDE_READING_PRIORITY.md
+
+Purpose:
+Documentation priority matrix.
+
+Contains:
+- Critical documents
+- High-priority documents
+- Conditional reading rules
+
+Used For:
+- Efficient onboarding
+- Token optimization
 
 --------------------------------------------------------------------------------
 01-PROJECT
@@ -319,6 +352,7 @@ Used For:
 --------------------------------------------------------------------------------
 
 SYSTEM_RULES.md
+
 Purpose:
 Global project rules.
 
@@ -326,9 +360,11 @@ Contains:
 - AI rules
 - Development constraints
 - Documentation policies
+- Architecture constraints
 
 Used For:
 - Consistency
+- Project governance
 
 --------------------------------------------------------------------------------
 
@@ -350,6 +386,7 @@ Used For:
 --------------------------------------------------------------------------------
 
 DEVELOPMENT_WORKFLOW.md
+
 Purpose:
 Development process.
 
@@ -357,6 +394,7 @@ Contains:
 - Development lifecycle
 - Validation process
 - Testing workflow
+- Release workflow
 
 Used For:
 - Daily development
@@ -364,6 +402,7 @@ Used For:
 --------------------------------------------------------------------------------
 
 DEVELOPMENT_RULES.md
+
 Purpose:
 Coding methodology.
 
@@ -371,13 +410,220 @@ Contains:
 - Refactoring rules
 - Patch-first policy
 - Architecture enforcement
+- Maintenance guidelines
 
 Used For:
 - Code quality
+- Development consistency
+
+--------------------------------------------------------------------------------
+
+DOMAIN_BOUNDARIES.md
+
+Purpose:
+Defines domain ownership and responsibilities.
+
+Contains:
+- Domain definitions
+- Domain responsibilities
+- Ownership boundaries
+- Domain protection rules
+
+Used For:
+- Architecture governance
+- Responsibility management
+
+--------------------------------------------------------------------------------
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+Purpose:
+Defines allowed domain dependencies.
+
+Contains:
+- Dependency rules
+- Allowed interactions
+- Forbidden interactions
+- Layer relationships
+
+Used For:
+- Architecture validation
+- Dependency control
+
+--------------------------------------------------------------------------------
+
+FILE_OWNERSHIP_MATRIX.md
+
+Purpose:
+Defines ownership and responsibility of project files.
+
+Contains:
+- File ownership
+- Domain ownership
+- Responsibility mapping
+- Review requirements
+
+Used For:
+- Change management
+- Impact analysis
+
+--------------------------------------------------------------------------------
+
+PROJECT_IMPACT_MATRIX.md
+
+Purpose:
+Defines project-wide impact analysis requirements.
+
+Contains:
+- Impact classifications
+- Review requirements
+- Dependency impacts
+- Validation requirements
+
+Used For:
+- Change assessment
+- Risk management
+
+--------------------------------------------------------------------------------
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+
+Purpose:
+Defines relationships between project documents.
+
+Contains:
+- Documentation dependencies
+- Update requirements
+- Related documents
+- Documentation impact mapping
+
+Used For:
+- Documentation maintenance
+- Change analysis
+
+--------------------------------------------------------------------------------
+
+DOCUMENT_UPDATE_MATRIX.md
+
+Purpose:
+Defines documentation update requirements.
+
+Contains:
+- Update rules
+- Review requirements
+- Changelog requirements
+- Documentation governance
+
+Used For:
+- Documentation maintenance
+- Consistency management
+
+--------------------------------------------------------------------------------
+
+CHANGE_CLASSIFICATION_RULES.md
+
+Purpose:
+Defines official change categories.
+
+Contains:
+- Change types
+- Risk levels
+- Validation levels
+- Review requirements
+
+Used For:
+- Change analysis
+- Governance workflows
+
+--------------------------------------------------------------------------------
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+Purpose:
+Mandatory checklist before applying changes.
+
+Contains:
+- Compatibility checks
+- Dependency checks
+- Documentation checks
+- Validation checks
+
+Used For:
+- Quality assurance
+- Safe modifications
+
+--------------------------------------------------------------------------------
+
+BUG_ANALYSIS_PROTOCOL.md
+
+Purpose:
+Defines the official bug investigation workflow.
+
+Contains:
+- Root cause analysis
+- Dependency review
+- Risk evaluation
+- Fix validation process
+
+Used For:
+- Bug resolution
+- Regression prevention
+
+--------------------------------------------------------------------------------
+
+UPDATE_GOVERNANCE_PROTOCOL.md
+
+Purpose:
+Defines governance rules for external updates.
+
+Contains:
+- Approval process
+- Update validation
+- Risk assessment
+- Governance controls
+
+Used For:
+- External updates
+- Dependency updates
+
+--------------------------------------------------------------------------------
+
+UPDATE_IMPACT_RULES.md
+
+Purpose:
+Defines impact analysis requirements for updates.
+
+Contains:
+- Compatibility evaluation
+- Dependency analysis
+- Risk assessment
+- Validation requirements
+
+Used For:
+- Update planning
+- Risk reduction
+
+--------------------------------------------------------------------------------
+
+UPDATE_REPORT_TEMPLATE.md
+
+Purpose:
+Standardized update analysis report.
+
+Contains:
+- Risk reporting
+- Impact reporting
+- Approval reporting
+- Validation reporting
+
+Used For:
+- Update reviews
+- Governance documentation
 
 --------------------------------------------------------------------------------
 
 USER_SETTINGS_SPEC.md
+
 Purpose:
 User settings definition.
 
@@ -410,6 +656,7 @@ Used For:
 --------------------------------------------------------------------------------
 
 ERROR_CODES_SPEC.md
+
 Purpose:
 Defines application errors.
 
@@ -736,7 +983,7 @@ Official project acronyms.
 Contains:
 - Technical acronyms
 - Printing acronyms
-- Wichy acronyms
+- SlicyWeb acronyms
 
 Used For:
 - Consistent terminology
@@ -777,9 +1024,99 @@ README.md
 Purpose:
 GitHub landing page.
 
+Contains:
+- Project overview
+- Architecture summary
+- Technology stack
+- Documentation entry points
+- AI governance overview
+
 Used For:
 - First impression
 - Project overview
+
+--------------------------------------------------------------------------------
+
+ROOT GOVERNANCE DOCUMENTS
+--------------------------------------------------------------------------------
+
+CLAUDE.md
+
+Purpose:
+Primary AI governance document.
+
+Contains:
+- AI behavior
+- Architecture protection
+- Documentation policies
+- Modification restrictions
+
+Used For:
+- AI governance
+- Safe modifications
+
+--------------------------------------------------------------------------------
+
+CLAUDE_PROJECT_CONTEXT.md
+
+Purpose:
+Complete AI project context.
+
+Contains:
+- Project overview
+- Domain overview
+- Architecture context
+
+Used For:
+- AI onboarding
+- Project understanding
+
+--------------------------------------------------------------------------------
+
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+Purpose:
+Official reading sequence.
+
+Contains:
+- Mandatory reading workflow
+- Reading priorities
+- Reading dependencies
+
+Used For:
+- AI onboarding
+- Documentation navigation
+
+--------------------------------------------------------------------------------
+
+CLAUDE_CHANGE_IMPACT_RULES.md
+
+Purpose:
+AI-specific impact analysis process.
+
+Contains:
+- Impact analysis
+- Dependency analysis
+- Risk evaluation
+
+Used For:
+- Safe modifications
+- Regression prevention
+
+--------------------------------------------------------------------------------
+
+CLAUDE_FILE_UPDATE_RULES.md
+
+Purpose:
+AI-specific file update governance.
+
+Contains:
+- Patch-first policy
+- Update procedures
+- Compatibility requirements
+
+Used For:
+- Safe file modifications
 
 --------------------------------------------------------------------------------
 
@@ -812,8 +1149,18 @@ Used For:
 
 PROJECT TOTAL
 
-Core Documentation:
-40+ Specification Documents
+Documentation Assets:
+
+55+ Documentation Assets
+
+Includes:
+
+- Specifications
+- Architecture Documents
+- Governance Documents
+- Development Documents
+- AI Documents
+- Reference Documents
 
 Purpose:
 Create a complete AI-assisted 3D printing platform with professional-level architecture, documentation, maintainability, and scalability.
