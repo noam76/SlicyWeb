@@ -2,7 +2,7 @@
 
 ## Project Specification
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -11,427 +11,370 @@ Priority: Mandatory
 ---
 
 
-
 # 1. Project Overview
-
 
 
 ## Project Name
 
+SlicyWeb
 
+## Project Goal
 
-AI Smart Slicer
+Develop a modern intelligent 3D printing preparation software capable of automatically analyzing imported models and generating optimal 
 
+print settings based on:
 
+- Selected printer
 
-\## Project Goal
+- Printer hardware capabilities
 
+- Selected material
 
+- Material characteristics
 
-Develop a modern intelligent 3D printing preparation software capable of automatically analyzing imported models and generating optimal print settings based on:
+- Object geometry
 
+- Object dimensions
 
+- Object application
 
-\- Selected printer
-
-\- Printer hardware capabilities
-
-\- Selected material
-
-\- Material characteristics
-
-\- Object geometry
-
-\- Object dimensions
-
-\- Object application
-
-\- User constraints
-
-
+- User constraints
 
 The software must assist users in obtaining reliable and efficient print results with minimal manual configuration.
 
+---
 
+# Project Governance
 
-\---
+All project modifications must follow the governance framework.
 
+Reference Documents:
 
+```text
+CLAUDE_GOVERNANCE_PROTOCOL.md
 
-\# 2. Core Objectives
+CLAUDE_CHANGE_IMPACT_RULES.md
 
+CLAUDE_FILE_UPDATE_RULES.md
 
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+DOCUMENT_UPDATE_MATRIX.md
+```
+
+Purpose:
+
+```text
+Protect project architecture
+
+Control dependencies
+
+Prevent regressions
+
+Manage ownership
+
+Standardize modifications
+
+Maintain documentation consistency
+```
+
+---
+
+# 2. Core Objectives
 
 The application must:
 
+- Import STL files
 
+- Import 3MF files
 
-\- Import STL files
+- Display objects in a 3D environment
 
-\- Import 3MF files
+- Manage multiple objects simultaneously
 
-\- Display objects in a 3D environment
+- Support printer profile management
 
-\- Manage multiple objects simultaneously
+- Support material profile management
 
-\- Support printer profile management
+- Analyze imported models
 
-\- Support material profile management
+- Recommend printing settings automatically
 
-\- Analyze imported models
+- Estimate printing cost
 
-\- Recommend printing settings automatically
+- Estimate printing duration
 
-\- Estimate printing cost
+- Detect printing risks
 
-\- Estimate printing duration
+- Optimize orientation automatically
 
-\- Detect printing risks
+- Classify object types automatically
 
-\- Optimize orientation automatically
+- Generate support recommendations
 
-\- Classify object types automatically
+- Apply validated print presets
 
-\- Generate support recommendations
-
-\- Apply validated print presets
-
-\- Support undo and redo operations
-
-
+- Support undo and redo operations
 
 The system should operate similarly to professional slicers while providing intelligent assistance.
 
 
-
 Examples:
 
+- OrcaSlicer
 
+- PrusaSlicer
 
-\- OrcaSlicer
+- Cura
 
-\- PrusaSlicer
+- Bambu Studio
 
-\- Cura
+---
 
-\- Bambu Studio
-
-
-
-\---
-
-
-
-\# 3. Project Scope
-
-
+# 3. Project Scope
 
 The project will initially focus on:
 
 
+- Visualization
 
-\- Visualization
+- Analysis
 
-\- Analysis
-
-\- Recommendations
-
+- Recommendations
 
 
 The first versions will not generate G-Code.
 
-
-
 G-Code generation may be added in future phases.
 
+---
 
+# 4. Main Features
 
-\---
-
-
-
-\# 4. Main Features
-
-
-
-\## 4.1 File Import
-
-
+## 4.1 File Import
 
 Supported formats:
 
+- STL
 
-
-\- STL
-
-\- 3MF
-
-
+- 3MF
 
 Future support:
 
+- OBJ
 
+- AMF
 
-\- OBJ
+- STEP
 
-\- AMF
+---
 
-\- STEP
-
-
-
-\---
-
-
-
-\## 4.2 Object Management
-
-
+## 4.2 Object Management
 
 The user must be able to:
 
+- Add objects
 
+- Remove objects
 
-\- Add objects
+- Duplicate objects
 
-\- Remove objects
+- Rename objects
 
-\- Duplicate objects
+- Hide objects
 
-\- Rename objects
+- Show objects
 
-\- Hide objects
+- Lock objects
 
-\- Show objects
+- Unlock objects
 
-\- Lock objects
+- Center objects on bed
 
-\- Unlock objects
+- Arrange objects automatically
 
-\- Center objects on bed
+- Arrange objects manually
 
-\- Arrange objects automatically
+---
 
-\- Arrange objects manually
-
-
-\---
-
-
-
-\## 4.3 Transformations
-
-
+## 4.3 Transformations
 
 Each object shall support:
 
+### Move
 
+- X
 
-\### Move
+- Y
 
-
-
-\- X
-
-\- Y
-
-\- Z
+- Z
 
 
 
-\### Rotate
+### Rotate
 
+- X Axis
 
+- Y Axis
 
-\- X Axis
-
-\- Y Axis
-
-\- Z Axis
+- Z Axis
 
 
 
 Modes:
 
+- Step rotation
+
+- Continuous rotation
 
 
-\- Step rotation
+### Scale
 
-\- Continuous rotation
+- Uniform scale
 
-
-
-\### Scale
-
-
-
-\- Uniform scale
-
-\- Independent scale
+- Independent scale
 
 
 
 Examples:
 
+- 50%
+
+- 100%
+
+- 150%
+
+- 2x
 
 
-\- 50%
-
-\- 100%
-
-\- 150%
-
-\- 2x
+---
 
 
-
-\---
-
-
-
-\## 4.4 Multi Object Support
-
+## 4.4 Multi Object Support
 
 
 The system shall:
 
+- Support multiple objects
 
+- Detect collisions
 
-\- Support multiple objects
+- Detect overlaps
 
-\- Detect collisions
+- Arrange objects automatically
 
-\- Detect overlaps
+- Arrange objects manually
 
-\- Arrange objects automatically
-
-\- Arrange objects manually
-
-
-
-\---
+---
 
 ## 4.5 History System
 
 The system shall support:
 
-\-  Undo
-\-  Redo
-\-  Action History
+-  Undo
+-  Redo
+-  Action History
 
 Supported Actions:
 
-\-  Import
-\-  Delete
-\-  Duplicate
-\-  Move
-\-  Rotate
-\-  Scale
-\-  Printer Changes
-\-  Material Changes
-\-  Print Settings Changes
+-  Import
+-  Delete
+-  Duplicate
+-  Move
+-  Rotate
+-  Scale
+-  Printer Changes
+-  Material Changes
+-  Print Settings Changes
 
 The history system must preserve project integrity.
 
-\---
+---
 
-
-\# 5. Visualization Engine
-
-
+# 5. Visualization Engine
 
 The workspace shall contain:
 
 
-
-\## Build Plate
-
+## Build Plate
 
 
-\- Grid view
+- Grid view
 
-\- Axis indicators
+- Axis indicators
 
-\- Real printer dimensions
+- Real printer dimensions
 
-\- Dynamic plate updates
-
-
-
-\---
+- Dynamic plate updates
 
 
+---
 
-\## Camera
 
+## Camera
 
 
 Supported views:
 
 
+- Perspective
 
-\- Perspective
+- Orthographic
 
-\- Orthographic
+- Isometric
 
-\- Isometric
+- Top
 
-\- Top
+- Bottom
 
-\- Bottom
+- Front
 
-\- Front
+- Back
 
-\- Back
+- Left
 
-\- Left
-
-\- Right
-
+- Right
 
 
-\---
+---
 
 
-
-\## Interaction
-
+## Interaction
 
 
-\- Zoom
+- Zoom
 
-\- Pan
+- Pan
 
-\- Orbit
+- Orbit
 
-\- Focus selected object
-
-
-
-\---
+- Focus selected object
 
 
-
-\# 6. Printer System
-
+---
 
 
-\## Printer Selection
+# 6. Printer System
 
+## Printer Selection
 
 
 Printer list shall be organized:
 
+Brand → Model
 
 
-Brand
-
-→ Model
-
-
-
-Example
-
+Example:
 
 
 Creality
@@ -463,225 +406,187 @@ Prusa
 &#x20;→ XL
 
 
-
-\---
-
+---
 
 
-\## Printer Data
-
+## Printer Data
 
 
 Each printer profile shall contain:
 
 
+- Brand
 
-\- Brand
+- Model
 
-\- Model
+- Build Volume
 
-\- Build Volume
+- Nozzle Diameter
 
-\- Nozzle Diameter
+- Supported Nozzles
 
-\- Supported Nozzles
+- Firmware Type
 
-\- Firmware Type
+- Extruder Type
 
-\- Extruder Type
-
-\- Direct Drive/Bowden
-
+- Direct Drive/Bowden
 
 
 Motion Capabilities:
 
 
+- Max Print Speed
 
-\- Max Print Speed
+- Max Travel Speed
 
-\- Max Travel Speed
+- Max Acceleration
 
-\- Max Acceleration
-
-\- Max Jerk
-
+- Max Jerk
 
 
 Thermal Capabilities:
 
 
+- Max Nozzle Temperature
 
-\- Max Nozzle Temperature
+- Max Bed Temperature
 
-\- Max Bed Temperature
-
-\- Chamber Temperature
-
+- Chamber Temperature
 
 
 Other:
 
 
+- Cooling System
 
-\- Cooling System
-
-\- Supported Materials
-
+- Supported Materials
 
 
-\---
+---
 
 
-
-\## Printer Data Sources
-
+## Printer Data Sources
 
 
 Priority:
 
+1. Local Database
+
+2. Local Cache
+
+3. Official Profiles
+
+4. Verified GitHub Repositories
 
 
-1\. Local Database
-
-2\. Local Cache
-
-3\. Official Profiles
-
-4\. Verified GitHub Repositories
+---
 
 
-
-\---
-
-
-
-\# 7. Material System
-
+# 7. Material System
 
 
 Supported Materials
 
+- PLA
+
+- PLA+
+
+- PETG
+
+- ABS
+
+- ASA
+
+- TPU
+
+- PCTG
+
+- Nylon
+
+- Nylon CF
+
+- PC
+
+- PET CF
+
+- PP
 
 
-\- PLA
-
-\- PLA+
-
-\- PETG
-
-\- ABS
-
-\- ASA
-
-\- TPU
-
-\- PCTG
-
-\- Nylon
-
-\- Nylon CF
-
-\- PC
-
-\- PET CF
-
-\- PP
+---
 
 
-
-\---
-
-
-
-\## Material Properties
-
+## Material Properties
 
 
 Each material shall contain:
 
 
+- Nozzle Temperature
 
-\- Nozzle Temperature
+- Bed Temperature
 
-\- Bed Temperature
+- Fan Speed
 
-\- Fan Speed
+- Cooling Requirements
 
-\- Cooling Requirements
+- Drying Requirements
 
-\- Drying Requirements
+- Warping Tendency
 
-\- Warping Tendency
+- Shrinkage Rate
 
-\- Shrinkage Rate
+- Recommended Speed
 
-\- Recommended Speed
-
-\- Mechanical Characteristics
-
+- Mechanical Characteristics
 
 
-\---
+---
 
 
-
-\# 8. Model Analysis Engine
-
-
+# 8. Model Analysis Engine
 
 The system shall analyze:
 
 
-
-\## Dimensions
-
+## Dimensions
 
 
-\- Width
+- Width
 
-\- Depth
+- Depth
 
-\- Height
-
-
-
-\---
+- Height
 
 
-
-\## Geometry
-
+---
 
 
-\- Volume
+## Geometry
 
-\- Surface Area
+- Volume
 
-\- Center of Mass
+- Surface Area
 
-
-
-\---
+- Center of Mass
 
 
-
-\## Printability
-
+---
 
 
-\- Overhangs
+## Printability
 
-\- Bridges
 
-\- Thin Walls
+- Overhangs
 
-\- Unsupported Areas
+- Bridges
 
-\- Sharp Edges
+- Thin Walls
 
-\- Fine Details
+- Unsupported Areas
 
+- Sharp Edges
+
+- Fine Details
 
 ---
 
@@ -704,262 +609,185 @@ Supported categories:
 - Functional Part
 
 
-\## Stability
+## Stability
 
 
+- Contact Area
 
-\- Contact Area
+- Height/Base Ratio
 
-\- Height/Base Ratio
+- Center Of Gravity
 
-\- Center Of Gravity
-
-\- Tip Risk
-
+- Tip Risk
 
 
-\---
+---
 
 
-
-\# 9. Artificial Intelligence Recommendation Engine
-
+# 9. Artificial Intelligence Recommendation Engine
 
 
 Input:
 
 Printer
-
 +
-
 Material
-
 +
-
 Filament
-
 +
-
 Model Analysis
-
 +
-
 Object Classification
 
 
 Output:
 
 
-
 Recommended Printing Profile
 
 
-
-\---
-
+---
 
 
-\## Priorities
-
+## Priorities
 
 
 Priority Order:
 
+1. Print Success
 
+2. Mechanical Reliability
 
-1\. Print Success
+3. Surface Quality
 
-2\. Mechanical Reliability
+4. Time Reduction
 
-3\. Surface Quality
+5. Material Reduction
 
-4\. Time Reduction
+---
 
-5\. Material Reduction
-
-
-
-\---
-
-
-
-\# 10. Recommended Parameters
-
-
+# 10. Recommended Parameters
 
 The AI may recommend:
 
+## Quality
+
+- Layer Height
+
+- Adaptive Layers
 
 
-\## Quality
+---
 
 
+## Walls
 
-\- Layer Height
+- Wall Count
 
-\- Adaptive Layers
-
-
-
-\---
+- Wall Thickness
 
 
-
-\## Walls
-
+---
 
 
-\- Wall Count
+## Top And Bottom
 
-\- Wall Thickness
+- Top Layers
 
-
-
-\---
+- Bottom Layers
 
 
-
-\## Top And Bottom
-
+---
 
 
-\- Top Layers
-
-\- Bottom Layers
-
-
-
-\---
-
-
-
-\## Infill
-
+## Infill
 
 
 Type:
 
+- Gyroid
 
+- Grid
 
-\- Gyroid
+- Cubic
 
-\- Grid
+- Honeycomb
 
-\- Cubic
+- Lightning
 
-\- Honeycomb
+Density: 0% - 100%
 
-\- Lightning
+---
 
-
-
-Density:
-
-
-
-0% - 100%
-
-
-
-\---
-
-
-
-\## Supports
-
-
+## Supports
 
 Types:
 
+- Organic
 
+- Tree
 
-\- Organic
-
-\- Tree
-
-\- Standard
-
+- Standard
 
 
 Settings:
 
+- Density
 
+- Angle Threshold
 
-\- Density
+- Interface Layers
 
-\- Angle Threshold
+---
 
-\- Interface Layers
-
-
-
-\---
-
-
-
-\## Adhesion
-
+## Adhesion
 
 
 Types:
 
+- None
+
+- Skirt
+
+- Brim
+
+- Raft
 
 
-\- None
-
-\- Skirt
-
-\- Brim
-
-\- Raft
+---
 
 
+## Cooling
 
-\---
+- Fan Speed
 
-
-
-\## Cooling
-
+- Minimum Layer Time
 
 
-\- Fan Speed
-
-\- Minimum Layer Time
+---
 
 
+## Retraction
 
-\---
+- Distance
 
-
-
-\## Retraction
-
+- Speed
 
 
-\- Distance
-
-\- Speed
+---
 
 
+## Speed
 
-\---
+- Print Speed
 
+- Inner Wall Speed
 
+- Outer Wall Speed
 
-\## Speed
+- Travel Speed
 
-
-
-\- Print Speed
-
-\- Inner Wall Speed
-
-\- Outer Wall Speed
-
-\- Travel Speed
-
-\- Infill Speed
+- Infill Speed
 
 
 ---
@@ -979,357 +807,257 @@ The AI may recommend:
 - Vase
 - Structural
 
-
-\# 11. Automatic Optimization
-
-
+# 11. Automatic Optimization
 
 The system shall be capable of:
 
 
-
-\## Orientation Search
-
+## Orientation Search
 
 
 Determine best orientation according to:
 
+- Support Reduction
 
+- Stability
 
-\- Support Reduction
+- Surface Quality
 
-\- Stability
+- Printing Time
 
-\- Surface Quality
+---
 
-\- Printing Time
+## Optimization Goals
 
+- Reduce Supports
 
+- Reduce Print Time
 
-\---
+- Reduce Material Usage
 
+- Improve Surface Quality
 
+- Improve Print Reliability
 
-\## Optimization Goals
+---
 
-
-
-\- Reduce Supports
-
-\- Reduce Print Time
-
-\- Reduce Material Usage
-
-\- Improve Surface Quality
-
-\- Improve Print Reliability
-
-
-
-\---
-
-
-
-\# 12. Cost Estimation
-
+# 12. Cost Estimation
 
 
 Estimate:
 
 
+- Filament Length
 
-\- Filament Length
+- Filament Weight
 
-\- Filament Weight
+- Material Cost
 
-\- Material Cost
+- Electricity Cost
 
-\- Electricity Cost
+- Printing Duration
 
-\- Printing Duration
+---
 
-
-
-\---
-
-
-
-\# 13. Warning System
+# 13. Warning System
 
 
 
 Generate warnings for:
 
 
+- Build Volume Exceeded
 
-\- Build Volume Exceeded
+- Collision Detected
 
-\- Collision Detected
+- Excessive Overhang
 
-\- Excessive Overhang
+- High Warp Risk
 
-\- High Warp Risk
+- Unsupported Structures
 
-\- Unsupported Structures
+- Fragile Features
 
-\- Fragile Features
+- Unstable Orientation
 
-\- Unstable Orientation
+- Excessive Print Time
 
-\- Excessive Print Time
+---
 
-
-
-\---
-
-
-
-\# 14. Development Strategy
-
-
+# 14. Development Strategy
 
 The project shall be developed incrementally.
-
-
-
 Every phase must be completed and validated before starting the next one.
-
-
-
 The project shall prioritize stability and maintainability.
 
+All modifications must include:
 
+- Impact analysis
+- Dependency validation
+- Documentation review
+- Governance review when required
 
-\---
+---
 
+# 15. Project Phases
 
-
-\# 15. Project Phases
-
-
-
-\## Phase 0
-
-
+## Phase 0
 
 Foundation
 
-
-
 Objectives:
 
+- Repository Setup
 
+- Code Standards
 
-\- Repository Setup
+- Folder Structure
 
-\- Code Standards
+- Data Definitions
 
-\- Folder Structure
+- Development Rules
 
-\- Data Definitions
+- Architecture Documentation
 
-\- Development Rules
+---
 
-\- Architecture Documentation
-
-
-
-\---
-
-
-
-\## Phase 1
-
-
+## Phase 1
 
 GUI Foundation
 
 
-
 Objectives:
 
+- Main Window
 
+- Menus
 
-\- Main Window
+- Panels
 
-\- Menus
+- Theme System
 
-\- Panels
-
-\- Theme System
-
-\- Layout Management
-
+- Layout Management
 
 
 No STL support.
 
-
-
 No analysis.
 
+---
 
-
-\---
-
-
-
-\## Phase 2
-
-
+## Phase 2
 
 3D Engine
 
-
-
 Objectives:
 
+- 3D Scene
 
+- Build Plate
 
-\- 3D Scene
+- Camera Controls
 
-\- Build Plate
+- Object Rendering
 
-\- Camera Controls
+---
 
-\- Object Rendering
-
-
-
-\---
-
-
-
-\## Phase 3
-
-
+## Phase 3
 
 Model Import
 
 
-
 Objectives:
 
+- STL Import
 
+- 3MF Import
 
-\- STL Import
+- Object List
 
-\- 3MF Import
+- Scene Synchronization
 
-\- Object List
+---
 
-\- Scene Synchronization
-
-
-
-\---
-
-
-
-\## Phase 4
-
-
+## Phase 4
 
 Transform System
 
 
-
 Objectives:
 
+- Move
+
+- Rotate
+
+- Scale
+
+- Reset Transform
 
 
-\- Move
-
-\- Rotate
-
-\- Scale
-
-\- Reset Transform
+---
 
 
-
-\---
-
-
-
-\## Phase 5
-
+## Phase 5
 
 
 Printer Management
 
 
-
 Objectives:
 
 
+- Printer Database
 
-\- Printer Database
+- Online Profiles
 
-\- Online Profiles
-
-\- Printer Selection
-
+- Printer Selection
 
 
-\---
+---
 
 
-
-\## Phase 6
-
+## Phase 6
 
 
 Material Management
 
 
-
 Objectives:
 
 
+- Material Database
 
-\- Material Database
+- Material Selection
 
-\- Material Selection
-
-\- Material Profiles
-
+- Material Profiles
 
 
-\---
+---
 
 
-
-\## Phase 7
-
+## Phase 7
 
 
 Model Analysis
 
 
-
 Objectives:
 
 
+- Geometry Analysis
 
-\- Geometry Analysis
+- Stability Analysis
 
-\- Stability Analysis
-
-\- Printability Analysis
-
+- Printability Analysis
 
 
-\---
+---
 
 
-
-\## Phase 8
-
+## Phase 8
 
 
 Recommendation Engine
-
 
 
 Objectives:
@@ -1341,30 +1069,27 @@ Objectives:
 - Warning Generation
 
 
-\---
+---
 
 
-\## Phase 9
-
-
+## Phase 9
 
 Optimization Engine
-
 
 
 Objectives:
 
 
+- Orientation Search
 
-\- Orientation Search
+- Time Optimization
 
-\- Time Optimization
-
-\- Material Optimization
-
+- Material Optimization
 
 
-\---
+
+
+---
 
 
 ## Phase 10
@@ -1381,10 +1106,8 @@ Objectives:
 - Cloud Sync
 - Remote Monitoring
 - Plugin System
-`
 
-
-\---
+---
 
 # 15.1 Documentation Status
 
@@ -1392,7 +1115,12 @@ Documentation Status:
 
 - Core Documentation Complete
 - Architecture Defined
+- Governance Layer Complete
+- Impact Analysis Layer Complete
+- Update Governance Layer Complete
+- Bug Analysis Layer Complete
 - Development Ready
+- Ready For AI Assisted Development
 
 Reference:
 
@@ -1401,26 +1129,40 @@ PROJECT_DOCUMENTATION_INDEX.md
 
 ---
 
+# Governance Principles
 
-\# 16. Long Term Vision
+The project follows:
 
+```text
+Patch First
 
+Impact Analysis First
+
+Documentation First
+
+Domain Ownership
+
+Dependency Governance
+
+Architecture Protection
+```
+
+---
+
+# 16. Long Term Vision
 
 Create a professional AI-assisted slicer capable of:
 
+- Competing with existing slicers
 
+- Reducing configuration complexity
 
-\- Competing with existing slicers
+- Improving print success rates
 
-\- Reducing configuration complexity
+- Providing intelligent print guidance
 
-\- Improving print success rates
-
-\- Providing intelligent print guidance
-
-\- Automatically adapting to hardware and material limitations
+- Automatically adapting to hardware and material limitations
 
 ---
 
 End of Document
-
