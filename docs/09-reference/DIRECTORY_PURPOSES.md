@@ -1,7 +1,7 @@
 # SLICYWEB
 # DIRECTORY PURPOSES
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -44,6 +44,30 @@ Source Code
 Assets
 Tests
 Runtime Resources
+```
+
+---
+
+# Root Governance Files
+
+Purpose:
+
+```text
+AI Governance Layer
+```
+
+Contains:
+
+```text
+CLAUDE.md
+
+CLAUDE_PROJECT_CONTEXT.md
+
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+CLAUDE_CHANGE_IMPACT_RULES.md
+
+CLAUDE_FILE_UPDATE_RULES.md
 ```
 
 ---
@@ -121,6 +145,10 @@ Documentation Index
 AI Reading Guide
 API Reading Guide
 AI Development Protocol
+Claude Governance
+Reading Priorities
+Documentation Navigation
+Governance Navigation
 ```
 
 ---
@@ -176,21 +204,44 @@ Development Standards
 Contains:
 
 ```text
-Workflows
-Rules
-Error Definitions
-Settings Specifications
-Impact Analysis Rules
-Documentation Update Rules
+- Development Rules
+- Development Workflows
+- Impact Analysis
+- Domain Governance
+- Dependency Management
+- Ownership Management
+- Documentation Governance
+- Bug Investigation
+- Update Governance
+- Verification Processes
+- Settings Specifications
+- Error Definitions
 ```
 
 Documents:
- 
+
 - SYSTEM_RULES.md
 - DEVELOPMENT_RULES.md
 - DEVELOPMENT_WORKFLOW.md
 - CHANGE_IMPACT_RULES.md
-- DOCUMENT_UPDATE_RULES.md
+
+- DOMAIN_BOUNDARIES.md
+- DOMAINS_DEPENDENCY_MATRIX.md
+- FILE_OWNERSHIP_MATRIX.md
+
+- PROJECT_IMPACT_MATRIX.md
+- CROSS_DOCUMENT_DEPENDENCIES.md
+- DOCUMENT_UPDATE_MATRIX.md
+
+- CHANGE_CLASSIFICATION_RULES.md
+- CHANGE_VERIFICATION_CHECKLIST.md
+
+- BUG_ANALYSIS_PROTOCOL.md
+
+- UPDATE_GOVERNANCE_PROTOCOL.md
+- UPDATE_IMPACT_RULES.md
+- UPDATE_REPORT_TEMPLATE.md
+
 - ERROR_CODES_SPEC.md
 - UNDO_REDO_SPEC.md
 - USER_SETTINGS_SPEC.md
@@ -308,6 +359,7 @@ Acronyms
 Versioning Policies
 Architecture Decisions
 Directory Definitions
+Governance References
 ```
 
 ---
@@ -1708,6 +1760,41 @@ Plugin Resources
 
 ---
 
+# Governance Documents
+
+The project governance framework includes:
+
+```text
+- CLAUDE_GOVERNANCE_PROTOCOL.md
+- CLAUDE_READING_PRIORITY.md
+- DOMAIN_BOUNDARIES.md
+- DOMAINS_DEPENDENCY_MATRIX.md
+- FILE_OWNERSHIP_MATRIX.md
+- PROJECT_IMPACT_MATRIX.md
+- CROSS_DOCUMENT_DEPENDENCIES.md
+- DOCUMENT_UPDATE_MATRIX.md
+- CHANGE_CLASSIFICATION_RULES.md
+- CHANGE_VERIFICATION_CHECKLIST.md
+- BUG_ANALYSIS_PROTOCOL.md
+- UPDATE_GOVERNANCE_PROTOCOL.md
+- UPDATE_IMPACT_RULES.md
+- UPDATE_REPORT_TEMPLATE.md
+```
+
+These documents define:
+
+```text
+- Ownership
+- Dependencies
+- Impact Analysis
+- Documentation Updates
+- Bug Investigation
+- Update Validation
+- Change Verification
+- Architecture Governance
+```
+
+---
 
 # Golden Rule
 
