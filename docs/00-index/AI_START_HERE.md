@@ -596,6 +596,8 @@ SYSTEM_RULES.md
 DEVELOPMENT_RULES.md
 
 DECISIONS.md
+
+DOMAIN_BOUNDARIES.md
 ```
 
 If conflict exists:
@@ -775,11 +777,12 @@ Do not regenerate the whole document.
 
 Reference:
 
-DOCUMENT_UPDATE_MATRIX.md
-CROSS_DOCUMENT_DEPENDENCIES.md
-FILE_OWNERSHIP_MATRIX.md
-PROJECT_IMPACT_MATRIX.md
-CLAUDE_FILE_UPDATE_RULES.md
+- DOCUMENT_UPDATE_MATRIX.md
+- CROSS_DOCUMENT_DEPENDENCIES.md
+- FILE_OWNERSHIP_MATRIX.md
+- PROJECT_IMPACT_MATRIX.md
+- CHANGE_CLASSIFICATION_RULES.md
+- CLAUDE_FILE_UPDATE_RULES.md
 
 ---
 
@@ -829,6 +832,8 @@ Bug fixes must follow:
 
 BUG_ANALYSIS_PROTOCOL.md
 
+PROJECT_IMPACT_MATRIX.md
+
 CHANGE_VERIFICATION_CHECKLIST.md
 
 Never implement fixes before:
@@ -859,6 +864,8 @@ UPDATE_IMPACT_RULES.md
 
 UPDATE_REPORT_TEMPLATE.md
 
+PROJECT_IMPACT_MATRIX.md
+
 Human approval is required before applying external updates.
 
 ---
@@ -875,9 +882,9 @@ Never modify a system you have not fully understood.
 
 # DOCUMENTATION VERSION
 
-Documentation Status:
-
 Version 2.0.0
+
+STATUS:
 
 Core Documentation Complete
 
