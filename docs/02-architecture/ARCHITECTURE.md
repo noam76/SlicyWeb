@@ -1,6 +1,6 @@
 # SYSTEM ARCHITECTURE
 
-Version: 1.1.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -72,11 +72,51 @@ Each module must have one primary responsibility.
 
 Avoid modules that perform multiple unrelated functions.
 
-
-
 ---
 
+# Governance Principles
 
+All architecture changes must follow the governance framework.
+
+Reference Documents:
+
+```text
+docs/00-index/CLAUDE_GOVERNANCE_PROTOCOL.md
+
+/CLAUDE_CHANGE_IMPACT_RULES.md
+
+/CLAUDE_FILE_UPDATE_RULES.md
+
+docs/03-development/DOMAIN_BOUNDARIES.md
+
+docs/03-development/DOMAINS_DEPENDENCY_MATRIX.md
+
+docs/03-development/FILE_OWNERSHIP_MATRIX.md
+
+docs/03-development/PROJECT_IMPACT_MATRIX.md
+
+docs/03-development/CHANGE_CLASSIFICATION_RULES.md
+
+docs/03-development/CHANGE_VERIFICATION_CHECKLIST.md
+```
+
+Purpose:
+
+```text
+Prevent architecture drift
+
+Maintain domain boundaries
+
+Protect module ownership
+
+Control dependencies
+
+Reduce regressions
+
+Standardize change validation
+```
+
+---
 
 ## Loose Coupling
 
@@ -1277,11 +1317,35 @@ Data
 
 ```
 
-
-
 ---
 
+# Domain Governance
 
+Domain relationships must follow:
+
+```text
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+```
+
+File ownership must follow:
+
+```text
+FILE_OWNERSHIP_MATRIX.md
+```
+
+Architecture changes must be reviewed using:
+
+```text
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+```
+
+---
 
 Forbidden
 
@@ -1466,9 +1530,39 @@ Test communication between modules.
 
 Verify previous functionality remains operational.
 
-
 ---
 
+# Architecture Governance Workflow
+
+Before modifying architecture:
+
+```text
+1. Identify impacted domains
+
+2. Verify ownership
+
+3. Review dependencies
+
+4. Perform impact analysis
+
+5. Update architecture documentation if required
+
+6. Validate backward compatibility
+```
+
+Reference:
+
+```text
+PROJECT_IMPACT_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+```
+
+---
 
 # Future Architecture Extensions
 
@@ -1512,7 +1606,11 @@ vision_classification
 6. Preserve backward compatibility whenever possible.
 7. Every module must remain independently testable.
 8. Stability has priority over complexity.
-
+9. Respect domain boundaries.
+10. Respect ownership definitions.
+11. Respect dependency governance.
+12. Perform impact analysis before architectural modifications.
+13. Update architecture documentation whenever architecture changes.
 ---
 
 # End Of Document
