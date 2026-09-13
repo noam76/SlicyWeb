@@ -1,6 +1,6 @@
-# Wichy
+# SlicyWeb
 
-AI-Assisted 3D Printing Preparation Platform
+AI-Assisted Smart Slicer Platform
 
 ## Status
 
@@ -14,9 +14,9 @@ Phase 0 - Foundation
 
 ---
 
-## About Wichy
+## About SlicyWeb
 
-Wichy is an AI-assisted 3D printing preparation platform designed to simplify and optimize print preparation workflows.
+SlicyWeb is an AI-assisted 3D printing preparation platform designed to simplify and optimize print preparation workflows.
 
 The platform combines:
 
@@ -40,12 +40,11 @@ docs/01-project/PROJECT_DESCRIPTION.md
 ## Overview
 
 
-Wichy is a next-generation AI-assisted 3D printing preparation platform designed to simplify and optimize the process of preparing models for additive manufacturing.
+SlicyWeb is a next-generation AI-assisted 3D printing preparation platform designed to simplify and optimize the process of preparing models for additive manufacturing.
 
 
 
 The project combines:
-
 
 
 - 3D Model Visualization
@@ -413,24 +412,28 @@ docs/
 
 ```
 
-
-Start here:
-
+For AI Systems:
 
 ```text
+CLAUDE.md
 
-docs/00-index/AI\_START\_HERE.md
+CLAUDE_PROJECT_CONTEXT.md
 
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+docs/00-index/AI_START_HERE.md
 ```
 
-
-Documentation index:
-
+For API Development:
 
 ```text
+docs/00-index/API_START_HERE.md
+```
 
-docs/00-index/PROJECT\_DOCUMENTATION\_INDEX.md
+Documentation Index:
 
+```text
+docs/00-index/PROJECT_DOCUMENTATION_INDEX.md
 ```
 
 ---
@@ -441,26 +444,22 @@ docs/00-index/PROJECT\_DOCUMENTATION\_INDEX.md
 
 ```text
 
-wichy/
+SlicyWeb/
 
+├── CLAUDE.md
+├── CLAUDE_PROJECT_CONTEXT.md
+├── CLAUDE_DOCUMENT_READING_ORDER.md
+├── CLAUDE_CHANGE_IMPACT_RULES.md
+├── CLAUDE_FILE_UPDATE_RULES.md
 ├── docs/
-
 ├── src/
-
 ├── tests/
-
 ├── assets/
-
 ├── cache/
-
 ├── logs/
-
 ├── scripts/
-
 ├── plugins/
-
 ├── public/
-
 └── .github/
 
 ```
@@ -476,10 +475,32 @@ docs/02-architecture/FILE\_STRUCTURE.md
 
 ```
 
-
-
 ---
 
+## AI Governance
+
+The project includes a dedicated AI governance layer.
+
+Main governance documents:
+
+- CLAUDE.md
+- CLAUDE_PROJECT_CONTEXT.md
+- CLAUDE_DOCUMENT_READING_ORDER.md
+- CLAUDE_CHANGE_IMPACT_RULES.md
+- CLAUDE_FILE_UPDATE_RULES.md
+- docs/00-index/CLAUDE_GOVERNANCE_PROTOCOL.md
+- docs/00-index/CLAUDE_READING_PRIORITY.md
+
+These documents define:
+
+- AI behavior
+- Documentation reading order
+- Impact analysis requirements
+- Documentation update requirements
+- File modification policies
+- Governance workflows
+
+---
 
 ## Development Rules
 
@@ -508,7 +529,6 @@ docs/03-development/DEVELOPMENT\_RULES.md
 
 ```
 
-
 ---
 
 
@@ -517,24 +537,17 @@ docs/03-development/DEVELOPMENT\_RULES.md
 
 Before contributing:
 
-
 ```text
 
-1\. AI\_START\_HERE.md
-
-2\. PROJECT\_DOCUMENTATION\_INDEX.md
-
-3\. PROJECT\_SPEC.md
-
-4\. SYSTEM\_RULES.md
-
-5\. ARCHITECTURE.md
-
-6\. FILE\_STRUCTURE.md
-
-7\. DATA\_SCHEMA.md
-
-8\. DEVELOPMENT\_RULES.md
+1. CLAUDE.md
+2. CLAUDE_PROJECT_CONTEXT.md
+3. CLAUDE_DOCUMENT_READING_ORDER.md
+4. docs/00-index/CLAUDE_GOVERNANCE_PROTOCOL.md
+5. CLAUDE_CHANGE_IMPACT_RULES.md
+6. CLAUDE_FILE_UPDATE_RULES.md
+7. docs/00-index/CLAUDE_READING_PRIORITY.md
+8. PROJECT_DOCUMENTATION_INDEX.md
+9. AI_START_HERE.md
 
 ```
 
@@ -591,10 +604,9 @@ See the LICENSE file for details.
 
 ---
 
-## Author
+## Project
 
-Wichy Project
-
+SlicyWeb
 
 AI Smart Slicer Platform
 
