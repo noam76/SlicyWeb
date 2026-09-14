@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # PROJECT IMPACT MATRIX
 
@@ -224,7 +224,7 @@ Review:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 AI_START_HERE.md
 
@@ -236,7 +236,7 @@ Possible Updates:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 Testing:
@@ -266,7 +266,7 @@ Review:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 AI_START_HERE.md
 
@@ -388,7 +388,7 @@ DIRECTORY_PURPOSES.md
 
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 CHANGELOG.md
 ```
@@ -630,7 +630,7 @@ PROJECT_DOCUMENTATION_INDEX.md
 Mandatory Update Evaluation:
 
 ```text
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 CHANGELOG.md
 ```
