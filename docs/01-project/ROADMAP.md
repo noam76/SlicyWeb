@@ -3,7 +3,7 @@
 # PROJECT ROADMAP
 
 
-Version: 1.1.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -17,10 +17,7 @@ Priority: Medium
 
 # Purpose
 
-
-
 This roadmap defines:
-
 
 
 - Development phases
@@ -36,55 +33,98 @@ This roadmap defines:
 
 The roadmap is the official project progression guide.
 
-
-
 All development must follow this roadmap.
-
-
 
 A phase cannot begin until the previous phase is considered stable.
 
 
+---
 
-\---
+# Roadmap Governance
 
+Roadmap evolution must comply with:
 
+```text
+DOMAIN_BOUNDARIES.md
 
-\# Development Strategy
+DOMAINS_DEPENDENCY_MATRIX.md
 
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+```
+
+Purpose:
+
+- Controlled Project Evolution
+
+- Change Governance
+
+- Dependency Governance
+
+- Documentation Governance
+
+- Risk Reduction
+
+- Architectural Consistency
+
+---
+
+# Development Strategy
 
 
 The project is developed incrementally.
 
 
-
 Objectives:
 
+- Reduce bugs
 
+- Avoid large rewrites
 
-\- Reduce bugs
+- Simplify testing
 
-\- Avoid large rewrites
+- Improve maintainability
 
-\- Simplify testing
+- Reduce token consumption
 
-\- Improve maintainability
-
-\- Reduce token consumption
-
-\- Preserve compatibility
-
+- Preserve compatibility
 
 
 Every phase must produce a usable and testable result.
 
 
+---
 
-\---
+# Phase Governance Rules
 
+Before starting a phase:
 
+1. Verify previous phase stability
 
-\# Global Progression
+2. Verify documentation readiness
+
+3. Verify dependencies
+
+4. Verify ownership impact
+
+5. Verify roadmap alignment
+
+6. Update project documentation if required
+
+A phase must not begin until governance requirements are satisfied.
+
+---
+
+# Global Progression
 
 
 
@@ -94,131 +134,79 @@ Phase 0
 
 Foundation
 
-
-
 ↓
-
-
 
 Phase 1
 
 GUI Foundation
 
-
-
 ↓
-
-
 
 Phase 2
 
 3D Rendering Engine
 
-
-
 ↓
-
-
 
 Phase 3
 
 Model Import System
 
-
-
 ↓
-
-
 
 Phase 4
 
 Object Manipulation
 
-
-
 ↓
-
-
 
 Phase 5
 
 Printer Management
 
-
-
 ↓
-
-
 
 Phase 6
 
 Material Management
 
-
-
 ↓
-
-
 
 Phase 7
 
 Model Analysis
 
-
-
 ↓
-
-
 
 Phase 8
 
 Recommendation Engine
 
-
-
 ↓
-
-
 
 Phase 9
 
 Optimization Engine
 
-
-
 ↓
-
-
 
 Phase 10
 
 Cost Estimation
 
-
-
 ↓
-
-
 
 Phase 11
 
 Project Persistence
 
-
-
 ↓
-
-
 
 Phase 12
 
 Advanced Features
 
-
-
 ↓
-
-
 
 Phase 13
 
@@ -228,37 +216,24 @@ Production Release
 
 
 
-\---
+---
 
 
 
-\# PHASE 0
+# PHASE 0
 
-\# FOUNDATION
-
-
-
-Status:
+# FOUNDATION
 
 
+Status: Required
 
-Required
-
-
-
-Priority:
+Priority: Critical
 
 
-
-Critical
-
+---
 
 
-\---
-
-
-
-\## Objectives
+## Objectives
 
 
 
@@ -266,11 +241,11 @@ Create project foundations before writing functional code.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 Repository Structure
 
@@ -297,11 +272,11 @@ Redo System
 History Stack
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -321,11 +296,11 @@ Architecture approved.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -333,13 +308,13 @@ Stable development foundation.
 
 
 
-\---
+---
 
 
 
-\# PHASE 1
+# PHASE 1
 
-\# GUI FOUNDATION
+# GUI FOUNDATION
 
 
 
@@ -359,11 +334,11 @@ Critical
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 
 
@@ -387,11 +362,11 @@ Only GUI.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 
 
@@ -431,11 +406,11 @@ Resizable Panels
 
 
 
-\---
+---
 
 
 
-\## Interface Sections
+## Interface Sections
 
 Top Toolbar
 
@@ -450,10 +425,10 @@ Notification Area
 Status Bar
 
 
-\---
+---
 
 
-\## Validation Criteria
+## Validation Criteria
 
 Application starts successfully.
 
@@ -464,20 +439,20 @@ Theme system works.
 All panels functional.
 
 
-\---
+---
 
 
-\## Output
+## Output
 
 Stable graphical interface.
 
 
-\---
+---
 
 
-\# PHASE 2
+# PHASE 2
 
-\# 3D RENDERING ENGINE
+# 3D RENDERING ENGINE
 
 
 Priority:
@@ -485,20 +460,20 @@ Priority:
 Critical
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 Create slicer-like 3D viewport.
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 Grid Bed
 
@@ -514,11 +489,11 @@ Visibility Control
 
 
 
-\---
+---
 
 
 
-\## Camera Features
+## Camera Features
 
 Orbit
 
@@ -531,11 +506,11 @@ Focus Object
 Reset View
 
 
-\---
+---
 
 
 
-\## View Modes
+## View Modes
 
 
 
@@ -558,11 +533,11 @@ Isometric
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -576,24 +551,24 @@ Axes visible.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 Complete 3D viewing environment.
 
 
 
-\---
+---
 
 
 
-\# PHASE 3
+# PHASE 3
 
-\# MODEL IMPORT SYSTEM
+# MODEL IMPORT SYSTEM
 
 
 
@@ -603,20 +578,20 @@ Critical
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 Import 3D models.
 
 
-\---
+---
 
 
 
-\## Supported Formats
+## Supported Formats
 
 STL
 
@@ -624,11 +599,11 @@ STL
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 File Import
 
@@ -642,9 +617,9 @@ Scene Integration
 
 
 
-\---
+---
 
-\## Validation Criteria
+## Validation Criteria
 
 Imported files correctly displayed.
 
@@ -654,23 +629,23 @@ No crashes.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 Model loading capability.
 
 
 
-\---
+---
 
 
 
-\# PHASE 4
+# PHASE 4
 
-\# OBJECT MANIPULATION
+# OBJECT MANIPULATION
 
 
 
@@ -680,21 +655,21 @@ Critical
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 Allow complete object control.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 Move Tool
 
@@ -712,11 +687,11 @@ Reset Tool
 
 
 
-\---
+---
 
 
 
-\## Translation
+## Translation
 
 X
 
@@ -726,11 +701,11 @@ Z
 
 
 
-\---
+---
 
 
 
-\## Rotation
+## Rotation
 
 X
 
@@ -743,11 +718,11 @@ Step Rotation
 Continuous Rotation
 
 
-\---
+---
 
 
 
-\## Scaling
+## Scaling
 
 Uniform
 
@@ -755,11 +730,11 @@ Independent
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 Transformations accurate.
 
@@ -769,23 +744,23 @@ Undo ready architecture.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 Full model positioning system.
 
 
-\---
+---
 
 
 
-\# PHASE 5
+# PHASE 5
 
-\# PRINTER MANAGEMENT
+# PRINTER MANAGEMENT
 
 
 
@@ -796,11 +771,11 @@ High
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 
 
@@ -808,11 +783,11 @@ Create printer database system.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 Local Database
 
@@ -829,10 +804,10 @@ Printer Profile Validation
 Profile Repository Support
 
 
-\---
+---
 
 
-\## Future Sources
+## Future Sources
 
 Official Profiles
 
@@ -842,11 +817,11 @@ Manufacturer Profiles
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 Printer changes update scene.
 
@@ -856,11 +831,11 @@ Printer data valid.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -868,13 +843,13 @@ Printer-aware environment.
 
 
 
-\---
+---
 
 
 
-\# PHASE 6
+# PHASE 6
 
-\# MATERIAL MANAGEMENT
+# MATERIAL MANAGEMENT
 
 
 
@@ -885,22 +860,22 @@ High
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 
 Create material system.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 Material Database
 
@@ -918,11 +893,11 @@ Manufacturer Profiles
 
 Filament Recommendation Support
 
-\---
+---
 
 
 
-\## Initial Materials
+## Initial Materials
 
 
 
@@ -962,11 +937,11 @@ PP
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -978,11 +953,11 @@ Materials configurable.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -990,13 +965,13 @@ Material-aware environment.
 
 
 
-\---
+---
 
 
 
-\# PHASE 7
+# PHASE 7
 
-\# MODEL ANALYSIS ENGINE
+# MODEL ANALYSIS ENGINE
 
 
 Priority:
@@ -1005,19 +980,19 @@ Priority:
 Critical
 
 
-\---
+---
 
 
-\## Objectives
+## Objectives
 
 
 Analyze imported models.
 
 
-\---
+---
 
 
-\## Geometry Analysis
+## Geometry Analysis
 
 Bounding Box
 
@@ -1035,11 +1010,11 @@ Confidence Score
 
 Category Detection
 
-\---
+---
 
 
 
-\## Printability Analysis
+## Printability Analysis
 
 
 
@@ -1063,11 +1038,11 @@ Unsupported Areas
 
 
 
-\---
+---
 
 
 
-\## Stability Analysis
+## Stability Analysis
 
 
 
@@ -1087,11 +1062,11 @@ Tip Risk
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -1107,11 +1082,11 @@ Large models supported.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -1119,13 +1094,13 @@ Complete model diagnostic engine.
 
 
 
-\---
+---
 
 
 
-\# PHASE 8
+# PHASE 8
 
-\# AI RECOMMENDATION ENGINE
+# AI RECOMMENDATION ENGINE
 
 
 Priority:
@@ -1134,19 +1109,19 @@ Priority:
 Critical
 
 
-\---
+---
 
 
-\## Objectives
+## Objectives
 
 
 Generate recommended settings.
 
 
-\---
+---
 
 
-\## Inputs
+## Inputs
 
 Printer
 
@@ -1159,10 +1134,10 @@ Analysis
 Object Classification
 
 
-\---
+---
 
 
-\## Outputs
+## Outputs
 
 
 Layer Height
@@ -1195,10 +1170,10 @@ Confidence Score
 
 
 
-\---
+---
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -1218,11 +1193,11 @@ Analysis constraints
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -1230,13 +1205,13 @@ Automatic profile generation.
 
 
 
-\---
+---
 
 
 
-\# PHASE 9
+# PHASE 9
 
-\# OPTIMIZATION ENGINE
+# OPTIMIZATION ENGINE
 
 
 Priority:
@@ -1245,19 +1220,19 @@ Priority:
 High
 
 
-\---
+---
 
 
-\## Objectives
+## Objectives
 
 
 Improve recommendations.
 
 
-\---
+---
 
 
-\## Deliverables
+## Deliverables
 
 Orientation Optimization
 
@@ -1271,10 +1246,10 @@ Support Optimization
 
 Preset Optimization
 
-\---
+---
 
 
-\## Metrics
+## Metrics
 
 
 Reliability
@@ -1296,11 +1271,11 @@ Material Usage
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -1312,11 +1287,11 @@ Recommendations improved.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -1324,13 +1299,13 @@ Advanced recommendation system.
 
 
 
-\---
+---
 
 
 
-\# PHASE 10
+# PHASE 10
 
-\# COST ESTIMATION
+# COST ESTIMATION
 
 
 
@@ -1342,11 +1317,11 @@ Medium
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 
 
@@ -1354,11 +1329,11 @@ Estimate print production cost.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 
 
@@ -1386,11 +1361,11 @@ Total Cost
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -1402,11 +1377,11 @@ Values reproducible.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -1414,13 +1389,13 @@ Production planning information.
 
 
 
-\---
+---
 
 
 
-\# PHASE 11
+# PHASE 11
 
-\# PROJECT PERSISTENCE
+# PROJECT PERSISTENCE
 
 
 
@@ -1432,11 +1407,11 @@ High
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 
 
@@ -1444,11 +1419,11 @@ Save and restore projects.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 
 
@@ -1476,11 +1451,11 @@ Scene Persistence
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -1492,11 +1467,11 @@ No data loss.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -1504,13 +1479,13 @@ Long-term usability.
 
 
 
-\---
+---
 
 
 
-\# PHASE 12
+# PHASE 12
 
-\# ADVANCED FEATURES
+# ADVANCED FEATURES
 
 
 
@@ -1522,11 +1497,11 @@ Future
 
 
 
-\---
+---
 
 
 
-\## Possible Features
+## Possible Features
 
 
 G-Code Generation
@@ -1555,31 +1530,31 @@ Preset Marketplace
 
 Plugin System
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 Defined during implementation.
 
 
-\---
+---
 
 
-\## Output
+## Output
 
 
 Professional ecosystem.
 
 
-\---
+---
 
 
-\# PHASE 13
+# PHASE 13
 
-\# PRODUCTION RELEASE
+# PRODUCTION RELEASE
 
 
 
@@ -1591,11 +1566,11 @@ Critical
 
 
 
-\---
+---
 
 
 
-\## Objectives
+## Objectives
 
 
 
@@ -1603,11 +1578,11 @@ Prepare release-quality software.
 
 
 
-\---
+---
 
 
 
-\## Deliverables
+## Deliverables
 
 
 
@@ -1639,11 +1614,11 @@ Update System
 
 
 
-\---
+---
 
 
 
-\## Validation Criteria
+## Validation Criteria
 
 
 
@@ -1659,11 +1634,11 @@ Stable releases.
 
 
 
-\---
+---
 
 
 
-\## Output
+## Output
 
 
 
@@ -1671,15 +1646,35 @@ Version 1.0 Production Ready.
 
 
 
-\---
+---
+
+# Roadmap Change Rules
+
+Before modifying the roadmap:
+
+1. Identify impacted phases
+
+2. Identify impacted documentation
+
+3. Identify impacted domains
+
+4. Verify dependencies
+
+5. Perform impact analysis
+
+6. Update CHANGELOG.md
+
+7. Validate roadmap consistency
+
+8. Validate governance requirements
+
+---
+
+# Release Strategy
 
 
 
-\# Release Strategy
-
-
-
-\## Alpha
+## Alpha
 
 
 
@@ -1687,11 +1682,11 @@ Internal Development
 
 
 
-\---
+---
 
 
 
-\## Beta
+## Beta
 
 
 
@@ -1699,11 +1694,11 @@ Feature Complete
 
 
 
-\---
+---
 
 
 
-\## Release Candidate
+## Release Candidate
 
 
 
@@ -1711,11 +1706,11 @@ Bug Fixes Only
 
 
 
-\---
+---
 
 
 
-\## Stable
+## Stable
 
 
 
@@ -1723,11 +1718,11 @@ Public Use
 
 
 
-\---
+---
 
 
 
-\# Version Roadmap
+# Version Roadmap
 
 
 
@@ -1795,43 +1790,66 @@ Stable Release
 
 
 
-\---
+---
 
 
 
-\# Success Criteria
+# Success Criteria
 
 The project is successful if:
 
-\- Users can import STL and 3MF files
+- Users can import STL and 3MF files
 
-\- Multiple objects are supported
+- Multiple objects are supported
 
-\- Printers are configurable
+- Printers are configurable
 
-\- Materials are configurable
+- Materials are configurable
 
-\- Automatic recommendations are reliable
+- Automatic recommendations are reliable
 
-\- Orientation suggestions improve print success
+- Orientation suggestions improve print success
 
-\- Project remains modular and maintainable
+- Project remains modular and maintainable
 
-\- New features can be added without major rewrites
+- New features can be added without major rewrites
 
-\- Object classification is reliable
+- Object classification is reliable
 
-\- Support recommendations are reliable
+- Support recommendations are reliable
 
-\- Preset recommendations improve workflow
+- Preset recommendations improve workflow
 
-\- Undo/Redo operations remain stable
-
-
-\---
+- Undo/Redo operations remain stable
 
 
-\# Golden Rule
+---
+
+# Roadmap Governance Validation
+
+Before approving roadmap modifications:
+
+Verify:
+
+- Dependencies validated
+
+- Ownership respected
+
+- Documentation updated
+
+- Impact analysis completed
+
+- Roadmap consistency maintained
+
+- Governance requirements satisfied
+
+Reference:
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+---
+
+# Golden Rule
 
 
 Every phase must leave the project in a working state.
@@ -1839,8 +1857,8 @@ Every phase must leave the project in a working state.
 Never start a new phase while the previous phase remains unstable.
 
 
-\---
+---
 
 
-\# End Of Document
+# End Of Document
 
