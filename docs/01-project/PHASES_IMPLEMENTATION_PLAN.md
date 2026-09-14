@@ -13,14 +13,9 @@ Priority: Medium
 
 # Purpose
 
-
-
 This document defines the implementation order of the project.
 
-
-
 The objective is to:
-
 
 - Avoid large rewrites
 
@@ -33,12 +28,32 @@ The objective is to:
 - Follow the roadmap correctly
 
 
-
 Development must follow these phases in order.
 
-
-
 Do not skip phases.
+
+
+Note:
+
+This document defines the technical implementation sequence.
+
+Functional project milestones are defined in:
+
+ROADMAP.md
+
+ROADMAP.md defines:
+
+- Functional progression
+- Project milestones
+- Release objectives
+
+PHASES_IMPLEMENTATION_PLAN.md defines:
+
+- Technical sequencing
+- Development dependencies
+- Technical implementation order
+
+If a conflict appears, ROADMAP.md governs functional objectives while this document governs technical implementation order.
 
 ---
 
@@ -46,6 +61,7 @@ Do not skip phases.
 
 Implementation planning must comply with:
 
+```text
 DOMAIN_BOUNDARIES.md
 
 DOMAINS_DEPENDENCY_MATRIX.md
@@ -61,9 +77,11 @@ CHANGE_VERIFICATION_CHECKLIST.md
 DOCUMENT_UPDATE_MATRIX.md
 
 CROSS_DOCUMENT_DEPENDENCIES.md
+```
 
 Purpose:
 
+```text
 - Controlled Implementation
 
 - Dependency Governance
@@ -75,6 +93,7 @@ Purpose:
 - Documentation Governance
 
 - Change Validation
+```
 
 ---
 
@@ -95,6 +114,8 @@ Before starting any phase:
 6. Verify roadmap alignment
 
 7. Validate governance requirements
+
+8. Verify ROADMAP.md consistency
 
 No phase may begin until all governance requirements are satisfied.
 
