@@ -1,8 +1,8 @@
-# AI SMART SLICER
+# SLICYWEB SMART SLICER
 
 # ARCHITECTURAL DECISIONS RECORD
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -16,15 +16,10 @@ Priority: Medium
 
 # Purpose
 
-
-
 This document records all major architectural, technical, and design decisions made throughout the project lifecycle.
 
 
-
 Goals:
-
-
 
 - Preserve decision history
 
@@ -60,31 +55,17 @@ Each decision uses the following format:
 
 ADR-XXX
 
-
-
 Title
-
-
 
 Status
 
-
-
 Date
-
-
 
 Context
 
-
-
 Decision
 
-
-
 Consequences
-
-
 
 Alternatives Considered
 
@@ -104,19 +85,11 @@ Alternatives Considered
 
 Proposed
 
-
-
 Accepted
-
-
 
 Deprecated
 
-
-
 Superseded
-
-
 
 Rejected
 
@@ -128,31 +101,14 @@ Rejected
 
 
 
-\# ADR-001
+# ADR-001
 
 
+Title: Desktop Application First
 
-Title:
+Status: Accepted
 
-
-
-Desktop Application First
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -224,30 +180,20 @@ TypeScript
 
 Advantages:
 
-
-
 ```text
 
 Local File Access
 
-
-
 Offline Operation
 
-
-
 Cross Platform
-
-
 
 Easy Future Expansion
 
 ```
 
 
-
 Disadvantages:
-
 
 
 ```text
@@ -265,64 +211,38 @@ Larger Application Size
 \## Alternatives Considered
 
 
-
 ```text
 
 Web Application
-
-
 
 Rejected
 
 ```
 
 
-
 Reason:
-
 
 
 ```text
 
 Local file handling limitations.
 
-
-
 Offline support required.
 
 ```
 
 
-
 \---
-
 
 
 \# ADR-002
 
 
+Title: TypeScript As Primary Language
 
-Title:
+Status: Accepted
 
-
-
-TypeScript As Primary Language
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -353,10 +273,7 @@ Project complexity requires:
 \## Decision
 
 
-
 Use:
-
-
 
 ```text
 
@@ -367,7 +284,6 @@ TypeScript
 
 
 for all application code.
-
 
 
 \---
@@ -381,20 +297,13 @@ for all application code.
 Advantages:
 
 
-
 ```text
 
 Type Safety
 
-
-
 Better Refactoring
 
-
-
 Improved IDE Support
-
-
 
 Reduced Bugs
 
@@ -409,13 +318,11 @@ Reduced Bugs
 \## Alternatives Considered
 
 
-
 ```text
 
 JavaScript
 
 ```
-
 
 
 Rejected.
@@ -429,28 +336,11 @@ Rejected.
 \# ADR-003
 
 
+Title: Three.js Rendering Engine
 
-Title:
+Status: Accepted
 
-
-
-Three.js Rendering Engine
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -470,19 +360,11 @@ Project requires:
 
 3D Viewport
 
-
-
 STL Rendering
-
-
 
 3MF Rendering
 
-
-
 Transform Controls
-
-
 
 Camera Controls
 
@@ -497,9 +379,7 @@ Camera Controls
 \## Decision
 
 
-
 Use:
-
 
 
 ```text
@@ -517,20 +397,14 @@ Three.js
 \## Consequences
 
 
-
 Advantages:
-
 
 
 ```text
 
 Mature Ecosystem
 
-
-
 Excellent Documentation
-
-
 
 Industry Proven
 
@@ -545,17 +419,13 @@ Industry Proven
 \## Alternatives Considered
 
 
-
 ```text
 
 Babylon.js
 
-
-
 Custom Renderer
 
 ```
-
 
 
 Rejected.
@@ -570,27 +440,11 @@ Rejected.
 
 
 
-Title:
+Title: Rule Based AI Engine
 
+Status: Accepted
 
-
-Rule Based AI Engine
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -610,11 +464,7 @@ Version 1.x must produce:
 
 Reliable
 
-
-
 Deterministic
-
-
 
 Predictable
 
@@ -625,9 +475,7 @@ Predictable
 results.
 
 
-
 \---
-
 
 
 \## Decision
@@ -637,7 +485,6 @@ results.
 Use:
 
 
-
 ```text
 
 Rule Based Recommendation Engine
@@ -645,9 +492,7 @@ Rule Based Recommendation Engine
 ```
 
 
-
 instead of machine learning.
-
 
 
 \---
@@ -661,16 +506,11 @@ instead of machine learning.
 Advantages:
 
 
-
 ```text
 
 Repeatable Results
 
-
-
 Easy Validation
-
-
 
 Low Risk
 
@@ -685,40 +525,20 @@ Low Risk
 \## Future
 
 
-
 Machine Learning may be added later.
-
 
 
 \---
 
 
-
 \# ADR-005
 
 
+Title: Local Data First
 
-Title:
+Status: Accepted
 
-
-
-Local Data First
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -745,32 +565,19 @@ External sources may be unavailable.
 Priority:
 
 
-
 ```text
 
 Local Database
 
-
-
 ↓
-
-
 
 Cache
 
-
-
 ↓
-
-
 
 GitHub
 
-
-
 ↓
-
-
 
 Other Sources
 
@@ -785,16 +592,11 @@ Other Sources
 \## Consequences
 
 
-
 ```text
 
 Faster Startup
 
-
-
 Offline Support
-
-
 
 Improved Reliability
 
@@ -809,28 +611,11 @@ Improved Reliability
 \# ADR-006
 
 
+Title: No G-Code Generation In Initial Releases
 
-Title:
+Status: Accepted
 
-
-
-No G-Code Generation In Initial Releases
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -841,9 +626,7 @@ Date:
 \## Context
 
 
-
 Project scope is large.
-
 
 
 \---
@@ -857,16 +640,11 @@ Project scope is large.
 Focus first on:
 
 
-
 ```text
 
 Visualization
 
-
-
 Analysis
-
-
 
 Recommendations
 
@@ -877,14 +655,10 @@ Recommendations
 \---
 
 
-
 \## Consequences
 
 
-
 Simpler early development.
-
-
 
 Reduced complexity.
 
@@ -897,9 +671,7 @@ Reduced complexity.
 \# Future
 
 
-
 G-Code planned for later phases.
-
 
 
 \---
@@ -909,28 +681,11 @@ G-Code planned for later phases.
 \# ADR-007
 
 
+Title: Modular Architecture
 
-Title:
+Status: Accepted
 
-
-
-Modular Architecture
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -962,19 +717,11 @@ Every major feature must be isolated:
 
 Importer
 
-
-
 Renderer
-
-
 
 Analysis
 
-
-
 Recommendation
-
-
 
 Optimization
 
@@ -989,56 +736,31 @@ Optimization
 \## Consequences
 
 
-
 Advantages:
-
 
 
 ```text
 
 Scalable
 
-
-
 Maintainable
-
-
 
 Testable
 
 ```
 
 
-
 \---
-
 
 
 \# ADR-008
 
 
+Title: State Management With Zustand
 
-Title:
+Status: Accepted
 
-
-
-State Management With Zustand
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -1053,7 +775,6 @@ Date:
 Use:
 
 
-
 ```text
 
 Zustand
@@ -1061,34 +782,25 @@ Zustand
 ```
 
 
-
 instead of:
-
 
 
 ```text
 
 Redux
 
-
-
 MobX
 
 ```
 
 
-
 \---
-
 
 
 \## Reason
 
 
-
 Lower complexity.
-
-
 
 Lower maintenance cost.
 
@@ -1101,28 +813,11 @@ Lower maintenance cost.
 \# ADR-009
 
 
+Title: Formal Documentation Required
 
-Title:
+Status: Accepted
 
-
-
-Formal Documentation Required
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -1133,54 +828,35 @@ Date:
 \## Decision
 
 
-
 Every major system must have documentation.
 
-
-
 Mandatory Documents:
-
 
 
 ```text
 
 Architecture
 
-
-
 Schema
-
-
 
 Security
 
-
-
 Performance
 
-
-
 API
-
-
 
 Testing
 
 ```
 
 
-
 \---
-
 
 
 \## Consequences
 
 
-
 Improves consistency.
-
-
 
 Improves AI-assisted development.
 
@@ -1193,28 +869,11 @@ Improves AI-assisted development.
 \# ADR-010
 
 
+Title: Patch-First Development
 
-Title:
+Status: Accepted
 
-
-
-Patch-First Development
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -1229,17 +888,13 @@ Date:
 Large AI-generated rewrites create bugs.
 
 
-
 \---
-
 
 
 \## Decision
 
 
-
 Prefer:
-
 
 
 ```text
@@ -1249,9 +904,7 @@ Patch Existing Code
 ```
 
 
-
 instead of:
-
 
 
 ```text
@@ -1261,7 +914,6 @@ Rewrite Entire Modules
 ```
 
 
-
 \---
 
 
@@ -1269,20 +921,14 @@ Rewrite Entire Modules
 \## Consequences
 
 
-
 Advantages:
-
 
 
 ```text
 
 Reduced Regressions
 
-
-
 Reduced Token Usage
-
-
 
 Improved Stability
 
@@ -1297,28 +943,11 @@ Improved Stability
 \# ADR-011
 
 
+Title: Single Source Of Truth
 
-Title:
+Status: Accepted
 
-
-
-Single Source Of Truth
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -1329,10 +958,7 @@ Date:
 \## Decision
 
 
-
 Application state stored centrally.
-
-
 
 Only services may update state.
 
@@ -1345,16 +971,12 @@ Only services may update state.
 \## Consequences
 
 
-
 Advantages:
-
 
 
 ```text
 
 Predictable Behavior
-
-
 
 Fewer Synchronization Bugs
 
@@ -1369,28 +991,11 @@ Fewer Synchronization Bugs
 \# ADR-012
 
 
+Title: Plugin System Reserved For Future
 
-Title:
+Status: Accepted
 
-
-
-Plugin System Reserved For Future
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -1399,66 +1004,40 @@ Date:
 
 
 \## Decision
-
 
 
 Do not implement plugins in early releases.
 
 
-
 \---
-
 
 
 \## Reason
 
 
-
 Core stability has priority.
 
 
-
 \---
-
 
 
 \# Future
 
 
-
 Plugin framework planned after stable releases.
-
 
 
 \---
 
 
-
 \# ADR-013
 
 
+Title: Security By Validation
 
-Title:
+Status: Accepted
 
-
-
-Security By Validation
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -1469,13 +1048,10 @@ Date:
 \## Decision
 
 
-
 All imported content must be validated.
 
 
-
 \---
-
 
 
 \## Applies To
@@ -1486,37 +1062,23 @@ All imported content must be validated.
 
 STL
 
-
-
 3MF
-
-
 
 Printer Profiles
 
-
-
 Material Profiles
-
-
 
 Repositories
 
 ```
 
 
-
 \---
 
 
-
-\## Consequences
-
-
+## Consequences
 
 Improved stability.
-
-
 
 Improved data integrity.
 
@@ -1526,31 +1088,13 @@ Improved data integrity.
 
 
 
-\# ADR-014
+# ADR-014
 
+Title: Performance Target
 
+Status: Accepted
 
-Title:
-
-
-
-Performance Target
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
@@ -1558,163 +1102,400 @@ Date:
 
 
 
-\## Decision
-
+## Decision
 
 
 Performance goals:
-
 
 
 ```text
 
 60 FPS Target
 
-
-
 30 FPS Minimum
-
-
 
 < 3 sec Startup
 
 ```
 
 
-
-\---
-
+---
 
 
-\## Consequences
-
+## Consequences
 
 
 Performance considerations become mandatory.
 
 
-
-\---
-
+---
 
 
-\# ADR-015
+# ADR-015
 
 
+Title: AI Assists User
 
-Title:
+Status: Accepted
 
-
-
-AI Assists User
-
-
-
-Status:
-
-
-
-Accepted
-
-
-
-Date:
-
-
-
-2026-08-24
+Date: 2026-08-24
 
 
 
 \---
-
 
 
 \## Decision
 
 
-
 The AI provides:
-
 
 
 ```text
 
 Recommendations
 
-
-
 Warnings
-
-
 
 Suggestions
 
 ```
 
 
-
 The user remains in control.
-
 
 
 \---
 
 
-
-\## Consequences
-
+## Consequences
 
 
 Avoids overly aggressive automation.
 
-
-
 Maintains user trust.
 
 
+---
 
-\---
+# ADR-016
 
+Title: Governance Framework Adoption
 
+Status: Accepted
 
-\# Future Decision Template
+Date: 2026-09-14
 
+---
+
+## Context
+
+Project complexity increased with:
+
+- Multiple domains
+- AI-assisted development
+- Architecture evolution
+- Documentation growth
+
+A formal governance framework became necessary.
+
+---
+
+## Decision
+
+Adopt a structured governance framework composed of:
+
+- Domain Governance
+- Ownership Management
+- Dependency Governance
+- Impact Analysis
+- Documentation Governance
+- Update Governance
+
+---
+
+## Consequences
+
+Advantages:
+
+- Reduced regressions
+- Controlled modifications
+- Improved maintainability
+- Better AI-assisted development
+- Consistent documentation
+
+---
+
+## Related Documents
+
+CLAUDE_GOVERNANCE_PROTOCOL.md
+
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+---
+
+# ADR-017
+
+Title: Documentation First Development
+
+Status: Accepted
+
+Date: 2026-09-14
+
+---
+
+## Context
+
+The project relies heavily on:
+
+- AI-assisted development
+- Long-term maintainability
+- Architecture consistency
+
+---
+
+## Decision
+
+Documentation must be created or updated before implementation.
+
+---
+
+## Consequences
+
+Advantages:
+
+- Better project understanding
+- Reduced ambiguity
+- Improved onboarding
+- Safer implementation
+
+---
+
+# ADR-018
+
+Title: Domain Ownership Enforcement
+
+Status: Accepted
+
+Date: 2026-09-14
+
+---
+
+## Context
+
+Project growth introduced:
+
+- Multiple domains
+- Shared responsibilities
+- Cross-domain dependencies
+
+Ownership rules became necessary.
+
+---
+
+## Decision
+
+Every file, module and document must have a designated ownership domain.
+
+Ownership definitions are maintained in:
+
+```text
+FILE_OWNERSHIP_MATRIX.md
+DOMAIN_BOUNDARIES.md
+```
+
+---
+
+# ADR-019
+
+Title: Documentation As Source Of Truth
+
+Status: Accepted
+
+Date: 2026-09-14
+
+---
+
+## Context
+
+The project relies heavily on:
+
+- AI-assisted development
+- Long-term maintainability
+- Documentation-driven architecture
+- Multi-document governance
+- Incremental development
+
+As the project grows, implementation and documentation must remain synchronized.
+
+Without a single authoritative source of truth, inconsistencies, regressions, architectural drift, and conflicting implementations become more likely.
+
+---
+
+## Decision
+
+Project documentation is the official Source Of Truth.
+
+Implementation must follow documented specifications.
+
+When a project behavior, architecture, schema, workflow, or process changes:
+
+- Documentation must be reviewed
+- Documentation must be updated when affected
+- Documentation consistency must be verified
+- Cross-document dependencies must be evaluated
+
+All implementation decisions must be traceable to documented specifications.
+
+---
+
+## Consequences
+
+Advantages:
+
+```text
+Improved Consistency
+
+Improved Maintainability
+
+Reduced Ambiguity
+
+Reduced Regression Risk
+
+Safer AI-Assisted Development
+
+Better Onboarding
+
+Better Knowledge Preservation
+
+Improved Architecture Governance
+```
+
+---
+
+## Related Documents
+
+```text
+PROJECT_SPEC.md
+
+ARCHITECTURE.md
+
+DATA_SCHEMA.md
+
+SYSTEM_RULES.md
+
+DEVELOPMENT_RULES.md
+
+DECISIONS.md
+
+PROJECT_DOCUMENTATION_INDEX.md
+
+AI_START_HERE.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CLAUDE_FILE_UPDATE_RULES.md
+```
+
+---
+
+## Alternatives Considered
+
+```text
+Code As Source Of Truth
+
+Rejected
+```
+
+Reason:
+
+```text
+Code Alone Does Not Explain Intent
+
+Difficult For AI Systems
+
+Higher Risk Of Knowledge Loss
+
+Reduced Architectural Traceability
+```
+
+---
+
+## Governance Impact
+
+The following principles become mandatory:
+
+```text
+Documentation First
+
+Impact Analysis First
+
+Patch First
+
+Architecture Protection
+
+Cross-Document Consistency
+
+Documentation Maintenance
+```
+
+---
+
+## Verification Requirements
+
+Before approving a modification:
+
+```text
+Verify Documentation Impact
+
+Verify Cross-Document Dependencies
+
+Verify Ownership Requirements
+
+Verify Architecture Consistency
+
+Verify Source Of Truth Compliance
+```
+
+---
+
+# Future Decision Template
 
 
 Copy and complete:
-
 
 
 ```text
 
 ADR-XXX
 
-
-
 Title:
-
-
 
 Status:
 
-
-
 Date:
-
-
 
 Context:
 
-
-
 Decision:
 
-
-
 Consequences:
-
-
 
 Alternatives Considered:
 
