@@ -1,18 +1,49 @@
-# WICHY – AI Smart 3D Printing Platform
+# SLICYWEB – AI Smart 3D Printing Platform
 
-Version:1.0.0
+Version: 2.0.0
 
 Status: Approved
 
 Priority: High
 
-**Philosophy:** Documentation-First | Local-First | Rule-Based AI
+**Philosophy:**  Documentation-First | Local-First | Rule-Based AI
+
+---
+
+## Governance Integration
+
+This architecture overview must remain aligned with:
+
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+
+Purpose:
+
+- Architecture Governance
+- Dependency Governance
+- Domain Ownership
+- Documentation Governance
+- Change Validation
+- Impact Analysis
 
 ---
 
 ## 1. Executive Summary & Vision
 
-Wichy is a next-generation desktop application engineered to simplify, optimize, and secure the 3D print preparation workflow. Rather than serving as just another slicing utility, Wichy acts as an intelligent engineering assistant that evaluates:
+SlicyWeb is a next-generation desktop application engineered to simplify, optimize, and secure the 3D print preparation workflow. Rather than serving as just another slicing utility, SlicyWeb acts as an intelligent engineering assistant that evaluates:
 
 - **The Hardware:** Printer specifications, build volume, kinematics, and firmware limits.
 - **The Material:** Polymer properties, thermal limits, and material-specific behavior.
@@ -88,6 +119,23 @@ The application enforces strict separation of concerns across single-responsibil
                                              │ Cost & Telemetry      │
                                              │ Estimator Engine      │
                                              └───────────────────────┘
+```
+
+---
+
+### Architecture Ownership
+
+All architectural components have designated ownership domains.
+
+Ownership definitions are maintained in:
+
+FILE_OWNERSHIP_MATRIX.md
+
+DOMAIN_BOUNDARIES.md
+
+Cross-domain architectural modifications require impact analysis.
+
+---
 
 ## 4. Technical Stack
 
@@ -110,6 +158,32 @@ Additional Core Libraries:
 
 ---
 
+## Architecture Change Rules
+
+Before modifying architecture:
+
+1. Identify impacted domains
+
+2. Identify impacted modules
+
+3. Identify impacted schemas
+
+4. Identify impacted APIs
+
+5. Review ownership
+
+6. Perform impact analysis
+
+7. Update documentation
+
+8. Update CHANGELOG.md
+
+9. Validate compatibility
+
+10. Validate governance requirements
+
+---
+
 ## 5. Development Roadmap & Principles
 
 ### Development Hierarchy
@@ -121,3 +195,27 @@ Additional Core Libraries:
 3. **User Authority:** Recommendations are suggested; the user retains absolute override control over all parameters.
 4. **Documentation First:** Architecture and specifications are defined before implementation.
 5. **Backward Compatibility:** Existing project formats and schemas should remain compatible whenever possible.
+
+---
+
+## Architecture Governance Validation
+
+Before accepting architecture changes:
+
+Verify:
+
+- Ownership respected
+
+- Dependencies validated
+
+- Documentation updated
+
+- Impact analysis completed
+
+- Compatibility maintained
+
+- Governance requirements satisfied
+
+Reference:
+
+CHANGE_VERIFICATION_CHECKLIST.md
