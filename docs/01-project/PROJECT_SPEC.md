@@ -91,6 +91,10 @@ The application must:
 
 - Import 3MF files
 
+- Open WYPROJ project files
+
+- Save WYPROJ project files
+
 - Display objects in a 3D environment
 
 - Manage multiple objects simultaneously
@@ -156,19 +160,56 @@ G-Code generation may be added in future phases.
 
 ## 4.1 File Import
 
-Supported formats:
+Supported Formats:
 
 - STL
-
 - 3MF
+- WYPROJ
 
-Future support:
+Purpose:
+
+- STL: Mesh Geometry Import
+- 3MF: Advanced Model Import
+- WYPROJ: Native Project Format
+
+Internal Data Format:
+
+- JSON
+
+Future Support:
 
 - OBJ
-
 - AMF
-
 - STEP
+
+---
+
+## Project File Format
+
+Native Project Format:
+
+WYPROJ
+
+Project Extension:
+
+.wyproj
+
+Project files may contain:
+
+- Scene Data
+- Object Data
+- Printer Selection
+- Material Selection
+- Filament Selection
+- Print Presets
+- Analysis Results
+- Recommendations
+- User Settings
+- Metadata
+
+Storage Format:
+
+JSON-Based Structure
 
 ---
 
