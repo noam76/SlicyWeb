@@ -2,7 +2,7 @@
 
 # TECHNOLOGY STACK
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -14,14 +14,10 @@ Priority: High
 
 # Purpose
 
-
-
 This document defines the official technology stack used by the project.
 
 
-
 Goals:
-
 
 
 - Long-term maintainability
@@ -39,13 +35,10 @@ Goals:
 - Compatibility with future extensions
 
 
-
 All development should follow this document.
 
 
-
 Technology changes require:
-
 
 
 - Architecture review
@@ -55,10 +48,45 @@ Technology changes require:
 - Changelog update
 
 
-
 ---
 
+# Technology Governance
 
+Technology modifications must comply with:
+
+```text
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+```
+
+Technology changes require:
+
+```text
+Impact Analysis
+
+Architecture Review
+
+Compatibility Review
+
+Documentation Review
+
+Migration Evaluation
+```
+
+---
 
 # Technology Selection Philosophy
 
@@ -499,19 +527,11 @@ Electron allows:
 
 Desktop Application
 
-
-
 File System Access
-
-
 
 Project Saving
 
-
-
 Project Loading
-
-
 
 Offline Usage
 
@@ -531,19 +551,11 @@ Offline Usage
 
 Main Process
 
-
-
 ↓
-
-
 
 Renderer Process
 
-
-
 ↓
-
-
 
 React Application
 
@@ -590,11 +602,43 @@ Profile Management
 
 ```
 
-
-
 ---
 
+# IPC Architecture Rules
 
+Preferred Flow:
+
+```text
+Renderer
+↓
+IPC
+↓
+Service
+↓
+Repository
+```
+
+Renderer components must not directly access:
+
+```text
+Repositories
+
+Storage Systems
+
+Remote Sources
+```
+
+All communication must pass through the IPC layer.
+
+Reference:
+
+```text
+API_SPEC.md
+
+ARCHITECTURE.md
+```
+
+---
 
 # 3D Rendering Engine
 
@@ -642,27 +686,15 @@ Three.js handles:
 
 Viewport
 
-
-
 Grid
-
-
 
 Axes
 
-
-
 Camera
-
-
 
 Objects
 
-
-
 Selection
-
-
 
 Transformations
 
@@ -686,11 +718,7 @@ Three.js should NOT manage:
 
 Application State
 
-
-
 Printer Profiles
-
-
 
 Business Logic
 
@@ -737,7 +765,6 @@ Three.js Examples
 Primary Library:
 
 
-
 ```text
 
 3MFLoader
@@ -745,17 +772,13 @@ Primary Library:
 ```
 
 
-
 Source:
-
 
 
 Three.js Examples
 
 
-
 ---
-
 
 
 # 3D Helper Libraries
@@ -765,13 +788,11 @@ Three.js Examples
 Use:
 
 
-
 ```text
 
 three/examples
 
 ```
-
 
 
 For:
@@ -1201,6 +1222,29 @@ Only when required.
 
 ---
 
+# Repository Integration
+
+Primary Technology:
+
+```text
+Octokit
+```
+
+Repository access flow:
+
+```text
+Service
+↓
+Repository
+↓
+RepositorySync
+↓
+GitHub
+```
+
+Direct GitHub access from GUI modules is forbidden.
+
+---
 
 
 # Purpose
