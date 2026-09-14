@@ -73,19 +73,12 @@ Remote requests should only occur when necessary.
 All API modifications must comply with:
 
 DOMAIN_BOUNDARIES.md
-
 DOMAINS_DEPENDENCY_MATRIX.md
-
 FILE_OWNERSHIP_MATRIX.md
-
 PROJECT_IMPACT_MATRIX.md
-
 CHANGE_CLASSIFICATION_RULES.md
-
 CHANGE_VERIFICATION_CHECKLIST.md
-
 DOCUMENT_UPDATE_MATRIX.md
-
 CROSS_DOCUMENT_DEPENDENCIES.md
 
 
@@ -146,25 +139,15 @@ Ownership must be verified before modifying shared APIs.
 # API Architecture
 
 ```text
-
 GUI
-
 ↓
-
-Application Layer
-
+IPC / Internal API
 ↓
-
 Services
-
 ↓
-
-API Layer
-
+Repositories
 ↓
-
 Storage / Cache / Remote
-
 ```
 
 ---
@@ -1561,6 +1544,18 @@ Purpose:
 
 Access online repositories.
 
+
+Repository Resolution Order:
+
+Local Database
+↓
+Local Cache
+↓
+Official Profiles
+↓
+Verified Repositories
+↓
+Community Sources
 
 ---
 
