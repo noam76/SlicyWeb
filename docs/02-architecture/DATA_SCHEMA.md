@@ -1,8 +1,7 @@
 # DATA SCHEMA
 
 
-
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -13,7 +12,6 @@ Priority: Mandatory
 
 # Purpose
 
-
 This document defines every data structure used by the project.
 
 All modules must follow these schemas.
@@ -22,9 +20,47 @@ No module may introduce incompatible structures without updating this document.
 
 This document is considered the single source of truth for data modeling.
 
-
 ---
 
+# Schema Governance
+
+All schema modifications must comply with:
+
+```text
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+```
+
+Purpose:
+
+```text
+Protect Data Consistency
+
+Prevent Breaking Changes
+
+Maintain Compatibility
+
+Control Schema Evolution
+
+Protect Domain Boundaries
+
+Standardize Validation
+```
+
+---
 
 # Global Rules
 
@@ -51,9 +87,49 @@ Time: seconds
 
 Cost: local currency
 
+---
+
+# Schema Ownership Rules
+
+Every schema belongs to a domain.
+
+
+Ownership must follow:
+
+FILE_OWNERSHIP_MATRIX.md
+
+DOMAIN_BOUNDARIES.md
+
+
+Cross-domain schema modifications require impact analysis.
+
+Ownership must be verified before modifying shared schemas.
 
 ---
 
+# Runtime Validation Rules
+
+All runtime validation must use:
+
+Zod Schemas
+
+Located in:
+
+src/schemas/
+
+Every schema documented in this file must have a corresponding runtime validation schema.
+
+Runtime validation is mandatory for:
+
+- User Input
+- Imported Files
+- Printer Profiles
+- Material Profiles
+- Filament Profiles
+- Repository Data
+- Project Files
+
+---
 
 # Entity Relationship Overview
 
@@ -880,6 +956,33 @@ Represents an entire workspace.
 
 ---
 
+# Classification Categories
+
+Supported values:
+
+Figurine
+
+Miniature
+
+Mechanical Part
+
+Gear
+
+Bracket
+
+Tool
+
+Enclosure
+
+Vase
+
+Prototype
+
+Structural Part
+
+Functional Part
+
+---
 
 # Recommended Settings Schema
 
@@ -930,6 +1033,31 @@ Represents an entire workspace.
 
 ---
 
+# Print Preset Categories
+
+Supported values:
+
+Draft
+
+Fast
+
+Balanced
+
+Quality
+
+Ultra Quality
+
+Mechanical
+
+Prototype
+
+Miniature
+
+Vase
+
+Structural
+
+---
 
 # Speed Schema
 
@@ -1356,6 +1484,31 @@ it
 
 ---
 
+# Schema Change Rules
+
+Before modifying a schema:
+
+1. Identify impacted domains
+
+2. Identify impacted services
+
+3. Identify impacted repositories
+
+4. Identify impacted APIs
+
+5. Identify impacted documentation
+
+6. Perform impact analysis
+
+7. Update validation schemas
+
+8. Update documentation
+
+9. Update CHANGELOG.md
+
+10. Validate backward compatibility
+
+---
 
 # Schema Compatibility Rules
 
