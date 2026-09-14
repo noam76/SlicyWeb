@@ -24,7 +24,7 @@ SYSTEM_RULES.md defines mandatory project rules.
 
 # Purpose
 
-This document defines the mandatory workflow that any AI assistant must follow before creating, modifying, reviewing, or validating code within the Wichy project.
+This document defines the mandatory workflow that any AI assistant must follow before creating, modifying, reviewing, or validating code within the SlicyWeb project.
 
 The objective is to:
 
