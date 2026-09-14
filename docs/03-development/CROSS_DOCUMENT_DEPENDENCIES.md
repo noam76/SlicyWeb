@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # CROSS DOCUMENT DEPENDENCIES
 
@@ -392,7 +392,7 @@ DIRECTORY_PURPOSES.md
 
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 CHANGELOG.md
 ```
@@ -870,7 +870,7 @@ FILE_STRUCTURE.md
 
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 ---
@@ -904,7 +904,7 @@ Documentation Inventory
 Review Required When Modified:
 
 ```text
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 AI_START_HERE.md
 
@@ -1011,7 +1011,7 @@ Contribution Process Changes
 
 ---
 
-# Wichy files explication.txt
+# SlicyWeb files explication.txt
 
 Review Required When:
 
