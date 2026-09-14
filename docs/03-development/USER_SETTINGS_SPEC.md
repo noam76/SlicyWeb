@@ -1,6 +1,6 @@
-\# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
-\# USER SETTINGS SPECIFICATION
+# USER SETTINGS SPECIFICATION
 
 
 Version: 1.0.0
@@ -10,11 +10,11 @@ Status: Approved
 Priority: High
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -26,23 +26,23 @@ Provides:
 
 
 
-\- User customization
+- User customization
 
-\- Persistent preferences
+- Persistent preferences
 
-\- UI configuration
+- UI configuration
 
-\- AI behavior preferences
+- AI behavior preferences
 
-\- Workspace restoration
-
-
-
-\---
+- Workspace restoration
 
 
 
-\# Settings Categories
+---
+
+
+
+# Settings Categories
 
 
 
@@ -72,11 +72,11 @@ Advanced
 
 
 
-\---
+---
 
 
 
-\# General Settings
+# General Settings
 
 
 
@@ -96,11 +96,11 @@ Advanced
 
 
 
-\---
+---
 
 
 
-\# Supported Languages
+# Supported Languages
 
 
 
@@ -120,11 +120,11 @@ Italian
 
 
 
-\---
+---
 
 
 
-\# Theme Modes
+# Theme Modes
 
 
 
@@ -140,11 +140,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# GUI Settings
+# GUI Settings
 
 
 
@@ -168,11 +168,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# Viewport Settings
+# Viewport Settings
 
 
 
@@ -198,11 +198,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# Camera Settings
+# Camera Settings
 
 
 
@@ -226,11 +226,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# Printer Settings
+# Printer Settings
 
 
 
@@ -252,11 +252,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# Material Settings
+# Material Settings
 
 
 
@@ -278,11 +278,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# AI Settings
+# AI Settings
 
 
 
@@ -306,11 +306,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# Performance Settings
+# Performance Settings
 
 
 
@@ -334,11 +334,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# File Settings
+# File Settings
 
 
 
@@ -362,11 +362,11 @@ System
 
 
 
-\---
+---
 
 
 
-\# Keyboard Shortcuts
+# Keyboard Shortcuts
 
 
 
@@ -374,11 +374,11 @@ Customizable.
 
 
 
-\---
+---
 
 
 
-\# Storage Location
+# Storage Location
 
 
 
@@ -390,11 +390,11 @@ settings.json
 
 
 
-\---
+---
 
 
 
-\# Backward Compatibility
+# Backward Compatibility
 
 
 
@@ -402,11 +402,11 @@ Old settings must migrate automatically.
 
 
 
-\---
+---
 
 
 
-\# Golden Rule
+# Golden Rule
 
 
 
@@ -414,9 +414,9 @@ User settings must never corrupt a project.
 
 
 
-\---
+---
 
 
 
-\# End Of Document
+# End Of Document
 
