@@ -591,6 +591,29 @@ unknown
 
 ---
 
+# Project File Schema
+
+Native Project Format:
+
+WYPROJ
+
+Project Extension:
+
+.wyproj
+
+Storage Format:
+
+JSON
+
+```json
+{
+  "format": "WYPROJ",
+  "version": "2.0.0",
+  "project": {}
+}
+```
+
+---
 
 # Project Schema
 
@@ -603,6 +626,7 @@ Represents an entire workspace.
 {
   "projectId": "",
   "projectName": "",
+  "projectFormat": "WYPROJ"
   "createdAt": "",
   "updatedAt": "",
   "version": "",
