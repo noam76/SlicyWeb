@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 # AI START HERE
 
 Version: 2.0.0
