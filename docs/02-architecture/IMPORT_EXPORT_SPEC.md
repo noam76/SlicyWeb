@@ -1,4 +1,4 @@
-# WICHY
+# SlicyWeb SMART SLICER
 # IMPORT EXPORT SPECIFICATION
 
 Version: 1.0.0
@@ -11,7 +11,7 @@ Priority: Medium
 
 # Purpose
 
-This document defines the import and export system used by Wichy.
+This document defines the import and export system used by SlicyWeb.
 
 The objective is to standardize:
 
@@ -407,7 +407,7 @@ inches
 Version 1:
 
 ```text
-Wichy Project
+SlicyWeb Project
 ```
 
 ---
@@ -459,7 +459,7 @@ Recommendations
 Reserved Extension:
 
 ```text
-.wichy
+.SlicyWeb
 ```
 
 ---
