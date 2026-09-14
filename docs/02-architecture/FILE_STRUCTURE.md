@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 # FILE STRUCTURE
 
 Version: 2.0.0
