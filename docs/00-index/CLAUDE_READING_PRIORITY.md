@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SLICYWEB SMART SLICER
 
 # CLAUDE READING PRIORITY
 
@@ -336,7 +336,7 @@ README.md
 
 CONTRIBUTING.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 Purpose:
