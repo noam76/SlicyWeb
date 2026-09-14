@@ -710,9 +710,9 @@ POST
 
 Purpose:
 
+Handle STL and 3MF model imports.
 
-
-Handle STL and 3MF imports.
+Project loading is handled separately by the Project API using the WYPROJ format.
 
 
 
@@ -1381,38 +1381,63 @@ POST
 # Project API
 
 
-
 Purpose:
-
-
 
 Save and load projects.
 
 
+Supported Project Format:
+
+WYPROJ
+
+
+Project Extension:
+
+.wyproj
+
+
+Project Storage Format:
+
+JSON
 
 ---
 
+## Project File Structure
 
+Project Container:
+
+WYPROJ
+
+Underlying Structure:
+
+JSON
+
+Required Metadata:
+
+- format
+- version
+- projectId
+- createdAt
+- updatedAt
+
+---
 
 ## Save Project
-
 
 
 ```text
 
 POST
 
-
-
 /api/project/save
 
 ```
 
+Output Format:
 
+WYPROJ
 
 ---
-
-
 
 ## Load Project
 
@@ -1428,7 +1453,13 @@ POST
 
 ```
 
+Accepted Format:
 
+WYPROJ
+
+Accepted Extension:
+
+.wyproj
 
 ---
 
@@ -1732,23 +1763,32 @@ Validate imported data.
 
 ---
 
-
 ## STL Validation
-
-
-```text
 
 File Structure
 Geometry
 Corruption
 
-```
+---
 
+## 3MF Validation
 
+File Structure
+Metadata
+Geometry
+Corruption
 
 ---
 
+## WYPROJ Validation
 
+Project Structure
+Schema Validation
+Version Validation
+Compatibility Validation
+Corruption Detection
+
+---
 
 ## Profile Validation
 
