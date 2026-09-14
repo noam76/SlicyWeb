@@ -1,8 +1,8 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # DEVELOPMENT RULES
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -57,7 +57,6 @@ The project must never be rebuilt from scratch without explicit approval.
 Development should focus on:
 
 
-
 - Stability
 
 - Modularity
@@ -69,10 +68,49 @@ Development should focus on:
 
 New functionality must extend the system rather than replace it.
 
-
-
 ---
 
+# Governance Requirements
+
+All modifications must comply with:
+
+```text
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+BUG_ANALYSIS_PROTOCOL.md
+
+UPDATE_GOVERNANCE_PROTOCOL.md
+```
+
+Development must respect:
+
+```text
+Ownership Rules
+
+Dependency Rules
+
+Impact Analysis Rules
+
+Documentation Governance Rules
+
+Architecture Governance Rules
+```
+
+---
 
 
 # Fundamental Rules
@@ -781,7 +819,7 @@ CHANGE_IMPACT_RULES.md
 
 and
 
-DOCUMENT_UPDATE_RULES.md
+DOCUMENT_UPDATE_MATRIX.md
 
 before modifying project documentation.
 
