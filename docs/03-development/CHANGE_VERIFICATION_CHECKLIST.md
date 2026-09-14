@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # CHANGE VERIFICATION CHECKLIST
 
@@ -557,7 +557,7 @@ Does PROJECT_DOCUMENTATION_INDEX.md require an update?
 
 ## 6.5
 
-Does Wichy files explication.txt require an update?
+Does SlicyWeb files explication.txt require an update?
 
 ```text
 [ ] Yes
