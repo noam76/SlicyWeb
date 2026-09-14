@@ -1,4 +1,4 @@
-# SlicyWeb
+# SlicyWeb SMART SLICER
 
 # AI SMART SLICER PLATFORM
 
