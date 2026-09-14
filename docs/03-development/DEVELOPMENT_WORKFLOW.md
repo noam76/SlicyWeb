@@ -1,4 +1,5 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
+
 # DEVELOPMENT WORKFLOW
 
 Version: 1.1.0
@@ -12,7 +13,7 @@ Priority: High
 
 # Purpose
 
-This document defines the complete development workflow for Wichy.
+This document defines the complete development workflow for SlicyWeb.
 
 The objectives are:
 
@@ -648,7 +649,7 @@ Hope It Works
 
 ---
 
-# Wichy Development Principle
+# SlicyWeb Development Principle
 
 ```text
 Documentation
@@ -672,7 +673,7 @@ Never reverse this order.
 
 # Large Project Rule
 
-Wichy is a large modular project.
+SlicyWeb is a large modular project.
 
 Before modifying any code:
 
