@@ -1,4 +1,6 @@
-# SLICYWEB – AI Smart 3D Printing Platform
+# SlicyWeb SMART SLICER 
+
+# AI Smart 3D Printing Platform
 
 Version: 2.0.0
 
