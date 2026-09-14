@@ -1,6 +1,6 @@
 # DOCUMENT UPDATE RULES
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -23,6 +23,52 @@ Its purpose is to:
 Documentation is considered part of the project source code.
 
 Documentation updates are mandatory whenever project changes occur.
+
+---
+
+# Governance Integration
+
+Documentation updates must comply with:
+
+```text
+CLAUDE_GOVERNANCE_PROTOCOL.md
+
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+BUG_ANALYSIS_PROTOCOL.md
+
+UPDATE_GOVERNANCE_PROTOCOL.md
+```
+
+Purpose:
+
+```text
+Protect documentation consistency
+
+Prevent architecture drift
+
+Maintain domain ownership
+
+Control documentation dependencies
+
+Reduce regressions
+
+Standardize documentation validation
+```
 
 ---
 
@@ -51,6 +97,34 @@ Implementation and documentation must remain synchronized.
 
 ---
 
+# Documentation Ownership Rules
+
+Before modifying documentation:
+
+- Verify ownership
+- Verify impacted domains
+- Verify cross-document dependencies
+
+Cross-domain documentation modifications require impact analysis.
+
+Documentation ownership must follow:
+
+```text
+FILE_OWNERSHIP_MATRIX.md
+
+DOMAIN_BOUNDARIES.md
+```
+
+Documentation dependencies must follow:
+
+```text
+CROSS_DOCUMENT_DEPENDENCIES.md
+
+DOCUMENT_UPDATE_MATRIX.md
+```
+
+---
+
 # Mandatory Documentation Review
 
 The following documents must always be reviewed when modifying the project:
@@ -61,6 +135,32 @@ The following documents must always be reviewed when modifying the project:
 - DATA_SCHEMA.md
 - SYSTEM_RULES.md
 - AI_DEVELOPMENT_PROTOCOL.md
+
+---
+
+# Documentation Impact Analysis
+
+Before updating documentation: 
+
+1. Identify impacted documents
+2. Identify impacted domains
+3. Identify ownership
+4. Review document dependencies
+5. Update affected documents
+6. Validate consistency
+7. Update CHANGELOG.md if required
+
+---
+
+# Documentation Dependency Rules
+
+Before updating any document:
+
+Review:
+
+```text
+CROSS_DOCUMENT_DEPENDENCIES.md
+```
 
 ---
 
@@ -150,7 +250,10 @@ Verify:
 - Directory purposes updated
 - Changelog updated
 - Index updated
-
+- Ownership verified
+- Dependencies reviewed
+- Impact analysis completed
+- Cross-document references validated
 All applicable items must be completed.
 
 ---
@@ -291,6 +394,30 @@ Verify:
 | API Change | API_SPEC.md, CHANGELOG.md |
 | Architecture Change | ARCHITECTURE.md, TECHNICAL_OVERVIEW.md, FILE_STRUCTURE.md |
 | Documentation Change | PROJECT_DOCUMENTATION_INDEX.md |
+
+---
+
+# Documentation Governance Validation
+
+Before marking documentation complete:
+
+Verify:
+
+- Ownership respected
+
+- Dependencies validated
+
+- References updated
+
+- Impact analysis completed
+
+- Governance requirements satisfied
+
+Reference:
+
+```text
+CHANGE_VERIFICATION_CHECKLIST.md
+```
 
 ---
 
