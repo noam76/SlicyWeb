@@ -214,7 +214,13 @@ Production Release
 
 ```
 
+Note:
 
+This roadmap defines functional project milestones and project progression.
+
+Detailed technical implementation sequencing, dependencies, and development order are defined in:
+
+PHASES_IMPLEMENTATION_PLAN.md
 
 ---
 
