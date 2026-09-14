@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # CHANGE CLASSIFICATION RULES
 
@@ -196,7 +196,7 @@ Required Review:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 Changelog Evaluation:
