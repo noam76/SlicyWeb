@@ -125,6 +125,7 @@ The application enforces strict separation of concerns across single-responsibil
 │ Notifications                                                      │
 │ Undo / Redo System                                                 │
 │ History Stack                                                      │
+│ Services                                                           │
 └──────────────────────────────┬─────────────────────────────────────┘
                                │
                                ▼
@@ -150,7 +151,7 @@ The application enforces strict separation of concerns across single-responsibil
 │ 3MF Loader         │ │ Build Plate        │ │ Material Database  │
 │ Validation         │ │ Grid System        │ │ Filament Database  │
 │ Geometry Parsing   │ │ Camera Controls    │ │ Preset Database    │
-│ Mesh Generation    │ │ Collision Display  │ │ Repository Sync    │
+│ Mesh Generation    │ │ Collision Display  │ │     │
 └──────────┬─────────┘ └────────────────────┘ └──────────┬─────────┘
            │                                             │
            └───────────────────┬─────────────────────────┘
@@ -216,26 +217,27 @@ The application enforces strict separation of concerns across single-responsibil
 ├────────────────────────────────────────────────────────────────────┤
 │ JSON Storage                                                       │
 │ WYPROJ Projects (.wyproj)                                          │
+│ Project Files                                                     │
 │ Local Database                                                     │
 │ Cache                                                              │
 │ Settings                                                           │
 │ Profiles                                                           │
 │ Analysis Results                                                   │
 │ Recommendations                                                    │
-└──────────────────────────────┬─────────────────────────────────────┘
+└──────────────────────────────┬──────────────────────────────────────┘
                                │
                                ▼
 
 ┌────────────────────────────────────────────────────────────────────┐
-│                     SYNCHRONIZATION LAYER                          │
+│                        REPOSITORY LAYER                            │
 ├────────────────────────────────────────────────────────────────────┤
-│ Official Printer Profiles                                          │
-│ Official Material Profiles                                         │
-│ Official Filament Profiles                                         │
-│ GitHub Repositories                                                │
+│ Repository Access                                                  │
+│ Repository Sync                                                    │
 │ Repository Validation                                              │
-│ Cache First Strategy                                               │
-└──────────────────────────────┬──────────────────────────────────────┘
+│ GitHub Sources                                                     │
+│ Official Profiles                                                  │
+│ Verified Repositories                                              │
+└──────────────────────────────┬─────────────────────────────────────┘
                                │
                                ▼
 
