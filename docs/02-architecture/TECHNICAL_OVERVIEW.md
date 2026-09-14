@@ -60,13 +60,17 @@ The system combines deterministic rule-based AI, geometry analytics, object clas
 ## 2. Core Feature Matrix
 
 ### 2.1 3D Workspace & Geometry Engine
-- **Supported Formats:** STL, 3MF, WYPROJ (Current) | STEP, OBJ, AMF (Roadmap)
+
+- **Supported Model Formats:** STL, 3MF
+- **Native Project Format:** WYPROJ (.wyproj)
+- **Internal Data Format:** JSON
+- **Future Formats:** STEP, OBJ, AMF
 - **Interactive Scene (Three.js):** Custom build plate visualization, dynamic grid adaptivity, spatial axis indicators, multi-object handling.
 - **Object Manipulation:** Precise Translation, Rotation, Uniform/Non-Uniform Scaling (with specialized Scale Gizmo), Duplication with automatic spacing, and Align-to-Bed.
 - **Real-Time Collision Detection:** Instantaneous bounding-box and mesh intersection checks with visual status feedback (grayscale tinting during collision).
 
 ### 2.2 Hardware & Material Intelligence
-- **Dynamic GitHub Sync:** Automated fetch from public open-source repositories (OrcaSlicer, PrusaSlicer, Cura) for up-to-date printer/material definitions, with local JSON fallback.
+- **Dynamic GitHub Sync:** Automated fetch from public open-source repositories Examples: (OrcaSlicer, PrusaSlicer, Cura, Manufacturer Repositories, Verified Community Repositories) for up-to-date printer/material definitions, with local JSON fallback.
 - **Firmware Adaptivity:** Profile tuning tailored to specific printer firmwares (Klipper, Marlin, Bambu OS, RepRapFirmware), adjusting Pressure Advance, Acceleration, and Jerk constraints.
 - **Tiered Material Profiles:**
   - *Generic Families:* PLA, PLA+, PETG, ABS, ASA, TPU, Nylon, PC, PP.
@@ -102,25 +106,165 @@ The system combines deterministic rule-based AI, geometry analytics, object clas
 The application enforces strict separation of concerns across single-responsibility modules:
 
 ```text
-       ┌────────────────────────────────────────────────────────┐
-       │                   React / UI Layer                     │
-       │           (Zustand State, Tailwind, shadcn)            │
-       └───────────────────────────┬────────────────────────────┘
-                                   │
-       ┌───────────────────────────┴────────────────────────────┐
-       │                 Three.js Renderer / App                │
-       │       (Workspace, Gizmos, Real-Time Collisions)        │
-       └───────┬───────────────────┬─────────────────────┬──────┘
-               │                   │                     │
-   ┌───────────┴───────────┐ ┌─────┴───────────────┐ ┌───┴───────────────────┐
-   │ Importer & Parser     │ │ Printer, Material & │ │ AI Analytics &        │
-   │ (STL / 3MF Loaders)   │ │ Filament Sync Engine│ │ Recommendation Engine │
-   └───────────────────────┘ └─────────────────────┘ └───┬───────────────────┘
-                                                         │
-                                             ┌───────────┴───────────┐
-                                             │ Cost & Telemetry      │
-                                             │ Estimator Engine      │
-                                             └───────────────────────┘
+┌────────────────────────────────────────────────────────────────────┐
+│                           USER INTERFACE                           │
+├────────────────────────────────────────────────────────────────────┤
+│ React                                                              │
+│ Tailwind CSS                                                       │
+│ shadcn/ui                                                          │
+│ Zustand State Management                                           │
+└──────────────────────────────┬─────────────────────────────────────┘
+                               │
+                               ▼
+┌────────────────────────────────────────────────────────────────────┐
+│                        APPLICATION LAYER                           │
+├────────────────────────────────────────────────────────────────────┤
+│ UI Controllers                                                     │
+│ Commands                                                           │
+│ Event Handling                                                     │
+│ Notifications                                                      │
+│ Undo / Redo System                                                 │
+│ History Stack                                                      │
+└──────────────────────────────┬─────────────────────────────────────┘
+                               │
+                               ▼
+┌────────────────────────────────────────────────────────────────────┐
+│                           WORKSPACE CORE                           │
+├────────────────────────────────────────────────────────────────────┤
+│ Scene Manager                                                      │
+│ Object Manager                                                     │
+│ Transform Manager                                                  │
+│ Selection Manager                                                  │
+│ Project Manager                                                    │
+│ WYPROJ Save / Load                                                 │
+└──────────────────────────────┬─────────────────────────────────────┘
+                               │
+          ┌────────────────────┼────────────────────┐
+          │                    │                    │
+          ▼                    ▼                    ▼
+
+┌────────────────────┐ ┌────────────────────┐ ┌────────────────────┐
+│ IMPORT ENGINE      │ │ VISUALIZATION      │ │ PROFILE SYSTEM     │
+├────────────────────┤ ├────────────────────┤ ├────────────────────┤
+│ STL Loader         │ │ Three.js Scene     │ │ Printer Database   │
+│ 3MF Loader         │ │ Build Plate        │ │ Material Database  │
+│ Validation         │ │ Grid System        │ │ Filament Database  │
+│ Geometry Parsing   │ │ Camera Controls    │ │ Preset Database    │
+│ Mesh Generation    │ │ Collision Display  │ │ Repository Sync    │
+└──────────┬─────────┘ └────────────────────┘ └──────────┬─────────┘
+           │                                             │
+           └───────────────────┬─────────────────────────┘
+                               │
+                               ▼
+
+┌────────────────────────────────────────────────────────────────────┐
+│                         ANALYSIS ENGINE                            │
+├────────────────────────────────────────────────────────────────────┤
+│ Dimensions                                                         │
+│ Bounding Box                                                       │
+│ Volume                                                             │
+│ Surface Area                                                       │
+│ Mesh Statistics                                                    │
+│ Overhang Detection                                                 │
+│ Bridge Detection                                                   │
+│ Thin Wall Detection                                                │
+│ Stability Analysis                                                 │
+│ Center Of Gravity                                                  │
+└──────────────────────────────┬─────────────────────────────────────┘
+                               │
+                               ▼
+┌────────────────────────────────────────────────────────────────────┐
+│                     CLASSIFICATION ENGINE                          │
+├────────────────────────────────────────────────────────────────────┤
+│ Object Classification                                              │
+│ Category Detection                                                 │
+│ Feature Detection                                                  │
+│ Confidence Score                                                   │
+└──────────────────────────────┬─────────────────────────────────────┘
+                               │
+                               ▼
+┌────────────────────────────────────────────────────────────────────┐
+│                   RECOMMENDATION ENGINE                            │
+├────────────────────────────────────────────────────────────────────┤
+│ Rule-Based Decision System                                         │
+│ Print Profile Generation                                           │
+│ Print Preset Selection                                             │
+│ Support Strategy Selection                                         │
+│ Warning Generation                                                 │
+│ Confidence Score                                                   │
+└──────────────────────────────┬──────────────────────────────────────┘
+                               │
+                 ┌─────────────┼─────────────┐
+                 │             │             │
+                 ▼             ▼             ▼
+
+┌────────────────┐ ┌────────────────┐ ┌────────────────┐
+│ OPTIMIZATION   │ │ COST ENGINE    │ │ WARNING ENGINE │
+├────────────────┤ ├────────────────┤ ├────────────────┤
+│ Orientation    │ │ Material Usage │ │ Risk Analysis  │
+│ Supports       │ │ Weight         │ │ Constraints    │
+│ Time           │ │ Cost           │ │ Notifications  │
+│ Material       │ │ Duration       │ │ Validation     │
+└───────┬────────┘ └───────┬────────┘ └───────┬────────┘
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+                           ▼
+
+┌────────────────────────────────────────────────────────────────────┐
+│                           DATA LAYER                               │
+├────────────────────────────────────────────────────────────────────┤
+│ JSON Storage                                                       │
+│ WYPROJ Projects (.wyproj)                                          │
+│ Local Database                                                     │
+│ Cache                                                              │
+│ Settings                                                           │
+│ Profiles                                                           │
+│ Analysis Results                                                   │
+│ Recommendations                                                    │
+└──────────────────────────────┬─────────────────────────────────────┘
+                               │
+                               ▼
+
+┌────────────────────────────────────────────────────────────────────┐
+│                     SYNCHRONIZATION LAYER                          │
+├────────────────────────────────────────────────────────────────────┤
+│ Official Printer Profiles                                          │
+│ Official Material Profiles                                         │
+│ Official Filament Profiles                                         │
+│ GitHub Repositories                                                │
+│ Repository Validation                                              │
+│ Cache First Strategy                                               │
+└──────────────────────────────┬──────────────────────────────────────┘
+                               │
+                               ▼
+
+┌────────────────────────────────────────────────────────────────────┐
+│                        EXTERNAL SOURCES                            │
+├────────────────────────────────────────────────────────────────────┤
+│ Official Manufacturer Profiles                                     │
+│ Verified GitHub Repositories                                       │
+│ Community Sources                                                  │
+└──────────────────────────────┬─────────────────────────────────────┘
+                               │
+                               ▼
+
+┌────────────────────────────────────────────────────────────────────┐
+│                          FUTURE MODULES                            │
+├────────────────────────────────────────────────────────────────────┤
+│ G-Code Engine                                                      │
+│ Multi Material System                                              │
+│ Plugin System                                                      │
+│ Plugin Marketplace                                                 │
+│ Cloud Synchronization                                              │
+│ Remote Printers                                                    │
+│ Webcam Monitoring                                                  │
+│ Vision Classification                                              │
+│ Machine Learning                                                   │
+│ Community Profiles                                                 │
+│ Filament Tracking                                                  │
+└────────────────────────────────────────────────────────────────────┘
+
 ```
 
 ---
