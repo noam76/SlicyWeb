@@ -1,6 +1,6 @@
-\# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
-\# UNDO REDO SPECIFICATION
+# UNDO REDO SPECIFICATION
 
 
 
@@ -16,11 +16,11 @@ Priority: High
 
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -36,23 +36,23 @@ The objective is to:
 
 
 
-\- Improve usability
+- Improve usability
 
-\- Prevent accidental mistakes
+- Prevent accidental mistakes
 
-\- Increase user confidence
+- Increase user confidence
 
-\- Support experimentation
+- Support experimentation
 
-\- Improve workflow efficiency
-
-
-
-\---
+- Improve workflow efficiency
 
 
 
-\# Core Principles
+---
+
+
+
+# Core Principles
 
 
 
@@ -64,15 +64,9 @@ The Undo/Redo system must be:
 
 Reliable
 
-
-
 Predictable
 
-
-
 Fast
-
-
 
 Consistent
 
@@ -80,19 +74,19 @@ Consistent
 
 
 
-\---
+---
 
 
 
-\# Terminology
+# Terminology
 
 
 
-\---
+---
 
 
 
-\## Undo
+## Undo
 
 
 
@@ -100,11 +94,11 @@ Reverts the most recent valid action.
 
 
 
-\---
+---
 
 
 
-\## Redo
+## Redo
 
 
 
@@ -112,11 +106,11 @@ Restores the most recently undone action.
 
 
 
-\---
+---
 
 
 
-\## Action
+## Action
 
 
 
@@ -128,15 +122,9 @@ Any operation that modifies:
 
 Scene
 
-
-
 Objects
 
-
-
 Settings
-
-
 
 Configuration
 
@@ -144,11 +132,11 @@ Configuration
 
 
 
-\---
+---
 
 
 
-\# Undo Redo Workflow
+# Undo Redo Workflow
 
 
 
@@ -156,35 +144,19 @@ Configuration
 
 User Action
 
-
-
 ↓
-
-
 
 Action Recorded
 
-
-
 ↓
-
-
 
 History Stack
 
-
-
 ↓
-
-
 
 Undo
 
-
-
 ↓
-
-
 
 Redo
 
@@ -192,11 +164,11 @@ Redo
 
 
 
-\---
+---
 
 
 
-\# History Architecture
+# History Architecture
 
 
 
@@ -204,19 +176,11 @@ Redo
 
 Action Stack
 
-
-
 ↓
-
-
 
 Undo Stack
 
-
-
 ↓
-
-
 
 Redo Stack
 
@@ -224,16 +188,15 @@ Redo Stack
 
 
 
-\---
+---
 
 
 
-\# Maximum History Size
+# Maximum History Size
 
 
 
 Default:
-
 
 
 ```text
@@ -244,7 +207,7 @@ Default:
 
 
 
-\---
+---
 
 
 
@@ -260,12 +223,11 @@ User Configurable
 
 
 
-\---
+---
 
 
 
-\# Global Rules
-
+# Global Rules
 
 
 Every undoable action must:
@@ -276,15 +238,9 @@ Every undoable action must:
 
 Store Previous State
 
-
-
 Store New State
 
-
-
 Be Reversible
-
-
 
 Be Deterministic
 
@@ -292,19 +248,19 @@ Be Deterministic
 
 
 
-\---
+---
 
 
 
-\# Undoable Categories
+# Undoable Categories
 
 
 
-\---
+---
 
 
 
-\## Scene Actions
+## Scene Actions
 
 
 
@@ -316,19 +272,11 @@ Supported:
 
 Import Object
 
-
-
 Delete Object
-
-
 
 Duplicate Object
 
-
-
 Center Object
-
-
 
 Arrange Objects
 
@@ -336,11 +284,11 @@ Arrange Objects
 
 
 
-\---
+---
 
 
 
-\## Transform Actions
+## Transform Actions
 
 
 
@@ -352,11 +300,7 @@ Supported:
 
 Move
 
-
-
 Rotate
-
-
 
 Scale
 
@@ -364,11 +308,11 @@ Scale
 
 
 
-\---
+---
 
 
 
-\## Visibility Actions
+## Visibility Actions
 
 
 
@@ -380,15 +324,9 @@ Supported:
 
 Show Object
 
-
-
 Hide Object
 
-
-
 Lock Object
-
-
 
 Unlock Object
 
@@ -396,11 +334,11 @@ Unlock Object
 
 
 
-\---
+---
 
 
 
-\## Selection Actions
+## Selection Actions
 
 
 
@@ -428,55 +366,19 @@ Selection Changes Are Temporary
 
 
 
-\---
+---
 
 
 
-\# Import Actions
+# Import Actions
 
 
 
-\---
+---
 
 
 
-\## STL Import
-
-
-
-Undo:
-
-
-
-```text
-
-Remove Imported Object
-
-```
-
-
-
-\---
-
-
-
-Redo:
-
-
-
-```text
-
-Restore Imported Object
-
-```
-
-
-
-\---
-
-
-
-\## 3MF Import
+## STL Import
 
 
 
@@ -492,7 +394,7 @@ Remove Imported Object
 
 
 
-\---
+---
 
 
 
@@ -508,11 +410,47 @@ Restore Imported Object
 
 
 
-\---
+---
 
 
 
-\# Delete Actions
+## 3MF Import
+
+
+
+Undo:
+
+
+
+```text
+
+Remove Imported Object
+
+```
+
+
+
+---
+
+
+
+Redo:
+
+
+
+```text
+
+Restore Imported Object
+
+```
+
+
+
+---
+
+
+
+# Delete Actions
 
 
 
@@ -528,7 +466,7 @@ Restore Object
 
 
 
-\---
+---
 
 
 
@@ -544,11 +482,11 @@ Delete Object Again
 
 
 
-\---
+---
 
 
 
-\# Duplicate Actions
+# Duplicate Actions
 
 
 
@@ -564,7 +502,7 @@ Remove Duplicate
 
 
 
-\---
+---
 
 
 
@@ -580,19 +518,19 @@ Restore Duplicate
 
 
 
-\---
+---
 
 
 
-\# Transform Actions
+# Transform Actions
 
 
 
-\---
+---
 
 
 
-\## Move
+## Move
 
 
 
@@ -612,11 +550,11 @@ New Position
 
 
 
-\---
+---
 
 
 
-\## Rotate
+## Rotate
 
 
 
@@ -636,11 +574,11 @@ New Rotation
 
 
 
-\---
+---
 
 
 
-\## Scale
+## Scale
 
 
 
@@ -660,11 +598,11 @@ New Scale
 
 
 
-\---
+---
 
 
 
-\# Multiple Object Transformations
+# Multiple Object Transformations
 
 
 
@@ -672,7 +610,7 @@ Supported.
 
 
 
-\---
+---
 
 
 
@@ -684,11 +622,7 @@ Example:
 
 Move 10 Objects
 
-
-
 ↓
-
-
 
 Single Undo Action
 
@@ -696,11 +630,11 @@ Single Undo Action
 
 
 
-\---
+---
 
 
 
-\# Printer Actions
+# Printer Actions
 
 
 
@@ -712,11 +646,7 @@ Supported:
 
 Change Printer
 
-
-
 Change Nozzle
-
-
 
 Change Printer Profile
 
@@ -724,7 +654,7 @@ Change Printer Profile
 
 
 
-\---
+---
 
 
 
@@ -740,11 +670,11 @@ Restore Previous Printer Configuration
 
 
 
-\---
+---
 
 
 
-\# Material Actions
+# Material Actions
 
 
 
@@ -756,11 +686,7 @@ Supported:
 
 Change Material
 
-
-
 Change Filament
-
-
 
 Change Material Profile
 
@@ -768,7 +694,7 @@ Change Material Profile
 
 
 
-\---
+---
 
 
 
@@ -784,11 +710,11 @@ Restore Previous Material Configuration
 
 
 
-\---
+---
 
 
 
-\# Print Settings Actions
+# Print Settings Actions
 
 
 
@@ -800,23 +726,13 @@ Supported:
 
 Layer Height
 
-
-
 Walls
-
-
 
 Infill
 
-
-
 Supports
 
-
-
 Cooling
-
-
 
 Retraction
 
@@ -824,7 +740,7 @@ Retraction
 
 
 
-\---
+---
 
 
 
@@ -840,11 +756,11 @@ Restore Previous Values
 
 
 
-\---
+---
 
 
 
-\# AI Recommendation Actions
+# AI Recommendation Actions
 
 
 
@@ -852,11 +768,11 @@ Supported.
 
 
 
-\---
+---
 
 
 
-\## Apply Recommendation
+## Apply Recommendation
 
 
 
@@ -872,7 +788,7 @@ Restore Previous Settings
 
 
 
-\---
+---
 
 
 
@@ -888,11 +804,11 @@ Apply Recommendation Again
 
 
 
-\---
+---
 
 
 
-\# Optimization Actions
+# Optimization Actions
 
 
 
@@ -900,11 +816,11 @@ Supported.
 
 
 
-\---
+---
 
 
 
-\## Orientation Optimization
+## Orientation Optimization
 
 
 
@@ -920,7 +836,7 @@ Restore Previous Orientation
 
 
 
-\---
+---
 
 
 
@@ -936,11 +852,11 @@ Apply Optimized Orientation
 
 
 
-\---
+---
 
 
 
-\## Support Optimization
+## Support Optimization
 
 
 
@@ -956,11 +872,11 @@ Restore Previous Support Strategy
 
 
 
-\---
+---
 
 
 
-\# User Settings
+# User Settings
 
 
 
@@ -988,11 +904,11 @@ Panel Layout
 
 
 
-\---
+---
 
 
 
-\# Project Loading
+# Project Loading
 
 
 
@@ -1000,7 +916,7 @@ Special Case.
 
 
 
-\---
+---
 
 
 
@@ -1016,7 +932,7 @@ Not Supported
 
 
 
-\---
+---
 
 
 
@@ -1032,11 +948,11 @@ Entire Workspace Replaced
 
 
 
-\---
+---
 
 
 
-\# Project Saving
+# Project Saving
 
 
 
@@ -1052,7 +968,7 @@ Not Supported
 
 
 
-\---
+---
 
 
 
@@ -1068,11 +984,11 @@ No Scene Modification
 
 
 
-\---
+---
 
 
 
-\# Non Undoable Actions
+# Non Undoable Actions
 
 
 
@@ -1104,11 +1020,11 @@ Camera Navigation
 
 
 
-\---
+---
 
 
 
-\# Transaction System
+# Transaction System
 
 
 
@@ -1120,7 +1036,7 @@ Group actions together.
 
 
 
-\---
+---
 
 
 
@@ -1168,11 +1084,11 @@ when appropriate.
 
 
 
-\---
+---
 
 
 
-\# History Entry Schema
+# History Entry Schema
 
 
 
@@ -1198,11 +1114,11 @@ when appropriate.
 
 
 
-\---
+---
 
 
 
-\# Action Types
+# Action Types
 
 
 
@@ -1258,11 +1174,11 @@ AI\_RECOMMENDATION
 
 
 
-\---
+---
 
 
 
-\# Memory Management
+# Memory Management
 
 
 
@@ -1282,11 +1198,11 @@ Avoid Storing Heavy Geometry Multiple Times
 
 
 
-\---
+---
 
 
 
-\# Geometry Storage Rules
+# Geometry Storage Rules
 
 
 
@@ -1314,11 +1230,11 @@ Duplicate Mesh Data
 
 
 
-\---
+---
 
 
 
-\# Redo Clearing Rule
+# Redo Clearing Rule
 
 
 
@@ -1346,19 +1262,19 @@ Clear Redo Stack
 
 
 
-\---
+---
 
 
 
-\# Keyboard Shortcuts
+# Keyboard Shortcuts
 
 
 
-\---
+---
 
 
 
-\## Undo
+## Undo
 
 
 
@@ -1374,11 +1290,11 @@ Cmd + Z
 
 
 
-\---
+---
 
 
 
-\## Redo
+## Redo
 
 
 
@@ -1394,7 +1310,7 @@ Cmd + Shift + Z
 
 
 
-\---
+---
 
 
 
@@ -1414,11 +1330,11 @@ Supported.
 
 
 
-\---
+---
 
 
 
-\# GUI Integration
+# GUI Integration
 
 
 
@@ -1440,7 +1356,7 @@ Edit
 
 
 
-\---
+---
 
 
 
@@ -1460,11 +1376,11 @@ Redo Button
 
 
 
-\---
+---
 
 
 
-\# Disabled State
+# Disabled State
 
 
 
@@ -1480,11 +1396,11 @@ Disable Control
 
 
 
-\---
+---
 
 
 
-\# Validation Rules
+# Validation Rules
 
 
 
@@ -1508,11 +1424,11 @@ Never Lose Data
 
 
 
-\---
+---
 
 
 
-\# Error Handling
+# Error Handling
 
 
 
@@ -1524,11 +1440,7 @@ If restoration fails:
 
 Cancel Operation
 
-
-
 Log Error
-
-
 
 Preserve Current State
 
@@ -1536,11 +1448,11 @@ Preserve Current State
 
 
 
-\---
+---
 
 
 
-\# Future Support
+# Future Support
 
 
 
@@ -1552,19 +1464,11 @@ Reserved:
 
 Undo History Panel
 
-
-
 Visual Timeline
-
-
 
 Action Search
 
-
-
 Named Restore Points
-
-
 
 Project Snapshots
 
@@ -1610,8 +1514,6 @@ PROJECT\_SYSTEM
 
 
 Every reversible action should behave exactly the same every time it is undone and redone.
-
-
 
 Predictability is more important than complexity.
 
