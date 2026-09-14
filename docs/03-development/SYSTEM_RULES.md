@@ -1,7 +1,7 @@
 # SYSTEM RULES
 
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -10,12 +10,9 @@ Priority: Mandatory
 ---
 
 
-
 # Purpose
 
-
 These rules define how the AI, development tools, and contributors must interact with the project.
-
 
 
 The objective is to:
@@ -33,36 +30,61 @@ The objective is to:
 - keep all modules compatible
 
 
-
 These rules have priority over implementation preferences.
-
 
 
 ---
 
 
-
 # Core Principles
-
 
 
 Priority Order:
 
+1. Stability
 
-1\. Stability
+2. Compatibility
 
-2\. Compatibility
+3. Reliability
 
-3\. Reliability
+4. Performance
 
-4\. Performance
-
-5\. New Features
+5. New Features
 
 
 
 A working feature must never be broken to add a new feature.
 
+---
+
+# Governance Framework
+
+All project modifications must comply with governance policies.
+
+Reference Documents:
+
+- CLAUDE_GOVERNANCE_PROTOCOL.md
+- DOMAIN_BOUNDARIES.md
+- DOMAINS_DEPENDENCY_MATRIX.md
+- FILE_OWNERSHIP_MATRIX.md
+- PROJECT_IMPACT_MATRIX.md
+- CHANGE_CLASSIFICATION_RULES.md
+- CHANGE_VERIFICATION_CHECKLIST.md
+- CROSS_DOCUMENT_DEPENDENCIES.md
+- DOCUMENT_UPDATE_MATRIX.md
+- BUG_ANALYSIS_PROTOCOL.md
+- UPDATE_GOVERNANCE_PROTOCOL.md
+- UPDATE_IMPACT_RULES.md
+- UPDATE_REPORT_TEMPLATE.md
+
+Purpose:
+
+- Architecture Protection
+- Dependency Governance
+- Ownership Management
+- Documentation Governance
+- Change Validation
+- Regression Prevention
 
 ---
 
@@ -78,6 +100,43 @@ Before modifying a file:
 - validate compatibility
 
 Always consult CHANGE_IMPACT_RULES.md before modifying project files.
+
+Impact analysis must follow:
+- PROJECT_IMPACT_MATRIX.md
+- CHANGE_CLASSIFICATION_RULES.md
+- CHANGE_VERIFICATION_CHECKLIST.md
+
+---
+
+# Documentation Governance Rules
+
+Documentation must be reviewed whenever:
+
+- Architecture changes
+- Domain ownership changes
+- Dependencies change
+- File structure changes
+- Development workflow changes
+
+Review using:
+
+- DOCUMENT_UPDATE_MATRIX.md
+
+- CROSS_DOCUMENT_DEPENDENCIES.md
+
+---
+
+# Domain Ownership Rules
+
+Every file belongs to a domain.
+
+Ownership definitions are maintained in:
+
+- FILE_OWNERSHIP_MATRIX.md
+
+- DOMAIN_BOUNDARIES.md
+
+Cross-domain modifications require impact analysis.
 
 ---
 
@@ -120,7 +179,6 @@ DO NOT rewrite complete systems.
 
 The AI must:
 
-
 - read existing files first
 
 - analyze project structure first
@@ -145,8 +203,6 @@ The AI should act as a software maintainer, not as a code regenerator.
 
 The AI must not:
 
-
-
 - regenerate the entire project
 
 - recreate existing files unnecessarily
@@ -167,9 +223,7 @@ The AI must not:
 
 # Update Policy
 
-
 Before modifying code:
-
 
 
 Step 1
@@ -177,11 +231,9 @@ Step 1
 Read existing implementation.
 
 
-
 Step 2
 
 Determine impacted modules.
-
 
 
 Step 3
@@ -189,20 +241,16 @@ Step 3
 Identify dependencies.
 
 
-
 Step 4
 
 Apply minimal modifications.
-
 
 
 Step 5
 
 Validate compatibility.
 
-
 ---
-
 
 
 # Modification Strategy
@@ -211,32 +259,27 @@ Validate compatibility.
 
 Preferred Order:
 
+1. Configuration update
 
+2. Data update
 
-1\. Configuration update
+3. Small function update
 
-2\. Data update
+4. Module update
 
-3\. Small function update
-
-4\. Module update
-
-5\. System update
+5. System update
 
 
 Avoid large-scale rewrites.
 
 
-
 ---
-
 
 
 # Token Optimization Rules
 
 
 The AI must minimize token usage.
-
 
 Use:
 
@@ -249,15 +292,12 @@ Use:
 - existing services
 
 
-
 Prefer: PATCHES
 
 instead of COMPLETE FILE REGENERATION
 
 
-
 ---
-
 
 
 # Documentation Rules
@@ -277,15 +317,11 @@ Documentation updates are required whenever:
 - data schema modified
 
 
-
 ---
-
 
 # Naming Rules
 
-
 Use consistent naming.
-
 
 Preferred: PascalCase
 
@@ -299,9 +335,7 @@ MaterialDatabase
 ModelAnalyzer
 
 
-
 ---
-
 
 
 Variables: camelCase
@@ -313,13 +347,10 @@ printerProfile
 
 materialProfile
 
-
-
 ---
 
 
 Constants: UPPER\_CASE
-
 
 
 Examples:
@@ -328,19 +359,13 @@ MAX\_PRINT\_SPEED
 
 DEFAULT\_LAYER\_HEIGHT
 
-
 ---
-
 
 # Architecture Respect Rules
 
-
 No module shall directly access unrelated modules.
 
-
-
 Communication must occur through:
-
 
 - interfaces
 
@@ -350,17 +375,11 @@ Communication must occur through:
 
 - events
 
-
-
 Avoid direct coupling.
-
-
 
 ---
 
-
 # Dependency Rules
-
 
 Every new dependency must be justified.
 
@@ -369,7 +388,6 @@ Before adding a dependency:
 
 Verify:
 
-
 - existing solution unavailable
 
 - dependency maintained
@@ -377,23 +395,17 @@ Verify:
 - dependency lightweight
 
 
-
 Avoid unnecessary packages.
-
 
 
 ---
 
 
-
 # GUI Rules
-
 
 GUI must be independent.
 
-
 GUI must never contain:
-
 
 - printer logic
 
@@ -403,21 +415,13 @@ GUI must never contain:
 
 - database logic
 
-
 GUI only displays data.
-
-
 
 ---
 
-
-
 # Analysis Engine Rules
 
-
 Analysis Engine must:
-
-
 
 - work independently
 
@@ -425,22 +429,15 @@ Analysis Engine must:
 
 - expose data through APIs
 
-
-
 The engine should be reusable.
-
 
 
 ---
 
 
-
 # AI Recommendation Rules
 
-
 Recommendations must be based only on:
-
-
 
 - printer profile
 
@@ -448,30 +445,21 @@ Recommendations must be based only on:
 
 - model analysis
 
-
 The AI must never invent printer capabilities.
 
 The AI must never invent material properties.
 
 Unknown data must be marked as unknown.
 
-
-
 ---
 
-
-
 # Printer Rules
-
 
 Printer profiles are authoritative.
 
 Printer limitations cannot be exceeded.
 
-
-
 If a recommendation exceeds:
-
 
 - speed
 
@@ -479,15 +467,9 @@ If a recommendation exceeds:
 
 - temperature
 
-
-
 it must be rejected automatically.
 
-
-
 ---
-
-
 
 # Material Rules
 
@@ -497,42 +479,32 @@ Recommendations must remain inside material limits.
 
 Unknown material data must trigger warnings.
 
-
 ---
-
-
 
 # Recommendation Priorities
 
-
-
 Always prioritize:
 
+1. Successful Print
 
-1\. Successful Print
+2. Mechanical Reliability
 
-2\. Mechanical Reliability
+3. Safety
 
-3\. Safety
+4. Quality
 
-4\. Quality
+5. Speed
 
-5\. Speed
-
-6\. Material Savings
+6. Material Savings
 
 
 Never sacrifice reliability for speed.
 
-
 ---
-
 
 # Warning Rules
 
-
 Warnings must be generated when:
-
 
 - object exceeds volume
 
@@ -551,20 +523,13 @@ Warnings must be generated when:
 - unknown material data
 
 
-
 Warnings may never be hidden.
-
-
 
 ---
 
-
-
 # Validation Rules
 
-
 Each recommendation must pass validation.
-
 
 Validation includes:
 
@@ -577,31 +542,24 @@ Validation includes:
 
 Invalid recommendations must be rejected.
 
-
 ---
-
-
 
 # Data Rules
 
-
 Data sources priority:
 
+1. Local Database
 
-1\. Local Database
+2. Cached Database
 
-2\. Cached Database
+3. Official Sources
 
-3\. Official Sources
-
-4\. Verified GitHub Sources
+4. Verified GitHub Sources
 
 
 Never trust unverified sources.
 
-
 ---
-
 
 # Local First Policy
 
@@ -611,22 +569,17 @@ Always use local data first.
 Network requests should occur only when:
 
 
-
 - data unavailable locally
 
 - user explicitly requests refresh
 
 
-
 Cache results whenever possible.
-
 
 ---
 
 
-
 # Version Control Rules
-
 
 Every modification must increment version.
 
@@ -634,9 +587,7 @@ Format: MAJOR.MINOR.PATCH
 
 Example: 1.0.0
 
-
 ---
-
 
 Major: Breaking changes
 
@@ -647,14 +598,11 @@ Examples:
 
 - schema change
 
-
 ---
-
 
 Minor:
 
 New features
-
 
 Examples:
 
@@ -663,13 +611,10 @@ Examples:
 - optimization tools
 
 
-
 ---
 
 
-
 Patch: Bug fixes
-
 
 Examples:
 
@@ -677,24 +622,18 @@ Examples:
 
 - GUI fixes
 
-
 ---
-
 
 
 # Testing Rules
 
-
 Every new feature requires testing.
-
 
 Minimum tests:
 
-
 - functional test
-- 
-- regression test
 
+- regression test
 
 No feature is complete without validation.
 
@@ -704,9 +643,7 @@ No feature is complete without validation.
 
 # Release Rules
 
-
 A release is acceptable only if:
-
 
 - all tests pass
 
@@ -716,9 +653,7 @@ A release is acceptable only if:
 
 - compatibility maintained
 
-
 ---
-
 
 # AI Session Rules
 
@@ -726,29 +661,24 @@ A release is acceptable only if:
 At the beginning of each development session:
 
 Read:
-
-1. PROJECT_DOCUMENTATION_INDEX.md
-2. PROJECT_SPEC.md
+1. AI_START_HERE.md
+2. PROJECT_DOCUMENTATION_INDEX.md
 3. SYSTEM_RULES.md
-4. ARCHITECTURE.md
-5. FILE_STRUCTURE.md
-6. DATA_SCHEMA.md
-7. ROADMAP.md
+4. PROJECT_SPEC.md
+5. ARCHITECTURE.md
+6. FILE_STRUCTURE.md
+7. DATA_SCHEMA.md
 8. CHANGELOG.md
 
 Before making modifications.
 
 ---
 
-
 # Compatibility Rules
-
 
 Backward compatibility is mandatory.
 
-
 Existing:
-
 
 - project files
 
@@ -765,14 +695,9 @@ Whenever compatibility is impossible:
 
 Document the breaking change.
 
-
-
 ---
 
-
-
 # Emergency Rule
-
 
 
 If multiple solutions exist:
@@ -787,10 +712,7 @@ Choose the solution that:
 
 - consumes the fewest tokens
 
-
-
 ---
-
 
 # Golden Rule
 
