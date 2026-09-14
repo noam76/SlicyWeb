@@ -47,12 +47,10 @@ This document serves as the reference for:
 
 # API Philosophy
 
-
 The project follows:
 
 
 ```text
-
 Local First
 
 ↓
@@ -62,13 +60,13 @@ Cache
 ↓
 
 Remote Sources
-
+```
 
 The application must always prioritize local data.
 
 Remote requests should only occur when necessary.
 
-```
+---
 
 # API Governance
 
