@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # DOCUMENT UPDATE MATRIX
 
@@ -137,7 +137,7 @@ Mandatory Updates:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 Conditional Updates:
@@ -165,7 +165,7 @@ Mandatory Updates:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 Conditional Updates:
@@ -193,7 +193,7 @@ Mandatory Updates:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 All References
 ```
@@ -223,7 +223,7 @@ Mandatory Updates:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 All Path References
 ```
@@ -329,7 +329,7 @@ DIRECTORY_PURPOSES.md
 
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 
 CHANGELOG.md
 ```
@@ -537,7 +537,7 @@ Mandatory Review:
 ```text
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 Mandatory Update Evaluation:
@@ -1080,7 +1080,7 @@ Always review during documentation structure changes.
 
 ---
 
-# Wichy files explication.txt Rules
+# SlicyWeb files explication.txt Rules
 
 Update When:
 
