@@ -1,4 +1,4 @@
-# SLICYWEB
+# SlicyWeb SMART SLICER
 
 # CHANGELOG
 
