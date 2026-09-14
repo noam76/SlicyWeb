@@ -1,4 +1,5 @@
-# SLICYWEB
+# SlicyWeb SMART SLICER
+
 # Project Specification
 
 Version: 2.0.0
