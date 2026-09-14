@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # FILE OWNERSHIP MATRIX
 
@@ -103,7 +103,7 @@ Document Moved
 Related Files:
 
 ```text
-Wichy files explication.txt
+ files explication.txt
 
 AI_START_HERE.md
 
@@ -503,7 +503,7 @@ DIRECTORY_PURPOSES.md
 
 PROJECT_DOCUMENTATION_INDEX.md
 
-Wichy files explication.txt
+ files explication.txt
 ```
 
 ---
