@@ -1,1219 +1,687 @@
-# WICHY
-# DIRECTORY PURPOSES
+# SlicyWeb SMART SLICER
 
-Version: 1.0.0
+# ARCHITECTURE DECISION MATRIX
+
+Version: 2.0.0
 
 Status: Approved
+
+Priority: Mandatory
 
 ---
 
 # Purpose
 
-This document defines the purpose and responsibility of every directory used within the Wichy project.
+This document records the major architecture decisions of the project.
 
-The objective is to ensure:
+Objectives:
 
-- Consistent project organization
-- Clear responsibilities
-- Easier onboarding
-- Improved maintainability
-- Predictable file placement
+- Document architecture decisions
+- Preserve architectural consistency
+- Explain architectural choices
+- Support governance reviews
+- Support impact analysis
+- Reduce architectural drift
+- Improve long-term maintainability
 
-Every file should be placed in the directory that matches its responsibility.
-
----
-
-# Project Root
-
-```text
-SlicyWeb/
-```
-
-Purpose:
-
-```text
-Project Root Directory
-```
-
-Contains:
-
-```text
-Project Configuration
-
-Documentation
-
-Source Code
-
-Assets
-
-Tests
-
-Runtime Resources
-```
+This document is the authoritative reference for architecture-level decisions.
 
 ---
 
-# docs/
+# Architecture Governance
+
+Architecture decisions must comply with:
+
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CROSS_DOCUMENT_DEPENDENCIES.md
 
 Purpose:
 
-```text
-Project Documentation
-```
-
-Contains:
-
-```text
-Specifications
-
-Architecture
-
-Rules
-
-Roadmaps
-
-Guides
-```
+- Architecture Protection
+- Dependency Governance
+- Ownership Validation
+- Impact Analysis
+- Change Control
+- Documentation Consistency
 
 ---
 
-# docs/00-index/
+# Decision Lifecycle
 
-Purpose:
+All architecture decisions shall follow the lifecycle below:
 
-```text
-Documentation Entry Point
-```
+Proposed
 
-Contains:
+↓
 
-```text
-Documentation Index
+Review
 
-AI Reading Guide
-```
+↓
 
----
+Approved
 
-# docs/01-project/
+↓
 
-Purpose:
+Implemented
 
-```text
-Project Definition
-```
+↓
 
-Contains:
+Maintained
 
-```text
-Vision
+Possible Status Values:
 
-Scope
-
-Roadmap
-
-Planning
-
-Change History
-```
+- Proposed
+- Under Review
+- Approved
+- Deprecated
+- Rejected
+- Superseded
 
 ---
 
-# docs/02-architecture/
+# Decision Classification
 
-Purpose:
+Critical
 
-```text
-System Design
-```
+Impacts:
 
-Contains:
+- Core Architecture
+- Multiple Domains
+- Project Direction
 
-```text
-Architecture
+Requires:
 
-Schemas
-
-Tech Stack
-
-File Structure
-
-API Definitions
-```
+- Impact Analysis
+- Governance Validation
 
 ---
 
-# docs/03-development/
+High
 
-Purpose:
+Impacts:
 
-```text
-Development Standards
-```
+- APIs
+- Services
+- Data Models
 
-Contains:
+Requires:
 
-```text
-Workflows
-
-Rules
-
-Error Definitions
-
-Settings Specifications
-```
+- Dependency Review
 
 ---
 
-# docs/04-ai/
+Medium
 
-Purpose:
+Impacts:
 
-```text
-Artificial Intelligence Specifications
-```
+- Internal Components
+- Technical Design
 
-Contains:
+Requires:
 
-```text
-Analysis Logic
-
-Recommendations
-
-Classification
-
-Presets
-
-Support Generation
-```
+- Technical Review
 
 ---
 
-# docs/05-profiles/
+Low
 
-Purpose:
+Impacts:
 
-```text
-Profile Definitions
-```
+- Internal Improvements
 
-Contains:
+Requires:
 
-```text
-Printer Profiles
-
-Material Profiles
-
-Filament Profiles
-```
+- Standard Validation
 
 ---
 
-# docs/06-quality/
+# Architecture Decision Matrix
 
-Purpose:
-
-```text
-Quality Assurance
-```
-
-Contains:
-
-```text
-Testing
-
-Security
-
-Performance
-```
-
----
-
-# docs/07-future/
-
-Purpose:
-
-```text
-Future Systems
-```
-
-Contains:
-
-```text
-G-Code Specifications
-
-Plugin System
-
-Future Extensions
-```
+| ID | Title | Category | Priority | Status |
+|----|---------|----------|----------|---------|
+| ADM-001 | Documentation First Development | Architecture | Critical | Approved |
+| ADM-002 | Local First Strategy | Architecture | Critical | Approved |
+| ADM-003 | Modular Architecture | Architecture | Critical | Approved |
+| ADM-004 | Domain Driven Organization | Architecture | Critical | Approved |
+| ADM-005 | Electron Desktop Platform | Platform | High | Approved |
+| ADM-006 | React + TypeScript Frontend | Frontend | High | Approved |
+| ADM-007 | Tailwind CSS + shadcn/ui | UI | Medium | Approved |
+| ADM-008 | Zustand State Management | Frontend | Medium | Approved |
+| ADM-009 | Three.js Rendering Engine | Rendering | High | Approved |
+| ADM-010 | Zod Validation Layer | Validation | High | Approved |
+| ADM-011 | Schema Driven Development | Data | Critical | Approved |
+| ADM-012 | Local JSON Storage | Storage | High | Approved |
+| ADM-013 | Versioned Project Files | Persistence | High | Approved |
+| ADM-014 | API Contract Architecture | API | High | Approved |
+| ADM-015 | IPC Communication Layer | Electron | High | Approved |
+| ADM-016 | Rule Based Analysis Engine | Analysis | Critical | Approved |
+| ADM-017 | Classification Before Recommendation | Analysis | High | Approved |
+| ADM-018 | Deterministic Recommendation Engine | AI | Critical | Approved |
+| ADM-019 | Cache First Synchronization | Synchronization | High | Approved |
+| ADM-020 | Governance Controlled Evolution | Governance | Critical | Approved |
 
 ---
 
-# docs/08-user-interface/
-
-Purpose:
-
-```text
-User Interface Specifications
-```
-
-Contains:
-
-```text
-Layouts
-
-Panels
-
-Menus
-
-User Experience Definitions
-```
+# Decision Details
 
 ---
 
-# docs/09-reference/
+ADM-001
 
-Purpose:
+Title:
 
-```text
-Project Reference Material
-```
+Documentation First Development
 
-Contains:
+Decision:
 
-```text
-Glossary
+Documentation must exist before implementation.
 
-Terminology
+Rationale:
 
-Naming Rules
+Architecture and requirements must be defined before development.
 
-Acronyms
+Benefits:
 
-Versioning Policies
-
-Architecture Decisions
-
-Directory Definitions
-```
+- Reduced ambiguity
+- Improved consistency
+- Better planning
 
 ---
 
-# src/
+ADM-002
 
-Purpose:
+Title:
 
-```text
-Application Source Code
-```
+Local First Strategy
 
-Contains:
+Decision:
 
-```text
-Business Logic
+The application shall remain fully functional without internet access.
 
-User Interface
+Rationale:
 
-Data Processing
+Offline operation is a core project requirement.
 
-Application Systems
-```
+Benefits:
 
----
-
-# src/app/
-
-Purpose:
-
-```text
-Application Bootstrap Layer
-```
-
-Contains:
-
-```text
-Startup Logic
-
-Shutdown Logic
-
-Application Initialization
-
-Dependency Management
-```
+- Reliability
+- Privacy
+- Independence from cloud services
 
 ---
 
-# src/gui/
+ADM-003
 
-Purpose:
+Title:
 
-```text
-User Interface Layer
-```
+Modular Architecture
 
-Contains:
+Decision:
 
-```text
-Layouts
+All major features shall be implemented as isolated modules.
 
-Panels
+Rationale:
 
-Dialogs
+Reduce coupling and improve maintainability.
 
-Menus
+Benefits:
 
-Components
-
-Themes
-```
+- Scalability
+- Testability
+- Easier maintenance
 
 ---
 
-# src/renderer/
+ADM-004
 
-Purpose:
+Title:
 
-```text
-3D Rendering System
-```
+Domain Driven Organization
 
-Contains:
+Decision:
 
-```text
-Scene Rendering
+The system shall be organized around business domains.
 
-Viewport Rendering
+Rationale:
 
-Camera Management
+Clear ownership boundaries and dependency control.
 
-Lighting Management
-```
+Benefits:
 
----
-
-# src/scene/
-
-Purpose:
-
-```text
-Scene Management
-```
-
-Contains:
-
-```text
-Workspace Data
-
-Scene Validation
-
-Scene Serialization
-```
+- Better governance
+- Simplified evolution
+- Reduced cross-domain impact
 
 ---
 
-# src/object_manager/
+ADM-005
 
-Purpose:
+Title:
 
-```text
-Model Management
-```
+Electron Desktop Platform
 
-Contains:
+Decision:
 
-```text
-Object Creation
+Electron is the official application platform.
 
-Object Storage
+Rationale:
 
-Duplication
+Cross-platform desktop deployment.
 
-Validation
-```
+Benefits:
 
----
-
-# src/transform/
-
-Purpose:
-
-```text
-Transformation Tools
-```
-
-Contains:
-
-```text
-Move
-
-Rotate
-
-Scale
-
-Transform Validation
-```
+- Windows support
+- Linux support
+- macOS support
 
 ---
 
-# src/importer/
+ADM-006
 
-Purpose:
+Title:
 
-```text
-Model Import System
-```
+React + TypeScript Frontend
 
-Contains:
+Decision:
 
-```text
-STL Import
+Frontend development shall use React and TypeScript.
 
-3MF Import
+Rationale:
 
-Import Validation
-```
+Type safety and maintainability.
 
----
+Benefits:
 
-# src/printer_database/
-
-Purpose:
-
-```text
-Printer Management System
-```
-
-Contains:
-
-```text
-Printer Loading
-
-Printer Validation
-
-Printer Storage
-
-Printer Repositories
-```
+- Strong typing
+- Component reusability
+- Improved reliability
 
 ---
 
-# src/material_database/
+ADM-007
 
-Purpose:
+Title:
 
-```text
-Material Management System
-```
+Tailwind CSS + shadcn/ui
 
-Contains:
+Decision:
 
-```text
-Material Profiles
+UI development shall use Tailwind CSS and shadcn/ui.
 
-Validation
+Rationale:
 
-Repositories
-```
+Consistent design system.
 
----
+Benefits:
 
-# src/filament_database/
-
-Purpose:
-
-```text
-Filament Management System
-```
-
-Contains:
-
-```text
-Filament Profiles
-
-Manufacturer Data
-
-Validation
-
-Repositories
-```
+- Faster UI development
+- Consistent user experience
 
 ---
 
-# src/model_analysis/
+ADM-008
 
-Purpose:
+Title:
 
-```text
-Geometry Analysis Engine
-```
+Zustand State Management
 
-Contains:
+Decision:
 
-```text
-Mesh Analysis
+Application state shall be managed with Zustand.
 
-Printability Analysis
+Rationale:
 
-Stability Analysis
+Simple architecture with low complexity.
 
-Geometry Evaluation
-```
+Benefits:
 
----
-
-# src/classification_engine/
-
-Purpose:
-
-```text
-Object Classification System
-```
-
-Contains:
-
-```text
-Object Categories
-
-Classification Rules
-
-Confidence Scoring
-
-Classification Validation
-```
+- Reduced boilerplate
+- Easier maintenance
 
 ---
 
-# src/recommendation_engine/
+ADM-009
 
-Purpose:
+Title:
 
-```text
-Recommendation Generation
-```
+Three.js Rendering Engine
 
-Contains:
+Decision:
 
-```text
-Decision Rules
+Three.js is the official 3D rendering engine.
 
-Validation
+Rationale:
 
-Warnings
+Mature ecosystem and strong visualization capabilities.
 
-Recommendations
-```
+Benefits:
 
----
-
-# src/preset_engine/
-
-Purpose:
-
-```text
-Print Preset Management
-```
-
-Contains:
-
-```text
-Preset Selection
-
-Preset Validation
-
-Preset Recommendations
-
-Preset Storage
-```
+- Performance
+- Extensibility
+- Industry adoption
 
 ---
 
-# src/optimization_engine/
+ADM-010
 
-Purpose:
+Title:
 
-```text
-Print Optimization
-```
+Zod Validation Layer
 
-Contains:
+Decision:
 
-```text
-Orientation Optimization
+Runtime validation shall be implemented using Zod schemas.
 
-Support Optimization
+Rationale:
 
-Time Optimization
+Prevent invalid application state.
 
-Material Optimization
-```
+Benefits:
 
----
-
-# src/cost_engine/
-
-Purpose:
-
-```text
-Cost Computation
-```
-
-Contains:
-
-```text
-Material Cost
-
-Energy Cost
-
-Time Estimation
-
-Total Cost
-```
+- Runtime safety
+- Consistent validation
 
 ---
 
-# src/repositories/
+ADM-011
 
-Purpose:
+Title:
 
-```text
-Data Access Layer
-```
+Schema Driven Development
 
-Contains:
+Decision:
 
-```text
-Repository Implementations
+Data structures originate from official schemas.
 
-Storage Access Logic
-```
+Rationale:
 
----
+Ensure consistency across the system.
 
-# src/storage/
+Benefits:
 
-Purpose:
-
-```text
-Persistence Layer
-```
-
-Contains:
-
-```text
-Local Storage
-
-File Storage
-
-Future Database Integrations
-```
+- Reduced duplication
+- Easier validation
 
 ---
 
-# src/recovery/
+ADM-012
 
-Purpose:
+Title:
 
-```text
-Project Recovery System
-```
+Local JSON Storage
 
-Contains:
+Decision:
 
-```text
-Auto Save
+Profiles and local configuration use JSON storage.
 
-Recovery Files
+Rationale:
 
-Session Restoration
+Portable and easy to maintain.
 
-Recovery Validation
-```
+Benefits:
 
----
-
-# src/services/
-
-Purpose:
-
-```text
-Shared Application Services
-```
-
-Contains:
-
-```text
-Reusable Business Logic
-
-Cross Module Operations
-```
+- Human readable
+- Easy backup
+- Easy migration
 
 ---
 
-# src/events/
+ADM-013
 
-Purpose:
+Title:
 
-```text
-Application Event System
-```
+Versioned Project Files
 
-Contains:
+Decision:
 
-```text
-Event Dispatching
+All project files must contain version information.
 
-Subscriptions
+Rationale:
 
-Notifications
-```
+Support future migrations.
 
----
+Benefits:
 
-# src/state/
-
-Purpose:
-
-```text
-Application State Management
-```
-
-Contains:
-
-```text
-Global State
-
-Stores
-
-Session State
-```
+- Backward compatibility
+- Compatibility tracking
 
 ---
 
-# src/config/
+ADM-014
 
-Purpose:
+Title:
 
-```text
-Configuration Management
-```
+API Contract Architecture
 
-Contains:
+Decision:
 
-```text
-Application Configuration
+All APIs must be defined by documented contracts.
 
-Feature Flags
+Rationale:
 
-Environment Settings
-```
+Stable communication interfaces.
 
----
+Benefits:
 
-# src/constants/
-
-Purpose:
-
-```text
-Global Constants
-```
-
-Contains:
-
-```text
-Default Values
-
-Limits
-
-Shared Constants
-```
+- Predictability
+- Compatibility
+- Testing support
 
 ---
 
-# src/schemas/
+ADM-015
 
-Purpose:
+Title:
 
-```text
-Runtime Validation Schemas
-```
+IPC Communication Layer
 
-Contains:
+Decision:
 
-```text
-Zod Schemas
+Electron processes communicate through documented IPC contracts.
 
-Validation Definitions
+Rationale:
 
-Data Models
-```
+Separation and security.
 
----
+Benefits:
 
-# src/utils/
-
-Purpose:
-
-```text
-Utility Functions
-```
-
-Contains:
-
-```text
-Helpers
-
-Converters
-
-Reusable Utilities
-```
+- Isolation
+- Maintainability
 
 ---
 
-# src/types/
+ADM-016
 
-Purpose:
+Title:
 
-```text
-Shared Type Definitions
-```
+Rule Based Analysis Engine
 
-Contains:
+Decision:
 
-```text
-TypeScript Types
+Model analysis shall use deterministic engineering rules.
 
-Interfaces
+Rationale:
 
-Enums
-```
+Consistent and repeatable analysis.
 
----
+Benefits:
 
-# data/
-
-Purpose:
-
-```text
-Project Data Repository
-```
-
-Contains:
-
-```text
-Profiles
-
-Materials
-
-Filaments
-
-Presets
-
-Repositories
-```
+- Transparency
+- Reliability
 
 ---
 
-# data/printers/
+ADM-017
 
-Purpose:
+Title:
 
-```text
-Printer Profile Storage
-```
+Classification Before Recommendation
 
-Contains:
+Decision:
 
-```text
-Printer Definitions
+Object classification shall occur before recommendation generation.
 
-Manufacturer Profiles
-```
+Rationale:
 
----
+Classification influences recommendation logic.
 
-# data/materials/
+Benefits:
 
-Purpose:
-
-```text
-Material Profile Storage
-```
-
-Contains:
-
-```text
-PLA
-
-PETG
-
-ABS
-
-ASA
-
-TPU
-
-And Other Materials
-```
+- Improved accuracy
+- Better recommendations
 
 ---
 
-# data/filaments/
+ADM-018
 
-Purpose:
+Title:
 
-```text
-Filament Profile Storage
-```
+Deterministic Recommendation Engine
 
-Contains:
+Decision:
 
-```text
-Manufacturer-Specific Filaments
-```
+Recommendations must be reproducible from identical inputs.
 
----
+Rationale:
 
-# data/presets/
+Engineering reliability.
 
-Purpose:
+Benefits:
 
-```text
-Print Preset Storage
-```
-
-Contains:
-
-```text
-Draft
-
-Balanced
-
-Quality
-
-Mechanical
-
-Miniature
-
-Custom Presets
-```
+- Predictability
+- User trust
 
 ---
 
-# tests/
+ADM-019
 
-Purpose:
+Title:
 
-```text
-Quality Validation
-```
+Cache First Synchronization
 
-Contains:
+Decision:
 
-```text
-Unit Tests
+Data retrieval order shall be:
 
-Integration Tests
+Local Database
 
-Regression Tests
+↓
 
-E2E Tests
-```
+Local Cache
 
----
+↓
 
-# assets/
+Remote Sources
 
-Purpose:
+Rationale:
 
-```text
-Project Visual Resources
-```
+Prioritize speed and offline capability.
 
-Contains:
+Benefits:
 
-```text
-Icons
-
-Images
-
-Logos
-
-Themes
-```
+- Faster access
+- Reduced network dependency
 
 ---
 
-# cache/
+ADM-020
 
-Purpose:
+Title:
 
-```text
-Temporary Runtime Data
-```
+Governance Controlled Evolution
 
-Contains:
+Decision:
 
-```text
-Downloaded Profiles
+Architecture changes require governance validation.
 
-Analysis Cache
+Rationale:
 
-Repositories Cache
-```
+Protect architectural integrity.
 
----
+Benefits:
 
-# logs/
-
-Purpose:
-
-```text
-Application Diagnostics
-```
-
-Contains:
-
-```text
-Application Logs
-
-Error Logs
-
-Diagnostic Information
-```
+- Controlled evolution
+- Reduced regressions
+- Better consistency
 
 ---
 
-# scripts/
+# Architecture Review Triggers
 
-Purpose:
+Architecture review is required when:
 
-```text
-Automation Tools
-```
-
-Contains:
-
-```text
-Setup Scripts
-
-Migration Scripts
-
-Release Scripts
-```
+- Domain boundaries change
+- New APIs are introduced
+- Schemas are modified
+- Storage strategy changes
+- Synchronization strategy changes
+- New architectural layers are added
+- Core workflows change
 
 ---
 
-# plugins/
+# Architecture Decision Rules
 
-Purpose:
+Before approving a new architecture decision:
 
-```text
-Plugin Management
-```
+1. Identify the problem
 
-Contains:
+2. Evaluate alternatives
 
-```text
-Installed Plugins
+3. Select the preferred solution
 
-Disabled Plugins
+4. Document rationale
 
-Plugin Cache
-```
+5. Identify impacted domains
 
----
+6. Perform impact analysis
 
-# public/
+7. Update required documentation
 
-Purpose:
-
-```text
-Public Resources
-```
-
-Contains:
-
-```text
-Fonts
-
-Icons
-
-Localization Files
-
-Static Resources
-```
+8. Validate governance requirements
 
 ---
 
-# releases/
+# Architecture Governance Validation
 
-Purpose:
+Before implementation:
 
-```text
-Release Artifacts
-```
+Verify:
 
-Contains:
+- Ownership respected
 
-```text
-Alpha Releases
+- Dependencies validated
 
-Beta Releases
+- Impact analysis completed
 
-Release Candidates
+- Documentation updated
 
-Stable Builds
-```
+- Compatibility maintained
 
----
+- Governance requirements satisfied
 
-# .github/
+Reference:
 
-Purpose:
-
-```text
-GitHub Configuration
-```
-
-Contains:
-
-```text
-Workflows
-
-Automation
-
-CI/CD Configuration
-```
-
----
-
-# .github/workflows/
-
-Purpose:
-
-```text
-Automation Pipeline
-```
-
-Contains:
-
-```text
-Build Validation
-
-Testing
-
-Linting
-
-Release Automation
-```
+CHANGE_VERIFICATION_CHECKLIST.md
 
 ---
 
 # Golden Rule
 
-Every file should have a single clear responsibility and should be stored in the directory that best matches that responsibility.
-
-If a file does not clearly belong to a directory, the project structure should be reviewed before creating the file.
+Architecture decisions must prioritize long-term maintainability, consistency, and reliability over short-term implementation convenience.
 
 ---
 
