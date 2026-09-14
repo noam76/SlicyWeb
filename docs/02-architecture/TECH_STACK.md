@@ -1,4 +1,4 @@
-# AI SMART SLICER
+# SlicyWeb SMART SLICER
 
 # TECHNOLOGY STACK
 
@@ -8,11 +8,11 @@ Status: Approved
 
 Priority: High
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -24,19 +24,19 @@ Goals:
 
 
 
-\- Long-term maintainability
+- Long-term maintainability
 
-\- High performance
+- High performance
 
-\- Cross-platform support
+- Cross-platform support
 
-\- Modular architecture
+- Modular architecture
 
-\- Large model support
+- Large model support
 
-\- Professional desktop experience
+- Professional desktop experience
 
-\- Compatibility with future extensions
+- Compatibility with future extensions
 
 
 
@@ -48,19 +48,19 @@ Technology changes require:
 
 
 
-\- Architecture review
+- Architecture review
 
-\- Documentation update
+- Documentation update
 
-\- Changelog update
-
-
-
-\---
+- Changelog update
 
 
 
-\# Technology Selection Philosophy
+---
+
+
+
+# Technology Selection Philosophy
 
 
 
@@ -86,21 +86,21 @@ Avoid technologies that are:
 
 
 
-\- Experimental
+- Experimental
 
-\- Poorly documented
+- Poorly documented
 
-\- Difficult to maintain
+- Difficult to maintain
 
-\- Rarely used
-
-
-
-\---
+- Rarely used
 
 
 
-\# Official Application Stack
+---
+
+
+
+# Official Application Stack
 
 
 
@@ -164,11 +164,11 @@ Vitest
 
 
 
-\---
+---
 
 
 
-\# Architecture Overview
+# Architecture Overview
 
 
 
@@ -204,15 +204,15 @@ Electron
 
 
 
-\---
+---
 
 
 
-\# Primary Language
+# Primary Language
 
 
 
-\## TypeScript
+## TypeScript
 
 
 
@@ -220,23 +220,23 @@ Reason:
 
 
 
-\- Type Safety
+- Type Safety
 
-\- Better Refactoring
+- Better Refactoring
 
-\- Large Project Support
+- Large Project Support
 
-\- Better AI Assistance
+- Better AI Assistance
 
-\- Better IDE Support
-
-
-
-\---
+- Better IDE Support
 
 
 
-\# TypeScript Rules
+---
+
+
+
+# TypeScript Rules
 
 
 
@@ -252,11 +252,11 @@ Enabled
 
 
 
-\---
+---
 
 
 
-\# Configuration
+# Configuration
 
 
 
@@ -276,15 +276,15 @@ Enabled
 
 
 
-\---
+---
 
 
 
-\# UI Framework
+# UI Framework
 
 
 
-\## React
+## React
 
 
 
@@ -296,11 +296,11 @@ Latest Stable
 
 
 
-\---
+---
 
 
 
-\# Reason
+# Reason
 
 
 
@@ -308,23 +308,23 @@ Provides:
 
 
 
-\- Component Architecture
+- Component Architecture
 
-\- Reusable Interface Elements
+- Reusable Interface Elements
 
-\- Fast Development
+- Fast Development
 
-\- Large Ecosystem
+- Large Ecosystem
 
-\- Excellent Tooling
-
-
-
-\---
+- Excellent Tooling
 
 
 
-\# React Guidelines
+---
+
+
+
+# React Guidelines
 
 
 
@@ -352,23 +352,23 @@ Class Components
 
 
 
-\---
+---
 
 
 
-\# State Management
+# State Management
 
 
 
-\## Zustand
+## Zustand
 
 
 
-\---
+---
 
 
 
-\# Why Zustand
+# Why Zustand
 
 
 
@@ -376,23 +376,23 @@ Advantages:
 
 
 
-\- Lightweight
+- Lightweight
 
-\- Fast
+- Fast
 
-\- Minimal Boilerplate
+- Minimal Boilerplate
 
-\- Excellent for Desktop Apps
+- Excellent for Desktop Apps
 
-\- Easy Testing
-
-
-
-\---
+- Easy Testing
 
 
 
-\# Responsibilities
+---
+
+
+
+# Responsibilities
 
 
 
@@ -423,10 +423,10 @@ Recommendations
 ```
 
 
-\---
+---
 
 
-\# Forbidden
+# Forbidden
 
 
 Do not use Zustand for:
@@ -445,23 +445,23 @@ One-Time UI States
 Use local component state instead.
 
 
-\---
+---
 
 
 
-\# Desktop Framework
+# Desktop Framework
 
 
 
-\## Electron
+## Electron
 
 
 
-\---
+---
 
 
 
-\# Why Electron
+# Why Electron
 
 
 
@@ -469,25 +469,25 @@ Requirements:
 
 
 
-\- Windows Support
+- Windows Support
 
-\- Linux Support
+- Linux Support
 
-\- macOS Support
+- macOS Support
 
-\- Local File Access
+- Local File Access
 
-\- STL/3MF Import
+- STL/3MF Import
 
-\- Future G-Code Support
-
-
-
-\---
+- Future G-Code Support
 
 
 
-\# Benefits
+---
+
+
+
+# Benefits
 
 
 
@@ -519,11 +519,11 @@ Offline Usage
 
 
 
-\---
+---
 
 
 
-\# Electron Structure
+# Electron Structure
 
 
 
@@ -551,11 +551,11 @@ React Application
 
 
 
-\---
+---
 
 
 
-\# Communication
+# Communication
 
 
 Use:
@@ -592,23 +592,23 @@ Profile Management
 
 
 
-\---
+---
 
 
 
-\# 3D Rendering Engine
+# 3D Rendering Engine
 
 
 
-\## Three.js
+## Three.js
 
 
 
-\---
+---
 
 
 
-\# Why Three.js
+# Why Three.js
 
 
 
@@ -616,21 +616,21 @@ Provides:
 
 
 
-\- High Performance Rendering
+- High Performance Rendering
 
-\- Large Community
+- Large Community
 
-\- STL Support
+- STL Support
 
-\- Extensive Documentation
-
-
-
-\---
+- Extensive Documentation
 
 
 
-\# Responsibilities
+---
+
+
+
+# Responsibilities
 
 
 
@@ -670,11 +670,11 @@ Transformations
 
 
 
-\---
+---
 
 
 
-\# Forbidden
+# Forbidden
 
 
 
@@ -698,11 +698,11 @@ Business Logic
 
 
 
-\---
+---
 
 
 
-\# STL Support
+# STL Support
 
 
 
@@ -726,11 +726,11 @@ Three.js Examples
 
 
 
-\---
+---
 
 
 
-\# 3MF Support
+# 3MF Support
 
 
 
@@ -754,11 +754,11 @@ Three.js Examples
 
 
 
-\---
+---
 
 
 
-\# 3D Helper Libraries
+# 3D Helper Libraries
 
 
 
@@ -798,23 +798,23 @@ AxesHelper
 
 
 
-\---
+---
 
 
 
-\# UI Component Library
+# UI Component Library
 
 
 
-\## shadcn/ui
+## shadcn/ui
 
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -842,11 +842,11 @@ Customization
 
 
 
-\---
+---
 
 
 
-\# Components
+# Components
 
 
 
@@ -886,23 +886,23 @@ Cards
 
 
 
-\---
+---
 
 
 
-\# Styling System
+# Styling System
 
 
 
-\## Tailwind CSS
+## Tailwind CSS
 
 
 
-\---
+---
 
 
 
-\# Benefits
+# Benefits
 
 
 
@@ -926,11 +926,11 @@ Small Bundle Size
 
 
 
-\---
+---
 
 
 
-\# Design Rules
+# Design Rules
 
 
 
@@ -958,23 +958,23 @@ Tailwind Utilities
 
 
 
-\---
+---
 
 
 
-\# Icons
+# Icons
 
 
 
-\## Lucide React
+## Lucide React
 
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -1018,23 +1018,23 @@ Material
 
 
 
-\---
+---
 
 
 
-\# Data Validation
+# Data Validation
 
 
 
-\## Zod
+## Zod
 
 
 
-\---
+---
 
 
 
-\# Why
+# Why
 
 
 
@@ -1061,10 +1061,10 @@ API Responses
 ```
 
 
-\---
+---
 
 
-\# File Formats
+# File Formats
 
 
 Supported:
@@ -1107,15 +1107,15 @@ AMF
 
 
 
-\---
+---
 
 
 
-\# Local Storage
+# Local Storage
 
 
 
-\## JSON Based
+## JSON Based
 
 
 
@@ -1123,11 +1123,11 @@ Initial Versions
 
 
 
-\---
+---
 
 
 
-\# Storage Location
+# Storage Location
 
 
 
@@ -1163,11 +1163,11 @@ Settings
 
 
 
-\---
+---
 
 
 
-\# Future Database
+# Future Database
 
 
 
@@ -1187,23 +1187,23 @@ Only when required.
 
 
 
-\---
+---
 
 
 
-\# GitHub Integration
+# GitHub Integration
 
 
 
-\## Octokit
+## Octokit
 
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -1218,10 +1218,10 @@ Community Data
 ```
 
 
-\---
+---
 
 
-\# Strategy
+# Strategy
 
 
 
@@ -1241,11 +1241,11 @@ Then GitHub
 
 
 
-\---
+---
 
 
 
-\# Search Indexing
+# Search Indexing
 
 
 
@@ -1285,23 +1285,23 @@ Material Search
 
 
 
-\---
+---
 
 
 
-\# Geometry Analysis
+# Geometry Analysis
 
 
 
-\## three-mesh-bvh
+## three-mesh-bvh
 
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -1329,11 +1329,11 @@ Large Model Support
 
 
 
-\---
+---
 
 
 
-\# Mathematical Calculations
+# Mathematical Calculations
 
 
 
@@ -1357,23 +1357,23 @@ Avoid unnecessary dependencies.
 
 
 
-\---
+---
 
 
 
-\# Logging System
+# Logging System
 
 
 
-\## Electron Log
+## Electron Log
 
 
 
-\---
+---
 
 
 
-\# Responsibilities
+# Responsibilities
 
 
 
@@ -1397,11 +1397,11 @@ Errors
 
 
 
-\---
+---
 
 
 
-\# Settings Management
+# Settings Management
 
 
 
@@ -1433,13 +1433,13 @@ preferences.json
 
 
 
-\---
+---
 
 
 
-\# Testing Framework
+# Testing Framework
 
-\## Coverage Target
+## Coverage Target
 
 Minimum:
 
@@ -1449,15 +1449,15 @@ Critical Modules:
 
 90%
 
-\## Vitest
+## Vitest
 
 
 
-\---
+---
 
 
 
-\# Responsibilities
+# Responsibilities
 
 
 
@@ -1473,23 +1473,23 @@ Integration Tests
 
 
 
-\---
+---
 
 
 
-\# UI Testing
+# UI Testing
 
 
 
-\## Testing Library
+## Testing Library
 
 
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -1505,23 +1505,23 @@ Accessibility Verification
 
 
 
-\---
+---
 
 
 
-\# Future End-To-End Testing
+# Future End-To-End Testing
 
 
 
-\## Playwright
+## Playwright
 
 
 
-\---
+---
 
 
 
-\# Responsibilities
+# Responsibilities
 
 
 
@@ -1553,23 +1553,23 @@ GUI Workflows
 
 
 
-\---
+---
 
 
 
-\# Build System
+# Build System
 
 
 
-\## Vite
+## Vite
 
 
 
-\---
+---
 
 
 
-\# Why
+# Why
 
 
 
@@ -1589,15 +1589,15 @@ Modern Tooling
 
 
 
-\---
+---
 
 
 
-\# Package Manager
+# Package Manager
 
 
 
-\## npm
+## npm
 
 
 
@@ -1621,15 +1621,15 @@ Supported
 
 
 
-\---
+---
 
 
 
-\# Source Control
+# Source Control
 
 
 
-\## Git
+## Git
 
 
 
@@ -1645,11 +1645,11 @@ GitHub
 
 
 
-\---
+---
 
 
 
-\# Branch Strategy
+# Branch Strategy
 
 
 
@@ -1669,11 +1669,11 @@ feature/\*
 
 
 
-\---
+---
 
 
 
-\# CI/CD
+# CI/CD
 
 
 
@@ -1693,11 +1693,11 @@ GitHub Actions
 
 
 
-\---
+---
 
 
 
-\# CI Tasks
+# CI Tasks
 
 
 
@@ -1721,31 +1721,15 @@ Schema Validation
 
 
 
-\---
+---
 
 
 
-\# Code Quality
+# Code Quality
 
 
 
-\## ESLint
-
-
-
-Mandatory
-
-
-
-\---
-
-
-
-\# Formatting
-
-
-
-\## Prettier
+## ESLint
 
 
 
@@ -1753,11 +1737,27 @@ Mandatory
 
 
 
-\---
+---
 
 
 
-\# Linting Rules
+# Formatting
+
+
+
+## Prettier
+
+
+
+Mandatory
+
+
+
+---
+
+
+
+# Linting Rules
 
 
 
@@ -1777,11 +1777,11 @@ No Warnings
 
 
 
-\---
+---
 
 
 
-\# Performance Targets
+# Performance Targets
 
 
 
@@ -1797,11 +1797,11 @@ GUI Startup:
 
 
 
-\---
+---
 
 
 
-\# STL Loading
+# STL Loading
 
 
 
@@ -1817,11 +1817,11 @@ Medium Models
 
 
 
-\---
+---
 
 
 
-\# Scene FPS
+# Scene FPS
 
 
 
@@ -1849,11 +1849,11 @@ Minimum:
 
 
 
-\---
+---
 
 
 
-\# Memory Goals
+# Memory Goals
 
 
 
@@ -1877,11 +1877,11 @@ Long Sessions
 
 
 
-\---
+---
 
 
 
-\# Future Technologies
+# Future Technologies
 
 
 Reserved
@@ -1890,10 +1890,10 @@ Reserved
 Do Not Implement Yet
 
 
-\---
+---
 
 
-\## G-Code Engine
+## G-Code Engine
 
 
 Possible:
@@ -1906,10 +1906,10 @@ Rust
 ```
 
 
-\---
+---
 
 
-\## Machine Learning
+## Machine Learning
 
 
 Possible:
@@ -1926,10 +1926,10 @@ Local Inference
 ```
 
 
-\---
+---
 
 
-\## Cloud Sync
+## Cloud Sync
 
 
 
@@ -1949,11 +1949,11 @@ Firebase
 
 
 
-\---
+---
 
 
 
-\# Forbidden Technologies
+# Forbidden Technologies
 
 
 
@@ -1993,11 +1993,11 @@ Maintain stack consistency.
 
 
 
-\---
+---
 
 
 
-\# Stack Stability Rule
+# Stack Stability Rule
 
 
 
@@ -2019,11 +2019,11 @@ Changing a core technology requires:
 
 
 
-\---
+---
 
 
 
-\# Golden Rule
+# Golden Rule
 
 
 
@@ -2031,9 +2031,9 @@ Choose technologies that make the project easier to maintain five years from now
 
 
 
-\---
+---
 
 
 
-\# End Of Document
+# End Of Document
 
