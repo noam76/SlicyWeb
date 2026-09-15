@@ -556,6 +556,14 @@ Data sources priority:
 
 4. Verified GitHub Sources
 
+Internal storage format:
+
+- JSON
+
+- Native project format:
+
+- WYPROJ (.wyproj)
+
 
 Never trust unverified sources.
 
@@ -680,14 +688,12 @@ Backward compatibility is mandatory.
 
 Existing:
 
-- project files
-
-- profiles
-
+- WYPROJ project files
+- printer profiles
+- material profiles
+- filament profiles
 - databases
-
 - APIs
-
 
 must remain operational.
 
