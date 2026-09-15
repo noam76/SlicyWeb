@@ -15,13 +15,10 @@ Priority: Mandatory
 # Purpose
 
 
-
 This document defines the mandatory development rules for the entire project.
 
 
-
 These rules exist to:
-
 
 
 - Prevent regressions
@@ -39,13 +36,10 @@ These rules exist to:
 - Simplify future development
 
 
-
 All contributors, tools and AI assistants must follow these rules.
 
 
-
 ---
-
 
 
 # Development Philosophy
@@ -1277,42 +1271,27 @@ Release only if:
 
 ---
 
-
-
 # Backward Compatibility Rules
-
-
 
 Always preserve:
 
-
-
-- project files
-
-- profiles
-
+- WYPROJ project files
+- printer profiles
+- material profiles
+- filament profiles
 - APIs
-
 - settings
-
-
 
 When impossible:
 
 Document the breaking change.
 
-
-
 ---
-
-
 
 # Refactoring Rules
 
 
-
 Refactor only when:
-
 
 
 - measurable benefit exists
@@ -1322,13 +1301,10 @@ Refactor only when:
 - tests exist
 
 
-
 Refactoring must not change behavior.
 
 
-
 ---
-
 
 
 # Emergency Rule
