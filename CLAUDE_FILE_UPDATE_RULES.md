@@ -427,6 +427,8 @@ Storage Impact
 Mandatory Review:
 
 ```text
+PROJECT_SPEC.md
+
 API_SPEC.md
 
 AI_ENGINE_SPEC.md
@@ -602,16 +604,13 @@ Applicable Files:
 
 ```text
 SYSTEM_RULES.md
-
 DEVELOPMENT_RULES.md
-
 AI_DEVELOPMENT_PROTOCOL.md
-
 CLAUDE_GOVERNANCE_PROTOCOL.md
-
 CLAUDE_CHANGE_IMPACT_RULES.md
-
 CLAUDE_FILE_UPDATE_RULES.md
+DOCUMENT_UPDATE_RULES.md
+DOCUMENT_UPDATE_MATRIX.md
 ```
 
 Before modification verify:
