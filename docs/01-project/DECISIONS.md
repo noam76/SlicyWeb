@@ -39,11 +39,11 @@ This document should only contain significant decisions.
 
 
 
-\---
+---
 
 
 
-\# Decision Format
+# Decision Format
 
 
 
@@ -73,11 +73,11 @@ Alternatives Considered
 
 
 
-\---
+---
 
 
 
-\# Status Values
+# Status Values
 
 
 
@@ -97,7 +97,7 @@ Rejected
 
 
 
-\---
+---
 
 
 
@@ -111,26 +111,25 @@ Status: Accepted
 Date: 2026-08-24
 
 
-
-\---
-
+---
 
 
-\## Context
-
+## Context
 
 
 The application is intended to work with:
 
 
 
-\- STL files
+- STL files
 
-\- 3MF files
+- 3MF files
 
-\- Large geometry files
+- WYPROJ files
 
-\- Local printer profiles
+- Large geometry files
+
+- Local printer profiles
 
 
 
@@ -138,11 +137,11 @@ The application must also work offline.
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 
@@ -170,11 +169,11 @@ TypeScript
 
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 
@@ -204,11 +203,11 @@ Larger Application Size
 
 
 
-\---
+---
 
 
 
-\## Alternatives Considered
+## Alternatives Considered
 
 
 ```text
@@ -232,10 +231,10 @@ Offline support required.
 ```
 
 
-\---
+---
 
 
-\# ADR-002
+# ADR-002
 
 
 Title: TypeScript As Primary Language
@@ -246,11 +245,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Context
+## Context
 
 
 
@@ -266,11 +265,11 @@ Project complexity requires:
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 Use:
@@ -286,11 +285,11 @@ TypeScript
 for all application code.
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 
@@ -311,11 +310,11 @@ Reduced Bugs
 
 
 
-\---
+---
 
 
 
-\## Alternatives Considered
+## Alternatives Considered
 
 
 ```text
@@ -329,11 +328,11 @@ Rejected.
 
 
 
-\---
+---
 
 
 
-\# ADR-003
+# ADR-003
 
 
 Title: Three.js Rendering Engine
@@ -344,11 +343,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Context
+## Context
 
 
 
@@ -372,11 +371,11 @@ Camera Controls
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 Use:
@@ -390,11 +389,11 @@ Three.js
 
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 Advantages:
@@ -412,11 +411,11 @@ Industry Proven
 
 
 
-\---
+---
 
 
 
-\## Alternatives Considered
+## Alternatives Considered
 
 
 ```text
@@ -432,11 +431,11 @@ Rejected.
 
 
 
-\---
+---
 
 
 
-\# ADR-004
+# ADR-004
 
 
 
@@ -448,11 +447,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Context
+## Context
 
 
 
@@ -475,10 +474,10 @@ Predictable
 results.
 
 
-\---
+---
 
 
-\## Decision
+## Decision
 
 
 
@@ -495,11 +494,11 @@ Rule Based Recommendation Engine
 instead of machine learning.
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 
@@ -518,20 +517,20 @@ Low Risk
 
 
 
-\---
+---
 
 
 
-\## Future
+## Future
 
 
 Machine Learning may be added later.
 
 
-\---
+---
 
 
-\# ADR-005
+# ADR-005
 
 
 Title: Local Data First
@@ -542,11 +541,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Context
+## Context
 
 
 
@@ -554,11 +553,11 @@ External sources may be unavailable.
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 
@@ -585,11 +584,11 @@ Other Sources
 
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 ```text
@@ -604,11 +603,11 @@ Improved Reliability
 
 
 
-\---
+---
 
 
 
-\# ADR-006
+# ADR-006
 
 
 Title: No G-Code Generation In Initial Releases
@@ -619,21 +618,21 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Context
+## Context
 
 
 Project scope is large.
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 
@@ -652,10 +651,10 @@ Recommendations
 
 
 
-\---
+---
 
 
-\## Consequences
+## Consequences
 
 
 Simpler early development.
@@ -664,21 +663,21 @@ Reduced complexity.
 
 
 
-\---
+---
 
 
 
-\# Future
+# Future
 
 
 G-Code planned for later phases.
 
 
-\---
+---
 
 
 
-\# ADR-007
+# ADR-007
 
 
 Title: Modular Architecture
@@ -689,11 +688,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Context
+## Context
 
 
 
@@ -701,11 +700,11 @@ The project will continue to grow.
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 
@@ -729,11 +728,11 @@ Optimization
 
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 Advantages:
@@ -750,10 +749,10 @@ Testable
 ```
 
 
-\---
+---
 
 
-\# ADR-008
+# ADR-008
 
 
 Title: State Management With Zustand
@@ -764,11 +763,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 
@@ -794,10 +793,10 @@ MobX
 ```
 
 
-\---
+---
 
 
-\## Reason
+## Reason
 
 
 Lower complexity.
@@ -806,11 +805,11 @@ Lower maintenance cost.
 
 
 
-\---
+---
 
 
 
-\# ADR-009
+# ADR-009
 
 
 Title: Formal Documentation Required
@@ -821,11 +820,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 Every major system must have documentation.
@@ -850,10 +849,10 @@ Testing
 ```
 
 
-\---
+---
 
 
-\## Consequences
+## Consequences
 
 
 Improves consistency.
@@ -862,11 +861,11 @@ Improves AI-assisted development.
 
 
 
-\---
+---
 
 
 
-\# ADR-010
+# ADR-010
 
 
 Title: Patch-First Development
@@ -877,21 +876,21 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Context
+## Context
 
 
 
 Large AI-generated rewrites create bugs.
 
 
-\---
+---
 
 
-\## Decision
+## Decision
 
 
 Prefer:
@@ -914,11 +913,11 @@ Rewrite Entire Modules
 ```
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 Advantages:
@@ -936,11 +935,11 @@ Improved Stability
 
 
 
-\---
+---
 
 
 
-\# ADR-011
+# ADR-011
 
 
 Title: Single Source Of Truth
@@ -951,11 +950,11 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 Application state stored centrally.
@@ -964,11 +963,11 @@ Only services may update state.
 
 
 
-\---
+---
 
 
 
-\## Consequences
+## Consequences
 
 
 Advantages:
@@ -984,11 +983,11 @@ Fewer Synchronization Bugs
 
 
 
-\---
+---
 
 
 
-\# ADR-012
+# ADR-012
 
 
 Title: Plugin System Reserved For Future
@@ -999,38 +998,38 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 Do not implement plugins in early releases.
 
 
-\---
+---
 
 
-\## Reason
+## Reason
 
 
 Core stability has priority.
 
 
-\---
+---
 
 
-\# Future
+# Future
 
 
 Plugin framework planned after stable releases.
 
 
-\---
+---
 
 
-\# ADR-013
+# ADR-013
 
 
 Title: Security By Validation
@@ -1041,20 +1040,20 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
-\## Decision
+## Decision
 
 
 All imported content must be validated.
 
 
-\---
+---
 
 
-\## Applies To
+## Applies To
 
 
 
@@ -1073,7 +1072,7 @@ Repositories
 ```
 
 
-\---
+---
 
 
 ## Consequences
@@ -1084,7 +1083,7 @@ Improved data integrity.
 
 
 
-\---
+---
 
 
 
@@ -1098,7 +1097,7 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
 
@@ -1142,10 +1141,10 @@ Date: 2026-08-24
 
 
 
-\---
+---
 
 
-\## Decision
+## Decision
 
 
 The AI provides:
@@ -1165,7 +1164,7 @@ Suggestions
 The user remains in control.
 
 
-\---
+---
 
 
 ## Consequences
@@ -1365,75 +1364,48 @@ All implementation decisions must be traceable to documented specifications.
 
 Advantages:
 
-```text
-Improved Consistency
-
-Improved Maintainability
-
-Reduced Ambiguity
-
-Reduced Regression Risk
-
-Safer AI-Assisted Development
-
-Better Onboarding
-
-Better Knowledge Preservation
-
-Improved Architecture Governance
-```
+- Improved Consistency
+- Improved Maintainability
+- Reduced Ambiguity
+- Reduced Regression Risk
+- Safer AI-Assisted Development
+- Better Onboarding
+- Better Knowledge Preservation
+- Improved Architecture Governance
 
 ---
 
 ## Related Documents
 
-```text
-PROJECT_SPEC.md
-
-ARCHITECTURE.md
-
-DATA_SCHEMA.md
-
-SYSTEM_RULES.md
-
-DEVELOPMENT_RULES.md
-
-DECISIONS.md
-
-PROJECT_DOCUMENTATION_INDEX.md
-
-AI_START_HERE.md
-
-DOCUMENT_UPDATE_MATRIX.md
-
-CROSS_DOCUMENT_DEPENDENCIES.md
-
-PROJECT_IMPACT_MATRIX.md
-
-CLAUDE_FILE_UPDATE_RULES.md
-```
+- PROJECT_SPEC.md
+- ARCHITECTURE.md
+- DATA_SCHEMA.md
+- API_SPEC.md
+- TECHNICAL_OVERVIEW.md
+- SYSTEM_RULES.md
+- DEVELOPMENT_RULES.md
+- DECISIONS.md
+- PROJECT_DOCUMENTATION_INDEX.md
+- AI_START_HERE.md
+- DOCUMENT_UPDATE_MATRIX.md
+- CROSS_DOCUMENT_DEPENDENCIES.md
+- PROJECT_IMPACT_MATRIX.md
+- CLAUDE_FILE_UPDATE_RULES.md
 
 ---
 
 ## Alternatives Considered
 
-```text
 Code As Source Of Truth
 
 Rejected
-```
 
 Reason:
 
-```text
-Code Alone Does Not Explain Intent
-
-Difficult For AI Systems
-
-Higher Risk Of Knowledge Loss
-
-Reduced Architectural Traceability
-```
+- Code Alone Does Not Explain Intent
+- Difficult For AI Systems
+- Higher Risk Of Knowledge Loss
+- Reduced Architectural Traceability
 
 ---
 
@@ -1441,19 +1413,12 @@ Reduced Architectural Traceability
 
 The following principles become mandatory:
 
-```text
-Documentation First
-
-Impact Analysis First
-
-Patch First
-
-Architecture Protection
-
-Cross-Document Consistency
-
-Documentation Maintenance
-```
+- Documentation First
+- Impact Analysis First
+- Patch First
+- Architecture Protection
+- Cross-Document Consistency
+- Documentation Maintenance
 
 ---
 
@@ -1461,27 +1426,270 @@ Documentation Maintenance
 
 Before approving a modification:
 
-```text
-Verify Documentation Impact
+- Verify Documentation Impact
+- Verify Cross-Document Dependencies
+- Verify Ownership Requirements
+- Verify Architecture Consistency
+- Verify Source Of Truth Compliance
 
-Verify Cross-Document Dependencies
+---
 
-Verify Ownership Requirements
+# ADR-020
 
-Verify Architecture Consistency
+Title: Native Project Format WYPROJ
 
-Verify Source Of Truth Compliance
-```
+Status: Accepted
+
+Date: 2026-09-15
+
+---
+
+## Context
+
+The application requires a native project format capable of storing:
+
+- Scene Data
+- Object Data
+- Printer Selection
+- Material Selection
+- Filament Selection
+- Print Presets
+- Analysis Results
+- Recommendations
+- User Settings
+- Metadata
+
+The project format must support:
+
+- Save
+- Load
+- Auto Save
+- Recovery
+- Future Version Migration
+
+---
+
+## Decision
+
+Use WYPROJ as the native project format.
+
+Project Extension:
+
+.wyproj
+
+Underlying Storage Format:
+
+JSON
+
+---
+
+## Consequences
+
+Advantages:
+
+- Full Project Persistence
+- Recovery Support
+- Versioned Project Files
+- Compatibility Validation
+- Portable Storage
+- Human Readable Structure
+
+---
+
+## Related Documents
+
+- PROJECT_SPEC.md
+- DATA_SCHEMA.md
+- API_SPEC.md
+- TECHNICAL_OVERVIEW.md
+
+---
+
+## Alternatives Considered
+
+Multiple Separate Files
+
+Rejected
+
+Reason:
+
+- Harder To Manage
+- Increased Risk Of Missing Data
+- More Complex Recovery Logic
+
+---
+
+# ADR-021
+
+Title: JSON As Internal Storage Format
+
+Status: Accepted
+
+Date: 2026-09-15
+
+---
+
+## Context
+
+The application requires a standard internal storage format for:
+
+- Profiles
+- Settings
+- Cache
+- Metadata
+- Project Files
+- Repository Data
+- Future Extensions
+
+The format must be:
+
+- Human Readable
+- Easy To Validate
+- Cross Platform
+- Easy To Maintain
+
+---
+
+## Decision
+
+Use JSON as the internal storage format.
+
+JSON is used by:
+
+- WYPROJ Files
+- Local Database
+- Cache
+- Settings
+- Profile Storage
+- Repository Imports
+
+---
+
+## Consequences
+
+Advantages:
+
+- Human Readable
+- Cross Platform
+- Easy Validation
+- Schema Friendly
+- Easy Backup
+- Zod Compatible
+- Easy Migration
+
+---
+
+## Alternatives Considered
+
+- XML
+- Binary Storage
+- SQLite Only
+
+Rejected
+
+Reason:
+
+- Higher Complexity
+- Lower Portability
+- Reduced Transparency
+
+---
+
+## Related Documents
+
+- PROJECT_SPEC.md
+- DATA_SCHEMA.md
+- API_SPEC.md
+- TECHNICAL_OVERVIEW.md
+
+---
+
+# ADR-022
+
+Title: Impact Analysis Before Change
+
+Status: Accepted
+
+Date: 2026-09-15
+
+---
+
+## Context
+
+Project complexity has increased significantly due to:
+
+- Domain Ownership
+- Dependency Governance
+- Multi-Document Architecture
+- AI-Assisted Development
+- Cross-Domain Dependencies
+
+Changes made without impact analysis increase the risk of:
+
+- Regressions
+- Documentation Drift
+- Architecture Violations
+- Compatibility Issues
+
+---
+
+## Decision
+
+Impact analysis is mandatory before any significant modification.
+
+Impact analysis applies to:
+
+- Architecture Changes
+- API Changes
+- Schema Changes
+- Documentation Changes
+- Cross-Domain Changes
+- Repository Changes
+- Governance Changes
+
+---
+
+## Consequences
+
+Advantages:
+
+- Reduced Regression Risk
+- Improved Change Visibility
+- Better Dependency Control
+- Safer Refactoring
+- Improved Documentation Consistency
+- Stronger Governance
+
+---
+
+## Related Documents
+
+- PROJECT_IMPACT_MATRIX.md
+- CHANGE_CLASSIFICATION_RULES.md
+- CHANGE_VERIFICATION_CHECKLIST.md
+- DOCUMENT_UPDATE_MATRIX.md
+- CROSS_DOCUMENT_DEPENDENCIES.md
+
+---
+
+## Verification Requirements
+
+Before approving a significant change:
+
+- Identify Impacted Domains
+- Identify Impacted Files
+- Identify Impacted APIs
+- Identify Impacted Schemas
+- Validate Ownership
+- Review Documentation
+- Validate Dependencies
+- Complete Impact Analysis
 
 ---
 
 # Future Decision Template
 
-
 Copy and complete:
-
-
-```text
 
 ADR-XXX
 
@@ -1499,29 +1707,14 @@ Consequences:
 
 Alternatives Considered:
 
-```
+---
 
-
-
-\---
-
-
-
-\# Golden Rule
-
-
+# Golden Rule
 
 Every major technical decision must be recorded here before implementation.
 
-
-
 Future contributors should understand not only WHAT was decided, but WHY it was decided.
 
+---
 
-
-\---
-
-
-
-\# End Of Document
-
+# End Of Document
