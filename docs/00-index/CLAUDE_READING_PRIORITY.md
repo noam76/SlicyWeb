@@ -88,20 +88,15 @@ Nothing may override them.
 Mandatory Reading:
 
 ```text
+
 CLAUDE.md
-
 CLAUDE_PROJECT_CONTEXT.md
-
 docs/01-project/PROJECT_SPEC.md
-
 docs/02-architecture/ARCHITECTURE.md
-
+docs/02-architecture/TECHNICAL_OVERVIEW.md
 docs/02-architecture/DATA_SCHEMA.md
-
 docs/03-development/SYSTEM_RULES.md
-
 docs/03-development/DEVELOPMENT_RULES.md
-
 docs/01-project/DECISIONS.md
 ```
 
@@ -426,14 +421,11 @@ Architecture changes require the highest review level.
 Mandatory Reading:
 
 ```text
+PROJECT_SPEC.md
 DATA_SCHEMA.md
-
 API_SPEC.md
-
 AI_ENGINE_SPEC.md
-
 PROJECT_IMPACT_MATRIX.md
-
 DOCUMENT_UPDATE_MATRIX.md
 ```
 
