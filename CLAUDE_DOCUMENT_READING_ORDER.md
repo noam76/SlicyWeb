@@ -177,9 +177,7 @@ Development methodology.
 
 Read:
 
-```text
 docs/02-architecture/ARCHITECTURE.md
-```
 
 Purpose:
 
@@ -191,13 +189,11 @@ System architecture.
 
 Read:
 
-```text
-docs/02-architecture/DATA_SCHEMA.md
-```
+docs/02-architecture/TECHNICAL_OVERVIEW.md
 
 Purpose:
 
-Data contracts.
+Architecture overview, module boundaries and system organization.
 
 ---
 
@@ -205,13 +201,11 @@ Data contracts.
 
 Read:
 
-```text
-docs/02-architecture/API_SPEC.md
-```
+docs/02-architecture/DATA_SCHEMA.md
 
 Purpose:
 
-All API definitions.
+Data contracts.
 
 ---
 
@@ -219,29 +213,23 @@ All API definitions.
 
 Read:
 
-```text
-docs/02-architecture/FILE_STRUCTURE.md
-```
+docs/02-architecture/API_SPEC.md
 
 Purpose:
 
-Project structure.
+All API definitions.
 
 ---
-
-# Governance Reading
 
 ## Step 13
 
 Read:
 
-```text
-docs/00-index/CLAUDE_GOVERNANCE_PROTOCOL.md
-```
+docs/02-architecture/FILE_STRUCTURE.md
 
 Purpose:
 
-Claude governance.
+Project structure.
 
 ---
 
