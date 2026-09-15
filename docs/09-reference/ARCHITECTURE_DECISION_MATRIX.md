@@ -443,11 +443,11 @@ ADM-013
 
 Title:
 
-Versioned Project Files
+All project files must contain version information.
 
 Decision:
 
-All project files must contain version information.
+All WYPROJ project files must contain format and version information.
 
 Rationale:
 
