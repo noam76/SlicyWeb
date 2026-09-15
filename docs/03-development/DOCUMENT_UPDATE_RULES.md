@@ -218,6 +218,7 @@ Mandatory review:
 - Related Type Definitions
 - Related Zod Schemas
 - API_SPEC.md
+- PROJECT_SPEC.md
 
 All schema definitions must remain consistent.
 
@@ -382,18 +383,21 @@ Verify:
 
 ---
 
-# Documentation Update Matrix
+# Documentation Update Matrix Reference
 
-| Change Type | Documents To Review |
-|------------|--------------------|
-| New File | FILE_STRUCTURE.md, DIRECTORY_PURPOSES.md, PROJECT_DOCUMENTATION_INDEX.md |
-| New Folder | FILE_STRUCTURE.md, DIRECTORY_PURPOSES.md, ARCHITECTURE.md |
-| New Engine | ARCHITECTURE.md, FILE_STRUCTURE.md, AI_ENGINE_SPEC.md |
-| New Service | FILE_STRUCTURE.md, DIRECTORY_PURPOSES.md |
-| Schema Change | DATA_SCHEMA.md, API_SPEC.md |
-| API Change | API_SPEC.md, CHANGELOG.md |
-| Architecture Change | ARCHITECTURE.md, TECHNICAL_OVERVIEW.md, FILE_STRUCTURE.md |
-| Documentation Change | PROJECT_DOCUMENTATION_INDEX.md |
+Documentation impact relationships are maintained in:
+
+DOCUMENT_UPDATE_MATRIX.md
+
+This document defines:
+
+- Change Types
+- Impacted Documents
+- Review Requirements
+- Update Requirements
+- Cross-Document Dependencies
+
+The matrix is the authoritative reference for documentation impact analysis.
 
 ---
 
