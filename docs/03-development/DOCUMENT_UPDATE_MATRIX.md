@@ -294,6 +294,10 @@ AI_START_HERE.md
 README.md
 
 DIRECTORY_PURPOSES.md
+
+TECHNICAL_OVERVIEW.md
+
+TECHNICAL_OVERVIEW.md
 ```
 
 ---
@@ -397,6 +401,8 @@ DATA_SCHEMA.md
 Mandatory Review:
 
 ```text
+PROJECT_SPEC.md
+
 API_SPEC.md
 
 AI_ENGINE_SPEC.md
@@ -423,6 +429,37 @@ Mandatory Update Evaluation:
 ```text
 CHANGELOG.md
 ```
+
+---
+# Project Format Change
+
+Examples:
+
+```text
+Native Project Format Change
+Project Metadata Change
+Project Versioning Change
+Project Persistence Change
+WYPROJ Structure Change
+```
+
+Mandatory Review:
+
+```text
+PROJECT_SPEC.md
+DATA_SCHEMA.md
+API_SPEC.md
+TECHNICAL_OVERVIEW.md
+DECISIONS.md
+```
+
+Mandatory Update Evaluation:
+
+```text
+CHANGELOG.md
+```
+
+ARCHITECTURE_DECISION_MATRIX.md
 
 ---
 
@@ -530,6 +567,8 @@ Mandatory Updates:
 FILE_STRUCTURE.md
 
 DIRECTORY_PURPOSES.md
+
+PROJECT_DOCUMENTATION_INDEX.md
 ```
 
 Mandatory Review:
@@ -906,6 +945,10 @@ DEVELOPMENT_RULES.md
 AI_DEVELOPMENT_PROTOCOL.md
 
 CLAUDE_GOVERNANCE_PROTOCOL.md
+
+DOCUMENT_UPDATE_RULES.md
+
+DOCUMENT_UPDATE_MATRIX.md
 ```
 
 Conditional Updates:
