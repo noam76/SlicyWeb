@@ -451,6 +451,7 @@ DATA_SCHEMA.md
 API_SPEC.md
 TECHNICAL_OVERVIEW.md
 DECISIONS.md
+ARCHITECTURE_DECISION_MATRIX.md
 ```
 
 Mandatory Update Evaluation:
@@ -459,7 +460,11 @@ Mandatory Update Evaluation:
 CHANGELOG.md
 ```
 
+Conditional Updates:
+
+```text
 ARCHITECTURE_DECISION_MATRIX.md
+```
 
 ---
 
