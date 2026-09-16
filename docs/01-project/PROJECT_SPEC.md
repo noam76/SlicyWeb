@@ -184,6 +184,35 @@ Future Support:
 
 ---
 
+## 4.2 Internationalization
+
+The application shall support multilingual user interfaces.
+
+Initial supported languages:
+
+- English
+- French
+- Hebrew
+
+Additional languages may be added in future releases.
+
+Requirements:
+
+- All user-facing text must support localization.
+- GUI text must not be hardcoded.
+- Application architecture must remain language-independent whenever possible.
+- Language switching should be supported without requiring project file changes.
+- WYPROJ project files must remain language-neutral and independent from interface language.
+
+Purpose:
+
+- Improve accessibility
+- Support international users
+- Simplify future localization
+- Preserve compatibility across languages
+
+---
+
 ## Project File Format
 
 Native Project Format:
@@ -215,7 +244,7 @@ Project Versioning:
 
 ---
 
-## 4.2 Object Management
+## 4.3 Object Management
 
 The user must be able to:
 
@@ -243,7 +272,7 @@ The user must be able to:
 
 ---
 
-## 4.3 Transformations
+## 4.4 Transformations
 
 Each object shall support:
 
@@ -296,7 +325,7 @@ Examples:
 ---
 
 
-## 4.4 Multi Object Support
+## 4.5 Multi Object Support
 
 
 The system shall:
@@ -313,7 +342,7 @@ The system shall:
 
 ---
 
-## 4.5 History System
+## 4.6 History System
 
 The system shall support:
 
