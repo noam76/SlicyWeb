@@ -208,8 +208,10 @@ Project files may contain:
 - Metadata
 
 Storage Format:
+- JSON-Based Structure
 
-JSON-Based Structure
+Project Versioning:
+- Mandatory
 
 ---
 
@@ -503,14 +505,11 @@ Other:
 
 
 Priority:
-
 1. Local Database
-
 2. Local Cache
-
 3. Official Profiles
-
-4. Verified GitHub Repositories
+4. Verified Repositories
+5. Community Sources
 
 
 ---
