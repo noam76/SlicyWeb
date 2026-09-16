@@ -500,12 +500,10 @@ Repositories
 Required Review:
 
 ```text
+PROJECT_SPEC.md
 DATA_SCHEMA.md
-
 API_SPEC.md
-
 ARCHITECTURE.md
-
 AI_ENGINE_SPEC.md
 ```
 
@@ -842,11 +840,11 @@ Cache Changes
 Must Review:
 
 ```text
+PROJECT_SPEC.md
 ARCHITECTURE.md
-
 DATA_SCHEMA.md
-
 API_SPEC.md
+DECISIONS.md
 ```
 
 Must Determine:
