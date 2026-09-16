@@ -23,15 +23,15 @@ Goals:
 
 - Preserve decision history
 
-\- Explain why choices were made
+- Explain why choices were made
 
-\- Avoid repeating discussions
+- Avoid repeating discussions
 
-\- Simplify future maintenance
+- Simplify future maintenance
 
-\- Assist AI-driven development
+- Assist AI-driven development
 
-\- Assist future contributors
+- Assist future contributors
 
 
 
@@ -257,11 +257,11 @@ Project complexity requires:
 
 
 
-\- strong typing
+- strong typing
 
-\- maintainability
+- maintainability
 
-\- refactoring safety
+- refactoring safety
 
 
 
