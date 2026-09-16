@@ -146,6 +146,8 @@ docs/03-development/FILE_OWNERSHIP_MATRIX.md
 docs/03-development/PROJECT_IMPACT_MATRIX.md
 
 docs/03-development/CROSS_DOCUMENT_DEPENDENCIES.md
+
+docs/03-development/CHANGE_IMPACT_RULES.md
 ```
 
 Purpose:
