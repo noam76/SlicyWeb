@@ -149,6 +149,105 @@ Direct repository access from GUI is prohibited.
 
 Business logic must never be implemented inside GUI components.
 
+
+---
+
+# Core Domains
+
+The project is divided into domains.
+
+Main Domains:
+
+- GUI
+- Viewport
+- Scene
+- Import
+- Analysis
+- Classification
+- Recommendation
+- Optimization
+- Profiles
+- Repositories
+- Storage
+- IPC
+- State Management
+- Validation
+
+Each domain owns specific responsibilities.
+
+Responsibilities must not overlap unnecessarily.
+
+---
+
+# State Architecture
+
+The application follows a Single Source Of Truth architecture.
+
+State management responsibilities belong to:
+
+- Zustand State Stores
+
+GUI components must not mutate state directly.
+
+Services are responsible for controlled state modifications.
+
+State consistency must be preserved across all modules.
+
+---
+
+# Major Engines
+
+Classification Engine
+
+Responsible For:
+
+- Object Detection
+- Object Classification
+- Category Assignment
+- Confidence Scoring
+
+---
+
+Recommendation Engine
+
+Responsible For:
+
+- Recommendation Generation
+- Parameter Selection
+- Preset Recommendation
+- User Assistance
+
+---
+
+Optimization Engine
+
+Responsible For:
+
+- Orientation Optimization
+- Support Reduction
+- Material Reduction
+- Print Time Reduction
+
+---
+
+Validation Engine
+
+Responsible For:
+
+- Schema Validation
+- Recommendation Validation
+- Compatibility Validation
+
+---
+
+Notification System
+
+Responsible For:
+
+- Information Notifications
+- Warning Notifications
+- Critical Notifications
+
 ---
 
 # User Interface Principles
@@ -234,6 +333,24 @@ Profile files should include version information.
 Example:
 
 version: "1.0"
+
+---
+
+# Validation Philosophy
+
+Validation is mandatory.
+
+Validate:
+
+- Imported Files
+- Profiles
+- Schemas
+- API Payloads
+- Repository Data
+- User Input
+- External Data
+
+External data must never be trusted automatically.
 
 ---
 
@@ -338,6 +455,63 @@ Every modification requires:
 
 Governance rules are mandatory.
 
+
+---
+
+# Update Philosophy
+
+External updates include:
+
+- Printers
+- Materials
+- Filaments
+- Presets
+- Repositories
+- External Sources
+
+External updates must follow:
+
+Detect
+↓
+Analyze
+↓
+Dependency Review
+↓
+Impact Analysis
+↓
+Update Report
+↓
+Human Approval
+↓
+Apply
+↓
+Validate
+↓
+Document
+
+Automatic modifications are prohibited.
+
+Human approval is required before implementation.
+
+---
+
+# Bug Investigation Philosophy
+
+The objective is not only to fix bugs.
+
+The objective is to understand why they occurred.
+
+Every bug investigation should determine:
+
+- Root Cause
+- Affected Files
+- Related Files
+- Affected Domains
+- Compatibility Risk
+- Regression Risk
+
+Root cause identification must occur before proposing a fix.
+
 ---
 
 # Project Priorities
@@ -378,6 +552,22 @@ Governance Documents:
 - CLAUDE_CHANGE_IMPACT_RULES.md
 - DOCUMENT_UPDATE_RULES.md
 - DOCUMENT_UPDATE_MATRIX.md
+
+---
+
+# Project Success Criteria
+
+The project is considered successful when it remains:
+
+- Stable
+- Consistent
+- Maintainable
+- Predictable
+- Extensible
+- Well Documented
+- Backward Compatible
+
+Long-term maintainability has higher value than short-term speed.
 
 ---
 
