@@ -1,0 +1,536 @@
+\# SLICYWEB SMART SLICER
+
+
+
+\# CLAUDE PROJECT CONTEXT
+
+
+
+Version: 1.0.0
+
+
+
+Status: Approved
+
+
+
+Priority: High
+
+
+
+\---
+
+
+
+\# Project Overview
+
+
+
+Project Name:
+
+
+
+SlicyWeb Smart Slicer
+
+
+
+Project Type:
+
+
+
+AI-Assisted 3D Printing Preparation Software
+
+
+
+Purpose:
+
+
+
+Provide intelligent print preparation, analysis, recommendations, and optimization for 3D printing workflows.
+
+
+
+The application focuses on:
+
+
+
+\- Visualization
+
+\- Analysis
+
+\- Recommendations
+
+\- Optimization
+
+\- Print Preparation
+
+
+
+The initial versions do not generate G-Code.
+
+
+
+\---
+
+
+
+\# Core Goals
+
+
+
+The software must:
+
+
+
+\- Import STL files
+
+\- Import 3MF files
+
+\- Open WYPROJ projects
+
+\- Save WYPROJ projects
+
+\- Analyze 3D models
+
+\- Recommend print settings
+
+\- Detect print risks
+
+\- Estimate print duration
+
+\- Estimate print cost
+
+\- Optimize object orientation
+
+\- Assist users with reliable printing decisions
+
+
+
+\---
+
+
+
+\# Supported Formats
+
+
+
+Import Formats:
+
+
+
+\- STL
+
+\- 3MF
+
+\- WYPROJ
+
+
+
+Native Project Format:
+
+
+
+\- WYPROJ
+
+
+
+Project Extension:
+
+
+
+\- .wyproj
+
+
+
+Internal Storage Format:
+
+
+
+\- JSON
+
+
+
+Project files must remain versioned and compatible.
+
+
+
+\---
+
+
+
+\# Technology Stack
+
+
+
+Frontend:
+
+
+
+\- React
+
+\- TypeScript
+
+
+
+Desktop Framework:
+
+
+
+\- Electron
+
+
+
+3D Engine:
+
+
+
+\- Three.js
+
+
+
+State Management:
+
+
+
+\- Zustand
+
+
+
+\---
+
+
+
+\# Architecture
+
+
+
+Application Flow:
+
+
+
+GUI
+
+↓
+
+Service
+
+↓
+
+Repository
+
+↓
+
+RepositorySync
+
+↓
+
+Remote Source
+
+
+
+Repository access must remain centralized.
+
+
+
+Direct repository access from GUI is prohibited.
+
+
+
+Business logic must remain outside GUI components.
+
+
+
+\---
+
+
+
+\# AI System
+
+
+
+The recommendation system is:
+
+
+
+\- Rule Based
+
+\- Deterministic
+
+\- Reproducible
+
+
+
+Recommendations are generated using:
+
+
+
+\- Printer Profiles
+
+\- Material Profiles
+
+\- Filament Profiles
+
+\- Model Analysis
+
+\- Object Classification
+
+
+
+The AI must never invent:
+
+
+
+\- Printer capabilities
+
+\- Material limits
+
+\- Filament properties
+
+\- Recommendations unsupported by available data
+
+
+
+Unknown values must be treated as unknown.
+
+
+
+\---
+
+
+
+\# Development Principles
+
+
+
+The project follows:
+
+
+
+\- Documentation First
+
+\- Impact Analysis First
+
+\- Patch First
+
+\- Compatibility First
+
+\- Domain Ownership
+
+\- Dependency Governance
+
+\- Architecture Protection
+
+
+
+Preferred strategy:
+
+
+
+1\. Analyze
+
+2\. Verify Ownership
+
+3\. Verify Dependencies
+
+4\. Perform Impact Analysis
+
+5\. Modify
+
+6\. Validate
+
+7\. Update Documentation
+
+8\. Verify Consistency
+
+
+
+Large rewrites are prohibited unless explicitly approved.
+
+
+
+\---
+
+
+
+\# Governance Principles
+
+
+
+Documentation is the Source Of Truth.
+
+
+
+Implementation must follow documentation.
+
+
+
+Changes require:
+
+
+
+\- Ownership Verification
+
+\- Dependency Verification
+
+\- Impact Analysis
+
+\- Documentation Review
+
+\- Compatibility Verification
+
+
+
+Governance and documentation consistency are mandatory.
+
+
+
+\---
+
+
+
+\# Internationalization
+
+
+
+The application must support multilingual user interfaces.
+
+
+
+Initial languages:
+
+
+
+\- English
+
+\- French
+
+\- Hebrew
+
+
+
+Additional languages may be added in future releases.
+
+
+
+Requirements:
+
+
+
+\- User-facing text must support localization.
+
+\- GUI text should not be hardcoded.
+
+\- Architecture should remain language-independent.
+
+\- WYPROJ project files must remain language-neutral.
+
+
+
+\---
+
+
+
+\# Project Priorities
+
+
+
+Priority Order:
+
+
+
+1\. Stability
+
+2\. Compatibility
+
+3\. Reliability
+
+4\. Safety
+
+5\. Quality
+
+6\. Performance
+
+7\. New Features
+
+
+
+A working feature must never be broken to add a new feature.
+
+
+
+\---
+
+
+
+\# Source Of Truth
+
+
+
+Highest Authority Documents:
+
+
+
+\- PROJECT\_SPEC.md
+
+\- ARCHITECTURE.md
+
+\- TECHNICAL\_OVERVIEW.md
+
+\- DATA\_SCHEMA.md
+
+\- API\_SPEC.md
+
+\- SYSTEM\_RULES.md
+
+\- DEVELOPMENT\_RULES.md
+
+\- DECISIONS.md
+
+
+
+Governance Documents:
+
+
+
+\- CLAUDE\_GOVERNANCE\_PROTOCOL.md
+
+\- CLAUDE\_DOCUMENT\_READING\_ORDER.md
+
+\- CLAUDE\_READING\_PRIORITY.md
+
+\- CLAUDE\_FILE\_UPDATE\_RULES.md
+
+\- CLAUDE\_CHANGE\_IMPACT\_RULES.md
+
+\- DOCUMENT\_UPDATE\_RULES.md
+
+\- DOCUMENT\_UPDATE\_MATRIX.md
+
+
+
+\---
+
+
+
+\# Golden Rule
+
+
+
+Protect the architecture.
+
+
+
+Protect the documentation.
+
+
+
+Protect compatibility.
+
+
+
+Protect project stability.
+
+
+
+Improve the system without increasing risk.
+
