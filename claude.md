@@ -2,7 +2,7 @@
 
 ## Project
 
-AI Smart Slicer
+SlicyWeb Smart Slicer
 
 AI-assisted 3D printing preparation platform focused on:
 
