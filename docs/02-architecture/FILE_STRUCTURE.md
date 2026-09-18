@@ -31,6 +31,7 @@ This structure is the official reference for the entire project.
 ```text
 SlicyWeb/
 
+├── i18n/
 ├── data/
 ├── docs/
 ├── src/
@@ -42,6 +43,7 @@ SlicyWeb/
 ├── scripts/
 ├── plugins/
 ├── public/
+├── project/
 ├── releases/
 ├── .github/
 │
@@ -50,6 +52,8 @@ SlicyWeb/
 ├── CLAUDE_DOCUMENT_READING_ORDER.md
 ├── CLAUDE_CHANGE_IMPACT_RULES.md
 ├── CLAUDE_FILE_UPDATE_RULES.md
+├── CLAUDE_GOVERNANCE_PROTOCOL.md		= Gouvernance officielle des modifications et validations
+├── CLAUDE_READING_PRIORITY.md       	= Priorités de lecture et hiérarchie documentaire
 │
 ├── README.md
 ├── CONTRIBUTING.md
@@ -82,8 +86,6 @@ data/
 docs/
 │
 ├── 00-index/
-│	├── CLAUDE_READING_PRIORITY.md       = Priorités de lecture et hiérarchie documentaire
-│   ├── CLAUDE_GOVERNANCE_PROTOCOL.md 	 = Gouvernance officielle des modifications et validations
 │   ├── AI_START_HERE.md                 = Point d'entrée principal pour l'IA et les nouveaux contributeurs
 │   ├── AI_DEVELOPMENT_PROTOCOL.md       = Protocole officiel de développement et de revue pour les IA
 │   ├── API_START_HERE.md                = Guide de démarrage rapide pour l'API et les services
@@ -227,10 +229,12 @@ CODE_OF_CONDUCT.md
 LICENSE.md
 ```
 
-Total Documentation Assets:
+# Total Documentation Assets
+
+Documentation Count Maintained In:
 
 ```text
-55+ Documentation Assets
+PROJECT_DOCUMENTATION_INDEX.md
 ```
 ---
 
@@ -671,6 +675,20 @@ src/types/
 ├── DefaultMaterial.ts
 └── UserPreferences.ts
 ```
+
+---
+
+# Internationalization
+
+```text
+src/i18n/
+
+├── TranslationLoader.ts
+├── TranslationService.ts
+├── LanguageManager.ts
+└── locales/
+```
+
 ---
 
 # constants
@@ -769,6 +787,10 @@ plugins/
 
 ```text
 public/
+├── locales/
+│   ├── en.json
+│   ├── fr.json
+│   └── he.json
 ```
 
 ---
