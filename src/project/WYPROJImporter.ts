@@ -24,13 +24,27 @@ export class WYPROJImporter {
   public importFromString(
     content: string
   ): ProjectState {
-    const project = this.deserializer.deserialize(content);
+    const container = JSON.parse(content);
+
+    if (container.format !== "WYPROJ") {
+      throw new Error(
+        "Invalid WYPROJ format."
+      );
+    }
+
+    if (!container.project) {
+      throw new Error(
+        "Project data is missing."
+      );
+    }
+
+    const project = this.deserializer.deserialize(
+      JSON.stringify(container.project)
+    );
 
     this.validator.validate(project);
-
     return project;
   }
-
   private async validateFilePath(
     filePath: string
   ): Promise<void> {
