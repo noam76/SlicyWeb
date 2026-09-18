@@ -38,7 +38,7 @@ export class ProjectManager extends EventEmitter {
 
     this.currentProject = {
       metadata: {
-        version: "1.0.0",
+        version: "2.0.0",
         createdAt: timestamp,
         updatedAt: timestamp,
         application: "SlicyWeb Smart Slicer",
@@ -74,6 +74,8 @@ export class ProjectManager extends EventEmitter {
     this.ensureProjectLoaded();
 
     this.currentProject!.metadata.updatedAt = new Date().toISOString();
+
+    this.validator.validate(this.currentProject!);
 
     const content = this.serializer.serialize(this.currentProject!);
 
