@@ -80,6 +80,45 @@ Project files must remain versioned and backward compatible.
 
 ---
 
+# Project Persistence
+
+The application uses WYPROJ as its native project format.
+
+Project files:
+
+- Must be versioned
+- Must remain backward compatible whenever possible
+- Must remain language-neutral
+- Must use JSON as the internal storage structure
+
+Project persistence includes:
+
+- Scene Data
+- Object Data
+- Printer Selection
+- Material Selection
+- Filament Selection
+- Presets
+- Analysis Results
+- Recommendations
+- User Settings
+- Metadata
+
+Project persistence is handled through:
+
+- ProjectManager
+- ProjectSerializer
+- ProjectDeserializer
+- ProjectValidator
+- WYPROJImporter
+- WYPROJExporter
+
+All project loading and saving operations must pass through the project layer.
+
+Direct manipulation of WYPROJ files outside the project layer is discouraged.
+
+---
+
 # File Processing Pipeline
 
 File routing must be determined by file extension.
