@@ -1,57 +1,43 @@
 // src/project/WYPROJExporter.ts
+import { ProjectState } from "./ProjectManager";
 
 export interface WYPROJFile {
   format: "WYPROJ";
   version: string;
-  project: Record<string, unknown>;
-}
-
-export interface ProjectSchema {
-  projectId: string;
-  projectName: string;
-  projectFormat: "WYPROJ";
-  createdAt: string;
-  updatedAt: string;
-  version: string;
-
-  scene: Record<string, unknown>;
-  settings: Record<string, unknown>;
-
-  analysis: Record<string, unknown>;
-  recommendations: Record<string, unknown>;
-
-  preset: Record<string, unknown>;
-
-  printer: Record<string, unknown>;
-  material: Record<string, unknown>;
-  filament: Record<string, unknown>;
+  project: ProjectState;
 }
 
 export class WYPROJExporter {
   /**
-   * Creates a valid WYPROJ container
+   * Creates a valid WYPROJ container.
    */
-  public static create(project: ProjectSchema): WYPROJFile {
+  public static create(
+    project: ProjectState
+  ): WYPROJFile {
     return {
       format: "WYPROJ",
-      version: project.version,
+      version: project.metadata.version,
       project,
     };
   }
 
   /**
-   * Converts a project into a formatted JSON string
+   * Serializes a project into WYPROJ JSON format.
    */
-  public static serialize(project: ProjectSchema): string {
+  public static serialize(
+    project: ProjectState
+  ): string {
     const wyproj = this.create(project);
 
     return JSON.stringify(wyproj, null, 2);
   }
 
   /**
-   * Creates a Blob ready for download
+   * Creates a downloadable blob.
    */
-  public static createBlob(project: ProjectSchema): Blob {
+  public static createBlob(
+    project: ProjectState
+  ): Blob {
     const content = this.serialize(project);
 
     return new Blob([content], {
@@ -60,10 +46,15 @@ export class WYPROJExporter {
   }
 
   /**
-   * Generates a file name using the project name
+   * Generates a safe WYPROJ filename.
    */
-  public static createFileName(project: ProjectSchema): string {
-    const safeName = project.projectName
+  public static createFileName(
+    project: ProjectState
+  ): string {
+    const projectName =
+      project.metadata.application ?? "project";
+
+    const safeName = projectName
       .trim()
       .replace(/\s+/g, "_")
       .replace(/[^a-zA-Z0-9_-]/g, "");
@@ -72,9 +63,11 @@ export class WYPROJExporter {
   }
 
   /**
-   * Exports project content and metadata
+   * Exports file name and content.
    */
-  public static export(project: ProjectSchema): {
+  public static export(
+    project: ProjectState
+  ): {
     fileName: string;
     content: string;
   } {
