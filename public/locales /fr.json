@@ -1,7 +1,7 @@
 {
   "app.title": "SlicyWeb Smart Slicer",
   "app.version": "Version",
-  "app.loading": "Chargement...",
+  "app.loadin": "Chargement...",
   "app.ready": "Prêt",
 
   "menu.file": "Fichier",
