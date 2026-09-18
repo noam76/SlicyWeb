@@ -1,4 +1,3 @@
-// src/project/WYPROJExporter.ts
 import { ProjectState } from "./ProjectManager";
 
 export interface WYPROJFile {
