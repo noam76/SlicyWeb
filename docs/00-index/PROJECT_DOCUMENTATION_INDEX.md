@@ -108,44 +108,6 @@ Importance:
 
 ---
 
-## CLAUDE_GOVERNANCE_PROTOCOL.md
-
-Purpose:
-
-Global governance framework for AI systems.
-
-Contains:
-
-- Governance rules
-- Dependency controls
-- Documentation controls
-- Update controls
-- Architecture protection rules
-
-Importance:
-
-★★★★★
-
----
-
-## CLAUDE_READING_PRIORITY.md
-
-Purpose:
-
-Reading priority matrix for AI systems.
-
-Contains:
-
-- Critical documents
-- High priority documents
-- Conditional reading requirements
-
-Importance:
-
-★★★★★
-
----
-
 ## PROJECT_DOCUMENTATION_INDEX.md
 
 Purpose:
@@ -187,6 +149,23 @@ Importance:
 
 ---
 
+## CLAUDE_GOVERNANCE_PROTOCOL.md
+
+Purpose:
+Global governance framework for AI systems.
+
+Contains:
+- Governance rules
+- Dependency controls
+- Documentation controls
+- Update controls
+- Architecture protection rules
+
+Importance:
+★★★★★
+
+---
+
 ## CLAUDE_PROJECT_CONTEXT.md
 
 Purpose:
@@ -220,6 +199,21 @@ Contains:
 
 Importance:
 
+★★★★★
+
+---
+
+## CLAUDE_READING_PRIORITY.md
+
+Purpose:
+Reading priority matrix for AI systems.
+
+Contains:
+- Critical documents
+- High priority documents
+- Conditional reading requirements
+
+Importance:
 ★★★★★
 
 ---
@@ -547,6 +541,25 @@ Contains:
 - Compatibility evaluation
 - Risk assessment
 - Impact management
+
+Importance:
+
+★★★★★
+
+---
+
+## DOCUMENT_UPDATE_RULES.md
+
+Purpose:
+
+Documentation update governance rules.
+
+Contains:
+
+- Documentation synchronization
+- Update requirements
+- Consistency enforcement
+- Traceability requirements
 
 Importance:
 
@@ -1284,27 +1297,29 @@ Importance:
 
 ```text
 1. CLAUDE.md
-2. CLAUDE_PROJECT_CONTEXT.md
+2. CLAUDE_READING_PRIORITY.md
 3. CLAUDE_DOCUMENT_READING_ORDER.md
-4. CLAUDE_GOVERNANCE_PROTOCOL.md
-5. CLAUDE_CHANGE_IMPACT_RULES.md
-6. CLAUDE_FILE_UPDATE_RULES.md
-7. CLAUDE_READING_PRIORITY.md
-8. PROJECT_DOCUMENTATION_INDEX.md
-9. AI_START_HERE.md
-10. PROJECT_SPEC.md
-11. SYSTEM_RULES.md
-12. DEVELOPMENT_RULES.md
-13. ARCHITECTURE.md
-14. DATA_SCHEMA.md
-15. FILE_STRUCTURE.md
-16. DOMAIN_BOUNDARIES.md
-17. DOMAINS_DEPENDENCY_MATRIX.md
-18. CHANGE_CLASSIFICATION_RULES.md
-19. PROJECT_IMPACT_MATRIX.md
-20. CHANGE_VERIFICATION_CHECKLIST.md
-21. CHANGELOG.md
-22. DECISIONS.md
+4. CLAUDE_PROJECT_CONTEXT.md
+5. CLAUDE_GOVERNANCE_PROTOCOL.md
+6. CLAUDE_CHANGE_IMPACT_RULES.md
+7. CLAUDE_FILE_UPDATE_RULES.md
+8. DOCUMENT_UPDATE_RULES.md
+9. DOCUMENT_UPDATE_MATRIX.md
+10. PROJECT_DOCUMENTATION_INDEX.md
+11. AI_START_HERE.md
+12. PROJECT_SPEC.md
+13. SYSTEM_RULES.md
+14. DEVELOPMENT_RULES.md
+15. ARCHITECTURE.md
+16. DATA_SCHEMA.md
+17. FILE_STRUCTURE.md
+18. DOMAIN_BOUNDARIES.md
+19. DOMAINS_DEPENDENCY_MATRIX.md
+20. CHANGE_CLASSIFICATION_RULES.md
+21. PROJECT_IMPACT_MATRIX.md
+22. CHANGE_VERIFICATION_CHECKLIST.md
+23. CHANGELOG.md
+24. DECISIONS.md
 ```
 
 ---
