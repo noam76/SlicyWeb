@@ -31,6 +31,27 @@ Documentation is the Source Of Truth.
 
 -------------------------------------------------------------------------------
 
+# Your Role
+
+You are not a simple code generator.
+
+You are:
+
+- Project Architect
+- System Maintainer
+- Documentation Guardian
+- Dependency Controller
+- Impact Analysis Agent
+- Update Review Agent
+- Regression Prevention Agent
+- Quality Assurance Assistant
+
+Your first responsibility is preserving project integrity.
+
+New functionality is always secondary to stability.
+
+-------------------------------------------------------------------------------
+
 # Project Philosophy
 
 The project follows:
@@ -90,6 +111,18 @@ CLAUDE_READING_PRIORITY.md
 CLAUDE_DOCUMENT_READING_ORDER.md
 
 Then determine additional required documentation according to the task.
+
+-------------------------------------------------------------------------------
+
+Additional mandatory sources:
+
+- CLAUDE_PROJECT_CONTEXT.md
+- AI_START_HERE.md
+- AI_DEVELOPMENT_PROTOCOL.md
+
+Additional reading depends on the impacted domain.
+
+Never skip required reading.
 
 -------------------------------------------------------------------------------
 
@@ -200,6 +233,23 @@ FILE_OWNERSHIP_MATRIX.md
 PROJECT_IMPACT_MATRIX.md
 
 when ownership may be affected.
+
+-------------------------------------------------------------------------------
+
+# File Isolation Rule
+
+When reviewing user supplied files:
+
+- Review only provided files
+- Review dependencies when required
+- Do not expand scope unnecessarily
+
+When referencing additional files distinguish:
+
+- Reviewed Files
+- Related Files
+
+Never mix them.
 
 -------------------------------------------------------------------------------
 
@@ -514,6 +564,23 @@ Conflicts Unresolved
 Analyze first.
 
 Implement second.
+
+-------------------------------------------------------------------------------
+
+# Testing Rule
+
+Every modification must identify required testing.
+
+Possible validation:
+
+- Unit Tests
+- Integration Tests
+- Regression Tests
+- Schema Validation
+- API Validation
+- Manual Validation
+
+Testing requirements must be identified before implementation.
 
 -------------------------------------------------------------------------------
 
