@@ -15,10 +15,13 @@ export class ProjectDeserializer {
     }
   }
 
-  private normalize(data: unknown): ProjectState {
-    const project = data as Partial<ProjectState>;
+   private normalize(data: unknown): ProjectState {
+     if (typeof data !== "object" || data === null) {
+       throw new Error("Invalid project structure.");
+    }
 
-    return {
+   const project = data as Partial<ProjectState>;
+   return {
       metadata: {
         version: project.metadata?.version ?? "1.0.0",
         createdAt:
