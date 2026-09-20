@@ -609,7 +609,8 @@ JSON
 {
   "format": "WYPROJ",
   "version": "2.0.0",
-  "project": {}
+  "project": {},
+  "metadata": {}
 }
 ```
 
@@ -626,7 +627,7 @@ Represents an entire workspace.
 {
   "projectId": "",
   "projectName": "",
-  "projectFormat": "WYPROJ"
+  "projectFormat": "WYPROJ",
   "createdAt": "",
   "updatedAt": "",
   "version": "",
@@ -1452,7 +1453,6 @@ system
 # Language Values
 
 
-
 ```text
 
 en
@@ -1460,15 +1460,7 @@ en
 fr
 
 he
-
-es
-
-de
-
-it
-
 ```
-
 
 ---
 
@@ -1504,6 +1496,13 @@ it
 
 }
 
+```
+
+language:
+```text
+- es
+- de
+- it
 ```
 
 ---
