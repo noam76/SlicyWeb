@@ -1,7 +1,7 @@
 # SlicyWeb SMART SLICER
 # IMPORT EXPORT SPECIFICATION
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -407,7 +407,7 @@ inches
 Version 1:
 
 ```text
-SlicyWeb Project
+WYPROJ
 ```
 
 ---
@@ -429,6 +429,41 @@ GCODE
 Purpose:
 
 Save complete workspace.
+
+---
+
+# Project Components
+
+ProjectManager
+ProjectSerializer
+ProjectDeserializer
+ProjectValidator
+WYPROJImporter
+WYPROJExporter
+
+---
+
+# WYPROJ Project Lifecycle
+
+Application State
+↓
+ProjectValidator
+↓
+ProjectSerializer
+↓
+WYPROJExporter
+↓
+.wyproj File
+
+.wyproj File
+↓
+WYPROJImporter
+↓
+ProjectDeserializer
+↓
+ProjectValidator
+↓
+Application State
 
 ---
 
@@ -456,10 +491,10 @@ Recommendations
 
 # Project Format
 
-Reserved Extension:
+Official Extension:
 
 ```text
-.SlicyWeb
+.wyproj
 ```
 
 ---
@@ -468,10 +503,24 @@ Reserved Extension:
 
 ```json
 {
-  "version": "",
-  "project": {},
-  "scene": {},
-  "settings": {}
+  "format": "WYPROJ",
+  "version": "2.0.0",
+  "project": {
+    "metadata": {
+    "version": "2.0.0",
+    "createdAt": "",
+    "updatedAt": "",
+    "application": "SlicyWeb Smart Slicer"
+    },
+    "scene": {},
+    "printers": [],
+    "materials": [],
+    "filaments": [],
+    "presets": [],
+    "analysis": [],
+    "recommendations": [],
+    "settings": {}
+  }
 }
 ```
 
@@ -623,15 +672,13 @@ Used By:
 
 ```text
 IMPORT_MANAGER
-
 STL_IMPORTER
-
 THREEMF_IMPORTER
-
+PROJECT_MANAGER
+WYPROJ_IMPORTER
+WYPROJ_EXPORTER
 SCENE_MANAGER
-
 MODEL_ANALYSIS
-
 OBJECT_MANAGER
 ```
 
@@ -641,6 +688,8 @@ OBJECT_MANAGER
 
 ```text
 FILE_STRUCTURE.md
+
+ARCHITECTURE.md
 
 DATA_SCHEMA.md
 
