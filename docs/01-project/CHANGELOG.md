@@ -271,6 +271,8 @@ Architecture Governance Framework
 - PROJECT_SPEC.md
 - PROJECT_DESCRIPTION.md
 - CHANGELOG.md
+- FILE_OWNERSHIP_MATRIX.md
+- CHANGELOG.md
 
 - SlicyWeb files explication.txt
 
@@ -305,6 +307,74 @@ Governance Layer Complete
 Documentation Synchronized
 
 Ready For AI Assisted Development
+
+---
+
+# VERSION 0.1.2
+
+Release Type:
+Architecture & Internationalization Update
+
+Status:
+Completed
+
+Date:
+TBD
+
+---
+
+## Added
+
+Project Management Domain
+
+Internationalization Domain
+
+WYPROJ Project System
+
+ProjectManager
+ProjectSerializer
+ProjectDeserializer
+ProjectValidator
+WYPROJImporter
+WYPROJExporter
+
+LanguageManager
+LocalizationService
+TranslationLoader
+
+English Localization
+French Localization
+Hebrew Localization
+
+---
+
+## Documentation Updated
+
+ARCHITECTURE.md
+
+DATA_SCHEMA.md
+
+IMPORT_EXPORT_SPEC.md
+
+TECHNICAL_OVERVIEW.md
+
+GUI_SPEC.md
+
+DOMAIN_BOUNDARIES.md
+
+PROJECT_IMPACT_MATRIX.md
+
+---
+
+## Result
+
+Project Persistence Layer Defined
+
+Internationalization Layer Defined
+
+WYPROJ Format Standardized
+
+Documentation Synchronized
 
 ---
 
