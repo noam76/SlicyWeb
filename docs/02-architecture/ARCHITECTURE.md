@@ -689,7 +689,9 @@ FileValidator
 
 Folder
 
+```text
 /project
+```
 
 Responsibilities:
 
@@ -1139,7 +1141,6 @@ Folder:
 
 ---
 
-
 # Configuration System
 
 Responsibilities:
@@ -1157,50 +1158,35 @@ Folder:
 
 ---
 
-
-
-# Cache System
-
+## Internationalization Module
 
 Folder
 
+/i18n
 
 ```text
-
-/cache
-
+Responsibilities:
 ```
 
+- Language management
+- Translation loading
+- Localization services
+- Language switching
+- Translation dictionary access
 
-Responsibilities:
+Submodules
 
-- Store downloaded profiles
-- Reduce network requests
-- Improve startup speed
-
-
----
-
-# Online Repository System
-
-
-Folder
-
-```text
-/repositories
-```
-
-Responsibilities:
-
-- GitHub access
-- Profile refresh
-- Data synchronization
+LanguageManager
+LocalizationService
+TranslationLoader
 
 Translation Files
 
 Folder
 
+```text
 /public/locales
+```
 
 Files
 
@@ -1214,6 +1200,28 @@ Purpose
 - Language-independent architecture
 - Externalized translations
 
+---
+
+# Cache System
+
+
+Folder
+
+
+```text
+
+/cache
+
+```
+
+Responsibilities:
+
+- Store downloaded profiles
+- Reduce network requests
+- Improve startup speed
+
+
+---
 
 # Event Architecture
 
@@ -1426,9 +1434,17 @@ Only services may modify state.
 
 # Persistence Architecture
 
-
 Saved Project
 
+WYPROJ File
+↓
+WYPROJImporter
+↓
+ProjectDeserializer
+↓
+ProjectValidator
+↓
+Application State
 
 Contains:
 
@@ -1446,9 +1462,7 @@ Contains:
 
 ```
 
-
 Does Not Contain:
-
 
 ```text
 
@@ -1460,8 +1474,36 @@ Logs
 
 ```
 
+Application State
+↓
+ProjectValidator
+↓
+ProjectSerializer
+↓
+WYPROJExporter
+↓
+WYPROJ File
+
 ---
 
+Project Format
+
+WYPROJ
+
+Extension
+
+.wyproj
+
+Components
+
+- ProjectManager
+- ProjectSerializer
+- ProjectDeserializer
+- ProjectValidator
+- WYPROJImporter
+- WYPROJExporter
+  
+---
 
 # Logging Architecture
 
