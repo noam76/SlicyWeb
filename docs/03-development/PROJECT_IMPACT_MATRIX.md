@@ -2,7 +2,7 @@
 
 # PROJECT IMPACT MATRIX
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -324,6 +324,8 @@ DOMAIN_BOUNDARIES.md
 
 DOMAINS_DEPENDENCY_MATRIX.md
 
+TECHNICAL_OVERVIEW.md
+
 FILE_OWNERSHIP_MATRIX.md
 ```
 
@@ -387,6 +389,8 @@ Mandatory Update Evaluation:
 DIRECTORY_PURPOSES.md
 
 PROJECT_DOCUMENTATION_INDEX.md
+
+DOMAIN_BOUNDARIES.md
 
 SlicyWeb files explication.txt
 
@@ -625,6 +629,8 @@ FILE_STRUCTURE.md
 DIRECTORY_PURPOSES.md
 
 PROJECT_DOCUMENTATION_INDEX.md
+
+DOMAIN_BOUNDARIES.md
 ```
 
 Mandatory Update Evaluation:
@@ -648,6 +654,82 @@ Impact:
 ```text
 High
 ```
+
+---
+
+# Project Format Change
+
+Examples:
+
+```text
+WYPROJ Schema Change
+Project Serialization Change
+Project Save Logic
+Project Load Logic
+Project Version Change
+```
+
+Mandatory Review:
+
+```text
+IMPORT_EXPORT_SPEC.md
+DATA_SCHEMA.md
+ARCHITECTURE.md
+PROJECT_SPEC.md
+```
+
+Review If Relevant:
+
+```text
+GUI_SPEC.md
+TECHNICAL_OVERVIEW.md
+```
+Testing:
+
+```text
+Save Validation
+Load Validation
+Backward Compatibility Tests
+```
+
+Impact:
+
+High
+
+---
+
+# Internationalization Change
+
+Examples:
+
+```text
+New Language
+Translation Structure Change
+Localization Logic Change
+Language Manager Change
+```
+
+Mandatory Review:
+
+GUI_SPEC.md
+ARCHITECTURE.md
+DATA_SCHEMA.md
+DOMAIN_BOUNDARIES.md
+
+Review If Relevant:
+
+FILE_STRUCTURE.md
+TECHNICAL_OVERVIEW.md
+
+Testing:
+
+Localization Validation
+RTL Validation
+UI Validation
+
+Impact:
+
+Medium
 
 ---
 
