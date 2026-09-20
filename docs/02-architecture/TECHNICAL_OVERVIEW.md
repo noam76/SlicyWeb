@@ -99,6 +99,13 @@ The system combines deterministic rule-based AI, geometry analytics, object clas
   - Total Estimated Print Duration.
   - **Print Preset Integration:** Estimates are generated using the currently selected printer, material, filament profile, and print preset.
 
+### 2.6 Internationalization
+- Multi-language user interface
+- English support
+- French support
+- Hebrew support
+- External JSON translation dictionaries
+
 ---
 
 ## 3. System Architecture & Module Boundaries
@@ -140,6 +147,14 @@ The application enforces strict separation of concerns across single-responsibil
 │ WYPROJ Save / Load                                                 │
 └──────────────────────────────┬─────────────────────────────────────┘
                                │
+                               ▼
+┌────────────────────────────────────────────────────────────────────┐
+│                     Internationalization                           │
+├────────────────────────────────────────────────────────────────────┤
+│ LanguageManager                                                    │
+│ LocalizationService                                                │
+│ TranslationLoader                                                  │
+└──────────────────────────────┬─────────────────────────────────────┘
           ┌────────────────────┼────────────────────┐
           │                    │                    │
           ▼                    ▼                    ▼
@@ -151,7 +166,7 @@ The application enforces strict separation of concerns across single-responsibil
 │ 3MF Loader         │ │ Build Plate        │ │ Material Database  │
 │ Validation         │ │ Grid System        │ │ Filament Database  │
 │ Geometry Parsing   │ │ Camera Controls    │ │ Preset Database    │
-│ Mesh Generation    │ │ Collision Display  │ │     │
+│ Mesh Generation    │ │ Collision Display  │ │                    │
 └──────────┬─────────┘ └────────────────────┘ └──────────┬─────────┘
            │                                             │
            └───────────────────┬─────────────────────────┘
@@ -193,7 +208,7 @@ The application enforces strict separation of concerns across single-responsibil
 │ Support Strategy Selection                                         │
 │ Warning Generation                                                 │
 │ Confidence Score                                                   │
-└──────────────────────────────┬──────────────────────────────────────┘
+└──────────────────────────────┬─────────────────────────────────────┘
                                │
                  ┌─────────────┼─────────────┐
                  │             │             │
@@ -217,14 +232,15 @@ The application enforces strict separation of concerns across single-responsibil
 ├────────────────────────────────────────────────────────────────────┤
 │ JSON Storage                                                       │
 │ WYPROJ Projects (.wyproj)                                          │
-│ Project Files                                                     │
+│ Project Files                                                      │
 │ Local Database                                                     │
 │ Cache                                                              │
 │ Settings                                                           │
 │ Profiles                                                           │
+│ Translation Files (en/fr/he)                                       │
 │ Analysis Results                                                   │
 │ Recommendations                                                    │
-└──────────────────────────────┬──────────────────────────────────────┘
+└──────────────────────────────┬─────────────────────────────────────┘
                                │
                                ▼
 
