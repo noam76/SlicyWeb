@@ -81,7 +81,7 @@ All architecture changes must follow the governance framework.
 Reference Documents:
 
 ```text
-docs/00-index/CLAUDE_GOVERNANCE_PROTOCOL.md
+/CLAUDE_GOVERNANCE_PROTOCOL.md
 
 /CLAUDE_CHANGE_IMPACT_RULES.md
 
@@ -683,17 +683,39 @@ ThreeMFImporter
 FileValidator
 ```
 
-
 ---
 
-
-## Printer Database Module
-
-
+## Project Module
 
 Folder
 
+/project
 
+Responsibilities:
+
+- Project lifecycle management
+- Project serialization
+- Project deserialization
+- Project validation
+- WYPROJ import
+- WYPROJ export
+- Save operations
+- Load operations
+
+Submodules
+
+ProjectManager
+ProjectSerializer
+ProjectDeserializer
+ProjectValidator
+WYPROJImporter
+WYPROJExporter
+
+---
+
+## Printer Database Module
+
+Folder
 
 ```text
 
@@ -701,9 +723,7 @@ Folder
 
 ```
 
-
 Responsibilities:
-
 
 - Load printers
 
@@ -1161,8 +1181,6 @@ Responsibilities:
 
 ---
 
-
-
 # Online Repository System
 
 
@@ -1178,7 +1196,24 @@ Responsibilities:
 - Profile refresh
 - Data synchronization
 
----
+Translation Files
+
+Folder
+
+/public/locales
+
+Files
+
+- en.json
+- fr.json
+- he.json
+
+Purpose
+
+- User interface localization
+- Language-independent architecture
+- Externalized translations
+
 
 # Event Architecture
 
@@ -1202,14 +1237,9 @@ Recommendation Updated
 
 ```
 
-
-
 ---
 
-
-
 # Event Types
-
 
 ## Object Events
 
@@ -1227,15 +1257,9 @@ ObjectSelected
 
 ```
 
-
-
 ---
 
-
-
 ## Transformation Events
-
-
 
 ```text
 
