@@ -189,15 +189,18 @@ Future Support:
 The application shall support multilingual user interfaces.
 
 Initial supported languages:
-
 - English
 - French
 - Hebrew
 
+Managed By:
+- LanguageManager
+- LocalizationService
+- TranslationLoader
+
 Additional languages may be added in future releases.
 
 Requirements:
-
 - All user-facing text must support localization.
 - GUI text must not be hardcoded.
 - Application architecture must remain language-independent whenever possible.
@@ -205,7 +208,6 @@ Requirements:
 - WYPROJ project files must remain language-neutral and independent from interface language.
 
 Purpose:
-
 - Improve accessibility
 - Support international users
 - Simplify future localization
@@ -235,12 +237,29 @@ Project files may contain:
 - Recommendations
 - User Settings
 - Metadata
+- Project Version Information
 
 Storage Format:
 - JSON-Based Structure
 
+Container Format:
+{
+  "format": "WYPROJ",
+  "version": "2.0.0",
+  "project": {},
+  "metadata": {}
+}
+
 Project Versioning:
 - Mandatory
+
+Managed By:
+- ProjectManager
+- ProjectSerializer
+- ProjectDeserializer
+- ProjectValidator
+- WYPROJImporter
+- WYPROJExporter
 
 ---
 
