@@ -2,7 +2,7 @@
 
 # DOMAIN BOUNDARIES
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -114,6 +114,7 @@ Storage
 Notification
 Cost Estimation
 Project Management
+Internationalization
 Security
 Testing
 ```
@@ -141,10 +142,9 @@ Owns:
 GUI_SPEC.md
 
 src/gui/
-
-src/components/
-
-src/pages/
+src/gui/components/
+src/gui/dialogs/
+src/gui/windows/
 ```
 
 May:
@@ -785,6 +785,7 @@ Responsibilities:
 - Cache
 - Save Operations
 - Load Operations
+- WYPROJ Persistence
 
 Owns:
 
@@ -898,6 +899,14 @@ Owns:
 
 ```text
 Project Services
+
+src/project/
+ProjectManager
+ProjectSerializer
+ProjectDeserializer
+ProjectValidator
+WYPROJImporter
+WYPROJExporter
 ```
 
 Must Not:
@@ -913,6 +922,48 @@ Boundary:
 ```text
 Project Management Only
 ```
+
+---
+
+# INTERNATIONALIZATION DOMAIN
+
+Purpose:
+
+Localization Management
+
+Responsibilities:
+
+- Language Management
+- Translation Loading
+- Localization Services
+- Language Selection
+- Translation Resolution
+
+Owns:
+
+```text
+src/i18n/
+
+LanguageManager
+LocalizationService
+TranslationLoader
+
+public/locales/
+
+en.json
+fr.json
+he.json
+```
+
+Must Not:
+
+Render UI Directly
+Perform Analysis
+Generate Recommendations
+
+Boundary:
+
+Localization Only
 
 ---
 
