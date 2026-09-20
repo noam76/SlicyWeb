@@ -119,11 +119,15 @@ The architecture must support future extensions including:
 Supported formats:
 
 ```text
-
 STL
 
 3MF
+```
 
+Native Project Format:
+
+```text
+WYPROJ (.wyproj)
 ```
 
 
@@ -448,6 +452,19 @@ while preserving print reliability.
 
 ---
 
+## Internationalization
+
+Supported Languages:
+
+```text
+English
+French
+Hebrew
+```
+
+The platform supports multilingual user interfaces through an externalized translation system.
+
+---
 
 # Cost Estimation
 
