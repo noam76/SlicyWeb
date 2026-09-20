@@ -1,18 +1,18 @@
-\# AI SMART SLICER
+# AI SMART SLICER
 
-\# GUI SPECIFICATION
+# GUI SPECIFICATION
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
 Priority: Critical
 
-\---
+---
 
 
 
-\# Purpose
+# Purpose
 
 
 
@@ -24,17 +24,17 @@ This specification serves as the reference for:
 
 
 
-\- Visual Design
+- Visual Design
 
-\- Layout
+- Layout
 
-\- Navigation
+- Navigation
 
-\- User Experience
+- User Experience
 
-\- Components
+- Components
 
-\- Interaction Rules
+- Interaction Rules
 
 
 
@@ -42,13 +42,13 @@ The GUI should provide a familiar experience for users coming from:
 
 
 
-\- OrcaSlicer
+- OrcaSlicer
 
-\- Bambu Studio
+- Bambu Studio
 
-\- PrusaSlicer
+- PrusaSlicer
 
-\- Cura
+- Cura
 
 
 
@@ -56,11 +56,11 @@ while introducing a modern AI-assisted workflow.
 
 
 
-\---
+---
 
 
 
-\# GUI Principles
+# GUI Principles
 
 
 
@@ -68,27 +68,27 @@ The interface must be:
 
 
 
-\- Modern
+- Modern
 
-\- Fast
+- Fast
 
-\- Predictable
+- Predictable
 
-\- Consistent
+- Consistent
 
-\- Responsive
+- Responsive
 
-\- Beginner Friendly
+- Beginner Friendly
 
-\- Advanced User Friendly
-
-
-
-\---
+- Advanced User Friendly
 
 
 
-\# Design Priorities
+---
+
+
+
+# Design Priorities
 
 
 
@@ -96,23 +96,23 @@ Priority Order:
 
 
 
-1\. Clarity
+1. Clarity
 
-2\. Efficiency
+2. Efficiency
 
-3\. Visibility
+3. Visibility
 
-4\. Accessibility
+4. Accessibility
 
-5\. Aesthetics
-
-
-
-\---
+5. Aesthetics
 
 
 
-\# Visual Style
+---
+
+
+
+# Visual Style
 
 
 
@@ -132,11 +132,11 @@ System Theme optional
 
 
 
-\---
+---
 
 
 
-\# Color Philosophy
+# Color Philosophy
 
 
 
@@ -168,11 +168,11 @@ Success: #27AE60
 
 
 
-\---
+---
 
 
 
-\# Font
+# Font
 
 
 
@@ -204,11 +204,11 @@ Sans-serif
 
 
 
-\---
+---
 
 
 
-\# Minimum Font Sizes
+# Minimum Font Sizes
 
 
 
@@ -228,11 +228,11 @@ Tooltip     11px
 
 
 
-\---
+---
 
 
 
-\# Main Window
+# Main Window
 
 
 
@@ -268,11 +268,11 @@ Layout:
 
 
 
-\---
+---
 
 
 
-\# Window Areas
+# Window Areas
 
 
 
@@ -298,11 +298,11 @@ Status Bar
 
 
 
-\---
+---
 
 
 
-\# Menu Bar
+# Menu Bar
 
 
 
@@ -318,47 +318,35 @@ Always Visible
 
 
 
-\---
+---
 
 
 
-\# File Menu
+# File Menu
 
 
 
 Functions:
 
-
-
 ```text
 
 New Project
 
-
-
 Open Project
 
-
+Open WYPROJ
 
 Save Project
 
-
-
 Save As
 
-
+Export WYPROJ
 
 Import STL
 
-
-
 Import 3MF
 
-
-
 Close Project
-
-
 
 Exit
 
@@ -366,11 +354,11 @@ Exit
 
 
 
-\---
+---
 
 
 
-\# Edit Menu
+# Edit Menu
 
 
 
@@ -410,11 +398,11 @@ Preferences
 
 
 
-\---
+---
 
 
 
-\# View Menu
+# View Menu
 
 
 
@@ -466,11 +454,11 @@ Reset View
 
 
 
-\---
+---
 
 
 
-\# Printer Menu
+# Printer Menu
 
 
 
@@ -502,11 +490,11 @@ Export Profile
 
 
 
-\---
+---
 
 
 
-\# Material Menu
+# Material Menu
 
 
 
@@ -527,7 +515,7 @@ Export Material
 ```
 
 
-\---
+---
 
 # Filament Menu
 
@@ -542,29 +530,21 @@ Import Filament
 
 Export Filament
 ```
-\---
+---
 
-\# Tools Menu
-
+# Tools Menu
 
 
 Functions:
-
 
 
 ```text
 
 Analyze Models
 
-
-
 Recompute Analysis
 
-
-
 Generate Recommendations
-
-
 
 Optimize Orientation
 
@@ -572,27 +552,37 @@ Optimize Orientation
 
 
 
-\---
+---
 
+# Language Menu
 
+Functions:
 
-\# Help Menu
+English
+French
+Hebrew
+
+Managed By:
+```text
+- LanguageManager
+- LocalizationService
+- TranslationLoader
+```
+
+---
+
+# Help Menu
 
 
 
 Functions:
 
 
-
 ```text
 
 Documentation
 
-
-
 Release Notes
-
-
 
 About
 
@@ -600,27 +590,23 @@ About
 
 
 
-\---
+---
 
 
 
-\# Toolbar
-
-
+# Toolbar
 
 Position:
-
-
 
 Below Menu
 
 
 
-\---
+---
 
 
 
-\# Toolbar Buttons
+# Toolbar Buttons
 
 
 
@@ -672,11 +658,11 @@ Generate
 
 
 
-\---
+---
 
 
 
-\# Object Panel
+# Object Panel
 
 
 
@@ -696,11 +682,11 @@ Collapsible
 
 
 
-\---
+---
 
 
 
-\# Contents
+# Contents
 
 
 
@@ -736,11 +722,11 @@ Selection State
 
 
 
-\---
+---
 
 
 
-\# Object Context Menu
+# Object Context Menu
 
 
 
@@ -788,11 +774,11 @@ Unlock
 
 
 
-\---
+---
 
 
 
-\# Multi Selection
+# Multi Selection
 
 
 
@@ -816,11 +802,11 @@ SHIFT + Click
 
 
 
-\---
+---
 
 
 
-\# 3D Viewport
+# 3D Viewport
 
 
 
@@ -836,11 +822,11 @@ Largest interface area.
 
 
 
-\---
+---
 
 
 
-\# Viewport Purpose
+# Viewport Purpose
 
 
 
@@ -848,23 +834,23 @@ Display:
 
 
 
-\- Build Plate
+- Build Plate
 
-\- Objects
+- Objects
 
-\- Axes
+- Axes
 
-\- Grid
+- Grid
 
-\- Selection Indicators
-
-
-
-\---
+- Selection Indicators
 
 
 
-\# Build Plate
+---
+
+
+
+# Build Plate
 
 
 
@@ -876,11 +862,11 @@ Dynamic sizing.
 
 
 
-\---
+---
 
 
 
-\# Plate Display
+# Plate Display
 
 
 
@@ -908,11 +894,11 @@ Boundary Limits
 
 
 
-\---
+---
 
 
 
-\# Axis Display
+# Axis Display
 
 
 
@@ -940,11 +926,11 @@ Z = Blue
 
 
 
-\---
+---
 
 
 
-\# Coordinate Grid
+# Coordinate Grid
 
 
 
@@ -956,11 +942,11 @@ Adaptive spacing.
 
 
 
-\---
+---
 
 
 
-\# Viewport Controls
+# Viewport Controls
 
 
 
@@ -984,11 +970,11 @@ Right Mouse = Rotate Camera
 
 
 
-\---
+---
 
 
 
-\# Camera Views
+# Camera Views
 
 
 
@@ -1028,11 +1014,11 @@ Isometric
 
 
 
-\---
+---
 
 
 
-\# Selection Visualization
+# Selection Visualization
 
 
 
@@ -1056,11 +1042,11 @@ Bounding Box
 
 
 
-\---
+---
 
 
 
-\# Object Gizmos
+# Object Gizmos
 
 
 
@@ -1076,11 +1062,11 @@ Scale Gizmo
 
 
 
-\---
+---
 
 
 
-\# Move Gizmo
+# Move Gizmo
 
 
 
@@ -1104,11 +1090,11 @@ Z
 
 
 
-\---
+---
 
 
 
-\# Rotate Gizmo
+# Rotate Gizmo
 
 
 
@@ -1148,11 +1134,11 @@ Incremental
 
 
 
-\---
+---
 
 
 
-\# Scale Gizmo
+# Scale Gizmo
 
 
 
@@ -1172,11 +1158,11 @@ Non Uniform
 
 
 
-\---
+---
 
 
 
-\# Properties Panel
+# Properties Panel
 
 
 
@@ -1196,15 +1182,16 @@ Collapsible
 
 
 
-\---
+---
 
 
 
-\# Properties Sections
-
+# Properties Sections
 
 
 ```text
+
+Project
 
 Printer
 
@@ -1224,13 +1211,30 @@ Recommendations
 
 ```
 
+---
 
+# Project Section
 
-\---
+Displays:
 
+```text
+Project Name
+Project Version
+Created Date
+Last Saved
+Project Format
+Application
+```
 
+Format:
 
-\# Printer Section
+```text
+WYPROJ
+```
+
+---
+
+# Printer Section
 
 
 
@@ -1262,11 +1266,11 @@ Printer Limits
 
 
 
-\---
+---
 
 
 
-\# Printer Selector
+# Printer Selector
 
 
 
@@ -1316,11 +1320,11 @@ Prusa
 
 
 
-\---
+---
 
 
 
-\# Material Section
+# Material Section
 
 
 
@@ -1344,7 +1348,7 @@ Speed Profile
 
 
 
-\---
+---
 
 # Filament Section
 
@@ -1364,7 +1368,7 @@ Cooling Overrides
 Retraction Profile
 ```
 
-\---
+---
 
 # Print Preset Section
 
@@ -1382,9 +1386,9 @@ Custom
 Active Preset
 ```
 
-\---
+---
 
-\# Transform Section
+# Transform Section
 
 
 
@@ -1420,11 +1424,11 @@ Scale Z
 
 
 
-\---
+---
 
 
 
-\# Transform Actions
+# Transform Actions
 
 
 
@@ -1452,11 +1456,11 @@ Center On Bed
 
 
 
-\---
+---
 
 
 
-\# Analysis Section
+# Analysis Section
 
 
 
@@ -1500,11 +1504,11 @@ Stability
 
 
 
-\---
+---
 
 
 
-\# Recommendation Section
+# Recommendation Section
 
 
 
@@ -1536,11 +1540,11 @@ Recommended Preset
 
 
 
-\---
+---
 
 
 
-\# Notification Area
+# Notification Area
 
 
 
@@ -1552,11 +1556,11 @@ Bottom
 
 
 
-\---
+---
 
 
 
-\# Notification Types
+# Notification Types
 
 
 
@@ -1580,11 +1584,11 @@ Error
 
 
 
-\---
+---
 
 
 
-\# Status Bar
+# Status Bar
 
 
 
@@ -1607,15 +1611,19 @@ Analysis Status
 Selected Filament
 
 Active Preset
+
+Current Language
+
+Project Status
 ```
 
 
 
-\---
+---
 
 
 
-\# Search System
+# Search System
 
 Printer Search
 
@@ -1627,11 +1635,11 @@ Filament Search
 
 Preset Search
 
-\---
+---
 
 
 
-\# Drag And Drop
+# Drag And Drop
 
 
 
@@ -1653,19 +1661,19 @@ WYPROJ
 
 
 
-\---
+---
 
 
 
-\# Keyboard Shortcuts
+# Keyboard Shortcuts
 
 
 
-\---
+---
 
 
 
-\## Project
+## Project
 
 
 
@@ -1685,11 +1693,11 @@ CTRL + S     Save Project
 
 
 
-\---
+---
 
 
 
-\## Edit
+## Edit
 
 
 
@@ -1709,11 +1717,11 @@ DELETE       Delete Object
 
 
 
-\---
+---
 
 
 
-\## Selection
+## Selection
 
 
 
@@ -1729,11 +1737,11 @@ ESC          Deselect
 
 
 
-\---
+---
 
 
 
-\## View
+## View
 
 
 
@@ -1749,11 +1757,11 @@ HOME         Reset Camera
 
 
 
-\---
+---
 
 
 
-\## Transform
+## Transform
 
 
 
@@ -1773,11 +1781,11 @@ S            Scale
 
 
 
-\---
+---
 
 
 
-\# AI Assistant Panel
+# AI Assistant Panel
 
 
 
@@ -1797,11 +1805,11 @@ Optional
 
 
 
-\---
+---
 
 
 
-\# AI Assistant Displays
+# AI Assistant Displays
 
 
 
@@ -1824,11 +1832,11 @@ Recommended Preset
 
 
 
-\---
+---
 
 
 
-\# Responsive Behavior
+# Responsive Behavior
 
 
 
@@ -1876,11 +1884,11 @@ Layout should remain functional at:
 
 
 
-\---
+---
 
 
 
-\# Error Handling UI
+# Error Handling UI
 
 
 
@@ -1920,11 +1928,11 @@ No technical stack traces visible to user.
 
 
 
-\---
+---
 
 
 
-\# Accessibility
+# Accessibility
 
 
 
@@ -1936,27 +1944,52 @@ Support:
 
 Keyboard Navigation
 
-
-
 High Contrast Theme
-
-
 
 Scalable Fonts
 
-
-
 Color Safe Warnings
+
+RTL Language Support
 
 ```
 
 
 
-\---
+---
 
+# Localization Support
 
+Supported Languages:
 
-\# Future GUI Features
+English
+French
+Hebrew
+
+Translation Source:
+
+```text
+public/locales/
+```
+
+Files:
+```text
+- en.json
+- fr.json
+- he.json
+```
+
+Managed By:
+
+```text
+LanguageManager
+LocalizationService
+TranslationLoader
+```
+
+---
+
+# Future GUI Features
 
 
 
@@ -1988,11 +2021,11 @@ Profile Repository Browser
 
 
 
-\---
+---
 
 
 
-\# GUI Golden Rules
+# GUI Golden Rules
 
 
 
@@ -2024,9 +2057,9 @@ Profile Repository Browser
 
 
 
-\---
+---
 
 
 
-\# End Of Document
+# End Of Document
 
