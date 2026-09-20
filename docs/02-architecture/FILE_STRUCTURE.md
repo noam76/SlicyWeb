@@ -31,7 +31,6 @@ This structure is the official reference for the entire project.
 ```text
 SlicyWeb/
 
-├── i18n/
 ├── data/
 ├── docs/
 ├── src/
@@ -43,7 +42,7 @@ SlicyWeb/
 ├── scripts/
 ├── plugins/
 ├── public/
-├── project/
+│   └── locales/
 ├── releases/
 ├── .github/
 │
@@ -120,6 +119,7 @@ docs/
 │   ├── FILE_OWNERSHIP_MATRIX.md         = Ownership et responsabilité officiels des fichiers
 │   ├── PROJECT_IMPACT_MATRIX.md         = Analyse d'impact des changements
 │   ├── CROSS_DOCUMENT_DEPENDENCIES.md   = Dépendances entre documents
+│   ├── DOCUMENT_UPDATE_RULES.md         = Gouvernance des mises à jour documentaires
 │   ├── DOCUMENT_UPDATE_MATRIX.md        = Règles de mise à jour documentaire
 │   ├── CHANGE_CLASSIFICATION_RULES.md   = Classification officielle des changements
 │   ├── CHANGE_VERIFICATION_CHECKLIST.md = Vérification obligatoire avant changement
@@ -229,13 +229,6 @@ CODE_OF_CONDUCT.md
 LICENSE.md
 ```
 
-# Total Documentation Assets
-
-Documentation Count Maintained In:
-
-```text
-PROJECT_DOCUMENTATION_INDEX.md
-```
 ---
 
 # Documentation Status:
@@ -263,8 +256,9 @@ Ready For AI Assisted Development
 # Source Structure
 
 ```text
-src/
 
+src/
+├── i18n/
 ├── app/
 ├── gui/
 ├── renderer/
@@ -279,6 +273,7 @@ src/
 ├── optimization_engine/
 ├── filament_database/
 ├── classification_engine/
+├── project/
 ├── preset_engine/
 ├── recovery/
 ├── cost_engine/
@@ -618,6 +613,21 @@ src/notifications/
 
 ---
 
+# Project Persistence
+
+```text
+src/project/
+
+├── ProjectManager.ts
+├── ProjectSerializer.ts
+├── ProjectDeserializer.ts
+├── ProjectValidator.ts
+├── WYPROJImporter.ts
+└── WYPROJExporter.ts
+```
+
+---
+
 # Services
 
 ```text
@@ -683,10 +693,9 @@ src/types/
 ```text
 src/i18n/
 
-├── TranslationLoader.ts
-├── TranslationService.ts
 ├── LanguageManager.ts
-└── locales/
+├── LocalizationService.ts
+└── TranslationLoader.ts
 ```
 
 ---
@@ -867,8 +876,6 @@ webcam/
 marketplace/
 
 undo_redo/
-
-project_persistence/
 ```
 
 ---
