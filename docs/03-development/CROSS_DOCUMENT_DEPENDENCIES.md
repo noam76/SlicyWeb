@@ -2,7 +2,7 @@
 
 # CROSS DOCUMENT DEPENDENCIES
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -149,6 +149,12 @@ ROADMAP.md
 
 PROJECT_DESCRIPTION.md
 
+TECHNICAL_OVERVIEW.md
+
+IMPORT_EXPORT_SPEC.md
+
+CLAUDE_PROJECT_CONTEXT.md
+
 CHANGELOG.md
 ```
 
@@ -256,6 +262,10 @@ API_SPEC.md
 
 FILE_STRUCTURE.md
 
+TECHNICAL_OVERVIEW.md
+
+IMPORT_EXPORT_SPEC.md
+
 AI_ENGINE_SPEC.md
 ```
 
@@ -319,6 +329,10 @@ PRINTER_PROFILE_SPEC.md
 MATERIAL_PROFILE_SPEC.md
 
 FILAMENT_SETTINGS_SPEC.md
+
+IMPORT_EXPORT_SPEC.md
+
+TECHNICAL_OVERVIEW.md
 
 CHANGELOG.md
 ```
@@ -407,6 +421,10 @@ Depends On:
 DATA_SCHEMA.md
 
 API_SPEC.md
+
+PROJECT_SPEC.md
+
+TECHNICAL_OVERVIEW.md
 ```
 
 Review Required When Modified:
@@ -416,6 +434,32 @@ API_SPEC.md
 
 DATA_SCHEMA.md
 
+PROJECT_SPEC.md
+
+TECHNICAL_OVERVIEW.md
+
+CLAUDE_PROJECT_CONTEXT.md
+
+CHANGELOG.md
+```
+
+---
+
+# USER_SETTINGS_SPEC.md
+
+Depends On:
+
+```text
+PROJECT_SPEC.md
+TECHNICAL_OVERVIEW.md
+CLAUDE_PROJECT_CONTEXT.md
+```
+
+Review Required When Modified:
+
+```text
+GUI_SPEC.md
+CLAUDE_PROJECT_CONTEXT.md
 CHANGELOG.md
 ```
 
@@ -431,6 +475,10 @@ ARCHITECTURE.md
 DATA_SCHEMA.md
 
 API_SPEC.md
+
+IMPORT_EXPORT_SPEC.md
+
+PROJECT_SPEC.md
 ```
 
 Review Required When Modified:
@@ -918,6 +966,10 @@ CLAUDE_DOCUMENT_READING_ORDER.md
 Depends On:
 
 ```text
+CLAUDE_DOCUMENT_READING_ORDER.md
+
+CLAUDE_PROJECT_CONTEXT.md
+
 PROJECT_DOCUMENTATION_INDEX.md
 
 ARCHITECTURE.md
@@ -944,6 +996,12 @@ AI_START_HERE.md
 
 SYSTEM_RULES.md
 
+DOMAIN_BOUNDARIES.md
+
+PROJECT_IMPACT_MATRIX.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
 DEVELOPMENT_RULES.md
 ```
 
@@ -951,6 +1009,37 @@ Review Required When Modified:
 
 ```text
 CLAUDE_GOVERNANCE_PROTOCOL.md
+```
+
+---
+
+# CLAUDE_PROJECT_CONTEXT.md
+
+Owns:
+
+```text
+Project Context
+Project Domains
+Project Constraints
+AI Context
+```
+
+Depends On:
+
+```text
+PROJECT_SPEC.md
+ARCHITECTURE.md
+TECHNICAL_OVERVIEW.md
+DOMAIN_BOUNDARIES.md
+```
+
+Review Required When Modified:
+
+```text
+CLAUDE.md
+AI_START_HERE.md
+CLAUDE_DOCUMENT_READING_ORDER.md
+CHANGELOG.md
 ```
 
 ---
