@@ -2,7 +2,7 @@
 
 # DOCUMENT UPDATE MATRIX
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -335,6 +335,8 @@ PROJECT_DOCUMENTATION_INDEX.md
 
 SlicyWeb files explication.txt
 
+CLAUDE_PROJECT_CONTEXT.md
+
 CHANGELOG.md
 ```
 
@@ -449,6 +451,7 @@ Mandatory Review:
 PROJECT_SPEC.md
 DATA_SCHEMA.md
 API_SPEC.md
+IMPORT_EXPORT_SPEC.md
 TECHNICAL_OVERVIEW.md
 DECISIONS.md
 ARCHITECTURE_DECISION_MATRIX.md
@@ -464,6 +467,43 @@ Conditional Updates:
 
 ```text
 ARCHITECTURE_DECISION_MATRIX.md
+```
+
+---
+
+# Internationalization Change
+
+Examples:
+
+```text
+New Language
+Translation Structure Change
+Localization Logic Change
+Language Manager Change
+Localization Service Change
+Translation Loader Change
+```
+
+Mandatory Review:
+
+```text
+PROJECT_SPEC.md
+TECHNICAL_OVERVIEW.md
+DOMAIN_BOUNDARIES.md
+USER_SETTINGS_SPEC.md
+```
+
+Conditional Updates:
+
+```text
+GUI_SPEC.md
+DATA_SCHEMA.md
+```
+
+Mandatory Update Evaluation:
+
+```text
+CHANGELOG.md
 ```
 
 ---
