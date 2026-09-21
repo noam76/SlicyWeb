@@ -1,6 +1,5 @@
 # DATA SCHEMA
 
-
 Version: 2.0.0
 
 Status: Approved
