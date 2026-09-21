@@ -487,6 +487,28 @@ Settings
 Recommendations
 ```
 
+Metadata:
+
+```text
+"metadata": {
+  "version": "2.0.0",
+  "createdAt": "",
+  "updatedAt": "",
+  "application": "SlicyWeb Smart Slicer"
+}
+```
+
+A WYPROJ project may contain one or more imported objects.
+
+Supported Sources:
+
+```text
+- STL
+- 3MF
+```
+
+Mixed format projects are supported.
+
 ---
 
 # Project Format
@@ -540,24 +562,14 @@ Auto Save
 
 ---
 
-# Auto Save
-
-Future Feature
+# Recovery System
 
 Purpose:
 
 ```text
 Recovery Protection
-```
-
----
-
-# Recovery Mode
-
-Purpose:
-
-```text
-Restore Last Session
+Project Persistence
+Session Recovery
 ```
 
 ---
