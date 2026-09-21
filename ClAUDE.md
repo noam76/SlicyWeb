@@ -337,6 +337,30 @@ Repository validation is mandatory.
 
 -------------------------------------------------------------------------------
 
+# Project Management Rule
+
+All project persistence must follow the Project Management domain.
+
+WYPROJ operations must use:
+
+- ProjectManager
+- ProjectSerializer
+- ProjectDeserializer
+- ProjectValidator
+- WYPROJImporter
+- WYPROJExporter
+
+Requirements:
+
+- Maintain WYPROJ compatibility
+- Preserve project versioning
+- Preserve backward compatibility
+- Keep project files language-neutral
+
+Direct manipulation of project files outside the project layer is prohibited.
+
+-------------------------------------------------------------------------------
+
 # Internationalization Rule
 
 The application is multilingual.
