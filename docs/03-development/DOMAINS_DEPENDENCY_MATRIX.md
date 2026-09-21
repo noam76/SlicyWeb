@@ -763,7 +763,11 @@ LanguageManager.ts
 LocalizationService.ts
 TranslationLoader.ts
 public/locales/
+```
+
 Can Depend On:
+
+```text
 Validation Domain
 Storage Domain
 ```
