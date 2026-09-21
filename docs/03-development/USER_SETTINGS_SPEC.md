@@ -3,7 +3,7 @@
 # USER SETTINGS SPECIFICATION
 
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -95,34 +95,70 @@ Advanced
 ```
 
 
+Supported Values:
+
+```text
+en
+fr
+he
+```
 
 ---
 
+# Project Settings
 
+```json
+{
+  "project": {
+    "autoSave": true,
+    "autoSaveInterval": 300,
+    "restoreLastSession": true
+  }
+}
+```
+
+Used By:
+
+```text
+ProjectManager
+RecoveryManager
+AutoSaveService
+SessionRestorer
+```
+---
 
 # Supported Languages
 
-
-
 ```text
-
 English
 
 French
 
-Spanish
-
-German
-
-Italian
-
+Hebrew
 ```
-
-
 
 ---
 
+# Internationalization
 
+Language management is handled by:
+
+```text
+LanguageManager
+LocalizationService
+TranslationLoader
+```
+
+Requirements:
+
+```text
+No hardcoded UI text
+Externalized translations
+Language-neutral project files
+Runtime language switching
+```
+
+---
 
 # Theme Modes
 
@@ -348,10 +384,6 @@ System
 
 &#x20; "files": {
 
-&#x20;   "autosave": true,
-
-&#x20;   "autosaveInterval": 300,
-
 &#x20;   "recentProjects": 20
 
 &#x20; }
@@ -388,7 +420,8 @@ settings.json
 
 ```
 
-
+Stored separately from WYPROJ project files.
+User settings must not alter project data.
 
 ---
 
