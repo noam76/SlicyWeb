@@ -263,6 +263,8 @@ Contains:
 - Folder organization
 - Module locations
 - Naming strategy
+- Project System Structure
+- Internationalization Structure
 
 Used For:
 - Project organization
@@ -298,6 +300,8 @@ Import and export system specification.
 Contains:
 - STL import
 - 3MF import
+- WYPROJ import
+- WYPROJ export
 - Validation process
 - Export workflow
 - Supported formats
@@ -319,6 +323,8 @@ Contains:
 - Data flow
 - Application workflow
 - Technical relationships
+- Project Management
+- Internationalization
 
 Used For:
 - Project understanding
@@ -631,6 +637,7 @@ Contains:
 - Preferences
 - Themes
 - Language
+- Localization
 - Viewport settings
 
 Used For:
