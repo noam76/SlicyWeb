@@ -45,6 +45,9 @@ Create an AI-assisted 3D printing preparation software capable of:
 
 - Importing STL files
 - Importing 3MF files
+- Opening WYPROJ projects
+- Saving WYPROJ projects
+- Supporting multilingual user interfaces
 - Visualizing multiple models
 - Managing printers
 - Managing materials
@@ -157,6 +160,8 @@ Read:
 docs/02-architecture/ARCHITECTURE.md
 
 docs/02-architecture/API_SPEC.md
+
+docs/02-architecture/TECHNICAL_OVERVIEW.md
 ```
 
 Purpose:
@@ -371,15 +376,62 @@ docs/05-profiles/FILAMENT_SETTINGS_SPEC.md
 
 ---
 
+# PROJECT MANAGEMENT TASKS
+
+Read:
+
+```text
+docs/02-architecture/IMPORT_EXPORT_SPEC.md
+
+docs/02-architecture/DATA_SCHEMA.md
+
+docs/03-development/DOMAIN_BOUNDARIES.md
+```
+
+Purpose:
+
+```text
+WYPROJ management
+Project persistence
+Project serialization
+Project validation
+Recovery systems
+```
+
+---
+
+# INTERNATIONALIZATION TASKS
+
+Read:
+
+```text
+docs/01-project/PROJECT_SPEC.md
+
+docs/02-architecture/TECHNICAL_OVERVIEW.md
+
+docs/03-development/DOMAIN_BOUNDARIES.md
+```
+
+Purpose:
+
+```text
+Localization architecture
+Language management
+Translation management
+Supported languages
+```
+
 ---
 
 # PRINT TASKS
 
 Read:
 
+```text
 docs/04-ai/PRINT_SETTINGS_SPEC.md
 
 docs/04-ai/PRINT_PRESETS_SPEC.md
+```
 
 ---
 
@@ -588,6 +640,8 @@ The following documents have the highest authority:
 PROJECT_SPEC.md
 
 ARCHITECTURE.md
+
+TECHNICAL_OVERVIEW.md
 
 DATA_SCHEMA.md
 
