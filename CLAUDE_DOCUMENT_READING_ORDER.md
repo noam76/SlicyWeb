@@ -1,6 +1,6 @@
 # CLAUDE DOCUMENT READING ORDER
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -193,7 +193,11 @@ docs/02-architecture/TECHNICAL_OVERVIEW.md
 
 Purpose:
 
-Architecture overview, module boundaries and system organization.
+Architecture overview
+Project Management overview
+Internationalization overview
+System organization
+Module boundaries
 
 ---
 
@@ -237,13 +241,14 @@ Project structure.
 
 Read:
 
-```text
-docs/03-development/DOMAINS_DEPENDENCY_MATRIX.md
-```
+docs/02-architecture/IMPORT_EXPORT_SPEC.md
 
 Purpose:
 
-Understand domain dependency rules.
+Import systems
+Export systems
+WYPROJ format
+Serialization workflow
 
 ---
 
@@ -266,6 +271,20 @@ Understand domain ownership and boundaries.
 Read:
 
 ```text
+docs/03-development/DOMAINS_DEPENDENCY_MATRIX.md
+```
+
+Purpose:
+
+Understand domain dependency rules.
+
+---
+
+## Step 17
+
+Read:
+
+```text
 docs/03-development/CROSS_DOCUMENT_DEPENDENCIES.md
 ```
 
@@ -275,7 +294,7 @@ Understand document relationships.
 
 ---
 
-## Step 17
+## Step 18
 
 Read:
 
@@ -289,7 +308,7 @@ Understand file ownership.
 
 ---
 
-## Step 18
+## Step 19
 
 Read:
 
@@ -303,7 +322,7 @@ Determine modification impact.
 
 ---
 
-## Step 19
+## Step 20
 
 Read:
 
@@ -317,7 +336,7 @@ Determine documentation update requirements.
 
 ---
 
-## Step 20
+## Step 21
 
 Read:
 
@@ -331,7 +350,7 @@ Classify the modification.
 
 ---
 
-## Step 21
+## Step 22
 
 Read:
 
@@ -349,7 +368,7 @@ Validate change readiness.
 
 Read when modifications are expected.
 
-## Step 22
+## Step 23
 
 Read:
 
@@ -363,7 +382,7 @@ Understand project evolution.
 
 ---
 
-## Step 23
+## Step 24
 
 Read:
 
@@ -381,7 +400,7 @@ Understand architectural decisions.
 
 Read when documentation is involved.
 
-## Step 24
+## Step 25
 
 Read:
 
@@ -395,12 +414,12 @@ Documentation inventory.
 
 ---
 
-## Step 25
+## Step 26
 
 Read:
 
 ```text
-Wichy files explication.txt
+SlicyWeb files explication.txt
 ```
 
 Purpose:
@@ -555,6 +574,65 @@ Material and filament management.
 
 ---
 
+# Project Management Tasks
+
+Read:
+
+```text
+docs/01-project/PROJECT_SPEC.md
+```
+
+```text
+docs/02-architecture/IMPORT_EXPORT_SPEC.md
+```
+
+```text
+docs/02-architecture/DATA_SCHEMA.md
+```
+
+```text
+docs/03-development/DOMAIN_BOUNDARIES.md
+```
+
+Purpose:
+
+```text
+WYPROJ management
+Project persistence
+Project serialization
+Project validation
+Recovery systems
+```
+
+---
+
+# Internationalization Tasks
+
+Read:
+
+```text
+docs/01-project/PROJECT_SPEC.md
+```
+
+```text
+docs/02-architecture/TECHNICAL_OVERVIEW.md
+```
+
+```text
+docs/03-development/DOMAIN_BOUNDARIES.md
+```
+
+Purpose:
+
+```text
+Localization architecture
+Language management
+Translation management
+Supported languages
+```
+
+---
+
 # Repository Tasks
 
 Read:
@@ -636,6 +714,10 @@ docs/07-future/PLUGIN_SYSTEM_SPEC.md
 # Reference Reading
 
 Read when terminology, naming, versions, structure or documentation is involved.
+
+```text
+docs/03-development/DOCUMENT_UPDATE_MATRIX.md
+```
 
 ```text
 docs/09-reference/GLOSSARY.md
