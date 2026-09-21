@@ -1,6 +1,6 @@
 # AI DEVELOPMENT PROTOCOL
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -63,15 +63,22 @@ A working feature must never be broken to add a new feature.
 Before analyzing code, the AI must read:
 
 1. PROJECT_DOCUMENTATION_INDEX.md
-2. AI_START_HERE.md
-3. PROJECT_SPEC.md
-4. SYSTEM_RULES.md
-5. AI_DEVELOPMENT_PROTOCOL.md
-6. ARCHITECTURE.md
-7. DATA_SCHEMA.md
-8. FILE_STRUCTURE.md
-9. ROADMAP.md
-10. CHANGELOG.md
+2. CLAUDE_DOCUMENT_READING_ORDER.md
+3. AI_START_HERE.md
+4. PROJECT_SPEC.md
+5. SYSTEM_RULES.md
+6. AI_DEVELOPMENT_PROTOCOL.md
+7. ARCHITECTURE.md
+8. DATA_SCHEMA.md
+9. FILE_STRUCTURE.md
+10. ROADMAP.md
+11. CHANGELOG.md
+12. DOMAIN_BOUNDARIES.md
+13. DOMAINS_DEPENDENCY_MATRIX.md
+14. FILE_OWNERSHIP_MATRIX.md
+15. PROJECT_IMPACT_MATRIX.md
+16. DOCUMENT_UPDATE_MATRIX.md
+17. CHANGE_VERIFICATION_CHECKLIST.md
 
 Documentation has priority over assumptions.
 
@@ -85,11 +92,89 @@ Before modifying any file:
 
 1. Read architecture references
 2. Read associated schema
-3. Read related types
-4. Read related services
-5. Read existing implementation
+3. Verify domain ownership
+4. Verify allowed dependencies
+5. Read related types
+6. Read related services
+7. Read existing implementation
+8. Perform impact analysis
 
 The AI must understand the surrounding system before making modifications.
+
+---
+
+# Governance Validation
+
+Before modifying any file:
+
+1. Verify ownership
+2. Verify dependencies
+3. Verify impact
+4. Verify document updates
+5. Verify change classification
+6. Verify compatibility
+
+Required References:
+
+DOMAIN_BOUNDARIES.md
+
+DOMAINS_DEPENDENCY_MATRIX.md
+
+FILE_OWNERSHIP_MATRIX.md
+
+PROJECT_IMPACT_MATRIX.md
+
+DOCUMENT_UPDATE_MATRIX.md
+
+CHANGE_CLASSIFICATION_RULES.md
+
+CHANGE_VERIFICATION_CHECKLIST.md
+
+---
+
+# Project Systems
+
+When project files are involved:
+
+Read:
+
+IMPORT_EXPORT_SPEC.md
+
+DATA_SCHEMA.md
+
+PROJECT_SPEC.md
+
+Required Validation:
+
+WYPROJ Compatibility
+
+Serialization Compatibility
+
+Version Compatibility
+
+---
+
+# Internationalization Rules
+
+When localization is involved:
+
+Read:
+
+PROJECT_SPEC.md
+
+TECHNICAL_OVERVIEW.md
+
+DOMAIN_BOUNDARIES.md
+
+Requirements:
+
+No hardcoded UI text
+
+All strings localizable
+
+Language independence preserved
+
+WYPROJ remains language neutral
 
 ---
 
