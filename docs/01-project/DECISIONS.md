@@ -8,11 +8,7 @@ Status: Approved
 
 Priority: Medium
 
-
-
 ---
-
-
 
 # Purpose
 
@@ -1502,6 +1498,8 @@ Advantages:
 - DATA_SCHEMA.md
 - API_SPEC.md
 - TECHNICAL_OVERVIEW.md
+- IMPORT_EXPORT_SPEC.md
+- USER_SETTINGS_SPEC.md
 
 ---
 
@@ -1684,6 +1682,54 @@ Before approving a significant change:
 - Review Documentation
 - Validate Dependencies
 - Complete Impact Analysis
+
+---
+
+# ADR-023
+
+Title: Externalized Internationalization System
+
+Status: Accepted
+
+Date: 2026-09-15
+
+## Context
+
+The application must support multiple languages.
+
+Project files must remain language neutral.
+
+Future languages must be added without modifying application logic.
+
+## Decision
+
+Use an externalized translation system.
+
+Components:
+
+- LanguageManager
+- LocalizationService
+- TranslationLoader
+
+Languages:
+
+- English
+- French
+- Hebrew
+
+Translations are stored in language dictionaries.
+
+Project files remain language independent.
+
+## Consequences
+
+Advantages:
+
+- Easier localization
+- Better maintainability
+- Language-independent architecture
+- Language-neutral WYPROJ files
+- Simpler future expansion
 
 ---
 
