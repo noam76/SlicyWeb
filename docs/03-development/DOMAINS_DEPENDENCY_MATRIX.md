@@ -2,7 +2,7 @@
 
 # DOMAINS DEPENDENCY MATRIX
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -124,6 +124,7 @@ Validation
 Notification
 Cost Estimation
 Project Management
+Internationalization
 Security
 Testing
 ```
@@ -734,6 +735,62 @@ Cannot Depend On:
 ```text
 GUI Domain
 RepositorySync Domain
+```
+
+---
+
+# INTERNATIONALIZATION DOMAIN
+
+Purpose:
+
+Localization and language management.
+
+Responsible For:
+
+```text
+- Language Selection
+- Translation Loading
+- Translation Resolution
+- Localization Services
+- Language Persistence
+```
+
+Owns:
+
+```text
+src/i18n/
+LanguageManager.ts
+LocalizationService.ts
+TranslationLoader.ts
+public/locales/
+Can Depend On:
+Validation Domain
+Storage Domain
+```
+
+Cannot Depend On:
+
+```text
+GUI Domain
+RepositorySync Domain
+Remote Sources
+```
+
+Requirements:
+
+```text
+- No hardcoded UI text
+- Language-neutral project files
+- Externalized translations
+- Consistent localization behavior
+```
+
+Managed Languages:
+
+```text
+English
+French
+Hebrew
 ```
 
 ---
