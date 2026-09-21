@@ -2,7 +2,7 @@
 
 # UNDO REDO SPECIFICATION
 
-Version: 1.0.0
+Version: 2.0.0
 
 Status: Approved
 
@@ -13,7 +13,7 @@ Priority: High
 # Purpose
 
 
-This document defines the Undo/Redo system used throughout Wichy.
+This document defines the Undo/Redo system used throughout SlicyWeb.
 
 The system allows users to safely revert or restore actions performed during a project session.
 
@@ -834,19 +834,11 @@ Apply Optimized Orientation
 
 ```
 
-
-
 ---
-
-
 
 ## Support Optimization
 
-
-
 Undo:
-
-
 
 ```text
 
@@ -854,67 +846,42 @@ Restore Previous Support Strategy
 
 ```
 
-
-
 ---
-
-
 
 # User Settings
 
-
-
 Supported Only For Current Session.
-
-
 
 Examples:
 
-
-
 ```text
-
 Theme
-
-
-
 Viewport Options
-
-
-
 Panel Layout
-
 ```
 
+Language changes are not stored in Undo/Redo history.
 
+Reason:
+
+```text
+Language changes affect application localization
+but do not modify project data or scene state.
+```
 
 ---
-
-
 
 # Project Loading
 
-
-
-Special Case.
-
-
-
----
-
-
+Loading a WYPROJ project replaces the active workspace.
 
 Undo:
-
-
 
 ```text
 
 Not Supported
 
 ```
-
-
 
 ---
 
@@ -970,7 +937,26 @@ No Scene Modification
 
 ---
 
+# Auto Save And Recovery
 
+Auto Save operations are not stored in the Undo/Redo history.
+
+Reason:
+
+```text
+Auto Save is a persistence operation
+not a user modification.
+```
+
+Recovery operations are not undoable.
+
+Reason:
+
+```text
+Recovery restores a previously saved project state.
+```
+
+---
 
 # Non Undoable Actions
 
@@ -1465,25 +1451,25 @@ Project Snapshots
 
 # Integration Points
 
-
-
 Used By:
 
-
-
 ```text
+GUI_SPEC.md
 
-GUI\_SPEC.md
+OBJECT_MANAGER
 
-OBJECT\_MANAGER
+SCENE_MANAGER
 
-SCENE\_MANAGER
+TRANSFORM_SYSTEM
 
-TRANSFORM\_SYSTEM
+PRINT_SETTINGS_SPEC.md
 
-PRINT\_SETTINGS\_SPEC.md
-
-PROJECT\_SYSTEM
+PROJECT_MANAGER
+PROJECT_SERIALIZER
+PROJECT_DESERIALIZER
+PROJECT_VALIDATOR
+WYPROJ_IMPORTER
+WYPROJ_EXPORTER
 
 ```
 
