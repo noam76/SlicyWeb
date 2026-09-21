@@ -174,6 +174,8 @@ Application Flow:
 
 GUI
 ↓
+Application
+↓
 Service
 ↓
 Repository
@@ -199,18 +201,28 @@ Main Domains:
 
 - GUI
 - Viewport
-- Scene
+- Application
+- State Management
 - Import
+- Scene
 - Analysis
 - Classification
 - Recommendation
 - Optimization
 - Profiles
-- Repositories
-- Storage
-- IPC
-- State Management
+- Presets
 - Validation
+- API
+- IPC
+- Repository
+- RepositorySync
+- Storage
+- Notification
+- Cost Estimation
+- Project Management
+- Internationalization
+- Security
+- Testing
 
 Each domain owns specific responsibilities.
 
@@ -336,6 +348,12 @@ Examples:
 - en.json
 - fr.json
 - he.json
+
+Managed By:
+
+- LanguageManager
+- LocalizationService
+- TranslationLoader
 
 The architecture must remain language-independent.
 
