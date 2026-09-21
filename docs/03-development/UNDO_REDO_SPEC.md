@@ -2,38 +2,22 @@
 
 # UNDO REDO SPECIFICATION
 
-
-
 Version: 1.0.0
-
-
 
 Status: Approved
 
-
-
 Priority: High
 
-
-
 ---
-
-
 
 # Purpose
 
 
-
 This document defines the Undo/Redo system used throughout Wichy.
-
-
 
 The system allows users to safely revert or restore actions performed during a project session.
 
-
-
 The objective is to:
-
 
 
 - Improve usability
